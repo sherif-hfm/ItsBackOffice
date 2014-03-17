@@ -7,6 +7,7 @@
 *.sln.docstates
 *.mdf
 *.ldf
+*.bak
 
 # Build results
 
