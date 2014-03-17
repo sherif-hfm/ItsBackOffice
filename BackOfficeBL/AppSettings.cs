@@ -11,7 +11,7 @@ namespace BackOfficeBL
 {
     public class AppSettings
     {
-        public string NewAppsConnectionString = "Data Source=VS2012-PC\\SQLSRV2008R2;Initial Catalog=NewApps;Persist Security Info=True;User ID=sa;Password=P@ssw0rd;MultipleActiveResultSets=True;Application Name=EntityFramework";
+        public string NewAppsConnectionString = "Data Source=ahmed.3utilities.com;initial catalog=BackOffice;persist security info=True;user id=sa;password=P@ssw0rd;MultipleActiveResultSets=True;Application Name=EntityFramework";
 
         public static AppSettings CrAppSettings = new AppSettings();
 
