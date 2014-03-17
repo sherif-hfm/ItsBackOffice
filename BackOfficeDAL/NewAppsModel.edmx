@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NewApps.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="NewAppsStoreContainer">
+          <EntitySet Name="Sec_FormFunctions" EntityType="NewApps.Store.Sec_FormFunctions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sec_GroupRights" EntityType="NewApps.Store.Sec_GroupRights" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sec_Groups" EntityType="NewApps.Store.Sec_Groups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sec_MainMenu" EntityType="NewApps.Store.Sec_MainMenu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sec_Users" EntityType="NewApps.Store.Sec_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sec_UsersGroup" EntityType="NewApps.Store.Sec_UsersGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Srch_SearchMaster" EntityType="NewApps.Store.Srch_SearchMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Srch_SearchParameters" EntityType="NewApps.Store.Srch_SearchParameters" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Sec_GroupRights_Sec_Groups" Association="NewApps.Store.FK_Sec_GroupRights_Sec_Groups">
+            <End Role="Sec_Groups" EntitySet="Sec_Groups" />
+            <End Role="Sec_GroupRights" EntitySet="Sec_GroupRights" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sec_GroupRights_Sec_MainMenu" Association="NewApps.Store.FK_Sec_GroupRights_Sec_MainMenu">
+            <End Role="Sec_MainMenu" EntitySet="Sec_MainMenu" />
+            <End Role="Sec_GroupRights" EntitySet="Sec_GroupRights" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sec_MainMenu_Sec_MainMenu" Association="NewApps.Store.FK_Sec_MainMenu_Sec_MainMenu">
+            <End Role="Sec_MainMenu" EntitySet="Sec_MainMenu" />
+            <End Role="Sec_MainMenu1" EntitySet="Sec_MainMenu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sec_UsersGroup_Sec_Groups" Association="NewApps.Store.FK_Sec_UsersGroup_Sec_Groups">
+            <End Role="Sec_Groups" EntitySet="Sec_Groups" />
+            <End Role="Sec_UsersGroup" EntitySet="Sec_UsersGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sec_UsersGroup_Sec_Users" Association="NewApps.Store.FK_Sec_UsersGroup_Sec_Users">
+            <End Role="Sec_Users" EntitySet="Sec_Users" />
+            <End Role="Sec_UsersGroup" EntitySet="Sec_UsersGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Srch_SearchParameters_Srch_SearchMaster" Association="NewApps.Store.FK_Srch_SearchParameters_Srch_SearchMaster">
+            <End Role="Srch_SearchMaster" EntitySet="Srch_SearchMaster" />
+            <End Role="Srch_SearchParameters" EntitySet="Srch_SearchParameters" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Sec_FormFunctions">
+          <Key>
+            <PropertyRef Name="FunctionID" />
+          </Key>
+          <Property Name="FunctionID" Type="int" Nullable="false" />
+          <Property Name="FunctionText_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="FunctionText_Eng" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sec_GroupRights">
+          <Key>
+            <PropertyRef Name="GroupID" />
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="GroupID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AllowedFunctions" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sec_Groups">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name_Ara" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name_Eng" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsDisable" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sec_MainMenu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Text_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text_Eng" Type="nvarchar" MaxLength="50" />
+          <Property Name="ParentMenuID" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormOption" Type="nvarchar" MaxLength="255" />
+          <Property Name="FormAllowedFunctions" Type="int" Nullable="false" />
+          <Property Name="SplitBefore" Type="bit" />
+          <Property Name="ShowInMenuBar" Type="bit" />
+          <Property Name="ShowInToolBar" Type="bit" />
+          <Property Name="ToolBarImage" Type="nvarchar" MaxLength="255" />
+          <Property Name="ToolBarIndex" Type="int" />
+          <Property Name="TooBarText_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="TooBarText_Eng" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sec_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserLogin" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name_Ara" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name_Eng" Type="nvarchar" MaxLength="255" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsAdmin" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sec_UsersGroup">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="GroupID" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Srch_SearchMaster">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Name="SearchID" Type="int" Nullable="false" />
+          <Property Name="SearchSQL_Ara" Type="nvarchar(max)" />
+          <Property Name="SearchSQL_Eng" Type="nvarchar(max)" />
+          <Property Name="SearchResultStyle_Ara" Type="xml" />
+          <Property Name="SearchResultStyle_Eng" Type="xml" />
+          <Property Name="AddWhere" Type="bit" Nullable="false" />
+          <Property Name="ParametersColumns" Type="int" Nullable="false" />
+          <Property Name="ReturnsFields" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddNewForm" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditForm" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Srch_SearchParameters">
+          <Key>
+            <PropertyRef Name="SearchID" />
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="SearchID" Type="int" Nullable="false" />
+          <Property Name="ParameterID" Type="int" Nullable="false" />
+          <Property Name="ValuesKeys" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ConditionDataFields" Type="nvarchar" MaxLength="50" />
+          <Property Name="ConditionParameters" Type="nvarchar" MaxLength="50" />
+          <Property Name="ParameterText_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="ParameterText_Eng" Type="nvarchar" MaxLength="50" />
+          <Property Name="ParameterControl" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParameterControlWidth" Type="int" Nullable="false" />
+          <Property Name="ComperOrders" Type="nvarchar" MaxLength="50" />
+          <Property Name="ComboBoxSQL_Ara" Type="nvarchar" MaxLength="500" />
+          <Property Name="ComboBoxSQL_Eng" Type="nvarchar" MaxLength="500" />
+          <Property Name="ComboBoxValueMembers" Type="nvarchar" MaxLength="50" />
+          <Property Name="ComboBoxDisplayMember_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="ComboBoxDisplayMember_Eng" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Sec_GroupRights_Sec_Groups">
+          <End Role="Sec_Groups" Type="NewApps.Store.Sec_Groups" Multiplicity="1" />
+          <End Role="Sec_GroupRights" Type="NewApps.Store.Sec_GroupRights" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_Groups">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="Sec_GroupRights">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sec_GroupRights_Sec_MainMenu">
+          <End Role="Sec_MainMenu" Type="NewApps.Store.Sec_MainMenu" Multiplicity="1" />
+          <End Role="Sec_GroupRights" Type="NewApps.Store.Sec_GroupRights" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_MainMenu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="Sec_GroupRights">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sec_MainMenu_Sec_MainMenu">
+          <End Role="Sec_MainMenu" Type="NewApps.Store.Sec_MainMenu" Multiplicity="0..1" />
+          <End Role="Sec_MainMenu1" Type="NewApps.Store.Sec_MainMenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_MainMenu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="Sec_MainMenu1">
+              <PropertyRef Name="ParentMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sec_UsersGroup_Sec_Groups">
+          <End Role="Sec_Groups" Type="NewApps.Store.Sec_Groups" Multiplicity="1" />
+          <End Role="Sec_UsersGroup" Type="NewApps.Store.Sec_UsersGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_Groups">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="Sec_UsersGroup">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sec_UsersGroup_Sec_Users">
+          <End Role="Sec_Users" Type="NewApps.Store.Sec_Users" Multiplicity="1" />
+          <End Role="Sec_UsersGroup" Type="NewApps.Store.Sec_UsersGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Sec_UsersGroup">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Srch_SearchParameters_Srch_SearchMaster">
+          <End Role="Srch_SearchMaster" Type="NewApps.Store.Srch_SearchMaster" Multiplicity="1" />
+          <End Role="Srch_SearchParameters" Type="NewApps.Store.Srch_SearchParameters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Srch_SearchMaster">
+              <PropertyRef Name="SearchID" />
+            </Principal>
+            <Dependent Role="Srch_SearchParameters">
+              <PropertyRef Name="SearchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NewApps" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="NewAppsCnn" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sec_FormFunctions" EntityType="NewApps.Sec_FormFunctions" />
+          <EntitySet Name="Sec_GroupRights" EntityType="NewApps.Sec_GroupRights" />
+          <EntitySet Name="Sec_Groups" EntityType="NewApps.Sec_Groups" />
+          <EntitySet Name="Sec_MainMenu" EntityType="NewApps.Sec_MainMenu" />
+          <AssociationSet Name="FK_Sec_GroupRights_Sec_Groups" Association="NewApps.FK_Sec_GroupRights_Sec_Groups">
+            <End Role="Sec_Groups" EntitySet="Sec_Groups" />
+            <End Role="Sec_GroupRights" EntitySet="Sec_GroupRights" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sec_GroupRights_Sec_MainMenu" Association="NewApps.FK_Sec_GroupRights_Sec_MainMenu">
+            <End Role="Sec_MainMenu" EntitySet="Sec_MainMenu" />
+            <End Role="Sec_GroupRights" EntitySet="Sec_GroupRights" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sec_MainMenu_Sec_MainMenu" Association="NewApps.FK_Sec_MainMenu_Sec_MainMenu">
+            <End Role="Sec_MainMenu" EntitySet="Sec_MainMenu" />
+            <End Role="Sec_MainMenu1" EntitySet="Sec_MainMenu" />
+          </AssociationSet>
+          <EntitySet Name="Sec_Users" EntityType="NewApps.Sec_Users" />
+          <AssociationSet Name="Sec_UsersGroup" Association="NewApps.Sec_UsersGroup">
+            <End Role="Sec_Groups" EntitySet="Sec_Groups" />
+            <End Role="Sec_Users" EntitySet="Sec_Users" />
+          </AssociationSet>
+          <EntitySet Name="Srch_SearchMaster" EntityType="NewApps.Srch_SearchMaster" />
+          <EntitySet Name="Srch_SearchParameters" EntityType="NewApps.Srch_SearchParameters" />
+          <AssociationSet Name="FK_Srch_SearchParameters_Srch_SearchMaster" Association="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster">
+            <End Role="Srch_SearchMaster" EntitySet="Srch_SearchMaster" />
+            <End Role="Srch_SearchParameters" EntitySet="Srch_SearchParameters" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Sec_FormFunctions">
+          <Key>
+            <PropertyRef Name="FunctionID" />
+          </Key>
+          <Property Type="Int32" Name="FunctionID" Nullable="false" />
+          <Property Type="String" Name="FunctionText_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FunctionText_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sec_GroupRights">
+          <Key>
+            <PropertyRef Name="GroupID" />
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Type="String" Name="GroupID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MenuID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AllowedFunctions" Nullable="false" />
+          <NavigationProperty Name="Sec_Groups" Relationship="NewApps.FK_Sec_GroupRights_Sec_Groups" FromRole="Sec_GroupRights" ToRole="Sec_Groups" />
+          <NavigationProperty Name="Sec_MainMenu" Relationship="NewApps.FK_Sec_GroupRights_Sec_MainMenu" FromRole="Sec_GroupRights" ToRole="Sec_MainMenu" />
+        </EntityType>
+        <EntityType Name="Sec_Groups">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Type="String" Name="GroupID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name_Ara" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name_Eng" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsDisable" Nullable="false" />
+          <NavigationProperty Name="Sec_GroupRights" Relationship="NewApps.FK_Sec_GroupRights_Sec_Groups" FromRole="Sec_Groups" ToRole="Sec_GroupRights" />
+          <NavigationProperty Name="Sec_Users" Relationship="NewApps.Sec_UsersGroup" FromRole="Sec_Groups" ToRole="Sec_Users" />
+        </EntityType>
+        <EntityType Name="Sec_MainMenu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Type="String" Name="MenuID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Text_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Text_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParentMenuID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FormName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FormOption" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FormAllowedFunctions" Nullable="false" />
+          <Property Type="Boolean" Name="SplitBefore" />
+          <Property Type="Boolean" Name="ShowInMenuBar" />
+          <Property Type="Boolean" Name="ShowInToolBar" />
+          <Property Type="String" Name="ToolBarImage" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ToolBarIndex" />
+          <Property Type="String" Name="TooBarText_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TooBarText_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Sec_GroupRights" Relationship="NewApps.FK_Sec_GroupRights_Sec_MainMenu" FromRole="Sec_MainMenu" ToRole="Sec_GroupRights" />
+          <NavigationProperty Name="Sec_MainMenu1" Relationship="NewApps.FK_Sec_MainMenu_Sec_MainMenu" FromRole="Sec_MainMenu" ToRole="Sec_MainMenu1" />
+          <NavigationProperty Name="Sec_MainMenu2" Relationship="NewApps.FK_Sec_MainMenu_Sec_MainMenu" FromRole="Sec_MainMenu1" ToRole="Sec_MainMenu" />
+        </EntityType>
+        <Association Name="FK_Sec_GroupRights_Sec_Groups">
+          <End Type="NewApps.Sec_Groups" Role="Sec_Groups" Multiplicity="1" />
+          <End Type="NewApps.Sec_GroupRights" Role="Sec_GroupRights" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_Groups">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="Sec_GroupRights">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sec_GroupRights_Sec_MainMenu">
+          <End Type="NewApps.Sec_MainMenu" Role="Sec_MainMenu" Multiplicity="1" />
+          <End Type="NewApps.Sec_GroupRights" Role="Sec_GroupRights" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_MainMenu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="Sec_GroupRights">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sec_MainMenu_Sec_MainMenu">
+          <End Type="NewApps.Sec_MainMenu" Role="Sec_MainMenu" Multiplicity="0..1" />
+          <End Type="NewApps.Sec_MainMenu" Role="Sec_MainMenu1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sec_MainMenu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="Sec_MainMenu1">
+              <PropertyRef Name="ParentMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Sec_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserLogin" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name_Ara" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name_Eng" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsAdmin" Nullable="false" />
+          <NavigationProperty Name="Sec_Groups" Relationship="NewApps.Sec_UsersGroup" FromRole="Sec_Users" ToRole="Sec_Groups" />
+        </EntityType>
+        <Association Name="Sec_UsersGroup">
+          <End Type="NewApps.Sec_Groups" Role="Sec_Groups" Multiplicity="*" />
+          <End Type="NewApps.Sec_Users" Role="Sec_Users" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Srch_SearchMaster">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Type="Int32" Name="SearchID" Nullable="false" />
+          <Property Type="String" Name="SearchSQL_Ara" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchSQL_Eng" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchResultStyle_Ara" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchResultStyle_Eng" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="AddWhere" Nullable="false" />
+          <Property Type="Int32" Name="ParametersColumns" Nullable="false" />
+          <Property Type="String" Name="ReturnsFields" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddNewForm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EditForm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Srch_SearchParameters" Relationship="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster" FromRole="Srch_SearchMaster" ToRole="Srch_SearchParameters" />
+        </EntityType>
+        <EntityType Name="Srch_SearchParameters">
+          <Key>
+            <PropertyRef Name="SearchID" />
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Type="Int32" Name="SearchID" Nullable="false" />
+          <Property Type="Int32" Name="ParameterID" Nullable="false" />
+          <Property Type="String" Name="ValuesKeys" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConditionDataFields" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConditionParameters" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParameterText_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParameterText_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParameterControl" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ParameterControlWidth" Nullable="false" />
+          <Property Type="String" Name="ComperOrders" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ComboBoxSQL_Ara" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ComboBoxSQL_Eng" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ComboBoxValueMembers" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ComboBoxDisplayMember_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ComboBoxDisplayMember_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Srch_SearchMaster" Relationship="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster" FromRole="Srch_SearchParameters" ToRole="Srch_SearchMaster" />
+        </EntityType>
+        <Association Name="FK_Srch_SearchParameters_Srch_SearchMaster">
+          <End Type="NewApps.Srch_SearchMaster" Role="Srch_SearchMaster" Multiplicity="1" />
+          <End Type="NewApps.Srch_SearchParameters" Role="Srch_SearchParameters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Srch_SearchMaster">
+              <PropertyRef Name="SearchID" />
+            </Principal>
+            <Dependent Role="Srch_SearchParameters">
+              <PropertyRef Name="SearchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NewAppsStoreContainer" CdmEntityContainer="NewAppsCnn">
+          <EntitySetMapping Name="Sec_FormFunctions">
+            <EntityTypeMapping TypeName="NewApps.Sec_FormFunctions">
+              <MappingFragment StoreEntitySet="Sec_FormFunctions">
+                <ScalarProperty Name="FunctionText_Eng" ColumnName="FunctionText_Eng" />
+                <ScalarProperty Name="FunctionText_Ara" ColumnName="FunctionText_Ara" />
+                <ScalarProperty Name="FunctionID" ColumnName="FunctionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sec_GroupRights">
+            <EntityTypeMapping TypeName="NewApps.Sec_GroupRights">
+              <MappingFragment StoreEntitySet="Sec_GroupRights">
+                <ScalarProperty Name="AllowedFunctions" ColumnName="AllowedFunctions" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sec_Groups">
+            <EntityTypeMapping TypeName="NewApps.Sec_Groups">
+              <MappingFragment StoreEntitySet="Sec_Groups">
+                <ScalarProperty Name="IsDisable" ColumnName="IsDisable" />
+                <ScalarProperty Name="Name_Eng" ColumnName="Name_Eng" />
+                <ScalarProperty Name="Name_Ara" ColumnName="Name_Ara" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sec_MainMenu">
+            <EntityTypeMapping TypeName="NewApps.Sec_MainMenu">
+              <MappingFragment StoreEntitySet="Sec_MainMenu">
+                <ScalarProperty Name="TooBarText_Eng" ColumnName="TooBarText_Eng" />
+                <ScalarProperty Name="TooBarText_Ara" ColumnName="TooBarText_Ara" />
+                <ScalarProperty Name="ToolBarIndex" ColumnName="ToolBarIndex" />
+                <ScalarProperty Name="ToolBarImage" ColumnName="ToolBarImage" />
+                <ScalarProperty Name="ShowInToolBar" ColumnName="ShowInToolBar" />
+                <ScalarProperty Name="ShowInMenuBar" ColumnName="ShowInMenuBar" />
+                <ScalarProperty Name="SplitBefore" ColumnName="SplitBefore" />
+                <ScalarProperty Name="FormAllowedFunctions" ColumnName="FormAllowedFunctions" />
+                <ScalarProperty Name="FormOption" ColumnName="FormOption" />
+                <ScalarProperty Name="FormName" ColumnName="FormName" />
+                <ScalarProperty Name="ParentMenuID" ColumnName="ParentMenuID" />
+                <ScalarProperty Name="Text_Eng" ColumnName="Text_Eng" />
+                <ScalarProperty Name="Text_Ara" ColumnName="Text_Ara" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sec_Users">
+            <EntityTypeMapping TypeName="NewApps.Sec_Users">
+              <MappingFragment StoreEntitySet="Sec_Users">
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name_Eng" ColumnName="Name_Eng" />
+                <ScalarProperty Name="Name_Ara" ColumnName="Name_Ara" />
+                <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Sec_UsersGroup" TypeName="NewApps.Sec_UsersGroup" StoreEntitySet="Sec_UsersGroup">
+            <EndProperty Name="Sec_Users">
+              <ScalarProperty Name="UserID" ColumnName="UserID" />
+            </EndProperty>
+            <EndProperty Name="Sec_Groups">
+              <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Srch_SearchMaster">
+            <EntityTypeMapping TypeName="NewApps.Srch_SearchMaster">
+              <MappingFragment StoreEntitySet="Srch_SearchMaster">
+                <ScalarProperty Name="EditForm" ColumnName="EditForm" />
+                <ScalarProperty Name="AddNewForm" ColumnName="AddNewForm" />
+                <ScalarProperty Name="ReturnsFields" ColumnName="ReturnsFields" />
+                <ScalarProperty Name="ParametersColumns" ColumnName="ParametersColumns" />
+                <ScalarProperty Name="AddWhere" ColumnName="AddWhere" />
+                <ScalarProperty Name="SearchResultStyle_Eng" ColumnName="SearchResultStyle_Eng" />
+                <ScalarProperty Name="SearchResultStyle_Ara" ColumnName="SearchResultStyle_Ara" />
+                <ScalarProperty Name="SearchSQL_Eng" ColumnName="SearchSQL_Eng" />
+                <ScalarProperty Name="SearchSQL_Ara" ColumnName="SearchSQL_Ara" />
+                <ScalarProperty Name="SearchID" ColumnName="SearchID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Srch_SearchParameters">
+            <EntityTypeMapping TypeName="NewApps.Srch_SearchParameters">
+              <MappingFragment StoreEntitySet="Srch_SearchParameters">
+                <ScalarProperty Name="ComboBoxDisplayMember_Eng" ColumnName="ComboBoxDisplayMember_Eng" />
+                <ScalarProperty Name="ComboBoxDisplayMember_Ara" ColumnName="ComboBoxDisplayMember_Ara" />
+                <ScalarProperty Name="ComboBoxValueMembers" ColumnName="ComboBoxValueMembers" />
+                <ScalarProperty Name="ComboBoxSQL_Eng" ColumnName="ComboBoxSQL_Eng" />
+                <ScalarProperty Name="ComboBoxSQL_Ara" ColumnName="ComboBoxSQL_Ara" />
+                <ScalarProperty Name="ComperOrders" ColumnName="ComperOrders" />
+                <ScalarProperty Name="ParameterControlWidth" ColumnName="ParameterControlWidth" />
+                <ScalarProperty Name="ParameterControl" ColumnName="ParameterControl" />
+                <ScalarProperty Name="ParameterText_Eng" ColumnName="ParameterText_Eng" />
+                <ScalarProperty Name="ParameterText_Ara" ColumnName="ParameterText_Ara" />
+                <ScalarProperty Name="ConditionParameters" ColumnName="ConditionParameters" />
+                <ScalarProperty Name="ConditionDataFields" ColumnName="ConditionDataFields" />
+                <ScalarProperty Name="ValuesKeys" ColumnName="ValuesKeys" />
+                <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+                <ScalarProperty Name="SearchID" ColumnName="SearchID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

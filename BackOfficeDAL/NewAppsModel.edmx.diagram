@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9fdb143b02234e69bee2a83e806d773a" Name="Security" ZoomLevel="106">
+        <EntityTypeShape EntityType="NewApps.Sec_FormFunctions" Width="1.75" PointX="0.5" PointY="5.75" />
+        <EntityTypeShape EntityType="NewApps.Sec_GroupRights" Width="1.875" PointX="3.875" PointY="1.875" />
+        <EntityTypeShape EntityType="NewApps.Sec_Groups" Width="1.875" PointX="3.875" PointY="4.5" />
+        <EntityTypeShape EntityType="NewApps.Sec_MainMenu" Width="1.75" PointX="0.5" PointY="1.5" />
+        <AssociationConnector Association="NewApps.FK_Sec_GroupRights_Sec_Groups" />
+        <AssociationConnector Association="NewApps.FK_Sec_GroupRights_Sec_MainMenu" />
+        <AssociationConnector Association="NewApps.FK_Sec_MainMenu_Sec_MainMenu" />
+        <EntityTypeShape EntityType="NewApps.Sec_Users" Width="1.5" PointX="7.875" PointY="4.625" />
+        <AssociationConnector Association="NewApps.Sec_UsersGroup" />
+        <EntityTypeShape EntityType="NewApps.Srch_SearchMaster" Width="1.5" PointX="1.25" PointY="9.25" />
+        <EntityTypeShape EntityType="NewApps.Srch_SearchParameters" Width="1.5" PointX="3.875" PointY="9.375" />
+        <AssociationConnector Association="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
