@@ -68,13 +68,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Accounting\Notes.txt" />
+    <Content Include="HumanResource\Notes.txt" />
     <Content Include="Search\ResultGridColumnStyle.xml" />
+    <Content Include="Warehouses\Notes.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Accounting\" />
-    <Folder Include="HumanResource\" />
-    <Folder Include="Warehouses\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

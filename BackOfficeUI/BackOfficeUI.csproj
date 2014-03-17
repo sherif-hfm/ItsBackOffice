@@ -322,10 +322,11 @@
       <Name>BackOfficeResources</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Accounting\" />
-    <Folder Include="HumanResource\" />
-    <Folder Include="Warehouses\" />
+    <Content Include="Accounting\Notes.txt" />
+    <Content Include="HumanResource\Notes.txt" />
+    <Content Include="Warehouses\Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
