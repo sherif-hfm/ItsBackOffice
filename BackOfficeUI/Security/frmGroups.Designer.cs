@@ -1,6 +1,6 @@
-﻿namespace BackOfficeUI.Search.Controls
+﻿namespace BackOfficeUI.Security
 {
-    partial class SearchCheckBox
+    partial class frmGroups
     {
         /// <summary>
         /// Required designer variable.
@@ -20,17 +20,31 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify 
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmGroups
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(857, 399);
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "frmGroups";
+            this.Text = "frmGroups";
+            this.Load += new System.EventHandler(this.frmGroups_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
     }
 }

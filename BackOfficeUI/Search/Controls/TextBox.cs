@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackOfficeUI.Search.Controls
 {
-    public partial class TextBox : System.Windows.Forms.TextBox, IParametersControl
+    public partial class SearchTextBox : System.Windows.Forms.TextBox, IParametersControl
     {
-        public TextBox()
+        public SearchTextBox()
         {
             InitializeComponent();
             this.KeyDown += TextBox_KeyDown;

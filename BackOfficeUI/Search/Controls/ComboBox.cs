@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackOfficeUI.Search.Controls
 {
-    public partial class ComboBox : System.Windows.Forms.ComboBox, IParametersControl
+    public partial class SearchComboBox : System.Windows.Forms.ComboBox, IParametersControl
     {
-        public ComboBox()
+        public SearchComboBox()
         {
             InitializeComponent();
             this.DropDownStyle = ComboBoxStyle.DropDownList;

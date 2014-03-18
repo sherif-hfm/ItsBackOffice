@@ -1,6 +1,6 @@
 ﻿namespace BackOfficeUI.Search.Controls
 {
-    partial class ComboBox
+    partial class SearchComboBox
     {
         /// <summary>
         /// Required designer variable.

@@ -56,6 +56,7 @@ namespace BackOfficeBL.Security
             this.IsDisable = _dbGroup.IsDisable;
             this.IsNew = false;
         }
+
         public void ToDbGroup(Sec_Groups _dbGroup)
         {
             _dbGroup.GroupID = this.GroupID;

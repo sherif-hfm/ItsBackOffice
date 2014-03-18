@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackOfficeUI.Search.Controls
 {
-    public partial class CheckBox : System.Windows.Forms.CheckBox,IParametersControl
+    public partial class SearchCheckBox : System.Windows.Forms.CheckBox,IParametersControl
     {
-        public CheckBox()
+        public SearchCheckBox()
         {
             InitializeComponent();
             this.CheckStateChanged += CheckBox_CheckStateChanged;

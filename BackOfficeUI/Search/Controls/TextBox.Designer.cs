@@ -1,6 +1,6 @@
 ﻿namespace BackOfficeUI.Search.Controls
 {
-    partial class TextBox
+    partial class SearchTextBox
     {
         /// <summary>
         /// Required designer variable.

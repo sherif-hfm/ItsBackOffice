@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BackOfficeUI.Controls
 {
-    public partial class ListBox : System.Windows.Forms.ListBox,IControl
+    public partial class ComboBox : System.Windows.Forms.ComboBox, IControl
     {
-        public ListBox()
+        public ComboBox()
         {
             InitializeComponent();
             this.BackColor = Color.White;
@@ -47,7 +47,7 @@ namespace BackOfficeUI.Controls
 
         public bool IsEmpty()
         {
-            if (this.SelectedItems.Count > 0)
+            if (this.SelectedValue != null)
                 return false;
             else
                 return true;
@@ -55,7 +55,7 @@ namespace BackOfficeUI.Controls
 
         public void ClearData()
         {
-            this.SelectedItems.Clear();
+
         }
 
         #endregion

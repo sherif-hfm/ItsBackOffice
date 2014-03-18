@@ -191,7 +191,7 @@ namespace BackOfficeUI.Search
 
         private IParametersControl CreateTextBoxParameter(SearchParameterProperties prm)
         {
-            Search.Controls.TextBox textBox = new Search.Controls.TextBox();
+            Search.Controls.SearchTextBox textBox = new Search.Controls.SearchTextBox();
             textBox.Width = prm.ParameterControlWidth;
 
             return textBox;
@@ -199,7 +199,7 @@ namespace BackOfficeUI.Search
 
         private IParametersControl CreateCheckBoxParameter(SearchParameterProperties prm)
         {
-            Search.Controls.CheckBox checkBox = new Search.Controls.CheckBox();
+            Search.Controls.SearchCheckBox checkBox = new Search.Controls.SearchCheckBox();
             checkBox.Width = prm.ParameterControlWidth;
 
             return checkBox;
@@ -207,7 +207,7 @@ namespace BackOfficeUI.Search
 
         private IParametersControl CreateComboBoxParameter(SearchParameterProperties prm)
         {
-            Search.Controls.ComboBox comboBox = new Search.Controls.ComboBox();
+            Search.Controls.SearchComboBox comboBox = new Search.Controls.SearchComboBox();
             comboBox.Width = prm.ParameterControlWidth;
             comboBox.DataSource = prm.GetComboData();
             comboBox.DisplayMember = prm.ComboBoxDisplayMember;
@@ -217,7 +217,7 @@ namespace BackOfficeUI.Search
 
         private IParametersControl CreateDateTimePickerParameter(SearchParameterProperties prm)
         {
-            Search.Controls.DateTimePicker dateTimePicker = new Search.Controls.DateTimePicker();
+            Search.Controls.SearchDateTimePicker dateTimePicker = new Search.Controls.SearchDateTimePicker();
             dateTimePicker.Width = prm.ParameterControlWidth;
 
             return dateTimePicker;

@@ -1,6 +1,6 @@
 ﻿namespace BackOfficeUI.Search.Controls
 {
-    partial class DateTimePicker
+    partial class SearchDateTimePicker
     {
         /// <summary>
         /// Required designer variable.

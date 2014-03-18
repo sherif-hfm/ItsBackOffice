@@ -46,18 +46,26 @@ namespace BackOfficeBL.Security
 
         public static User CheckUser(string _userName,string _password)
         {
-            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-            var dbUsers = from u in newAppsCnn.Sec_Users where u.UserLogin == _userName && u.Password == _password select u;
-            if (dbUsers.Count() > 0)
+            try
             {
-                Sec_Users dbUser = dbUsers.First();
-                User user = new User();
-                user.FromDbUser(dbUser);
-                user.LoadUserMenu(dbUser);
-                return user;
+                NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+                var dbUsers = from u in newAppsCnn.Sec_Users where u.UserLogin == _userName && u.Password == _password select u;
+                if (dbUsers.Count() > 0)
+                {
+                    Sec_Users dbUser = dbUsers.First();
+                    User user = new User();
+                    user.FromDbUser(dbUser);
+                    user.LoadUserMenu(dbUser);
+                    return user;
+                }
+                else
+                    return null;
             }
-            else
-                return null;
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
         }
 
         public static User GetFirst()

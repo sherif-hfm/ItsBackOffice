@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackOfficeUI.Search.Controls
 {
-    public partial class DateTimePicker : System.Windows.Forms.DateTimePicker, IParametersControl
+    public partial class SearchDateTimePicker : System.Windows.Forms.DateTimePicker, IParametersControl
     {
-        public DateTimePicker()
+        public SearchDateTimePicker()
         {
             InitializeComponent();
             this.Format = DateTimePickerFormat.Short;
