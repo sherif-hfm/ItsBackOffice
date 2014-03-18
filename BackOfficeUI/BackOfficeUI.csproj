@@ -340,6 +340,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Accounting\Notes.txt" />
+    <Content Include="General\Notes.txt" />
     <Content Include="HumanResource\Notes.txt" />
     <Content Include="Warehouses\Notes.txt" />
   </ItemGroup>
