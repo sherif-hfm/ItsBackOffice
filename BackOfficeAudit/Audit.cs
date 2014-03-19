@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
+
+namespace BackOfficeAudit
+{
+    public static class Audit
+    {
+        public enum AuditActionTypes { AddNew = 1, Edit = 2, Delete = 3 };
+
+        public static void AddDataAudit(AuditActionTypes _actionType, string _tableName, object _auditData, object _auditOldData)
+        { 
+        
+        }
+
+        private string GetXml(object _auditData)
+        {
+          
+            StringWriter strWriter = new StringWriter();
+            XmlWriterSettings xmlWriterSettings = new XmlWriterSettings()
+            {
+                Encoding = Encoding.Unicode,
+                OmitXmlDeclaration = true,
+                Indent = true
+            };
+            XmlWriter xmlWriter = XmlWriter.Create(strWriter, xmlWriterSettings);
+            XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(_auditData.GetType(), new XmlRootAttribute("AuditData"));
+
+            writer.Serialize(xmlWriter, _auditData);
+            return strWriter.GetStringBuilder().ToString();
+        }
+    }
+}
