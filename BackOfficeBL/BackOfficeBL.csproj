@@ -54,11 +54,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\SearchMaster.cs" />
     <Compile Include="Search\SearchParameter.cs" />
+    <Compile Include="General\Enums.cs" />
     <Compile Include="Security\Group.cs" />
     <Compile Include="Security\MenuItem.cs" />
     <Compile Include="Security\User.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BackOfficeAudit\BackOfficeAudit.csproj">
+      <Project>{567fdb5a-cb79-4698-a92f-1e8f2242db4b}</Project>
+      <Name>BackOfficeAudit</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BackOfficeDAL\BackOfficeDAL.csproj">
       <Project>{74498c2f-1f94-41e0-8122-e8fc8743bfdf}</Project>
       <Name>BackOfficeDAL</Name>
