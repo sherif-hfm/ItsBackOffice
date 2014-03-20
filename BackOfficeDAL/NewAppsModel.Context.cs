@@ -32,5 +32,9 @@ namespace BackOfficeDAL
         public DbSet<Sec_Users> Sec_Users { get; set; }
         public DbSet<Srch_SearchMaster> Srch_SearchMaster { get; set; }
         public DbSet<Srch_SearchParameters> Srch_SearchParameters { get; set; }
+        public DbSet<Acc_Voucher> Acc_Voucher { get; set; }
+        public DbSet<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
+        public DbSet<Acc_VouchersType> Acc_VouchersType { get; set; }
+        public DbSet<Acc_VoucherValidation> Acc_VoucherValidation { get; set; }
     }
 }

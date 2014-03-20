@@ -17,6 +17,12 @@
         <EntityTypeShape EntityType="NewApps.Srch_SearchMaster" Width="1.5" PointX="1.25" PointY="9.25" />
         <EntityTypeShape EntityType="NewApps.Srch_SearchParameters" Width="1.5" PointX="3.875" PointY="9.375" />
         <AssociationConnector Association="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster" />
+        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="0.5" PointY="14.875" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherDtl" Width="1.5" PointX="3.125" PointY="14.625" />
+        <EntityTypeShape EntityType="NewApps.Acc_VouchersType" Width="2.375" PointX="6.25" PointY="13.5" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherValidation" Width="2.25" PointX="9" PointY="15" />
+        <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_VouchersTemplate" />
+        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

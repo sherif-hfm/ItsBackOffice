@@ -6,6 +6,10 @@
     <edmx:StorageModels>
     <Schema Namespace="NewApps.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="NewAppsStoreContainer">
+          <EntitySet Name="Acc_Voucher" EntityType="NewApps.Store.Acc_Voucher" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Acc_VoucherDtl" EntityType="NewApps.Store.Acc_VoucherDtl" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Acc_VouchersType" EntityType="NewApps.Store.Acc_VouchersType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Acc_VoucherValidation" EntityType="NewApps.Store.Acc_VoucherValidation" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_FormFunctions" EntityType="NewApps.Store.Sec_FormFunctions" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_GroupRights" EntityType="NewApps.Store.Sec_GroupRights" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_Groups" EntityType="NewApps.Store.Sec_Groups" store:Type="Tables" Schema="dbo" />
@@ -14,6 +18,14 @@
           <EntitySet Name="Sec_UsersGroup" EntityType="NewApps.Store.Sec_UsersGroup" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Srch_SearchMaster" EntityType="NewApps.Store.Srch_SearchMaster" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Srch_SearchParameters" EntityType="NewApps.Store.Srch_SearchParameters" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Acc_Voucher_Acc_VouchersTemplate" Association="NewApps.Store.FK_Acc_Voucher_Acc_VouchersTemplate">
+            <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
+            <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acc_VoucherDtl_Acc_Voucher" Association="NewApps.Store.FK_Acc_VoucherDtl_Acc_Voucher">
+            <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
+            <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
+          </AssociationSet>
           <AssociationSet Name="FK_Sec_GroupRights_Sec_Groups" Association="NewApps.Store.FK_Sec_GroupRights_Sec_Groups">
             <End Role="Sec_Groups" EntitySet="Sec_Groups" />
             <End Role="Sec_GroupRights" EntitySet="Sec_GroupRights" />
@@ -39,6 +51,109 @@
             <End Role="Srch_SearchParameters" EntitySet="Srch_SearchParameters" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Acc_Voucher">
+          <Key>
+            <PropertyRef Name="VoucherTypeId" />
+            <PropertyRef Name="VoucherId" />
+            <PropertyRef Name="YearId" />
+          </Key>
+          <Property Name="VoucherTypeId" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VoucherId" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="YearId" Type="int" Nullable="false" />
+          <Property Name="VoucherLocationID" Type="nvarchar" MaxLength="20" />
+          <Property Name="VoucherDate" Type="datetime" Nullable="false" />
+          <Property Name="VoucherRefno" Type="nvarchar" MaxLength="20" />
+          <Property Name="VoucherNotes" Type="nvarchar" MaxLength="200" />
+          <Property Name="VoucherPrintCount" Type="int" />
+          <Property Name="IsExtrnalVoucher" Type="bit" Nullable="false" />
+          <Property Name="VoucherExtrnalField1" Type="nvarchar" MaxLength="10" />
+          <Property Name="VoucherExtrnalField2" Type="nvarchar" MaxLength="10" />
+          <Property Name="VoucherExtrnalField3" Type="nvarchar" MaxLength="10" />
+          <Property Name="VoucherExtrnalField4" Type="nvarchar" MaxLength="10" />
+          <Property Name="VoucherExtrnalField5" Type="nvarchar" MaxLength="10" />
+          <Property Name="VoucherPost" Type="bit" Nullable="false" />
+          <Property Name="TotalDtlDebitAmount" Type="decimal" Nullable="false" Precision="16" Scale="3" />
+          <Property Name="TotalCreditAmount" Type="decimal" Nullable="false" Precision="16" Scale="3" />
+          <Property Name="AnulTrans" Type="bit" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserDate" Type="datetime" />
+          <Property Name="ModifiedUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Acc_VoucherDtl">
+          <Key>
+            <PropertyRef Name="VoucherTypeId" />
+            <PropertyRef Name="VoucherId" />
+            <PropertyRef Name="YearId" />
+            <PropertyRef Name="Line_No" />
+          </Key>
+          <Property Name="VoucherTypeId" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VoucherId" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="YearId" Type="int" Nullable="false" />
+          <Property Name="Line_No" Type="int" Nullable="false" />
+          <Property Name="AccountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CostCenterId" Type="nvarchar" MaxLength="20" />
+          <Property Name="DetailRefNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Debit" Type="decimal" Nullable="false" Precision="16" Scale="3" />
+          <Property Name="Credit" Type="decimal" Nullable="false" Precision="16" Scale="3" />
+          <Property Name="CurrancyId" Type="int" Nullable="false" />
+          <Property Name="ExchangeRate" Type="decimal" Nullable="false" Precision="16" Scale="5" />
+          <Property Name="PaidInvoiceAmount" Type="decimal" Nullable="false" Precision="16" Scale="3" />
+          <Property Name="VoucherDtlNotes" Type="nvarchar" MaxLength="100" />
+          <Property Name="DtlExtrnalField1" Type="nvarchar" MaxLength="20" />
+          <Property Name="DtlExtrnalField2" Type="nvarchar" MaxLength="20" />
+          <Property Name="DtlExtrnalField3" Type="nvarchar" MaxLength="20" />
+          <Property Name="DtlExtrnalField4" Type="nvarchar" MaxLength="20" />
+          <Property Name="DtlExtrnalField5" Type="nvarchar" MaxLength="20" />
+          <Property Name="Reconciled" Type="bit" Nullable="false" />
+          <Property Name="DeliveredDate" Type="datetime" />
+          <Property Name="Delivered" Type="bit" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserDate" Type="datetime" />
+          <Property Name="ModifiedUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Acc_VouchersType">
+          <Key>
+            <PropertyRef Name="VoucherTypeId" />
+          </Key>
+          <Property Name="VoucherTypeId" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VoucherName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="VoucherNmae_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreditAccountid" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VoucherCurrancyid" Type="int" />
+          <Property Name="DetailExtraField1" Type="nvarchar" MaxLength="20" />
+          <Property Name="DetailExtraField2" Type="nvarchar" MaxLength="20" />
+          <Property Name="DetailExtraField3" Type="nvarchar" MaxLength="20" />
+          <Property Name="DetailExtraField4" Type="nvarchar" MaxLength="20" />
+          <Property Name="DetailExtraField5" Type="nvarchar" MaxLength="20" />
+          <Property Name="MainExtraField1" Type="nvarchar" MaxLength="20" />
+          <Property Name="MainExtraField2" Type="nvarchar" MaxLength="20" />
+          <Property Name="MainExtraField3" Type="nvarchar" MaxLength="20" />
+          <Property Name="MainExtraField4" Type="nvarchar" MaxLength="20" />
+          <Property Name="MainExtraField5" Type="nvarchar" MaxLength="20" />
+          <Property Name="DepitAccountId" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShortName_Ara" Type="nvarchar" MaxLength="5" />
+          <Property Name="ShortName_Eng" Type="nvarchar" MaxLength="5" />
+          <Property Name="DtlValidationField1" Type="int" />
+          <Property Name="DtlValidationField2" Type="nvarchar" MaxLength="10" />
+          <Property Name="DtlValidationField3" Type="int" />
+          <Property Name="DtlValidationField4" Type="int" />
+          <Property Name="DtlValidationField5" Type="int" />
+          <Property Name="MainValidationField1" Type="int" />
+          <Property Name="MainValidationField2" Type="int" />
+          <Property Name="mainValidationField3" Type="int" />
+          <Property Name="MainValidationField4" Type="int" />
+          <Property Name="MainValidationField5" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Acc_VoucherValidation">
+          <Key>
+            <PropertyRef Name="ValidationId" />
+          </Key>
+          <Property Name="ValidationId" Type="int" Nullable="false" />
+          <Property Name="ValidationName_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValidationName_Eng" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Sec_FormFunctions">
           <Key>
             <PropertyRef Name="FunctionID" />
@@ -139,6 +254,34 @@
           <Property Name="ComboBoxDisplayMember_Ara" Type="nvarchar" MaxLength="50" />
           <Property Name="ComboBoxDisplayMember_Eng" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <Association Name="FK_Acc_Voucher_Acc_VouchersTemplate">
+          <End Role="Acc_VouchersType" Type="NewApps.Store.Acc_VouchersType" Multiplicity="1" />
+          <End Role="Acc_Voucher" Type="NewApps.Store.Acc_Voucher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_VouchersType">
+              <PropertyRef Name="VoucherTypeId" />
+            </Principal>
+            <Dependent Role="Acc_Voucher">
+              <PropertyRef Name="VoucherTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acc_VoucherDtl_Acc_Voucher">
+          <End Role="Acc_Voucher" Type="NewApps.Store.Acc_Voucher" Multiplicity="1" />
+          <End Role="Acc_VoucherDtl" Type="NewApps.Store.Acc_VoucherDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_Voucher">
+              <PropertyRef Name="VoucherTypeId" />
+              <PropertyRef Name="VoucherId" />
+              <PropertyRef Name="YearId" />
+            </Principal>
+            <Dependent Role="Acc_VoucherDtl">
+              <PropertyRef Name="VoucherTypeId" />
+              <PropertyRef Name="VoucherId" />
+              <PropertyRef Name="YearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Sec_GroupRights_Sec_Groups">
           <End Role="Sec_Groups" Type="NewApps.Store.Sec_Groups" Multiplicity="1" />
           <End Role="Sec_GroupRights" Type="NewApps.Store.Sec_GroupRights" Multiplicity="*" />
@@ -242,6 +385,18 @@
           <AssociationSet Name="FK_Srch_SearchParameters_Srch_SearchMaster" Association="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster">
             <End Role="Srch_SearchMaster" EntitySet="Srch_SearchMaster" />
             <End Role="Srch_SearchParameters" EntitySet="Srch_SearchParameters" />
+          </AssociationSet>
+          <EntitySet Name="Acc_Voucher" EntityType="NewApps.Acc_Voucher" />
+          <EntitySet Name="Acc_VoucherDtl" EntityType="NewApps.Acc_VoucherDtl" />
+          <EntitySet Name="Acc_VouchersType" EntityType="NewApps.Acc_VouchersType" />
+          <EntitySet Name="Acc_VoucherValidation" EntityType="NewApps.Acc_VoucherValidation" />
+          <AssociationSet Name="FK_Acc_Voucher_Acc_VouchersTemplate" Association="NewApps.FK_Acc_Voucher_Acc_VouchersTemplate">
+            <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
+            <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acc_VoucherDtl_Acc_Voucher" Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher">
+            <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
+            <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
@@ -398,6 +553,141 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Acc_Voucher">
+          <Key>
+            <PropertyRef Name="VoucherTypeId" />
+            <PropertyRef Name="VoucherId" />
+            <PropertyRef Name="YearId" />
+          </Key>
+          <Property Type="String" Name="VoucherTypeId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <Property Type="String" Name="VoucherLocationID" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="VoucherDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="VoucherRefno" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherNotes" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="VoucherPrintCount" />
+          <Property Type="Boolean" Name="IsExtrnalVoucher" Nullable="false" />
+          <Property Type="String" Name="VoucherExtrnalField1" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherExtrnalField2" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherExtrnalField3" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherExtrnalField4" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherExtrnalField5" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="VoucherPost" Nullable="false" />
+          <Property Type="Decimal" Name="TotalDtlDebitAmount" Nullable="false" Precision="16" Scale="3" />
+          <Property Type="Decimal" Name="TotalCreditAmount" Nullable="false" Precision="16" Scale="3" />
+          <Property Type="Boolean" Name="AnulTrans" Nullable="false" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UserDate" Precision="3" />
+          <Property Type="String" Name="ModifiedUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <NavigationProperty Name="Acc_VouchersType" Relationship="NewApps.FK_Acc_Voucher_Acc_VouchersTemplate" FromRole="Acc_Voucher" ToRole="Acc_VouchersType" />
+          <NavigationProperty Name="Acc_VoucherDtl" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" FromRole="Acc_Voucher" ToRole="Acc_VoucherDtl" />
+        </EntityType>
+        <EntityType Name="Acc_VoucherDtl">
+          <Key>
+            <PropertyRef Name="VoucherTypeId" />
+            <PropertyRef Name="VoucherId" />
+            <PropertyRef Name="YearId" />
+            <PropertyRef Name="Line_No" />
+          </Key>
+          <Property Type="String" Name="VoucherTypeId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <Property Type="Int32" Name="Line_No" Nullable="false" />
+          <Property Type="String" Name="AccountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CostCenterId" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DetailRefNo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Debit" Nullable="false" Precision="16" Scale="3" />
+          <Property Type="Decimal" Name="Credit" Nullable="false" Precision="16" Scale="3" />
+          <Property Type="Int32" Name="CurrancyId" Nullable="false" />
+          <Property Type="Decimal" Name="ExchangeRate" Nullable="false" Precision="16" Scale="5" />
+          <Property Type="Decimal" Name="PaidInvoiceAmount" Nullable="false" Precision="16" Scale="3" />
+          <Property Type="String" Name="VoucherDtlNotes" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DtlExtrnalField1" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DtlExtrnalField2" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DtlExtrnalField3" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DtlExtrnalField4" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DtlExtrnalField5" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Reconciled" Nullable="false" />
+          <Property Type="DateTime" Name="DeliveredDate" Precision="3" />
+          <Property Type="Boolean" Name="Delivered" Nullable="false" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UserDate" Precision="3" />
+          <Property Type="String" Name="ModifiedUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <NavigationProperty Name="Acc_Voucher" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" FromRole="Acc_VoucherDtl" ToRole="Acc_Voucher" />
+        </EntityType>
+        <EntityType Name="Acc_VouchersType">
+          <Key>
+            <PropertyRef Name="VoucherTypeId" />
+          </Key>
+          <Property Type="String" Name="VoucherTypeId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherName_Ara" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VoucherNmae_Eng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreditAccountid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="VoucherCurrancyid" />
+          <Property Type="String" Name="DetailExtraField1" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DetailExtraField2" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DetailExtraField3" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DetailExtraField4" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DetailExtraField5" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MainExtraField1" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MainExtraField2" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MainExtraField3" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MainExtraField4" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MainExtraField5" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DepitAccountId" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShortName_Ara" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShortName_Eng" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DtlValidationField1" />
+          <Property Type="String" Name="DtlValidationField2" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DtlValidationField3" />
+          <Property Type="Int32" Name="DtlValidationField4" />
+          <Property Type="Int32" Name="DtlValidationField5" />
+          <Property Type="Int32" Name="MainValidationField1" />
+          <Property Type="Int32" Name="MainValidationField2" />
+          <Property Type="Int32" Name="mainValidationField3" />
+          <Property Type="Int32" Name="MainValidationField4" />
+          <Property Type="String" Name="MainValidationField5" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Acc_Voucher" Relationship="NewApps.FK_Acc_Voucher_Acc_VouchersTemplate" FromRole="Acc_VouchersType" ToRole="Acc_Voucher" />
+        </EntityType>
+        <EntityType Name="Acc_VoucherValidation">
+          <Key>
+            <PropertyRef Name="ValidationId" />
+          </Key>
+          <Property Type="Int32" Name="ValidationId" Nullable="false" />
+          <Property Type="String" Name="ValidationName_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ValidationName_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Acc_Voucher_Acc_VouchersTemplate">
+          <End Type="NewApps.Acc_VouchersType" Role="Acc_VouchersType" Multiplicity="1" />
+          <End Type="NewApps.Acc_Voucher" Role="Acc_Voucher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_VouchersType">
+              <PropertyRef Name="VoucherTypeId" />
+            </Principal>
+            <Dependent Role="Acc_Voucher">
+              <PropertyRef Name="VoucherTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acc_VoucherDtl_Acc_Voucher">
+          <End Type="NewApps.Acc_Voucher" Role="Acc_Voucher" Multiplicity="1" />
+          <End Type="NewApps.Acc_VoucherDtl" Role="Acc_VoucherDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_Voucher">
+              <PropertyRef Name="VoucherTypeId" />
+              <PropertyRef Name="VoucherId" />
+              <PropertyRef Name="YearId" />
+            </Principal>
+            <Dependent Role="Acc_VoucherDtl">
+              <PropertyRef Name="VoucherTypeId" />
+              <PropertyRef Name="VoucherId" />
+              <PropertyRef Name="YearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -506,6 +796,108 @@
                 <ScalarProperty Name="ValuesKeys" ColumnName="ValuesKeys" />
                 <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
                 <ScalarProperty Name="SearchID" ColumnName="SearchID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Acc_Voucher">
+            <EntityTypeMapping TypeName="NewApps.Acc_Voucher">
+              <MappingFragment StoreEntitySet="Acc_Voucher">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+                <ScalarProperty Name="UserDate" ColumnName="UserDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AnulTrans" ColumnName="AnulTrans" />
+                <ScalarProperty Name="TotalCreditAmount" ColumnName="TotalCreditAmount" />
+                <ScalarProperty Name="TotalDtlDebitAmount" ColumnName="TotalDtlDebitAmount" />
+                <ScalarProperty Name="VoucherPost" ColumnName="VoucherPost" />
+                <ScalarProperty Name="VoucherExtrnalField5" ColumnName="VoucherExtrnalField5" />
+                <ScalarProperty Name="VoucherExtrnalField4" ColumnName="VoucherExtrnalField4" />
+                <ScalarProperty Name="VoucherExtrnalField3" ColumnName="VoucherExtrnalField3" />
+                <ScalarProperty Name="VoucherExtrnalField2" ColumnName="VoucherExtrnalField2" />
+                <ScalarProperty Name="VoucherExtrnalField1" ColumnName="VoucherExtrnalField1" />
+                <ScalarProperty Name="IsExtrnalVoucher" ColumnName="IsExtrnalVoucher" />
+                <ScalarProperty Name="VoucherPrintCount" ColumnName="VoucherPrintCount" />
+                <ScalarProperty Name="VoucherNotes" ColumnName="VoucherNotes" />
+                <ScalarProperty Name="VoucherRefno" ColumnName="VoucherRefno" />
+                <ScalarProperty Name="VoucherDate" ColumnName="VoucherDate" />
+                <ScalarProperty Name="VoucherLocationID" ColumnName="VoucherLocationID" />
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+                <ScalarProperty Name="VoucherId" ColumnName="VoucherId" />
+                <ScalarProperty Name="VoucherTypeId" ColumnName="VoucherTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Acc_VoucherDtl">
+            <EntityTypeMapping TypeName="NewApps.Acc_VoucherDtl">
+              <MappingFragment StoreEntitySet="Acc_VoucherDtl">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedUser" ColumnName="ModifiedUser" />
+                <ScalarProperty Name="UserDate" ColumnName="UserDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Delivered" ColumnName="Delivered" />
+                <ScalarProperty Name="DeliveredDate" ColumnName="DeliveredDate" />
+                <ScalarProperty Name="Reconciled" ColumnName="Reconciled" />
+                <ScalarProperty Name="DtlExtrnalField5" ColumnName="DtlExtrnalField5" />
+                <ScalarProperty Name="DtlExtrnalField4" ColumnName="DtlExtrnalField4" />
+                <ScalarProperty Name="DtlExtrnalField3" ColumnName="DtlExtrnalField3" />
+                <ScalarProperty Name="DtlExtrnalField2" ColumnName="DtlExtrnalField2" />
+                <ScalarProperty Name="DtlExtrnalField1" ColumnName="DtlExtrnalField1" />
+                <ScalarProperty Name="VoucherDtlNotes" ColumnName="VoucherDtlNotes" />
+                <ScalarProperty Name="PaidInvoiceAmount" ColumnName="PaidInvoiceAmount" />
+                <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+                <ScalarProperty Name="CurrancyId" ColumnName="CurrancyId" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="DetailRefNo" ColumnName="DetailRefNo" />
+                <ScalarProperty Name="CostCenterId" ColumnName="CostCenterId" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Line_No" ColumnName="Line_No" />
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+                <ScalarProperty Name="VoucherId" ColumnName="VoucherId" />
+                <ScalarProperty Name="VoucherTypeId" ColumnName="VoucherTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Acc_VouchersType">
+            <EntityTypeMapping TypeName="NewApps.Acc_VouchersType">
+              <MappingFragment StoreEntitySet="Acc_VouchersType">
+                <ScalarProperty Name="MainValidationField5" ColumnName="MainValidationField5" />
+                <ScalarProperty Name="MainValidationField4" ColumnName="MainValidationField4" />
+                <ScalarProperty Name="mainValidationField3" ColumnName="mainValidationField3" />
+                <ScalarProperty Name="MainValidationField2" ColumnName="MainValidationField2" />
+                <ScalarProperty Name="MainValidationField1" ColumnName="MainValidationField1" />
+                <ScalarProperty Name="DtlValidationField5" ColumnName="DtlValidationField5" />
+                <ScalarProperty Name="DtlValidationField4" ColumnName="DtlValidationField4" />
+                <ScalarProperty Name="DtlValidationField3" ColumnName="DtlValidationField3" />
+                <ScalarProperty Name="DtlValidationField2" ColumnName="DtlValidationField2" />
+                <ScalarProperty Name="DtlValidationField1" ColumnName="DtlValidationField1" />
+                <ScalarProperty Name="ShortName_Eng" ColumnName="ShortName_Eng" />
+                <ScalarProperty Name="ShortName_Ara" ColumnName="ShortName_Ara" />
+                <ScalarProperty Name="DepitAccountId" ColumnName="DepitAccountId" />
+                <ScalarProperty Name="MainExtraField5" ColumnName="MainExtraField5" />
+                <ScalarProperty Name="MainExtraField4" ColumnName="MainExtraField4" />
+                <ScalarProperty Name="MainExtraField3" ColumnName="MainExtraField3" />
+                <ScalarProperty Name="MainExtraField2" ColumnName="MainExtraField2" />
+                <ScalarProperty Name="MainExtraField1" ColumnName="MainExtraField1" />
+                <ScalarProperty Name="DetailExtraField5" ColumnName="DetailExtraField5" />
+                <ScalarProperty Name="DetailExtraField4" ColumnName="DetailExtraField4" />
+                <ScalarProperty Name="DetailExtraField3" ColumnName="DetailExtraField3" />
+                <ScalarProperty Name="DetailExtraField2" ColumnName="DetailExtraField2" />
+                <ScalarProperty Name="DetailExtraField1" ColumnName="DetailExtraField1" />
+                <ScalarProperty Name="VoucherCurrancyid" ColumnName="VoucherCurrancyid" />
+                <ScalarProperty Name="CreditAccountid" ColumnName="CreditAccountid" />
+                <ScalarProperty Name="VoucherNmae_Eng" ColumnName="VoucherNmae_Eng" />
+                <ScalarProperty Name="VoucherName_Ara" ColumnName="VoucherName_Ara" />
+                <ScalarProperty Name="VoucherTypeId" ColumnName="VoucherTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Acc_VoucherValidation">
+            <EntityTypeMapping TypeName="NewApps.Acc_VoucherValidation">
+              <MappingFragment StoreEntitySet="Acc_VoucherValidation">
+                <ScalarProperty Name="ValidationName_Eng" ColumnName="ValidationName_Eng" />
+                <ScalarProperty Name="ValidationName_Ara" ColumnName="ValidationName_Ara" />
+                <ScalarProperty Name="ValidationId" ColumnName="ValidationId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
