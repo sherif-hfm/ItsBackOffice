@@ -14,20 +14,80 @@ namespace BackOfficeUI.Accounting
 {
     public partial class frmVoucher : frmBaseDB
     {
-        private BackOfficeBL.Accounting.Voucher CrVoucher;
+        private VoucherType CrVoucher;
+
         public frmVoucher()
         {
             InitializeComponent();
         }
-
+        #region Events
         private void frmVoucher_Load(object sender, EventArgs e)
         {
-            List<VoucherType> vot = Voucher.GetAllVouchers();
-            LoadDataGrid(vot);
+            List<VoucherType> VouchersList = Voucher.GetAllVouchers();
+            LoadDataGrid(VouchersList);
             List<VoucherValidation> VotVal = Voucher.GetAllValidations();
             LoadComboValidation(VotVal);
+            List<Account> AccountList = Account.GetAllAccountTree();
+            LoadCreditComboAccount(AccountList);
+            LoadDepitComboAccount(AccountList);
         }
 
+        private void dgrdVouchers_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void frmVoucher_AddNew(object sender, ref bool _status)
+        {
+            CrVoucher = new VoucherType();
+        }
+
+        private void frmVoucher_Cancel(object sender)
+        {
+
+        }
+
+        private void frmVoucher_Edit(object sender, ref bool _status)
+        {
+
+        }
+
+        private void frmVoucher_Delete(object sender, ref bool _status)
+        {
+            //if (CrVoucher == null)
+            //{
+            //    _status = false;
+            //    return;
+            //}
+            //else
+            //{
+            //    if (CrVoucher.IsNew == true)
+            //    {
+            //        _status = false;
+            //        return;
+            //    }
+            //}
+
+            //DataDeleteResult result = CrVoucher.Delete();
+            //_status = result.DeleteStatus;
+            //if (result.DeleteStatus == false)
+            //    MessageBox.Show(result.ErrorMessage);
+            //else
+            //    CrVoucher = null;
+        }
+
+        private void frmVoucher_Save(object sender, ref bool _status)
+        {
+            //GetDataFromGUI();
+            //DataSaveResult saveResult = CrAccount.Save();
+            //if (saveResult.SaveStatus == false)
+            //    _status = false;
+            //else
+            //    ShowGUI();
+        }
+        #endregion
+        #region Methods
         private void LoadDataGrid(List<VoucherType> _VoucherTypeList)
         {
             if (_VoucherTypeList.Count != 0)
@@ -75,12 +135,38 @@ namespace BackOfficeUI.Accounting
 
         }
 
-        private void LoadComboAccounts()
+        private void LoadCreditComboAccount(List<Account> AccountList)
         {
-            cbxCreditAccounts.ValueMember = "AccountID";
-            cbxCreditAccounts.DisplayMember = "";
-            cbxCreditAccounts.DataSource = Account.GetAllAccountTree();
+            if (AccountList.Count != 0)
+            {
+                cbxCreditAccounts.ValueMember = "AccountID";
+                cbxCreditAccounts.DisplayMember = "NameAndNos";
+                cbxCreditAccounts.DataSource = AccountList;
+            }
         }
+
+        private void LoadDepitComboAccount(List<Account> AccountList)
+        {
+            if (AccountList.Count != 0)
+            {
+                cbxCreditAccounts.ValueMember = "AccountID";
+                cbxCreditAccounts.DisplayMember = "NameAndNos";
+                cbxCreditAccounts.DataSource = AccountList;
+            }
+        }
+
+        private void CollectScreenValues()
+        {
+            CrVoucher.CurrencyID = Convert.ToInt32(cbxEnCurrency.SelectedValue);
+            CrVoucher.CriedtAccountID = cbxCreditAccounts.SelectedValue.ToString();
+            CrVoucher.DepitAccountId = cbxDepitAccounts.SelectedValue.ToString();
+
+        }
+
+        #endregion
+
+
+
 
     }
 }

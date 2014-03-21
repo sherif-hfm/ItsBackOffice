@@ -43,11 +43,6 @@
             this.cbxValidation2 = new BackOfficeUI.Controls.ComboBox();
             this.cbxValidation1 = new BackOfficeUI.Controls.ComboBox();
             this.lblCheckValueAdding = new BackOfficeUI.Controls.Label();
-            this.txtArExtraField1 = new BackOfficeUI.Controls.TextBox();
-            this.txtArExtraField5 = new BackOfficeUI.Controls.TextBox();
-            this.txtArExtraField4 = new BackOfficeUI.Controls.TextBox();
-            this.txtArExtraField3 = new BackOfficeUI.Controls.TextBox();
-            this.txtArExtraField2 = new BackOfficeUI.Controls.TextBox();
             this.txtEnExtraField5 = new BackOfficeUI.Controls.TextBox();
             this.txtEnExtraField2 = new BackOfficeUI.Controls.TextBox();
             this.txtEnExtraField3 = new BackOfficeUI.Controls.TextBox();
@@ -57,10 +52,13 @@
             this.lblExtraField4 = new BackOfficeUI.Controls.Label();
             this.lblExtraField5 = new BackOfficeUI.Controls.Label();
             this.txtEnExtraField1 = new BackOfficeUI.Controls.TextBox();
-            this.lblEnglish = new BackOfficeUI.Controls.Label();
-            this.lblArabic = new BackOfficeUI.Controls.Label();
             this.lblExtraField1 = new BackOfficeUI.Controls.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxEnCurrency = new BackOfficeUI.Controls.ComboBox();
+            this.cbxArCurrency = new BackOfficeUI.Controls.ComboBox();
+            this.cbxDepitAccounts = new BackOfficeUI.Controls.ComboBox();
+            this.lblDepitAccount = new BackOfficeUI.Controls.Label();
+            this.cbxCreditAccounts = new BackOfficeUI.Controls.ComboBox();
             this.lblCreditAccount = new BackOfficeUI.Controls.Label();
             this.lblVoucherCode = new BackOfficeUI.Controls.Label();
             this.txtVoucherCode = new BackOfficeUI.Controls.TextBox();
@@ -76,11 +74,6 @@
             this.cbxDtlValidation3 = new BackOfficeUI.Controls.ComboBox();
             this.cbxDtlValidation2 = new BackOfficeUI.Controls.ComboBox();
             this.cbxDtlValidation1 = new BackOfficeUI.Controls.ComboBox();
-            this.txtEnDtlExtraField1 = new BackOfficeUI.Controls.TextBox();
-            this.txtEnDtlExtraField5 = new BackOfficeUI.Controls.TextBox();
-            this.txtEnDtlExtraField4 = new BackOfficeUI.Controls.TextBox();
-            this.txtEnDtlExtraField3 = new BackOfficeUI.Controls.TextBox();
-            this.txtEnDtlExtraField2 = new BackOfficeUI.Controls.TextBox();
             this.txtArDtlExtraField5 = new BackOfficeUI.Controls.TextBox();
             this.txtArDtlExtraField2 = new BackOfficeUI.Controls.TextBox();
             this.txtArDtlExtraField3 = new BackOfficeUI.Controls.TextBox();
@@ -91,11 +84,6 @@
             this.lblDtlExtraField5 = new BackOfficeUI.Controls.Label();
             this.txtArDtlExtraField1 = new BackOfficeUI.Controls.TextBox();
             this.lblDtlExtraField1 = new BackOfficeUI.Controls.Label();
-            this.cbxCreditAccounts = new BackOfficeUI.Controls.ComboBox();
-            this.cbxDepitAccounts = new BackOfficeUI.Controls.ComboBox();
-            this.lblDepitAccount = new BackOfficeUI.Controls.Label();
-            this.cbxArCurrency = new BackOfficeUI.Controls.ComboBox();
-            this.cbxEnCurrency = new BackOfficeUI.Controls.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgrdVouchers)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -114,6 +102,7 @@
             this.VoucherTypeID});
             resources.ApplyResources(this.dgrdVouchers, "dgrdVouchers");
             this.dgrdVouchers.Name = "dgrdVouchers";
+            this.dgrdVouchers.SelectionChanged += new System.EventHandler(this.dgrdVouchers_SelectionChanged);
             // 
             // clmVoucherCode
             // 
@@ -154,11 +143,6 @@
             this.groupBox2.Controls.Add(this.cbxValidation2);
             this.groupBox2.Controls.Add(this.cbxValidation1);
             this.groupBox2.Controls.Add(this.lblCheckValueAdding);
-            this.groupBox2.Controls.Add(this.txtArExtraField1);
-            this.groupBox2.Controls.Add(this.txtArExtraField5);
-            this.groupBox2.Controls.Add(this.txtArExtraField4);
-            this.groupBox2.Controls.Add(this.txtArExtraField3);
-            this.groupBox2.Controls.Add(this.txtArExtraField2);
             this.groupBox2.Controls.Add(this.txtEnExtraField5);
             this.groupBox2.Controls.Add(this.txtEnExtraField2);
             this.groupBox2.Controls.Add(this.txtEnExtraField3);
@@ -168,8 +152,6 @@
             this.groupBox2.Controls.Add(this.lblExtraField4);
             this.groupBox2.Controls.Add(this.lblExtraField5);
             this.groupBox2.Controls.Add(this.txtEnExtraField1);
-            this.groupBox2.Controls.Add(this.lblEnglish);
-            this.groupBox2.Controls.Add(this.lblArabic);
             this.groupBox2.Controls.Add(this.lblExtraField1);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
@@ -226,46 +208,6 @@
             this.lblCheckValueAdding.IsRequired = false;
             this.lblCheckValueAdding.LockedInModes = 25;
             this.lblCheckValueAdding.Name = "lblCheckValueAdding";
-            // 
-            // txtArExtraField1
-            // 
-            this.txtArExtraField1.BackColor = System.Drawing.Color.White;
-            this.txtArExtraField1.IsRequired = false;
-            resources.ApplyResources(this.txtArExtraField1, "txtArExtraField1");
-            this.txtArExtraField1.LockedInModes = 25;
-            this.txtArExtraField1.Name = "txtArExtraField1";
-            // 
-            // txtArExtraField5
-            // 
-            this.txtArExtraField5.BackColor = System.Drawing.Color.White;
-            this.txtArExtraField5.IsRequired = false;
-            resources.ApplyResources(this.txtArExtraField5, "txtArExtraField5");
-            this.txtArExtraField5.LockedInModes = 25;
-            this.txtArExtraField5.Name = "txtArExtraField5";
-            // 
-            // txtArExtraField4
-            // 
-            this.txtArExtraField4.BackColor = System.Drawing.Color.White;
-            this.txtArExtraField4.IsRequired = false;
-            resources.ApplyResources(this.txtArExtraField4, "txtArExtraField4");
-            this.txtArExtraField4.LockedInModes = 25;
-            this.txtArExtraField4.Name = "txtArExtraField4";
-            // 
-            // txtArExtraField3
-            // 
-            this.txtArExtraField3.BackColor = System.Drawing.Color.White;
-            this.txtArExtraField3.IsRequired = false;
-            resources.ApplyResources(this.txtArExtraField3, "txtArExtraField3");
-            this.txtArExtraField3.LockedInModes = 25;
-            this.txtArExtraField3.Name = "txtArExtraField3";
-            // 
-            // txtArExtraField2
-            // 
-            this.txtArExtraField2.BackColor = System.Drawing.Color.White;
-            this.txtArExtraField2.IsRequired = false;
-            resources.ApplyResources(this.txtArExtraField2, "txtArExtraField2");
-            this.txtArExtraField2.LockedInModes = 25;
-            this.txtArExtraField2.Name = "txtArExtraField2";
             // 
             // txtEnExtraField5
             // 
@@ -335,20 +277,6 @@
             this.txtEnExtraField1.LockedInModes = 25;
             this.txtEnExtraField1.Name = "txtEnExtraField1";
             // 
-            // lblEnglish
-            // 
-            resources.ApplyResources(this.lblEnglish, "lblEnglish");
-            this.lblEnglish.IsRequired = false;
-            this.lblEnglish.LockedInModes = 25;
-            this.lblEnglish.Name = "lblEnglish";
-            // 
-            // lblArabic
-            // 
-            resources.ApplyResources(this.lblArabic, "lblArabic");
-            this.lblArabic.IsRequired = false;
-            this.lblArabic.LockedInModes = 25;
-            this.lblArabic.Name = "lblArabic";
-            // 
             // lblExtraField1
             // 
             resources.ApplyResources(this.lblExtraField1, "lblExtraField1");
@@ -375,6 +303,49 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // cbxEnCurrency
+            // 
+            this.cbxEnCurrency.BackColor = System.Drawing.Color.White;
+            this.cbxEnCurrency.FormattingEnabled = true;
+            this.cbxEnCurrency.IsRequired = false;
+            resources.ApplyResources(this.cbxEnCurrency, "cbxEnCurrency");
+            this.cbxEnCurrency.LockedInModes = 25;
+            this.cbxEnCurrency.Name = "cbxEnCurrency";
+            // 
+            // cbxArCurrency
+            // 
+            this.cbxArCurrency.BackColor = System.Drawing.Color.White;
+            this.cbxArCurrency.FormattingEnabled = true;
+            this.cbxArCurrency.IsRequired = false;
+            resources.ApplyResources(this.cbxArCurrency, "cbxArCurrency");
+            this.cbxArCurrency.LockedInModes = 25;
+            this.cbxArCurrency.Name = "cbxArCurrency";
+            // 
+            // cbxDepitAccounts
+            // 
+            this.cbxDepitAccounts.BackColor = System.Drawing.Color.White;
+            this.cbxDepitAccounts.FormattingEnabled = true;
+            this.cbxDepitAccounts.IsRequired = false;
+            resources.ApplyResources(this.cbxDepitAccounts, "cbxDepitAccounts");
+            this.cbxDepitAccounts.LockedInModes = 25;
+            this.cbxDepitAccounts.Name = "cbxDepitAccounts";
+            // 
+            // lblDepitAccount
+            // 
+            resources.ApplyResources(this.lblDepitAccount, "lblDepitAccount");
+            this.lblDepitAccount.IsRequired = false;
+            this.lblDepitAccount.LockedInModes = 25;
+            this.lblDepitAccount.Name = "lblDepitAccount";
+            // 
+            // cbxCreditAccounts
+            // 
+            this.cbxCreditAccounts.BackColor = System.Drawing.Color.White;
+            this.cbxCreditAccounts.FormattingEnabled = true;
+            this.cbxCreditAccounts.IsRequired = false;
+            resources.ApplyResources(this.cbxCreditAccounts, "cbxCreditAccounts");
+            this.cbxCreditAccounts.LockedInModes = 25;
+            this.cbxCreditAccounts.Name = "cbxCreditAccounts";
             // 
             // lblCreditAccount
             // 
@@ -449,11 +420,6 @@
             this.groupBox3.Controls.Add(this.cbxDtlValidation3);
             this.groupBox3.Controls.Add(this.cbxDtlValidation2);
             this.groupBox3.Controls.Add(this.cbxDtlValidation1);
-            this.groupBox3.Controls.Add(this.txtEnDtlExtraField1);
-            this.groupBox3.Controls.Add(this.txtEnDtlExtraField5);
-            this.groupBox3.Controls.Add(this.txtEnDtlExtraField4);
-            this.groupBox3.Controls.Add(this.txtEnDtlExtraField3);
-            this.groupBox3.Controls.Add(this.txtEnDtlExtraField2);
             this.groupBox3.Controls.Add(this.txtArDtlExtraField5);
             this.groupBox3.Controls.Add(this.txtArDtlExtraField2);
             this.groupBox3.Controls.Add(this.txtArDtlExtraField3);
@@ -512,46 +478,6 @@
             resources.ApplyResources(this.cbxDtlValidation1, "cbxDtlValidation1");
             this.cbxDtlValidation1.LockedInModes = 25;
             this.cbxDtlValidation1.Name = "cbxDtlValidation1";
-            // 
-            // txtEnDtlExtraField1
-            // 
-            this.txtEnDtlExtraField1.BackColor = System.Drawing.Color.White;
-            this.txtEnDtlExtraField1.IsRequired = false;
-            resources.ApplyResources(this.txtEnDtlExtraField1, "txtEnDtlExtraField1");
-            this.txtEnDtlExtraField1.LockedInModes = 25;
-            this.txtEnDtlExtraField1.Name = "txtEnDtlExtraField1";
-            // 
-            // txtEnDtlExtraField5
-            // 
-            this.txtEnDtlExtraField5.BackColor = System.Drawing.Color.White;
-            this.txtEnDtlExtraField5.IsRequired = false;
-            resources.ApplyResources(this.txtEnDtlExtraField5, "txtEnDtlExtraField5");
-            this.txtEnDtlExtraField5.LockedInModes = 25;
-            this.txtEnDtlExtraField5.Name = "txtEnDtlExtraField5";
-            // 
-            // txtEnDtlExtraField4
-            // 
-            this.txtEnDtlExtraField4.BackColor = System.Drawing.Color.White;
-            this.txtEnDtlExtraField4.IsRequired = false;
-            resources.ApplyResources(this.txtEnDtlExtraField4, "txtEnDtlExtraField4");
-            this.txtEnDtlExtraField4.LockedInModes = 25;
-            this.txtEnDtlExtraField4.Name = "txtEnDtlExtraField4";
-            // 
-            // txtEnDtlExtraField3
-            // 
-            this.txtEnDtlExtraField3.BackColor = System.Drawing.Color.White;
-            this.txtEnDtlExtraField3.IsRequired = false;
-            resources.ApplyResources(this.txtEnDtlExtraField3, "txtEnDtlExtraField3");
-            this.txtEnDtlExtraField3.LockedInModes = 25;
-            this.txtEnDtlExtraField3.Name = "txtEnDtlExtraField3";
-            // 
-            // txtEnDtlExtraField2
-            // 
-            this.txtEnDtlExtraField2.BackColor = System.Drawing.Color.White;
-            this.txtEnDtlExtraField2.IsRequired = false;
-            resources.ApplyResources(this.txtEnDtlExtraField2, "txtEnDtlExtraField2");
-            this.txtEnDtlExtraField2.LockedInModes = 25;
-            this.txtEnDtlExtraField2.Name = "txtEnDtlExtraField2";
             // 
             // txtArDtlExtraField5
             // 
@@ -628,49 +554,6 @@
             this.lblDtlExtraField1.LockedInModes = 25;
             this.lblDtlExtraField1.Name = "lblDtlExtraField1";
             // 
-            // cbxCreditAccounts
-            // 
-            this.cbxCreditAccounts.BackColor = System.Drawing.Color.White;
-            this.cbxCreditAccounts.FormattingEnabled = true;
-            this.cbxCreditAccounts.IsRequired = false;
-            resources.ApplyResources(this.cbxCreditAccounts, "cbxCreditAccounts");
-            this.cbxCreditAccounts.LockedInModes = 25;
-            this.cbxCreditAccounts.Name = "cbxCreditAccounts";
-            // 
-            // cbxDepitAccounts
-            // 
-            this.cbxDepitAccounts.BackColor = System.Drawing.Color.White;
-            this.cbxDepitAccounts.FormattingEnabled = true;
-            this.cbxDepitAccounts.IsRequired = false;
-            resources.ApplyResources(this.cbxDepitAccounts, "cbxDepitAccounts");
-            this.cbxDepitAccounts.LockedInModes = 25;
-            this.cbxDepitAccounts.Name = "cbxDepitAccounts";
-            // 
-            // lblDepitAccount
-            // 
-            resources.ApplyResources(this.lblDepitAccount, "lblDepitAccount");
-            this.lblDepitAccount.IsRequired = false;
-            this.lblDepitAccount.LockedInModes = 25;
-            this.lblDepitAccount.Name = "lblDepitAccount";
-            // 
-            // cbxArCurrency
-            // 
-            this.cbxArCurrency.BackColor = System.Drawing.Color.White;
-            this.cbxArCurrency.FormattingEnabled = true;
-            this.cbxArCurrency.IsRequired = false;
-            resources.ApplyResources(this.cbxArCurrency, "cbxArCurrency");
-            this.cbxArCurrency.LockedInModes = 25;
-            this.cbxArCurrency.Name = "cbxArCurrency";
-            // 
-            // cbxEnCurrency
-            // 
-            this.cbxEnCurrency.BackColor = System.Drawing.Color.White;
-            this.cbxEnCurrency.FormattingEnabled = true;
-            this.cbxEnCurrency.IsRequired = false;
-            resources.ApplyResources(this.cbxEnCurrency, "cbxEnCurrency");
-            this.cbxEnCurrency.LockedInModes = 25;
-            this.cbxEnCurrency.Name = "cbxEnCurrency";
-            // 
             // frmVoucher
             // 
             resources.ApplyResources(this, "$this");
@@ -680,6 +563,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgrdVouchers);
             this.Name = "frmVoucher";
+            this.AddNew += new BackOfficeUI.Controls.frmBaseDB.AddNewDelegate(this.frmVoucher_AddNew);
+            this.Edit += new BackOfficeUI.Controls.frmBaseDB.EditDelegate(this.frmVoucher_Edit);
+            this.Delete += new BackOfficeUI.Controls.frmBaseDB.DeleteDelegate(this.frmVoucher_Delete);
+            this.Save += new BackOfficeUI.Controls.frmBaseDB.SaveDelegate(this.frmVoucher_Save);
+            this.Cancel += new BackOfficeUI.Controls.frmBaseDB.CancelDelegate(this.frmVoucher_Cancel);
             this.Load += new System.EventHandler(this.frmVoucher_Load);
             this.Controls.SetChildIndex(this.dgrdVouchers, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
@@ -703,8 +591,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private Controls.Label lblExtraField1;
         private Controls.TextBox txtEnExtraField1;
-        private Controls.Label lblEnglish;
-        private Controls.Label lblArabic;
         private Controls.Label lblExtraField2;
         private Controls.Label lblExtraField3;
         private Controls.Label lblExtraField4;
@@ -713,11 +599,6 @@
         private Controls.TextBox txtEnExtraField3;
         private Controls.TextBox txtEnExtraField4;
         private Controls.TextBox txtEnExtraField5;
-        private Controls.TextBox txtArExtraField1;
-        private Controls.TextBox txtArExtraField5;
-        private Controls.TextBox txtArExtraField4;
-        private Controls.TextBox txtArExtraField3;
-        private Controls.TextBox txtArExtraField2;
         private Controls.Label lblCheckValueAdding;
         private Controls.ComboBox cbxValidation1;
         private Controls.ComboBox cbxValidation5;
@@ -740,11 +621,6 @@
         private Controls.ComboBox cbxDtlValidation3;
         private Controls.ComboBox cbxDtlValidation2;
         private Controls.ComboBox cbxDtlValidation1;
-        private Controls.TextBox txtEnDtlExtraField1;
-        private Controls.TextBox txtEnDtlExtraField5;
-        private Controls.TextBox txtEnDtlExtraField4;
-        private Controls.TextBox txtEnDtlExtraField3;
-        private Controls.TextBox txtEnDtlExtraField2;
         private Controls.TextBox txtArDtlExtraField5;
         private Controls.TextBox txtArDtlExtraField2;
         private Controls.TextBox txtArDtlExtraField3;
