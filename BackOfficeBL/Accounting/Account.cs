@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using BackOfficeDAL;
 using System.Globalization;
+using BackOfficeAudit;
 
 namespace BackOfficeBL.Accounting
 {
@@ -81,5 +82,56 @@ namespace BackOfficeBL.Accounting
             _dbAccount.IsDisableAccount = this.IsDisableAccount;
             _dbAccount.ParentId = this.ParentId;
         }
+
+        public DataSaveResult Save()
+        {
+            Acc_Accounts dbAccount;
+            try
+            {
+                NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+                var dbAccounts = from u in newAppsCnn.Acc_Accounts where u.AccountID == this.AccountID select u;
+                if (dbAccounts.Count() > 0)
+                {
+                    dbAccount = dbAccounts.First();
+                    this.ToDbAccount(dbAccount);
+                }
+                else
+                {
+                    dbAccount = new Acc_Accounts();
+                    this.ToDbAccount(dbAccount);
+                    newAppsCnn.Acc_Accounts.Add(dbAccount);
+                }
+                newAppsCnn.SaveChanges();
+                Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Acc_Accounts", this);
+                this.FromDbAccount(dbAccount);
+                return new DataSaveResult() { SaveStatus = true };
+            }
+            catch (Exception ex)
+            {
+                return new DataSaveResult() { SaveStatus = false };
+            }
+        }
+
+        public DataDeleteResult Delete()
+        {
+            Acc_Accounts dbAccount;
+            try
+            {
+                NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+                var dbAccounts = from u in newAppsCnn.Acc_Accounts where u.AccountID == this.AccountID select u;
+                if (dbAccounts.Count() > 0)
+                {
+                    dbAccount = dbAccounts.First();
+                    newAppsCnn.Acc_Accounts.Remove(dbAccount);
+                    newAppsCnn.SaveChanges();
+                }
+                return new DataDeleteResult() { DeleteStatus = true };
+            }
+            catch (Exception ex)
+            {
+                return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = ex.Message };
+            }
+        }
+
     }
 }
