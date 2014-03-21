@@ -12,12 +12,12 @@ namespace BackOfficeAudit
     {
         public enum AuditActionTypes { AddNew = 1, Edit = 2, Delete = 3 };
 
-        public static void AddDataAudit(AuditActionTypes _actionType, string _tableName, object _auditData, object _auditOldData)
-        { 
-        
+        public static void AddDataAudit(AuditActionTypes _actionType, string _tableName, object _auditData)
+        {
+            string xml = GetXml(_auditData);
         }
 
-        private string GetXml(object _auditData)
+        private static string GetXml(object _auditData)
         {
           
             StringWriter strWriter = new StringWriter();
@@ -25,7 +25,8 @@ namespace BackOfficeAudit
             {
                 Encoding = Encoding.Unicode,
                 OmitXmlDeclaration = true,
-                Indent = true
+                Indent = true,
+                 NewLineOnAttributes =true
             };
             XmlWriter xmlWriter = XmlWriter.Create(strWriter, xmlWriterSettings);
             XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(_auditData.GetType(), new XmlRootAttribute("AuditData"));

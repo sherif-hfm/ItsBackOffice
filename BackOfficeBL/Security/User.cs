@@ -1,9 +1,11 @@
-﻿using BackOfficeDAL;
+﻿using BackOfficeAudit;
+using BackOfficeDAL;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace BackOfficeBL.Security
 {
@@ -16,9 +18,11 @@ namespace BackOfficeBL.Security
         public string Name_Ara { get; set; }
         public string Name_Eng { get; set; }
         public string Password { get; set; }
-        public List<MenuItem> UserMenuItems = new List<MenuItem>();
         public bool IsAdmin { get; set; }
         public bool IsNew { get; set; }
+        [XmlIgnore]
+        public List<MenuItem> UserMenuItems = new List<MenuItem>();
+        [XmlIgnore]
         public List<Group> Groups = new List<Group>();
 
         public User() 
@@ -205,6 +209,7 @@ namespace BackOfficeBL.Security
 
         public void LoadDbUserGroups(Sec_Users _dbUser)
         {
+            Groups.Clear();
             foreach (var dbGroup in _dbUser.Sec_Groups)
             {
                 Group group = new Group();
@@ -264,6 +269,7 @@ namespace BackOfficeBL.Security
                     newAppsCnn.Sec_Users.Add(dbUser);
                 }
                 newAppsCnn.SaveChanges();
+                Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Sec_Users", this);
                 this.FromDbUser(dbUser);
                 return new DataSaveResult() { SaveStatus = true };
             }

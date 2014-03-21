@@ -40,6 +40,7 @@ namespace BackOfficeDAL
         public string ModifiedUser { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
     
+        public virtual Acc_Accounts Acc_Accounts { get; set; }
         public virtual Acc_Voucher Acc_Voucher { get; set; }
     }
 }
