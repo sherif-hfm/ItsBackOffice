@@ -18,7 +18,7 @@ namespace BackOfficeBL.Accounting
         public string CategroyName_Eng { get; set; }
         public bool IsNew { get; set; }
 
-        public static List<AccountCategory> GetAllAccountCategoryTree()
+        public static List<AccountCategory> GetAllAccountCategory()
         {
             List<AccountCategory> result = new List<AccountCategory>();
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);

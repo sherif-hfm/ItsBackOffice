@@ -17,7 +17,7 @@ namespace BackOfficeBL.Accounting
         public string TypeName_Eng { get; set; }
         public bool IsNew { get; set; }
 
-        public static List<Accounttype> GetAllAccounttypeTree()
+        public static List<Accounttype> GetAllAccounttype()
         {
             List<Accounttype> result = new List<Accounttype>();
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);

@@ -36,7 +36,6 @@
             this.txtAccountNo = new BackOfficeUI.Controls.TextBox();
             this.txtAccountNameAr = new BackOfficeUI.Controls.TextBox();
             this.txtAccountNameEng = new BackOfficeUI.Controls.TextBox();
-            this.txtAccountCategory = new BackOfficeUI.Controls.TextBox();
             this.txtStartBalance = new BackOfficeUI.Controls.TextBox();
             this.lblStartBalance = new BackOfficeUI.Controls.Label();
             this.lblDebit = new BackOfficeUI.Controls.Label();
@@ -44,10 +43,11 @@
             this.lblCreditor = new BackOfficeUI.Controls.Label();
             this.txtCreditor = new BackOfficeUI.Controls.TextBox();
             this.lblStopAccount = new BackOfficeUI.Controls.Label();
-            this.lblCostCenter = new BackOfficeUI.Controls.Label();
+            this.lblAccountType = new BackOfficeUI.Controls.Label();
             this.chkStopAccount = new BackOfficeUI.Controls.CheckBox();
-            this.cmbCostCenter = new BackOfficeUI.Controls.ComboBox();
+            this.cmbAccountType = new BackOfficeUI.Controls.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbAccountCategory = new BackOfficeUI.Controls.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,16 +135,6 @@
             this.txtAccountNameEng.Size = new System.Drawing.Size(270, 27);
             this.txtAccountNameEng.TabIndex = 10;
             // 
-            // txtAccountCategory
-            // 
-            this.txtAccountCategory.BackColor = System.Drawing.Color.White;
-            this.txtAccountCategory.IsRequired = false;
-            this.txtAccountCategory.Location = new System.Drawing.Point(227, 126);
-            this.txtAccountCategory.LockedInModes = 25;
-            this.txtAccountCategory.Name = "txtAccountCategory";
-            this.txtAccountCategory.Size = new System.Drawing.Size(270, 27);
-            this.txtAccountCategory.TabIndex = 11;
-            // 
             // txtStartBalance
             // 
             this.txtStartBalance.BackColor = System.Drawing.Color.White;
@@ -219,16 +209,16 @@
             this.lblStopAccount.TabIndex = 19;
             this.lblStopAccount.Text = "Stop Account";
             // 
-            // lblCostCenter
+            // lblAccountType
             // 
-            this.lblCostCenter.AutoSize = true;
-            this.lblCostCenter.IsRequired = false;
-            this.lblCostCenter.Location = new System.Drawing.Point(6, 294);
-            this.lblCostCenter.LockedInModes = 25;
-            this.lblCostCenter.Name = "lblCostCenter";
-            this.lblCostCenter.Size = new System.Drawing.Size(91, 19);
-            this.lblCostCenter.TabIndex = 21;
-            this.lblCostCenter.Text = "Cost Center";
+            this.lblAccountType.AutoSize = true;
+            this.lblAccountType.IsRequired = false;
+            this.lblAccountType.Location = new System.Drawing.Point(6, 294);
+            this.lblAccountType.LockedInModes = 25;
+            this.lblAccountType.Name = "lblAccountType";
+            this.lblAccountType.Size = new System.Drawing.Size(106, 19);
+            this.lblAccountType.TabIndex = 21;
+            this.lblAccountType.Text = "Account Type";
             // 
             // chkStopAccount
             // 
@@ -242,25 +232,26 @@
             this.chkStopAccount.TabIndex = 22;
             this.chkStopAccount.UseVisualStyleBackColor = true;
             // 
-            // cmbCostCenter
+            // cmbAccountType
             // 
-            this.cmbCostCenter.BackColor = System.Drawing.Color.White;
-            this.cmbCostCenter.FormattingEnabled = true;
-            this.cmbCostCenter.IsRequired = false;
-            this.cmbCostCenter.Location = new System.Drawing.Point(228, 288);
-            this.cmbCostCenter.LockedInModes = 25;
-            this.cmbCostCenter.Name = "cmbCostCenter";
-            this.cmbCostCenter.Size = new System.Drawing.Size(269, 27);
-            this.cmbCostCenter.TabIndex = 23;
+            this.cmbAccountType.BackColor = System.Drawing.Color.White;
+            this.cmbAccountType.FormattingEnabled = true;
+            this.cmbAccountType.IsRequired = false;
+            this.cmbAccountType.Location = new System.Drawing.Point(228, 288);
+            this.cmbAccountType.LockedInModes = 25;
+            this.cmbAccountType.Name = "cmbAccountType";
+            this.cmbAccountType.Size = new System.Drawing.Size(269, 27);
+            this.cmbAccountType.TabIndex = 23;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbAccountCategory);
             this.groupBox1.Controls.Add(this.txtAccountNo);
-            this.groupBox1.Controls.Add(this.cmbCostCenter);
+            this.groupBox1.Controls.Add(this.cmbAccountType);
             this.groupBox1.Controls.Add(this.lblAccountNo);
             this.groupBox1.Controls.Add(this.chkStopAccount);
             this.groupBox1.Controls.Add(this.lblAccountNameAr);
-            this.groupBox1.Controls.Add(this.lblCostCenter);
+            this.groupBox1.Controls.Add(this.lblAccountType);
             this.groupBox1.Controls.Add(this.lblAccountNameEng);
             this.groupBox1.Controls.Add(this.lblStopAccount);
             this.groupBox1.Controls.Add(this.lblAccountCategory);
@@ -269,7 +260,6 @@
             this.groupBox1.Controls.Add(this.txtCreditor);
             this.groupBox1.Controls.Add(this.txtAccountNameEng);
             this.groupBox1.Controls.Add(this.lblDebit);
-            this.groupBox1.Controls.Add(this.txtAccountCategory);
             this.groupBox1.Controls.Add(this.txtDebit);
             this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.lblStartBalance);
@@ -279,6 +269,17 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Master Data";
+            // 
+            // cmbAccountCategory
+            // 
+            this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
+            this.cmbAccountCategory.FormattingEnabled = true;
+            this.cmbAccountCategory.IsRequired = false;
+            this.cmbAccountCategory.Location = new System.Drawing.Point(228, 126);
+            this.cmbAccountCategory.LockedInModes = 25;
+            this.cmbAccountCategory.Name = "cmbAccountCategory";
+            this.cmbAccountCategory.Size = new System.Drawing.Size(269, 27);
+            this.cmbAccountCategory.TabIndex = 24;
             // 
             // frmAccountTree
             // 
@@ -312,7 +313,6 @@
         private Controls.TextBox txtAccountNo;
         private Controls.TextBox txtAccountNameAr;
         private Controls.TextBox txtAccountNameEng;
-        private Controls.TextBox txtAccountCategory;
         private Controls.TextBox txtStartBalance;
         private Controls.Label lblStartBalance;
         private Controls.Label lblDebit;
@@ -320,10 +320,11 @@
         private Controls.Label lblCreditor;
         private Controls.TextBox txtCreditor;
         private Controls.Label lblStopAccount;
-        private Controls.Label lblCostCenter;
+        private Controls.Label lblAccountType;
         private Controls.CheckBox chkStopAccount;
-        private Controls.ComboBox cmbCostCenter;
+        private Controls.ComboBox cmbAccountType;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Controls.ComboBox cmbAccountCategory;
 
     }
 }

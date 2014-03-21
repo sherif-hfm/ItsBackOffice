@@ -14,6 +14,8 @@ namespace BackOfficeUI.Accounting
     public partial class frmAccountTree : frmBaseDB
     {
         private BackOfficeBL.Accounting.Account CrAccount;
+        private BackOfficeBL.Accounting.Accounttype CrAccounttype;
+        private BackOfficeBL.Accounting.AccountCategory CrAccountCategory;
 
         public frmAccountTree()
         {
@@ -22,47 +24,60 @@ namespace BackOfficeUI.Accounting
 
         private void frmAccountTree_Load(object sender, EventArgs e)
         {
+            trvAccountTree.UnLock();
             LoadAccountTree();
+            LoadLookup();
         }
 
         private void ShowGUI()
         {
             if (CrAccount != null)
             {
-
                 txtAccountNameAr.Text = CrAccount.AccountName_Ar;
                 txtAccountNameEng.Text = CrAccount.AccountName_Eng;
-                cmbCostCenter.SelectedValue = CrAccount.AccountTypeId.ToString();
-                //txtAccountNameAr.Text                               =        CrAccount.AccountLevel     ;    
-                txtAccountNo.Text = CrAccount.AccountCategoryId.ToString();
-                //txtAccountNameAr.Text                               =        CrAccount.IsSubAccount     ;    
+                cmbAccountType.SelectedValue = CrAccount.AccountTypeId.ToString();
+                txtAccountNo.Text = CrAccount.AccountID;    
+                txtAccountNo.Text = CrAccount.AccountCategoryId.ToString(); 
                 chkStopAccount.Checked = CrAccount.IsDisableAccount;
-                //txtAccountNameAr.Text                               =        CrAccount.ParentId         ;    
             }
         }
+
+        private void LoadLookup()
+        {
+            cmbAccountType.Items.Clear();
+            cmbAccountCategory.Items.Clear();
+            cmbAccountType.ValueMember = "TypeID";
+            cmbAccountType.DisplayMember = "Name";
+            cmbAccountType.DataSource = Accounttype.GetAllAccounttype();
+            cmbAccountCategory.ValueMember = "CategoryId";
+            cmbAccountCategory.DisplayMember = "Name";
+            cmbAccountCategory.DataSource = AccountCategory.GetAllAccountCategory();
+        }
+
         private void LoadAccountTree()
         {
             List<Account> Acc_List = Account.GetAllAccountTree();
             // Call function here for bind treeview
-            CreateTreeView(Acc_List, 0, null);
+            CreateTreeView(Acc_List, "" , null);
         }
 
         // recursion function
-        private void CreateTreeView(List<Account> source, int parentID, TreeNode parentNode)
+        private void CreateTreeView(List<Account> source, string parentID, TreeNode parentNode)
         {
 
             List<Account> newSource = Account.GetAllAccountTree();
-            if (parentID == 0)
+            if (parentID == "")
             {
-                newSource = source.FindAll(a => a.ParentId.Equals(null));
+                newSource = source.FindAll(a => a.ParentId== null );
             }
             else
             {
-                newSource = source.FindAll(a => a.ParentId.Equals(parentID));
+                newSource = source.FindAll(a => a.ParentId== parentID);
             }
             foreach (var i in newSource)
             {
                 TreeNode newnode = new TreeNode(i.Name);
+                newnode.Tag = i.AccountID;
                 if (parentNode == null)
                 {
                     trvAccountTree.Nodes.Add(newnode);
@@ -71,8 +86,7 @@ namespace BackOfficeUI.Accounting
                 {
                     parentNode.Nodes.Add(newnode);
                 }
-                int AccountId = int.Parse(i.AccountID);
-                CreateTreeView(source, AccountId, newnode);
+                CreateTreeView(source, i.AccountID, newnode);
             }
         }
 
@@ -81,12 +95,11 @@ namespace BackOfficeUI.Accounting
         {
             CrAccount.AccountName_Ar = txtAccountNameAr.Text;
             CrAccount.AccountName_Eng = txtAccountNameEng.Text;
-            //CrAccount.AccountTypeId = int.Parse(cmbCostCenter.SelectedValue.ToString());
-            //CrAccount.AccountLevel = txtAccountNameAr.Text;
-            CrAccount.AccountCategoryId = int.Parse(txtAccountNo.Text);
-            //CrAccount.IsSubAccount = txtAccountNameAr.Text;
+            CrAccount.AccountTypeId = int.Parse(cmbAccountType.SelectedValue.ToString());
+            CrAccount.AccountCategoryId = int.Parse(cmbAccountCategory.SelectedValue.ToString());
+            CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
+            CrAccount.AccountID = txtAccountNo.Text;
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
-            //CrAccount.ParentId = txtAccountNameAr.Text;
         }
 
         private void frmAccountTree_Save(object sender, ref bool _status)
@@ -117,6 +130,8 @@ namespace BackOfficeUI.Accounting
         private void frmAccountTree_AddNew(object sender, ref bool _status)
         {
             CrAccount = new BackOfficeBL.Accounting.Account();
+            CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
+            CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
         }
     }
 }
