@@ -81,7 +81,7 @@ namespace BackOfficeUI.Accounting
         {
             CrAccount.AccountName_Ar = txtAccountNameAr.Text;
             CrAccount.AccountName_Eng = txtAccountNameEng.Text;
-            CrAccount.AccountTypeId = int.Parse(cmbCostCenter.SelectedValue.ToString());
+            //CrAccount.AccountTypeId = int.Parse(cmbCostCenter.SelectedValue.ToString());
             //CrAccount.AccountLevel = txtAccountNameAr.Text;
             CrAccount.AccountCategoryId = int.Parse(txtAccountNo.Text);
             //CrAccount.IsSubAccount = txtAccountNameAr.Text;
