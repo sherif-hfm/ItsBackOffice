@@ -37,6 +37,20 @@ namespace BackOfficeBL.Accounting
             return result;
         }
 
+        public static Account FindByAccountID(string _VaidationID)
+        {
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbAccounts = from u in newAppsCnn.Acc_Accounts where u.AccountID == _VaidationID select u;
+            if (dbAccounts.Count() > 0)
+            {
+                Acc_Accounts dbAccount = dbAccounts.First();
+                Account account = new Account();
+                account.FromDbAccount(dbAccount);
+                return account;
+            }
+            else
+                return null;
+        }
         public Account()
         {
             this.IsNew = true;

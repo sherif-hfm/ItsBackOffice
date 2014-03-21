@@ -191,6 +191,9 @@
     <Compile Include="Security\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Accounting\frmAccountTree.ar-KW.resx">
+      <DependentUpon>frmAccountTree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmAccountTree.resx">
       <DependentUpon>frmAccountTree.cs</DependentUpon>
     </EmbeddedResource>

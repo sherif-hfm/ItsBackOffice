@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccountTree));
             this.trvAccountTree = new BackOfficeUI.Controls.TreeView();
             this.lblAccountNo = new BackOfficeUI.Controls.Label();
             this.lblAccountNameAr = new BackOfficeUI.Controls.Label();
@@ -53,198 +54,144 @@
             // 
             // trvAccountTree
             // 
+            resources.ApplyResources(this.trvAccountTree, "trvAccountTree");
             this.trvAccountTree.BackColor = System.Drawing.Color.White;
             this.trvAccountTree.IsRequired = false;
-            this.trvAccountTree.Location = new System.Drawing.Point(12, 47);
             this.trvAccountTree.LockedInModes = 25;
             this.trvAccountTree.Name = "trvAccountTree";
-            this.trvAccountTree.Size = new System.Drawing.Size(605, 678);
-            this.trvAccountTree.TabIndex = 2;
             // 
             // lblAccountNo
             // 
-            this.lblAccountNo.AutoSize = true;
+            resources.ApplyResources(this.lblAccountNo, "lblAccountNo");
             this.lblAccountNo.IsRequired = false;
-            this.lblAccountNo.Location = new System.Drawing.Point(6, 30);
             this.lblAccountNo.LockedInModes = 25;
             this.lblAccountNo.Name = "lblAccountNo";
-            this.lblAccountNo.Size = new System.Drawing.Size(91, 19);
-            this.lblAccountNo.TabIndex = 4;
-            this.lblAccountNo.Text = "Account No";
             // 
             // lblAccountNameAr
             // 
-            this.lblAccountNameAr.AutoSize = true;
+            resources.ApplyResources(this.lblAccountNameAr, "lblAccountNameAr");
             this.lblAccountNameAr.IsRequired = false;
-            this.lblAccountNameAr.Location = new System.Drawing.Point(6, 63);
             this.lblAccountNameAr.LockedInModes = 25;
             this.lblAccountNameAr.Name = "lblAccountNameAr";
-            this.lblAccountNameAr.Size = new System.Drawing.Size(162, 19);
-            this.lblAccountNameAr.TabIndex = 5;
-            this.lblAccountNameAr.Text = "Account Name Arabic";
             // 
             // lblAccountNameEng
             // 
-            this.lblAccountNameEng.AutoSize = true;
+            resources.ApplyResources(this.lblAccountNameEng, "lblAccountNameEng");
             this.lblAccountNameEng.IsRequired = false;
-            this.lblAccountNameEng.Location = new System.Drawing.Point(6, 96);
             this.lblAccountNameEng.LockedInModes = 25;
             this.lblAccountNameEng.Name = "lblAccountNameEng";
-            this.lblAccountNameEng.Size = new System.Drawing.Size(168, 19);
-            this.lblAccountNameEng.TabIndex = 6;
-            this.lblAccountNameEng.Text = "Account Name English";
             // 
             // lblAccountCategory
             // 
-            this.lblAccountCategory.AutoSize = true;
+            resources.ApplyResources(this.lblAccountCategory, "lblAccountCategory");
             this.lblAccountCategory.IsRequired = false;
-            this.lblAccountCategory.Location = new System.Drawing.Point(6, 129);
             this.lblAccountCategory.LockedInModes = 25;
             this.lblAccountCategory.Name = "lblAccountCategory";
-            this.lblAccountCategory.Size = new System.Drawing.Size(134, 19);
-            this.lblAccountCategory.TabIndex = 7;
-            this.lblAccountCategory.Text = "Account Category";
             // 
             // txtAccountNo
             // 
+            resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.BackColor = System.Drawing.Color.White;
             this.txtAccountNo.IsRequired = false;
-            this.txtAccountNo.Location = new System.Drawing.Point(227, 27);
             this.txtAccountNo.LockedInModes = 25;
             this.txtAccountNo.Name = "txtAccountNo";
-            this.txtAccountNo.Size = new System.Drawing.Size(270, 27);
-            this.txtAccountNo.TabIndex = 8;
             // 
             // txtAccountNameAr
             // 
+            resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.BackColor = System.Drawing.Color.White;
             this.txtAccountNameAr.IsRequired = false;
-            this.txtAccountNameAr.Location = new System.Drawing.Point(227, 60);
             this.txtAccountNameAr.LockedInModes = 25;
             this.txtAccountNameAr.Name = "txtAccountNameAr";
-            this.txtAccountNameAr.Size = new System.Drawing.Size(270, 27);
-            this.txtAccountNameAr.TabIndex = 9;
             // 
             // txtAccountNameEng
             // 
+            resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.BackColor = System.Drawing.Color.White;
             this.txtAccountNameEng.IsRequired = false;
-            this.txtAccountNameEng.Location = new System.Drawing.Point(227, 93);
             this.txtAccountNameEng.LockedInModes = 25;
             this.txtAccountNameEng.Name = "txtAccountNameEng";
-            this.txtAccountNameEng.Size = new System.Drawing.Size(270, 27);
-            this.txtAccountNameEng.TabIndex = 10;
             // 
             // txtStartBalance
             // 
+            resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
             this.txtStartBalance.BackColor = System.Drawing.Color.White;
             this.txtStartBalance.IsRequired = false;
-            this.txtStartBalance.Location = new System.Drawing.Point(227, 159);
             this.txtStartBalance.LockedInModes = 25;
             this.txtStartBalance.Name = "txtStartBalance";
-            this.txtStartBalance.Size = new System.Drawing.Size(270, 27);
-            this.txtStartBalance.TabIndex = 12;
             // 
             // lblStartBalance
             // 
-            this.lblStartBalance.AutoSize = true;
+            resources.ApplyResources(this.lblStartBalance, "lblStartBalance");
             this.lblStartBalance.IsRequired = false;
-            this.lblStartBalance.Location = new System.Drawing.Point(6, 162);
             this.lblStartBalance.LockedInModes = 25;
             this.lblStartBalance.Name = "lblStartBalance";
-            this.lblStartBalance.Size = new System.Drawing.Size(100, 19);
-            this.lblStartBalance.TabIndex = 13;
-            this.lblStartBalance.Text = "Start Balance";
             // 
             // lblDebit
             // 
-            this.lblDebit.AutoSize = true;
+            resources.ApplyResources(this.lblDebit, "lblDebit");
             this.lblDebit.IsRequired = false;
-            this.lblDebit.Location = new System.Drawing.Point(6, 195);
             this.lblDebit.LockedInModes = 25;
             this.lblDebit.Name = "lblDebit";
-            this.lblDebit.Size = new System.Drawing.Size(46, 19);
-            this.lblDebit.TabIndex = 15;
-            this.lblDebit.Text = "Debit";
             // 
             // txtDebit
             // 
+            resources.ApplyResources(this.txtDebit, "txtDebit");
             this.txtDebit.BackColor = System.Drawing.Color.White;
             this.txtDebit.IsRequired = false;
-            this.txtDebit.Location = new System.Drawing.Point(227, 192);
             this.txtDebit.LockedInModes = 25;
             this.txtDebit.Name = "txtDebit";
-            this.txtDebit.Size = new System.Drawing.Size(270, 27);
-            this.txtDebit.TabIndex = 14;
             // 
             // lblCreditor
             // 
-            this.lblCreditor.AutoSize = true;
+            resources.ApplyResources(this.lblCreditor, "lblCreditor");
             this.lblCreditor.IsRequired = false;
-            this.lblCreditor.Location = new System.Drawing.Point(6, 228);
             this.lblCreditor.LockedInModes = 25;
             this.lblCreditor.Name = "lblCreditor";
-            this.lblCreditor.Size = new System.Drawing.Size(66, 19);
-            this.lblCreditor.TabIndex = 17;
-            this.lblCreditor.Text = "Creditor";
             // 
             // txtCreditor
             // 
+            resources.ApplyResources(this.txtCreditor, "txtCreditor");
             this.txtCreditor.BackColor = System.Drawing.Color.White;
             this.txtCreditor.IsRequired = false;
-            this.txtCreditor.Location = new System.Drawing.Point(227, 225);
             this.txtCreditor.LockedInModes = 25;
             this.txtCreditor.Name = "txtCreditor";
-            this.txtCreditor.Size = new System.Drawing.Size(270, 27);
-            this.txtCreditor.TabIndex = 16;
             // 
             // lblStopAccount
             // 
-            this.lblStopAccount.AutoSize = true;
+            resources.ApplyResources(this.lblStopAccount, "lblStopAccount");
             this.lblStopAccount.IsRequired = false;
-            this.lblStopAccount.Location = new System.Drawing.Point(6, 261);
             this.lblStopAccount.LockedInModes = 25;
             this.lblStopAccount.Name = "lblStopAccount";
-            this.lblStopAccount.Size = new System.Drawing.Size(103, 19);
-            this.lblStopAccount.TabIndex = 19;
-            this.lblStopAccount.Text = "Stop Account";
             // 
             // lblAccountType
             // 
-            this.lblAccountType.AutoSize = true;
+            resources.ApplyResources(this.lblAccountType, "lblAccountType");
             this.lblAccountType.IsRequired = false;
-            this.lblAccountType.Location = new System.Drawing.Point(6, 294);
             this.lblAccountType.LockedInModes = 25;
             this.lblAccountType.Name = "lblAccountType";
-            this.lblAccountType.Size = new System.Drawing.Size(106, 19);
-            this.lblAccountType.TabIndex = 21;
-            this.lblAccountType.Text = "Account Type";
             // 
             // chkStopAccount
             // 
-            this.chkStopAccount.AutoSize = true;
+            resources.ApplyResources(this.chkStopAccount, "chkStopAccount");
             this.chkStopAccount.ForeColor = System.Drawing.Color.Black;
             this.chkStopAccount.IsRequired = false;
-            this.chkStopAccount.Location = new System.Drawing.Point(352, 263);
             this.chkStopAccount.LockedInModes = 25;
             this.chkStopAccount.Name = "chkStopAccount";
-            this.chkStopAccount.Size = new System.Drawing.Size(15, 14);
-            this.chkStopAccount.TabIndex = 22;
             this.chkStopAccount.UseVisualStyleBackColor = true;
             // 
             // cmbAccountType
             // 
+            resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
             this.cmbAccountType.BackColor = System.Drawing.Color.White;
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.IsRequired = false;
-            this.cmbAccountType.Location = new System.Drawing.Point(228, 288);
             this.cmbAccountType.LockedInModes = 25;
             this.cmbAccountType.Name = "cmbAccountType";
-            this.cmbAccountType.Size = new System.Drawing.Size(269, 27);
-            this.cmbAccountType.TabIndex = 23;
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.cmbAccountCategory);
             this.groupBox1.Controls.Add(this.txtAccountNo);
             this.groupBox1.Controls.Add(this.cmbAccountType);
@@ -263,28 +210,21 @@
             this.groupBox1.Controls.Add(this.txtDebit);
             this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.lblStartBalance);
-            this.groupBox1.Location = new System.Drawing.Point(623, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(512, 320);
-            this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Master Data";
             // 
             // cmbAccountCategory
             // 
+            resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
             this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
             this.cmbAccountCategory.FormattingEnabled = true;
             this.cmbAccountCategory.IsRequired = false;
-            this.cmbAccountCategory.Location = new System.Drawing.Point(228, 126);
             this.cmbAccountCategory.LockedInModes = 25;
             this.cmbAccountCategory.Name = "cmbAccountCategory";
-            this.cmbAccountCategory.Size = new System.Drawing.Size(269, 27);
-            this.cmbAccountCategory.TabIndex = 24;
             // 
             // frmAccountTree
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.ClientSize = new System.Drawing.Size(1141, 750);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.trvAccountTree);
             this.Name = "frmAccountTree";
