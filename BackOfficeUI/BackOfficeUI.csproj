@@ -194,6 +194,9 @@
     <EmbeddedResource Include="Accounting\frmAccountTree.resx">
       <DependentUpon>frmAccountTree.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmVoucher.ar-KW.resx">
+      <DependentUpon>frmVoucher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmVoucher.resx">
       <DependentUpon>frmVoucher.cs</DependentUpon>
     </EmbeddedResource>
