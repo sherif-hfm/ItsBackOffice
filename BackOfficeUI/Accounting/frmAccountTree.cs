@@ -76,7 +76,7 @@ namespace BackOfficeUI.Accounting
             }
             foreach (var i in newSource)
             {
-                TreeNode newnode = new TreeNode(i.Name);
+                TreeNode newnode = new TreeNode(i.NameAndNo);
                 newnode.Tag = i.AccountID;
                 if (parentNode == null)
                 {

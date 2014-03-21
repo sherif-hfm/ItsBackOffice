@@ -12,6 +12,7 @@ namespace BackOfficeBL.Accounting
     {
         public string AccountID { get; set; }
         public string Name { get { return GetAccountName(); } }
+        public string NameAndNo { get { return GetAccountNameAndNo(); } }
         public bool IsDisable { get; set; }
         public string AccountName_Ar { get; set; }
         public string AccountName_Eng { get; set; }
@@ -54,6 +55,20 @@ namespace BackOfficeBL.Accounting
         public Account()
         {
             this.IsNew = true;
+        }
+
+        private string GetAccountNameAndNo()
+        {
+            CultureInfo cultureinfo = CultureInfo.CurrentUICulture;
+            switch (cultureinfo.Name)
+            {
+                case "en-US":
+                    return this.AccountName_Eng + " - " + this.AccountID;
+                case "ar-KW":
+                    return this.AccountName_Ar + " - " + this.AccountID;
+                default:
+                    return this.AccountName_Eng + " - " + this.AccountID;
+            }
         }
 
         private string GetAccountName()
