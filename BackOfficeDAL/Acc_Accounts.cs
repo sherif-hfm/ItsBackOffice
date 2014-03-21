@@ -14,6 +14,12 @@ namespace BackOfficeDAL
     
     public partial class Acc_Accounts
     {
+        public Acc_Accounts()
+        {
+            this.Acc_VoucherDtl = new HashSet<Acc_VoucherDtl>();
+            this.Acc_VouchersType = new HashSet<Acc_VouchersType>();
+        }
+    
         public string AccountID { get; set; }
         public string AccountName_Ar { get; set; }
         public string AccountName_Eng { get; set; }
@@ -30,5 +36,7 @@ namespace BackOfficeDAL
     
         public virtual Acc_AccountCategory Acc_AccountCategory { get; set; }
         public virtual Acc_Accountype Acc_Accountype { get; set; }
+        public virtual ICollection<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
+        public virtual ICollection<Acc_VouchersType> Acc_VouchersType { get; set; }
     }
 }

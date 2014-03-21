@@ -56,6 +56,18 @@
     <Compile Include="Acc_Accountype.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Acc_Voucher.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_VoucherDtl.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_VouchersType.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_VoucherValidation.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataUtils.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="NewAppsModel.Context.cs">

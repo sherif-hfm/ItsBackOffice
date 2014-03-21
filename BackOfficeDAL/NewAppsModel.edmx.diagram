@@ -19,9 +19,17 @@
         <AssociationConnector Association="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster" />
         <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="9.7409547854871263" PointY="22.093950401104031" />
         <EntityTypeShape EntityType="NewApps.Acc_Accounts" Width="1.5" PointX="3.044191188665196" PointY="19.263507926493656" />
-        <EntityTypeShape EntityType="NewApps.Acc_Accountype" Width="1.5" PointX="8.528689936049604" PointY="4.3413695564220518" />
+        <EntityTypeShape EntityType="NewApps.Acc_Accountype" Width="1.5" PointX="7.25" PointY="1.875" />
         <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_AccountCategory" />
         <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_Accountype" />
+        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="8.25" PointY="14.125" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherDtl" Width="1.5" PointX="11.25" PointY="15.625" />
+        <EntityTypeShape EntityType="NewApps.Acc_VouchersType" Width="1.5" PointX="14.25" PointY="17.125" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherValidation" Width="1.5" PointX="17.25" PointY="18.625" />
+        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_VouchersTemplate_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_VouchersTemplate" />
+        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -35,5 +35,9 @@ namespace BackOfficeDAL
         public DbSet<Acc_AccountCategory> Acc_AccountCategory { get; set; }
         public DbSet<Acc_Accounts> Acc_Accounts { get; set; }
         public DbSet<Acc_Accountype> Acc_Accountype { get; set; }
+        public DbSet<Acc_Voucher> Acc_Voucher { get; set; }
+        public DbSet<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
+        public DbSet<Acc_VouchersType> Acc_VouchersType { get; set; }
+        public DbSet<Acc_VoucherValidation> Acc_VoucherValidation { get; set; }
     }
 }
