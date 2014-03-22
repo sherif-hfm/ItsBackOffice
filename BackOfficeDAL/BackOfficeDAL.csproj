@@ -68,8 +68,18 @@
     <Compile Include="Acc_VoucherValidation.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Audit.cs" />
     <Compile Include="DataUtils.cs" />
     <Compile Include="DbContext.cs" />
+    <Compile Include="Gnrl_AuditActions.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Grnl_Audit.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Grnl_AuditDtl.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="NewAppsModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

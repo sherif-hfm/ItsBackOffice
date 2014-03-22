@@ -14,26 +14,107 @@ namespace BackOfficeUI.Accounting
 {
     public partial class frmVoucher : frmBaseDB
     {
-        private BackOfficeBL.Accounting.Voucher CrVoucher;
+        List<VoucherType> VouchersList;
+        private VoucherType CrVoucher;
+        private string VOUCHERTYPEID = "";
+        //private bool IsEdit = false;
+        //private bool IsAdd = false;
+
         public frmVoucher()
         {
             InitializeComponent();
         }
-
+        #region Events
         private void frmVoucher_Load(object sender, EventArgs e)
         {
-            List<VoucherType> vot = Voucher.GetAllVouchers();
-            LoadDataGrid(vot);
-            List<VoucherValidation> VotVal = Voucher.GetAllValidations();
-            LoadComboValidation(VotVal);
+            VouchersList = Voucher.GetAllVouchers();
+            LoadDataGrid(VouchersList);
+            LoadComboValidation(Voucher.GetAllValidations());
+            LoadCreditComboAccount(Account.GetAllAccountTree());
+            LoadDepitComboAccount(Account.GetAllAccountTree());
+
+
         }
 
+        private void dgrdVouchers_SelectionChanged(object sender, EventArgs e)
+        {
+            VOUCHERTYPEID = dgrdVouchers.SelectedRows[0].Cells[0].ToString();
+            VoucherType v = VouchersList.Find(a => a.VoucherTypeId == VOUCHERTYPEID);
+            //LoadScreenValues(Voucher.GetSelectedVoucher(VOUCHERTYPEID));
+            LoadScreenValues(v);
+            CollectScreenValues();
+        }
+
+
+        private void frmVoucher_AddNew(object sender, ref bool _status)
+        {
+            VOUCHERTYPEID = "";
+            CrVoucher = new VoucherType();
+        }
+
+        private void frmVoucher_Cancel(object sender)
+        {
+            VOUCHERTYPEID = CrVoucher.VoucherTypeId;
+            LoadScreenValues(CrVoucher);
+
+        }
+
+        private void frmVoucher_Edit(object sender, ref bool _status)
+        {
+            //CollectScreenValues();
+
+        }
+
+        private void frmVoucher_Delete(object sender, ref bool _status)
+        {
+            Voucher vu = new Voucher();
+            if (CrVoucher == null)
+            {
+                _status = false;
+                return;
+            }
+            DataDeleteResult result = vu.Delete(VOUCHERTYPEID);
+            _status = result.DeleteStatus;
+            if (result.DeleteStatus == false)
+            {
+                MessageBox.Show(result.ErrorMessage);
+            }
+            else
+            {
+                CrVoucher = null;
+                VouchersList = Voucher.GetAllVouchers();
+                LoadDataGrid(VouchersList);
+            }
+        }
+
+        private void frmVoucher_Save(object sender, ref bool _status)
+        {
+            Voucher vu = new Voucher();
+            CollectScreenValues();
+            DataSaveResult saveResult = vu.Save(CrVoucher);
+            if (saveResult.SaveStatus == false)
+            {
+                _status = false;
+
+            }
+            else
+            {
+                VouchersList = Voucher.GetAllVouchers();
+                LoadDataGrid(VouchersList);
+            }
+
+
+        }
+        #endregion
+        #region Methods
         private void LoadDataGrid(List<VoucherType> _VoucherTypeList)
         {
             if (_VoucherTypeList.Count != 0)
             {
                 dgrdVouchers.AutoGenerateColumns = false;
+                dgrdVouchers.DataSource = null;
                 dgrdVouchers.DataSource = _VoucherTypeList;
+
                 clmArVoucherName.DataPropertyName = "VoucherArName";
                 clmEnglishName.DataPropertyName = "VoucherEnName";
                 clmVoucherCode.DataPropertyName = "VoucherTypeId";
@@ -75,12 +156,179 @@ namespace BackOfficeUI.Accounting
 
         }
 
-        private void LoadComboAccounts()
+        private void LoadCreditComboAccount(List<Account> AccountList)
         {
-            cbxCreditAccounts.ValueMember = "AccountID";
-            cbxCreditAccounts.DisplayMember = "";
-            cbxCreditAccounts.DataSource = Account.GetAllAccountTree();
+            if (AccountList.Count != 0)
+            {
+                cbxCreditAccounts.ValueMember = "AccountID";
+                cbxCreditAccounts.DisplayMember = "NameAndNos";
+                cbxCreditAccounts.DataSource = AccountList;
+            }
         }
+
+        private void LoadDepitComboAccount(List<Account> AccountList)
+        {
+            if (AccountList.Count != 0)
+            {
+                cbxCreditAccounts.ValueMember = "AccountID";
+                cbxCreditAccounts.DisplayMember = "NameAndNos";
+                cbxCreditAccounts.DataSource = AccountList;
+            }
+        }
+
+        private void LoadScreenValues(VoucherType vouchertype)
+        {
+            cbxEnCurrency.SelectedValue = vouchertype.CurrencyID;
+            cbxArCurrency.SelectedValue = vouchertype.CurrencyID;
+
+            if (!string.IsNullOrEmpty(vouchertype.CriedtAccountID))
+            {
+                cbxCreditAccounts.SelectedValue = vouchertype.CriedtAccountID;
+            }
+            if (!string.IsNullOrEmpty(vouchertype.DepitAccountId))
+            {
+                cbxDepitAccounts.SelectedValue = vouchertype.DepitAccountId;
+            }
+            txtArabicName.Text = vouchertype.VoucherArName;
+            txtEnglishName.Text = vouchertype.VoucherEnName;
+
+            txtArDtlExtraField1.Text = vouchertype.DetailExtraField1;
+            txtArDtlExtraField2.Text = vouchertype.DetailExtraField2;
+            txtArDtlExtraField3.Text = vouchertype.DetailExtraField3;
+            txtArDtlExtraField4.Text = vouchertype.DetailExtraField4;
+            txtArDtlExtraField5.Text = vouchertype.DetailExtraField5;
+
+            txtEnExtraField1.Text = vouchertype.MainExtraField1;
+            txtEnExtraField2.Text = vouchertype.MainExtraField2;
+            txtEnExtraField3.Text = vouchertype.MainExtraField3;
+            txtEnExtraField4.Text = vouchertype.MainExtraField4;
+            txtEnExtraField5.Text = vouchertype.MainExtraField5;
+
+            if (vouchertype.MainValidationField1 != null)
+            {
+                cbxValidation1.SelectedValue = vouchertype.MainValidationField1;
+            }
+            if (vouchertype.MainValidationField2 != null)
+            {
+                cbxValidation2.SelectedValue = vouchertype.MainValidationField2;
+            }
+            if (vouchertype.mainValidationField3 != null)
+            {
+                cbxValidation3.SelectedValue = vouchertype.mainValidationField3;
+            }
+            if (vouchertype.MainValidationField4 != null)
+            {
+                cbxValidation4.SelectedValue = vouchertype.MainValidationField4;
+            }
+            if (vouchertype.MainValidationField5 != null)
+            {
+                cbxValidation5.SelectedValue = vouchertype.MainValidationField5;
+            }
+
+            if (vouchertype.DtlValidationField1 != null)
+            {
+                cbxDtlValidation1.SelectedValue = vouchertype.DtlValidationField1;
+            }
+            if (vouchertype.DtlValidationField2 != null)
+            {
+                cbxDtlValidation2.SelectedValue = vouchertype.DtlValidationField2;
+            }
+            if (vouchertype.DtlValidationField3 != null)
+            {
+                cbxDtlValidation3.SelectedValue = vouchertype.DtlValidationField3;
+            }
+            if (vouchertype.DtlValidationField4 != null)
+            {
+                cbxDtlValidation4.SelectedValue = vouchertype.DtlValidationField4;
+            }
+            if (vouchertype.DtlValidationField5 != null)
+            {
+                cbxDtlValidation5.SelectedValue = vouchertype.DtlValidationField5;
+            }
+        }
+
+        private void CollectScreenValues()
+        {
+            if (cbxEnCurrency.SelectedIndex != -1)
+            {
+                CrVoucher.CurrencyID = Convert.ToInt32(cbxEnCurrency.SelectedValue);
+            }
+            CrVoucher.VoucherTypeId = this.VOUCHERTYPEID;
+            CrVoucher.CriedtAccountID = cbxCreditAccounts.SelectedValue.ToString();
+            CrVoucher.DepitAccountId = cbxDepitAccounts.SelectedValue.ToString();
+            CrVoucher.ShortName_Ara = txtArabicName.Text;
+            CrVoucher.ShortName_Eng = txtEnglishName.Text;
+
+            CrVoucher.DetailExtraField1 = txtArDtlExtraField1.Text;
+            CrVoucher.DetailExtraField2 = txtArDtlExtraField2.Text;
+            CrVoucher.DetailExtraField3 = txtArDtlExtraField3.Text;
+            CrVoucher.DetailExtraField4 = txtArDtlExtraField4.Text;
+            CrVoucher.DetailExtraField5 = txtArDtlExtraField5.Text;
+
+            CrVoucher.MainExtraField1 = txtEnExtraField1.Text;
+            CrVoucher.MainExtraField2 = txtEnExtraField2.Text;
+            CrVoucher.MainExtraField3 = txtEnExtraField3.Text;
+            CrVoucher.MainExtraField4 = txtEnExtraField4.Text;
+            CrVoucher.MainExtraField5 = txtEnExtraField5.Text;
+
+            if (cbxValidation1.SelectedIndex != -1)
+            {
+                CrVoucher.MainValidationField1 = Convert.ToInt32(cbxValidation1.SelectedValue);
+            }
+            if (cbxValidation2.SelectedIndex != -1)
+            {
+                CrVoucher.MainValidationField2 = Convert.ToInt32(cbxValidation2.SelectedValue);
+            }
+            if (cbxValidation3.SelectedIndex != -1)
+            {
+                CrVoucher.mainValidationField3 = Convert.ToInt32(cbxValidation3.SelectedValue);
+            }
+            if (cbxValidation4.SelectedIndex != -1)
+            {
+                CrVoucher.MainValidationField4 = Convert.ToInt32(cbxValidation4.SelectedValue);
+            }
+            if (cbxValidation5.SelectedIndex != -1)
+            {
+                CrVoucher.MainValidationField5 = Convert.ToInt32(cbxValidation5.SelectedValue);
+            }
+
+            if (cbxDtlValidation1.SelectedIndex != -1)
+            {
+                CrVoucher.DtlValidationField1 = Convert.ToInt32(cbxDtlValidation1.SelectedValue);
+            }
+            if (cbxDtlValidation2.SelectedIndex != -1)
+            {
+                CrVoucher.DtlValidationField2 = Convert.ToInt32(cbxDtlValidation2.SelectedValue);
+            }
+            if (cbxDtlValidation3.SelectedIndex != -1)
+            {
+                CrVoucher.DtlValidationField3 = Convert.ToInt32(cbxDtlValidation3.SelectedValue);
+            }
+            if (cbxDtlValidation4.SelectedIndex != -1)
+            {
+                CrVoucher.DtlValidationField4 = Convert.ToInt32(cbxDtlValidation4.SelectedValue);
+            }
+            if (cbxDtlValidation5.SelectedIndex != -1)
+            {
+                CrVoucher.DtlValidationField5 = Convert.ToInt32(cbxDtlValidation5.SelectedValue);
+            }
+
+        }
+
+        #endregion
+
+        private void frmVoucher_DataRefresh(object sender)
+        {
+
+        }
+
+        private void frmVoucher_DataMove(object sender, MoveCommandEnum _moveCommand)
+        {
+
+        }
+
+
+
 
     }
 }

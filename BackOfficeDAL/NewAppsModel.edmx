@@ -13,6 +13,9 @@
           <EntitySet Name="Acc_VoucherDtl" EntityType="NewApps.Store.Acc_VoucherDtl" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_VouchersType" EntityType="NewApps.Store.Acc_VouchersType" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_VoucherValidation" EntityType="NewApps.Store.Acc_VoucherValidation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Gnrl_AuditActions" EntityType="NewApps.Store.Gnrl_AuditActions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Grnl_Audit" EntityType="NewApps.Store.Grnl_Audit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Grnl_AuditDtl" EntityType="NewApps.Store.Grnl_AuditDtl" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_FormFunctions" EntityType="NewApps.Store.Sec_FormFunctions" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_GroupRights" EntityType="NewApps.Store.Sec_GroupRights" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_Groups" EntityType="NewApps.Store.Sec_Groups" store:Type="Tables" Schema="dbo" />
@@ -44,6 +47,10 @@
           <AssociationSet Name="FK_Acc_VouchersTemplate_Acc_Accounts" Association="NewApps.Store.FK_Acc_VouchersTemplate_Acc_Accounts">
             <End Role="Acc_Accounts" EntitySet="Acc_Accounts" />
             <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Grnl_AuditDtl_Grnl_Audit" Association="NewApps.Store.FK_Grnl_AuditDtl_Grnl_Audit">
+            <End Role="Grnl_Audit" EntitySet="Grnl_Audit" />
+            <End Role="Grnl_AuditDtl" EntitySet="Grnl_AuditDtl" />
           </AssociationSet>
           <AssociationSet Name="FK_Sec_GroupRights_Sec_Groups" Association="NewApps.Store.FK_Sec_GroupRights_Sec_Groups">
             <End Role="Sec_Groups" EntitySet="Sec_Groups" />
@@ -208,6 +215,34 @@
           <Property Name="ValidationId" Type="int" Nullable="false" />
           <Property Name="ValidationName_Ara" Type="nvarchar" MaxLength="50" />
           <Property Name="ValidationName_Eng" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Gnrl_AuditActions">
+          <Key>
+            <PropertyRef Name="AuditActionId" />
+          </Key>
+          <Property Name="AuditActionId" Type="int" Nullable="false" />
+          <Property Name="AuditActionName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AuditActionName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Grnl_Audit">
+          <Key>
+            <PropertyRef Name="AuditId" />
+          </Key>
+          <Property Name="AuditId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AuditActionId" Type="int" Nullable="false" />
+          <Property Name="TableName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="ActionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Grnl_AuditDtl">
+          <Key>
+            <PropertyRef Name="AuditDtlId" />
+          </Key>
+          <Property Name="AuditDtlId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AuditId" Type="bigint" Nullable="false" />
+          <Property Name="PropertyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PropertyOriginalValues" Type="nvarchar(max)" />
+          <Property Name="PropertyCurrentValues" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Sec_FormFunctions">
           <Key>
@@ -385,6 +420,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Grnl_AuditDtl_Grnl_Audit">
+          <End Role="Grnl_Audit" Type="NewApps.Store.Grnl_Audit" Multiplicity="1" />
+          <End Role="Grnl_AuditDtl" Type="NewApps.Store.Grnl_AuditDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grnl_Audit">
+              <PropertyRef Name="AuditId" />
+            </Principal>
+            <Dependent Role="Grnl_AuditDtl">
+              <PropertyRef Name="AuditId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Sec_GroupRights_Sec_Groups">
           <End Role="Sec_Groups" Type="NewApps.Store.Sec_Groups" Multiplicity="1" />
           <End Role="Sec_GroupRights" Type="NewApps.Store.Sec_GroupRights" Multiplicity="*" />
@@ -519,6 +566,13 @@
           <AssociationSet Name="FK_Acc_VoucherDtl_Acc_Voucher" Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher">
             <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
             <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
+          </AssociationSet>
+          <EntitySet Name="Gnrl_AuditActions" EntityType="NewApps.Gnrl_AuditActions" />
+          <EntitySet Name="Grnl_Audit" EntityType="NewApps.Grnl_Audit" />
+          <EntitySet Name="Grnl_AuditDtl" EntityType="NewApps.Grnl_AuditDtl" />
+          <AssociationSet Name="FK_Grnl_AuditDtl_Grnl_Audit" Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit">
+            <End Role="Grnl_Audit" EntitySet="Grnl_Audit" />
+            <End Role="Grnl_AuditDtl" EntitySet="Grnl_AuditDtl" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
@@ -902,6 +956,48 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Gnrl_AuditActions">
+          <Key>
+            <PropertyRef Name="AuditActionId" />
+          </Key>
+          <Property Type="Int32" Name="AuditActionId" Nullable="false" />
+          <Property Type="String" Name="AuditActionName_Ara" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AuditActionName_Eng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Grnl_Audit">
+          <Key>
+            <PropertyRef Name="AuditId" />
+          </Key>
+          <Property Type="Int64" Name="AuditId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="AuditActionId" Nullable="false" />
+          <Property Type="String" Name="TableName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="ActionDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Grnl_AuditDtl" Relationship="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" FromRole="Grnl_Audit" ToRole="Grnl_AuditDtl" />
+        </EntityType>
+        <EntityType Name="Grnl_AuditDtl">
+          <Key>
+            <PropertyRef Name="AuditDtlId" />
+          </Key>
+          <Property Type="Int64" Name="AuditDtlId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="AuditId" Nullable="false" />
+          <Property Type="String" Name="PropertyName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PropertyOriginalValues" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PropertyCurrentValues" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Grnl_Audit" Relationship="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" FromRole="Grnl_AuditDtl" ToRole="Grnl_Audit" />
+        </EntityType>
+        <Association Name="FK_Grnl_AuditDtl_Grnl_Audit">
+          <End Type="NewApps.Grnl_Audit" Role="Grnl_Audit" Multiplicity="1" />
+          <End Type="NewApps.Grnl_AuditDtl" Role="Grnl_AuditDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grnl_Audit">
+              <PropertyRef Name="AuditId" />
+            </Principal>
+            <Dependent Role="Grnl_AuditDtl">
+              <PropertyRef Name="AuditId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1151,6 +1247,37 @@
                 <ScalarProperty Name="ValidationName_Eng" ColumnName="ValidationName_Eng" />
                 <ScalarProperty Name="ValidationName_Ara" ColumnName="ValidationName_Ara" />
                 <ScalarProperty Name="ValidationId" ColumnName="ValidationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gnrl_AuditActions">
+            <EntityTypeMapping TypeName="NewApps.Gnrl_AuditActions">
+              <MappingFragment StoreEntitySet="Gnrl_AuditActions">
+                <ScalarProperty Name="AuditActionName_Eng" ColumnName="AuditActionName_Eng" />
+                <ScalarProperty Name="AuditActionName_Ara" ColumnName="AuditActionName_Ara" />
+                <ScalarProperty Name="AuditActionId" ColumnName="AuditActionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grnl_Audit">
+            <EntityTypeMapping TypeName="NewApps.Grnl_Audit">
+              <MappingFragment StoreEntitySet="Grnl_Audit">
+                <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="AuditActionId" ColumnName="AuditActionId" />
+                <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grnl_AuditDtl">
+            <EntityTypeMapping TypeName="NewApps.Grnl_AuditDtl">
+              <MappingFragment StoreEntitySet="Grnl_AuditDtl">
+                <ScalarProperty Name="PropertyCurrentValues" ColumnName="PropertyCurrentValues" />
+                <ScalarProperty Name="PropertyOriginalValues" ColumnName="PropertyOriginalValues" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+                <ScalarProperty Name="AuditDtlId" ColumnName="AuditDtlId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

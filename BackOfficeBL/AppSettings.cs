@@ -16,6 +16,11 @@ namespace BackOfficeBL
 
         public static AppSettings CrAppSettings = new AppSettings();
 
+        public AppSettings()
+        {
+            BackOfficeDAL.DbAudit.NewAppsConnectionString = this.NewAppsConnectionString;
+        }
+
         public void LoadSettings()
         {
             try

@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-
+using BackOfficeDAL;
+using System.Threading;
+using System.Data.Entity.Infrastructure;
 namespace BackOfficeAudit
 {
     public static class Audit
@@ -17,9 +19,10 @@ namespace BackOfficeAudit
             string xml = GetXml(_auditData);
         }
 
+       
+
         private static string GetXml(object _auditData)
         {
-          
             StringWriter strWriter = new StringWriter();
             XmlWriterSettings xmlWriterSettings = new XmlWriterSettings()
             {

@@ -117,11 +117,288 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="clmVoucherCode.HeaderText" xml:space="preserve">
+    <value>رمز السند</value>
+  </data>
+  <data name="clmEnglishName.HeaderText" xml:space="preserve">
+    <value>الأسم انجليزى</value>
+  </data>
+  <data name="clmArVoucherName.HeaderText" xml:space="preserve">
+    <value>الأسم عربى</value>
+  </data>
+  <data name="clmEnEliasName.HeaderText" xml:space="preserve">
+    <value>الأسم انجليزى مختصر</value>
+  </data>
+  <data name="clmEliasAr.HeaderText" xml:space="preserve">
+    <value>الأسم عربى مختصر</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgrdVouchers.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="groupBox2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 180</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>رئيسى</value>
+  </data>
+  <data name="cbxValidation5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 146</value>
+  </data>
+  <data name="cbxValidation4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 119</value>
+  </data>
+  <data name="cbxValidation3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 92</value>
+  </data>
+  <data name="cbxValidation2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 65</value>
+  </data>
+  <data name="cbxValidation1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 38</value>
+  </data>
+  <data name="lblCheckValueAdding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 17</value>
+  </data>
+  <data name="lblCheckValueAdding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 19</value>
+  </data>
+  <data name="lblCheckValueAdding.Text" xml:space="preserve">
+    <value>أضافة قيمة للفحص</value>
+  </data>
+  <data name="txtEnExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 146</value>
+  </data>
+  <data name="txtEnExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 65</value>
+  </data>
+  <data name="txtEnExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 92</value>
+  </data>
+  <data name="txtEnExtraField4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 119</value>
+  </data>
+  <data name="lblExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 65</value>
+  </data>
+  <data name="lblExtraField2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblExtraField2.Text" xml:space="preserve">
+    <value>حقل أفتراضى 2</value>
+  </data>
+  <data name="lblExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 92</value>
+  </data>
+  <data name="lblExtraField3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblExtraField3.Text" xml:space="preserve">
+    <value>حقل أفتراضى 3</value>
+  </data>
+  <data name="lblExtraField4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 119</value>
+  </data>
+  <data name="lblExtraField4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblExtraField4.Text" xml:space="preserve">
+    <value>حقل أفتراضى 4</value>
+  </data>
+  <data name="lblExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 146</value>
+  </data>
+  <data name="lblExtraField5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblExtraField5.Text" xml:space="preserve">
+    <value>حقل أفتراضى 5</value>
+  </data>
+  <data name="txtEnExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 38</value>
+  </data>
+  <data name="lblExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 38</value>
+  </data>
+  <data name="lblExtraField1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblExtraField1.Text" xml:space="preserve">
+    <value>حقل أفتراضى 1</value>
+  </data>
+  <data name="groupBox1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="cbxEnCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 70</value>
+  </data>
+  <data name="cbxArCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 43</value>
+  </data>
+  <data name="cbxDepitAccounts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 107</value>
+  </data>
+  <data name="lblDepitAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 111</value>
+  </data>
+  <data name="lblDepitAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 19</value>
+  </data>
+  <data name="lblDepitAccount.Text" xml:space="preserve">
+    <value>حساب مدين افتراضى</value>
+  </data>
+  <data name="cbxCreditAccounts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 107</value>
+  </data>
+  <data name="lblCreditAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>704, 111</value>
+  </data>
+  <data name="lblCreditAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 19</value>
+  </data>
+  <data name="lblCreditAccount.Text" xml:space="preserve">
+    <value>حساب دائن افتراضى</value>
+  </data>
+  <data name="lblVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 47</value>
+  </data>
+  <data name="lblVoucherCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 19</value>
+  </data>
+  <data name="lblVoucherCode.Text" xml:space="preserve">
+    <value>رمز المستند</value>
+  </data>
+  <data name="txtVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 43</value>
+  </data>
+  <data name="lblVoucherName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 17</value>
+  </data>
+  <data name="lblVoucherName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 19</value>
+  </data>
+  <data name="lblVoucherName.Text" xml:space="preserve">
+    <value>أسم المستند</value>
+  </data>
+  <data name="lblCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 18</value>
+  </data>
   <data name="lblCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 19</value>
   </data>
   <data name="lblCurrency.Text" xml:space="preserve">
     <value>العملة</value>
+  </data>
+  <data name="lblArabicName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>557, 47</value>
+  </data>
+  <data name="lblArabicName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 19</value>
+  </data>
+  <data name="lblArabicName.Text" xml:space="preserve">
+    <value>الأسم عربى</value>
+  </data>
+  <data name="lblEnglishName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>541, 74</value>
+  </data>
+  <data name="lblEnglishName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 19</value>
+  </data>
+  <data name="lblEnglishName.Text" xml:space="preserve">
+    <value>الأسم انجليزى</value>
+  </data>
+  <data name="txtEnglishName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 70</value>
+  </data>
+  <data name="txtArabicName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 43</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 517</value>
+  </data>
+  <data name="groupBox3.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
+  <data name="cbxDtlValidation5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 139</value>
+  </data>
+  <data name="cbxDtlValidation4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 112</value>
+  </data>
+  <data name="cbxDtlValidation3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 85</value>
+  </data>
+  <data name="cbxDtlValidation2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 58</value>
+  </data>
+  <data name="cbxDtlValidation1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 31</value>
+  </data>
+  <data name="txtArDtlExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 139</value>
+  </data>
+  <data name="txtArDtlExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 58</value>
+  </data>
+  <data name="txtArDtlExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 85</value>
+  </data>
+  <data name="txtArDtlExtraField4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 112</value>
+  </data>
+  <data name="lblDtlExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 58</value>
+  </data>
+  <data name="lblDtlExtraField2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblDtlExtraField2.Text" xml:space="preserve">
+    <value>حقل أفتراضى 2</value>
+  </data>
+  <data name="lblDtlExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 85</value>
+  </data>
+  <data name="lblDtlExtraField3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblDtlExtraField3.Text" xml:space="preserve">
+    <value>حقل أفتراضى 3</value>
+  </data>
+  <data name="lblDtlExtraField14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 112</value>
+  </data>
+  <data name="lblDtlExtraField14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblDtlExtraField14.Text" xml:space="preserve">
+    <value>حقل أفتراضى 4</value>
+  </data>
+  <data name="lblDtlExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 139</value>
+  </data>
+  <data name="lblDtlExtraField5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblDtlExtraField5.Text" xml:space="preserve">
+    <value>حقل أفتراضى 5</value>
+  </data>
+  <data name="txtArDtlExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 31</value>
+  </data>
+  <data name="lblDtlExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 31</value>
+  </data>
+  <data name="lblDtlExtraField1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblDtlExtraField1.Text" xml:space="preserve">
+    <value>حقل أفتراضى 1</value>
   </data>
 </root>
