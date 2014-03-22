@@ -51,6 +51,7 @@
     <Compile Include="Accounting\AccountCategory.cs" />
     <Compile Include="Accounting\Accountype.cs" />
     <Compile Include="Accounting\CostCenter.cs" />
+    <Compile Include="Accounting\Currency.cs" />
     <Compile Include="Accounting\Voucher.cs" />
     <Compile Include="Accounting\VoucherType.cs" />
     <Compile Include="Accounting\VoucherValidation.cs" />

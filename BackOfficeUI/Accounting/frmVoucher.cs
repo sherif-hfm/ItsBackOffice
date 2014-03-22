@@ -16,7 +16,7 @@ namespace BackOfficeUI.Accounting
     {
         List<VoucherType> VouchersList;
         private VoucherType CrVoucher;
-        private string VOUCHERTYPEID = "";
+        private string VOUCHERTYPEID = null;
         //private bool IsEdit = false;
         //private bool IsAdd = false;
 
@@ -29,12 +29,13 @@ namespace BackOfficeUI.Accounting
 
         private void frmVoucher_Load(object sender, EventArgs e)
         {
-            VouchersList = Voucher.GetAllVouchers();
-            LoadDataGrid(VouchersList);
             LoadComboValidation(Voucher.GetAllValidations());
             LoadCreditComboAccount(Account.GetAllAccountTree());
             LoadDepitComboAccount(Account.GetAllAccountTree());
-            dgrdVouchers.Rows[0].Selected = true;
+            LoadComboCurrency(Voucher.GetAllCurrency());
+            VouchersList = Voucher.GetAllVouchers();
+            LoadDataGrid(VouchersList);
+            dgrdVouchers.Rows[1].Selected = true;
 
 
         }
@@ -45,7 +46,6 @@ namespace BackOfficeUI.Accounting
             {
                 VOUCHERTYPEID = dgrdVouchers.SelectedRows[0].Cells[0].Value.ToString();
                 VoucherType v = VouchersList.Find(a => a.VoucherTypeId == VOUCHERTYPEID);
-                //LoadScreenValues(Voucher.GetSelectedVoucher(VOUCHERTYPEID));
                 ShowGUI(v);
                 GetDataFromGUI();
             }
@@ -53,7 +53,7 @@ namespace BackOfficeUI.Accounting
 
         private void frmVoucher_AddNew(object sender, ref bool _status)
         {
-            VOUCHERTYPEID = "";
+            VOUCHERTYPEID = null;
             CrVoucher = new VoucherType();
         }
 
@@ -159,8 +159,8 @@ namespace BackOfficeUI.Accounting
                 clmVoucherCode.DataPropertyName = "VoucherTypeId";
                 clmEnEliasName.DataPropertyName = "ShortName_Eng";
                 clmEliasAr.DataPropertyName = "ShortName_Ara";
-
                 dgrdVouchers.DataSource = _VoucherTypeList;
+
             }
         }
 
@@ -192,6 +192,31 @@ namespace BackOfficeUI.Accounting
                 cbxValidation5.ValueMember = "VaidationID";
                 cbxValidation5.DisplayMember = "ValidationName";
                 cbxValidation5.SelectedIndex = -1;
+
+                cbxDtlValidation1.DataSource = _VotVal;
+                cbxDtlValidation1.ValueMember = "VaidationID";
+                cbxDtlValidation1.DisplayMember = "ValidationName";
+                cbxDtlValidation1.SelectedIndex = -1;
+
+                cbxDtlValidation2.DataSource = _VotVal;
+                cbxDtlValidation2.ValueMember = "VaidationID";
+                cbxDtlValidation2.DisplayMember = "ValidationName";
+                cbxDtlValidation2.SelectedIndex = -1;
+
+                cbxDtlValidation3.DataSource = _VotVal;
+                cbxDtlValidation3.ValueMember = "VaidationID";
+                cbxDtlValidation3.DisplayMember = "ValidationName";
+                cbxDtlValidation3.SelectedIndex = -1;
+
+                cbxDtlValidation4.DataSource = _VotVal;
+                cbxDtlValidation4.ValueMember = "VaidationID";
+                cbxDtlValidation4.DisplayMember = "ValidationName";
+                cbxDtlValidation4.SelectedIndex = -1;
+
+                cbxDtlValidation5.DataSource = _VotVal;
+                cbxDtlValidation5.ValueMember = "VaidationID";
+                cbxDtlValidation5.DisplayMember = "ValidationName";
+                cbxDtlValidation5.SelectedIndex = -1;
             }
 
         }
@@ -201,7 +226,7 @@ namespace BackOfficeUI.Accounting
             if (AccountList.Count != 0)
             {
                 cbxCreditAccounts.ValueMember = "AccountID";
-                cbxCreditAccounts.DisplayMember = "NameAndNos";
+                cbxCreditAccounts.DisplayMember = "NameAndNo";
                 cbxCreditAccounts.DataSource = AccountList;
             }
         }
@@ -210,17 +235,33 @@ namespace BackOfficeUI.Accounting
         {
             if (AccountList.Count != 0)
             {
-                cbxCreditAccounts.ValueMember = "AccountID";
-                cbxCreditAccounts.DisplayMember = "NameAndNos";
-                cbxCreditAccounts.DataSource = AccountList;
+                cbxDepitAccounts.ValueMember = "AccountID";
+                cbxDepitAccounts.DisplayMember = "NameAndNo";
+                cbxDepitAccounts.DataSource = AccountList;
+            }
+        }
+
+        private void LoadComboCurrency(List<Currency> _CurrencyList)
+        {
+            if (_CurrencyList.Count != 0)
+            {
+                cbxArCurrency.DisplayMember = "CurrencyArName";
+                cbxArCurrency.ValueMember = "CurrencyID";
+                cbxArCurrency.DataSource = _CurrencyList;
+
+                cbxEnCurrency.DisplayMember = "CurrencyEnName";
+                cbxEnCurrency.ValueMember = "CurrencyID";
+                cbxEnCurrency.DataSource = _CurrencyList;
             }
         }
 
         private void ShowGUI(VoucherType vouchertype)
         {
-            cbxEnCurrency.SelectedValue = vouchertype.CurrencyID;
-            cbxArCurrency.SelectedValue = vouchertype.CurrencyID;
-
+            if (vouchertype.CurrencyID != 0)
+            {
+                cbxEnCurrency.SelectedValue = vouchertype.CurrencyID;
+                cbxArCurrency.SelectedValue = vouchertype.CurrencyID;
+            }
             if (!string.IsNullOrEmpty(vouchertype.CriedtAccountID))
             {
                 cbxCreditAccounts.SelectedValue = vouchertype.CriedtAccountID;
@@ -229,6 +270,8 @@ namespace BackOfficeUI.Accounting
             {
                 cbxDepitAccounts.SelectedValue = vouchertype.DepitAccountId;
             }
+
+            txtVoucherCode.Text = vouchertype.VoucherTypeId;
             txtArabicName.Text = vouchertype.VoucherArName;
             txtEnglishName.Text = vouchertype.VoucherEnName;
 
@@ -289,15 +332,26 @@ namespace BackOfficeUI.Accounting
 
         private void GetDataFromGUI()
         {
+            CrVoucher = new VoucherType();
             if (cbxEnCurrency.SelectedIndex != -1)
             {
                 CrVoucher.CurrencyID = Convert.ToInt32(cbxEnCurrency.SelectedValue);
             }
-            CrVoucher.VoucherTypeId = this.VOUCHERTYPEID;
-            CrVoucher.CriedtAccountID = cbxCreditAccounts.SelectedValue.ToString();
-            CrVoucher.DepitAccountId = cbxDepitAccounts.SelectedValue.ToString();
-            CrVoucher.ShortName_Ara = txtArabicName.Text;
-            CrVoucher.ShortName_Eng = txtEnglishName.Text;
+            if (string.IsNullOrEmpty(VOUCHERTYPEID))
+            {
+                CrVoucher.VoucherTypeId = VOUCHERTYPEID;
+            }
+            if (cbxCreditAccounts.SelectedIndex != -1)
+            {
+                CrVoucher.CriedtAccountID = cbxCreditAccounts.SelectedValue.ToString();
+            }
+            if (cbxDepitAccounts.SelectedIndex != -1)
+            {
+                CrVoucher.DepitAccountId = cbxDepitAccounts.SelectedValue.ToString();
+            }
+            CrVoucher.VoucherTypeId = txtVoucherCode.Text;
+            CrVoucher.VoucherArName = txtArabicName.Text;
+            CrVoucher.VoucherEnName = txtEnglishName.Text;
 
             CrVoucher.DetailExtraField1 = txtArDtlExtraField1.Text;
             CrVoucher.DetailExtraField2 = txtArDtlExtraField2.Text;
@@ -352,7 +406,6 @@ namespace BackOfficeUI.Accounting
             {
                 CrVoucher.DtlValidationField5 = Convert.ToInt32(cbxDtlValidation5.SelectedValue);
             }
-
         }
 
         #endregion
