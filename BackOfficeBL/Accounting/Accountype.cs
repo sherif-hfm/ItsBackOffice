@@ -31,6 +31,21 @@ namespace BackOfficeBL.Accounting
             return result;
         }
 
+        public static Accounttype FindByAccounttypeID(int _VaidationID)
+        {
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbAccounttypes = from u in newAppsCnn.Acc_Accountype where u.TypeID == _VaidationID select u;
+            if (dbAccounttypes.Count() > 0)
+            {
+                Acc_Accountype dbAccounttype = dbAccounttypes.First();
+                Accounttype accounttype = new Accounttype();
+                accounttype.FromDbAccounttype(dbAccounttype);
+                accounttype.IsNew = false;
+                return accounttype;
+            }
+            else
+                return null;
+        }
         public Accounttype()
         {
             this.IsNew = true;

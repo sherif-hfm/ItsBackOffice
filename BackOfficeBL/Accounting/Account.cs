@@ -47,6 +47,7 @@ namespace BackOfficeBL.Accounting
                 Acc_Accounts dbAccount = dbAccounts.First();
                 Account account = new Account();
                 account.FromDbAccount(dbAccount);
+                account.IsNew = false;
                 return account;
             }
             else
@@ -109,7 +110,10 @@ namespace BackOfficeBL.Accounting
             _dbAccount.AccountCategoryId = this.AccountCategoryId;
             _dbAccount.IsSubAccount = this.IsSubAccount;
             _dbAccount.IsDisableAccount = this.IsDisableAccount;
-            _dbAccount.ParentId = this.ParentId;
+            if (this.IsNew == false)
+            {
+                _dbAccount.ParentId = this.ParentId;
+            }
         }
 
         public DataSaveResult Save()

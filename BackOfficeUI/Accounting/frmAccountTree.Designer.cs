@@ -54,9 +54,9 @@
             // 
             // trvAccountTree
             // 
-            resources.ApplyResources(this.trvAccountTree, "trvAccountTree");
             this.trvAccountTree.BackColor = System.Drawing.Color.White;
             this.trvAccountTree.IsRequired = false;
+            resources.ApplyResources(this.trvAccountTree, "trvAccountTree");
             this.trvAccountTree.LockedInModes = 25;
             this.trvAccountTree.Name = "trvAccountTree";
             // 
@@ -90,33 +90,33 @@
             // 
             // txtAccountNo
             // 
-            resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.BackColor = System.Drawing.Color.White;
             this.txtAccountNo.IsRequired = false;
+            resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.LockedInModes = 25;
             this.txtAccountNo.Name = "txtAccountNo";
             // 
             // txtAccountNameAr
             // 
-            resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.BackColor = System.Drawing.Color.White;
             this.txtAccountNameAr.IsRequired = false;
+            resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.LockedInModes = 25;
             this.txtAccountNameAr.Name = "txtAccountNameAr";
             // 
             // txtAccountNameEng
             // 
-            resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.BackColor = System.Drawing.Color.White;
             this.txtAccountNameEng.IsRequired = false;
+            resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.LockedInModes = 25;
             this.txtAccountNameEng.Name = "txtAccountNameEng";
             // 
             // txtStartBalance
             // 
-            resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
             this.txtStartBalance.BackColor = System.Drawing.Color.White;
             this.txtStartBalance.IsRequired = false;
+            resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
             this.txtStartBalance.LockedInModes = 25;
             this.txtStartBalance.Name = "txtStartBalance";
             // 
@@ -136,9 +136,9 @@
             // 
             // txtDebit
             // 
-            resources.ApplyResources(this.txtDebit, "txtDebit");
             this.txtDebit.BackColor = System.Drawing.Color.White;
             this.txtDebit.IsRequired = false;
+            resources.ApplyResources(this.txtDebit, "txtDebit");
             this.txtDebit.LockedInModes = 25;
             this.txtDebit.Name = "txtDebit";
             // 
@@ -151,9 +151,9 @@
             // 
             // txtCreditor
             // 
-            resources.ApplyResources(this.txtCreditor, "txtCreditor");
             this.txtCreditor.BackColor = System.Drawing.Color.White;
             this.txtCreditor.IsRequired = false;
+            resources.ApplyResources(this.txtCreditor, "txtCreditor");
             this.txtCreditor.LockedInModes = 25;
             this.txtCreditor.Name = "txtCreditor";
             // 
@@ -182,16 +182,15 @@
             // 
             // cmbAccountType
             // 
-            resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
             this.cmbAccountType.BackColor = System.Drawing.Color.White;
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.IsRequired = false;
+            resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
             this.cmbAccountType.LockedInModes = 25;
             this.cmbAccountType.Name = "cmbAccountType";
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.cmbAccountCategory);
             this.groupBox1.Controls.Add(this.txtAccountNo);
             this.groupBox1.Controls.Add(this.cmbAccountType);
@@ -210,15 +209,16 @@
             this.groupBox1.Controls.Add(this.txtDebit);
             this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.lblStartBalance);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // cmbAccountCategory
             // 
-            resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
             this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
             this.cmbAccountCategory.FormattingEnabled = true;
             this.cmbAccountCategory.IsRequired = false;
+            resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
             this.cmbAccountCategory.LockedInModes = 25;
             this.cmbAccountCategory.Name = "cmbAccountCategory";
             // 
@@ -256,7 +256,6 @@
         private Controls.TextBox txtStartBalance;
         private Controls.Label lblStartBalance;
         private Controls.Label lblDebit;
-        private Controls.TextBox txtDebit;
         private Controls.Label lblCreditor;
         private Controls.TextBox txtCreditor;
         private Controls.Label lblStopAccount;
@@ -265,6 +264,7 @@
         private Controls.ComboBox cmbAccountType;
         private System.Windows.Forms.GroupBox groupBox1;
         private Controls.ComboBox cmbAccountCategory;
+        private Controls.TextBox txtDebit;
 
     }
 }

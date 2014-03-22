@@ -37,12 +37,12 @@ namespace BackOfficeUI.Controls
 
         public void Lock()
         {
-            this.Enabled = false;
+           // this.Enabled = false;
         }
 
         public void UnLock()
         {
-            this.Enabled = true;
+          //  this.Enabled = true;
         }
 
         public bool IsEmpty()
