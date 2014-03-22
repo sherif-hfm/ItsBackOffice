@@ -42,5 +42,6 @@ namespace BackOfficeDAL
     
         public virtual Acc_Accounts Acc_Accounts { get; set; }
         public virtual Acc_Voucher Acc_Voucher { get; set; }
+        public virtual Acc_CostCenter Acc_CostCenter { get; set; }
     }
 }

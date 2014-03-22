@@ -9,6 +9,7 @@
           <EntitySet Name="Acc_AccountCategory" EntityType="NewApps.Store.Acc_AccountCategory" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Accounts" EntityType="NewApps.Store.Acc_Accounts" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Accountype" EntityType="NewApps.Store.Acc_Accountype" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Acc_CostCenter" EntityType="NewApps.Store.Acc_CostCenter" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Voucher" EntityType="NewApps.Store.Acc_Voucher" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_VoucherDtl" EntityType="NewApps.Store.Acc_VoucherDtl" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_VouchersType" EntityType="NewApps.Store.Acc_VouchersType" store:Type="Tables" Schema="dbo" />
@@ -32,12 +33,20 @@
             <End Role="Acc_Accountype" EntitySet="Acc_Accountype" />
             <End Role="Acc_Accounts" EntitySet="Acc_Accounts" />
           </AssociationSet>
+          <AssociationSet Name="FK_Acc_CostCenter_Acc_CostCenter" Association="NewApps.Store.FK_Acc_CostCenter_Acc_CostCenter">
+            <End Role="Acc_CostCenter" EntitySet="Acc_CostCenter" />
+            <End Role="Acc_CostCenter1" EntitySet="Acc_CostCenter" />
+          </AssociationSet>
           <AssociationSet Name="FK_Acc_Voucher_Acc_VouchersTemplate" Association="NewApps.Store.FK_Acc_Voucher_Acc_VouchersTemplate">
             <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
             <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
           </AssociationSet>
           <AssociationSet Name="FK_Acc_VoucherDtl_Acc_Accounts" Association="NewApps.Store.FK_Acc_VoucherDtl_Acc_Accounts">
             <End Role="Acc_Accounts" EntitySet="Acc_Accounts" />
+            <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acc_VoucherDtl_Acc_CostCenter" Association="NewApps.Store.FK_Acc_VoucherDtl_Acc_CostCenter">
+            <End Role="Acc_CostCenter" EntitySet="Acc_CostCenter" />
             <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
           </AssociationSet>
           <AssociationSet Name="FK_Acc_VoucherDtl_Acc_Voucher" Association="NewApps.Store.FK_Acc_VoucherDtl_Acc_Voucher">
@@ -112,6 +121,19 @@
           <Property Name="TypeName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="TypeName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="IsDisable" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Acc_CostCenter">
+          <Key>
+            <PropertyRef Name="CostCenterId" />
+          </Key>
+          <Property Name="CostCenterId" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CostCenterName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CostCenterName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsDisable" Type="bit" Nullable="false" />
+          <Property Name="CostOpenBalance" Type="decimal" Precision="16" Scale="3" />
+          <Property Name="ClosingBalance" Type="decimal" Precision="16" Scale="3" />
+          <Property Name="ParentId" Type="nvarchar" MaxLength="20" />
+          <Property Name="Notes" Type="ntext" />
         </EntityType>
         <EntityType Name="Acc_Voucher">
           <Key>
@@ -368,6 +390,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Acc_CostCenter_Acc_CostCenter">
+          <End Role="Acc_CostCenter" Type="NewApps.Store.Acc_CostCenter" Multiplicity="0..1" />
+          <End Role="Acc_CostCenter1" Type="NewApps.Store.Acc_CostCenter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_CostCenter">
+              <PropertyRef Name="CostCenterId" />
+            </Principal>
+            <Dependent Role="Acc_CostCenter1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Acc_Voucher_Acc_VouchersTemplate">
           <End Role="Acc_VouchersType" Type="NewApps.Store.Acc_VouchersType" Multiplicity="1" />
           <End Role="Acc_Voucher" Type="NewApps.Store.Acc_Voucher" Multiplicity="*" />
@@ -389,6 +423,18 @@
             </Principal>
             <Dependent Role="Acc_VoucherDtl">
               <PropertyRef Name="AccountId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acc_VoucherDtl_Acc_CostCenter">
+          <End Role="Acc_CostCenter" Type="NewApps.Store.Acc_CostCenter" Multiplicity="0..1" />
+          <End Role="Acc_VoucherDtl" Type="NewApps.Store.Acc_VoucherDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_CostCenter">
+              <PropertyRef Name="CostCenterId" />
+            </Principal>
+            <Dependent Role="Acc_VoucherDtl">
+              <PropertyRef Name="CostCenterId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -573,6 +619,15 @@
           <AssociationSet Name="FK_Grnl_AuditDtl_Grnl_Audit" Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit">
             <End Role="Grnl_Audit" EntitySet="Grnl_Audit" />
             <End Role="Grnl_AuditDtl" EntitySet="Grnl_AuditDtl" />
+          </AssociationSet>
+          <EntitySet Name="Acc_CostCenter" EntityType="NewApps.Acc_CostCenter" />
+          <AssociationSet Name="FK_Acc_CostCenter_Acc_CostCenter" Association="NewApps.FK_Acc_CostCenter_Acc_CostCenter">
+            <End Role="Acc_CostCenter" EntitySet="Acc_CostCenter" />
+            <End Role="Acc_CostCenter1" EntitySet="Acc_CostCenter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acc_VoucherDtl_Acc_CostCenter" Association="NewApps.FK_Acc_VoucherDtl_Acc_CostCenter">
+            <End Role="Acc_CostCenter" EntitySet="Acc_CostCenter" />
+            <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
@@ -860,6 +915,7 @@
           <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
           <NavigationProperty Name="Acc_Accounts" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_Accounts" FromRole="Acc_VoucherDtl" ToRole="Acc_Accounts" />
           <NavigationProperty Name="Acc_Voucher" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" FromRole="Acc_VoucherDtl" ToRole="Acc_Voucher" />
+          <NavigationProperty Name="Acc_CostCenter" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_CostCenter" FromRole="Acc_VoucherDtl" ToRole="Acc_CostCenter" />
         </EntityType>
         <EntityType Name="Acc_VouchersType">
           <Key>
@@ -995,6 +1051,46 @@
             </Principal>
             <Dependent Role="Grnl_AuditDtl">
               <PropertyRef Name="AuditId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Acc_CostCenter">
+          <Key>
+            <PropertyRef Name="CostCenterId" />
+          </Key>
+          <Property Type="String" Name="CostCenterId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CostCenterName_Ara" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CostCenterName_Eng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsDisable" Nullable="false" />
+          <Property Type="Decimal" Name="CostOpenBalance" Precision="16" Scale="3" />
+          <Property Type="Decimal" Name="ClosingBalance" Precision="16" Scale="3" />
+          <Property Type="String" Name="ParentId" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Acc_CostCenter1" Relationship="NewApps.FK_Acc_CostCenter_Acc_CostCenter" FromRole="Acc_CostCenter" ToRole="Acc_CostCenter1" />
+          <NavigationProperty Name="Acc_CostCenter2" Relationship="NewApps.FK_Acc_CostCenter_Acc_CostCenter" FromRole="Acc_CostCenter1" ToRole="Acc_CostCenter" />
+          <NavigationProperty Name="Acc_VoucherDtl" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_CostCenter" FromRole="Acc_CostCenter" ToRole="Acc_VoucherDtl" />
+        </EntityType>
+        <Association Name="FK_Acc_CostCenter_Acc_CostCenter">
+          <End Type="NewApps.Acc_CostCenter" Role="Acc_CostCenter" Multiplicity="0..1" />
+          <End Type="NewApps.Acc_CostCenter" Role="Acc_CostCenter1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_CostCenter">
+              <PropertyRef Name="CostCenterId" />
+            </Principal>
+            <Dependent Role="Acc_CostCenter1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Acc_VoucherDtl_Acc_CostCenter">
+          <End Type="NewApps.Acc_CostCenter" Role="Acc_CostCenter" Multiplicity="0..1" />
+          <End Type="NewApps.Acc_VoucherDtl" Role="Acc_VoucherDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_CostCenter">
+              <PropertyRef Name="CostCenterId" />
+            </Principal>
+            <Dependent Role="Acc_VoucherDtl">
+              <PropertyRef Name="CostCenterId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1278,6 +1374,20 @@
                 <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
                 <ScalarProperty Name="AuditId" ColumnName="AuditId" />
                 <ScalarProperty Name="AuditDtlId" ColumnName="AuditDtlId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Acc_CostCenter">
+            <EntityTypeMapping TypeName="NewApps.Acc_CostCenter">
+              <MappingFragment StoreEntitySet="Acc_CostCenter">
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="ClosingBalance" ColumnName="ClosingBalance" />
+                <ScalarProperty Name="CostOpenBalance" ColumnName="CostOpenBalance" />
+                <ScalarProperty Name="IsDisable" ColumnName="IsDisable" />
+                <ScalarProperty Name="CostCenterName_Eng" ColumnName="CostCenterName_Eng" />
+                <ScalarProperty Name="CostCenterName_Ara" ColumnName="CostCenterName_Ara" />
+                <ScalarProperty Name="CostCenterId" ColumnName="CostCenterId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -21,6 +21,8 @@
         <EntityTypeShape EntityType="NewApps.Grnl_Audit" Width="1.5" PointX="1.5" PointY="14.5" />
         <EntityTypeShape EntityType="NewApps.Grnl_AuditDtl" Width="1.5" PointX="5.125" PointY="14.75" />
         <AssociationConnector Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" />
+        <EntityTypeShape EntityType="NewApps.Acc_CostCenter" Width="1.5" PointX="8.0621122066220785" PointY="4.4486712983104733" />
+        <AssociationConnector Association="NewApps.FK_Acc_CostCenter_Acc_CostCenter" />
         </Diagram>
       <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="45" >
         <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="0.75" PointY="6.5" />
