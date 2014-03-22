@@ -8,7 +8,7 @@ namespace BackOfficeBL.Accounting
 {
    public class VoucherType
     {
-        public int VoucherTypeId { get; set; }
+        public string VoucherTypeId { get; set; }
 
         public string VoucherName { get { return GetVoucherName(); } }
         public string VoucherArName { get; set; }
