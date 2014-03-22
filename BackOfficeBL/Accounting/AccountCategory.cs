@@ -32,6 +32,21 @@ namespace BackOfficeBL.Accounting
             return result;
         }
 
+        public static AccountCategory FindByAccountCategoryID(int _VaidationID)
+        {
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbAccountCategorys = from u in newAppsCnn.Acc_AccountCategory where u.CategoryId == _VaidationID select u;
+            if (dbAccountCategorys.Count() > 0)
+            {
+                Acc_AccountCategory dbAccountCategory = dbAccountCategorys.First();
+                AccountCategory accountcategory = new AccountCategory();
+                accountcategory.FromDbAccountCategory(dbAccountCategory);
+                accountcategory.IsNew = false;
+                return accountcategory;
+            }
+            else
+                return null;
+        }
         public AccountCategory()
         {
             this.IsNew = true;

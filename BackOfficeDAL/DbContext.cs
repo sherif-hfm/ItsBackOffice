@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 
@@ -13,5 +14,13 @@ namespace BackOfficeDAL
             Database.Connection.ConnectionString = _connectionString;
             NewAppsCnn newAppsCnn = new NewAppsCnn();
         }
+
+        public override int SaveChanges()
+        {
+            List<DbEntityEntry> changes = ChangeTracker.Entries().ToList();
+            DbAudit.AddDataAudit(changes);
+            return  base.SaveChanges();
+        }
+        
     }
 }
