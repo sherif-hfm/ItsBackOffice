@@ -63,4 +63,14 @@ namespace BackOfficeBL.Accounting
         }
 
     }
+   public class Gidlist {
+
+     //  public string VoucherTypeId { get; set; }
+
+      // public string VoucherName { get { return GetVoucherName(); } }
+       public string VoucherArName { get; set; }
+       public string VoucherEnName { get; set; }
+       public string ShortName_Ara { get; set; }
+       public string ShortName_Eng { get; set; }
+   }
 }

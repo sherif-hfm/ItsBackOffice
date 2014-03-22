@@ -24,7 +24,9 @@ namespace BackOfficeUI.Accounting
         {
             InitializeComponent();
         }
+
         #region Events
+
         private void frmVoucher_Load(object sender, EventArgs e)
         {
             VouchersList = Voucher.GetAllVouchers();
@@ -32,19 +34,22 @@ namespace BackOfficeUI.Accounting
             LoadComboValidation(Voucher.GetAllValidations());
             LoadCreditComboAccount(Account.GetAllAccountTree());
             LoadDepitComboAccount(Account.GetAllAccountTree());
+            dgrdVouchers.Rows[0].Selected = true;
 
 
         }
 
         private void dgrdVouchers_SelectionChanged(object sender, EventArgs e)
         {
-            VOUCHERTYPEID = dgrdVouchers.SelectedRows[0].Cells[0].ToString();
-            VoucherType v = VouchersList.Find(a => a.VoucherTypeId == VOUCHERTYPEID);
-            //LoadScreenValues(Voucher.GetSelectedVoucher(VOUCHERTYPEID));
-            LoadScreenValues(v);
-            CollectScreenValues();
+            if (dgrdVouchers.SelectedRows.Count != 0)
+            {
+                VOUCHERTYPEID = dgrdVouchers.SelectedRows[0].Cells[0].Value.ToString();
+                VoucherType v = VouchersList.Find(a => a.VoucherTypeId == VOUCHERTYPEID);
+                //LoadScreenValues(Voucher.GetSelectedVoucher(VOUCHERTYPEID));
+                ShowGUI(v);
+                GetDataFromGUI();
+            }
         }
-
 
         private void frmVoucher_AddNew(object sender, ref bool _status)
         {
@@ -55,7 +60,7 @@ namespace BackOfficeUI.Accounting
         private void frmVoucher_Cancel(object sender)
         {
             VOUCHERTYPEID = CrVoucher.VoucherTypeId;
-            LoadScreenValues(CrVoucher);
+            ShowGUI(CrVoucher);
 
         }
 
@@ -90,7 +95,7 @@ namespace BackOfficeUI.Accounting
         private void frmVoucher_Save(object sender, ref bool _status)
         {
             Voucher vu = new Voucher();
-            CollectScreenValues();
+            GetDataFromGUI();
             DataSaveResult saveResult = vu.Save(CrVoucher);
             if (saveResult.SaveStatus == false)
             {
@@ -105,15 +110,49 @@ namespace BackOfficeUI.Accounting
 
 
         }
+
+        private void frmVoucher_DataRefresh(object sender)
+        {
+            int CurrentRow = dgrdVouchers.SelectedRows[0].Index;
+            VouchersList = Voucher.GetAllVouchers();
+            LoadDataGrid(VouchersList);
+            dgrdVouchers.Rows[CurrentRow].Selected = true;
+
+        }
+
+        private void frmVoucher_DataMove(object sender, MoveCommandEnum _moveCommand)
+        {
+            int CurrentRow;
+            switch (_moveCommand)
+            {
+
+                case MoveCommandEnum.MoveFirst:
+                    dgrdVouchers.Rows[0].Selected = true;
+                    break;
+                case MoveCommandEnum.MoveLast:
+                    dgrdVouchers.Rows[VouchersList.Count - 1].Selected = true;
+                    break;
+                case MoveCommandEnum.MoveNext:
+                    CurrentRow = dgrdVouchers.SelectedRows[0].Index;
+                    dgrdVouchers.Rows[CurrentRow + 1].Selected = true;
+                    break;
+                case MoveCommandEnum.MovePrev:
+                    CurrentRow = dgrdVouchers.SelectedRows[0].Index;
+                    dgrdVouchers.Rows[CurrentRow - 1].Selected = true;
+                    break;
+            }
+        }
+
         #endregion
+
         #region Methods
+
         private void LoadDataGrid(List<VoucherType> _VoucherTypeList)
         {
             if (_VoucherTypeList.Count != 0)
             {
                 dgrdVouchers.AutoGenerateColumns = false;
                 dgrdVouchers.DataSource = null;
-                dgrdVouchers.DataSource = _VoucherTypeList;
 
                 clmArVoucherName.DataPropertyName = "VoucherArName";
                 clmEnglishName.DataPropertyName = "VoucherEnName";
@@ -121,6 +160,7 @@ namespace BackOfficeUI.Accounting
                 clmEnEliasName.DataPropertyName = "ShortName_Eng";
                 clmEliasAr.DataPropertyName = "ShortName_Ara";
 
+                dgrdVouchers.DataSource = _VoucherTypeList;
             }
         }
 
@@ -176,7 +216,7 @@ namespace BackOfficeUI.Accounting
             }
         }
 
-        private void LoadScreenValues(VoucherType vouchertype)
+        private void ShowGUI(VoucherType vouchertype)
         {
             cbxEnCurrency.SelectedValue = vouchertype.CurrencyID;
             cbxArCurrency.SelectedValue = vouchertype.CurrencyID;
@@ -247,7 +287,7 @@ namespace BackOfficeUI.Accounting
             }
         }
 
-        private void CollectScreenValues()
+        private void GetDataFromGUI()
         {
             if (cbxEnCurrency.SelectedIndex != -1)
             {
@@ -317,15 +357,6 @@ namespace BackOfficeUI.Accounting
 
         #endregion
 
-        private void frmVoucher_DataRefresh(object sender)
-        {
-
-        }
-
-        private void frmVoucher_DataMove(object sender, MoveCommandEnum _moveCommand)
-        {
-
-        }
 
 
 
