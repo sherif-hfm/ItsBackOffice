@@ -76,7 +76,7 @@ namespace BackOfficeUI.Accounting
         private void CreateTreeView(List<Account> source, string parentID, TreeNode parentNode)
         {
 
-            List<Account> newSource = Account.GetAllAccountTree();
+            List<Account> newSource = new List<Account>();
             if (parentID == "")
             {
                 newSource = source.FindAll(a => a.ParentId == null);
@@ -107,7 +107,7 @@ namespace BackOfficeUI.Accounting
             CrAccount.AccountName_Eng = txtAccountNameEng.Text;
             CrAccount.AccountTypeId = int.Parse(cmbAccountType.SelectedValue.ToString());
             CrAccount.AccountCategoryId = int.Parse(cmbAccountCategory.SelectedValue.ToString());
-            if (CrAccount.IsNew == true)
+            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode!=null)
                 CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
             CrAccount.AccountID = txtAccountNo.Text;
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
