@@ -8,8 +8,14 @@ namespace BackOfficeBL
 {
     public  class AppInfo
     {
-        public static User CurrentUser;
+        private static User mCurrentUser = null;
+        public static User CurrentUser { get { return mCurrentUser; } set { mCurrentUser = value; UpdateAuditCurrentUser(); } }
         public static List<object> SystemVariables = new List<object>();
         public static string ApplicationUINamespace = "BackOfficeUI";
+
+        private static void UpdateAuditCurrentUser()
+        {
+            BackOfficeDAL.DbAudit.CrUserID = mCurrentUser.UserID;
+        }
     }
 }

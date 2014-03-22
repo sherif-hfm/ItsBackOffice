@@ -14,16 +14,12 @@ namespace BackOfficeAudit
     {
         public enum AuditActionTypes { AddNew = 1, Edit = 2, Delete = 3 };
 
-        public static void AddDataAudit(List<DbEntityEntry> _auditData)
+        public static void AddDataAudit(AuditActionTypes _actionType, string _tableName, object _auditData)
         {
-            Thread addAutid = new Thread(() => AddDataAuditAsync(_auditData));
-            addAutid.Start();
+            string xml = GetXml(_auditData);
         }
 
-        private static void AddDataAuditAsync(List<DbEntityEntry> _auditData)
-        { 
-        
-        }
+       
 
         private static string GetXml(object _auditData)
         {
