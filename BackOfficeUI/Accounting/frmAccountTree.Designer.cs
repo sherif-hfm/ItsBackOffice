@@ -91,7 +91,7 @@
             // txtAccountNo
             // 
             this.txtAccountNo.BackColor = System.Drawing.Color.White;
-            this.txtAccountNo.IsRequired = false;
+            this.txtAccountNo.IsRequired = true;
             resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.LockedInModes = 25;
             this.txtAccountNo.Name = "txtAccountNo";
@@ -99,7 +99,7 @@
             // txtAccountNameAr
             // 
             this.txtAccountNameAr.BackColor = System.Drawing.Color.White;
-            this.txtAccountNameAr.IsRequired = false;
+            this.txtAccountNameAr.IsRequired = true;
             resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.LockedInModes = 25;
             this.txtAccountNameAr.Name = "txtAccountNameAr";
@@ -107,7 +107,7 @@
             // txtAccountNameEng
             // 
             this.txtAccountNameEng.BackColor = System.Drawing.Color.White;
-            this.txtAccountNameEng.IsRequired = false;
+            this.txtAccountNameEng.IsRequired = true;
             resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.LockedInModes = 25;
             this.txtAccountNameEng.Name = "txtAccountNameEng";
@@ -184,7 +184,7 @@
             // 
             this.cmbAccountType.BackColor = System.Drawing.Color.White;
             this.cmbAccountType.FormattingEnabled = true;
-            this.cmbAccountType.IsRequired = false;
+            this.cmbAccountType.IsRequired = true;
             resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
             this.cmbAccountType.LockedInModes = 25;
             this.cmbAccountType.Name = "cmbAccountType";
@@ -217,7 +217,7 @@
             // 
             this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
             this.cmbAccountCategory.FormattingEnabled = true;
-            this.cmbAccountCategory.IsRequired = false;
+            this.cmbAccountCategory.IsRequired = true;
             resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
             this.cmbAccountCategory.LockedInModes = 25;
             this.cmbAccountCategory.Name = "cmbAccountCategory";

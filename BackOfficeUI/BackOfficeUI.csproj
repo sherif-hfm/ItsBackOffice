@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounting\frmCostCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmCostCenter.Designer.cs">
+      <DependentUpon>frmCostCenter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\frmAccountTree.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     <Compile Include="Security\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Accounting\frmCostCenter.ar-KW.resx">
+      <DependentUpon>frmCostCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmCostCenter.resx">
+      <DependentUpon>frmCostCenter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmAccountTree.ar-KW.resx">
       <DependentUpon>frmAccountTree.cs</DependentUpon>
     </EmbeddedResource>
