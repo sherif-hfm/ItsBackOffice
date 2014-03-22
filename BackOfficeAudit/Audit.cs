@@ -5,21 +5,28 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-
+using BackOfficeDAL;
+using System.Threading;
+using System.Data.Entity.Infrastructure;
 namespace BackOfficeAudit
 {
     public static class Audit
     {
         public enum AuditActionTypes { AddNew = 1, Edit = 2, Delete = 3 };
 
-        public static void AddDataAudit(AuditActionTypes _actionType, string _tableName, object _auditData)
+        public static void AddDataAudit(List<DbEntityEntry> _auditData)
         {
-            string xml = GetXml(_auditData);
+            Thread addAutid = new Thread(() => AddDataAuditAsync(_auditData));
+            addAutid.Start();
+        }
+
+        private static void AddDataAuditAsync(List<DbEntityEntry> _auditData)
+        { 
+        
         }
 
         private static string GetXml(object _auditData)
         {
-          
             StringWriter strWriter = new StringWriter();
             XmlWriterSettings xmlWriterSettings = new XmlWriterSettings()
             {
