@@ -58,7 +58,7 @@ namespace BackOfficeUI.Accounting
         private void frmVoucher_AddNew(object sender, ref bool _status)
         {
             GridSelectedRow = dgrdVouchers.SelectedRows[0].Index;
-            VOUCHERTYPEID = null;
+            //VOUCHERTYPEID = null;
             CrVoucher = new VoucherType();
 
         }
@@ -356,9 +356,9 @@ namespace BackOfficeUI.Accounting
             {
                 CrVoucher.CurrencyID = Convert.ToInt32(cbxEnCurrency.SelectedValue);
             }
-            if (string.IsNullOrEmpty(VOUCHERTYPEID))
+            if (!string.IsNullOrEmpty(txtVoucherCode.Text))
             {
-                CrVoucher.VoucherTypeId = VOUCHERTYPEID;
+                CrVoucher.VoucherTypeId = txtVoucherCode.Text;
             }
             if (cbxCreditAccounts.SelectedIndex != -1)
             {

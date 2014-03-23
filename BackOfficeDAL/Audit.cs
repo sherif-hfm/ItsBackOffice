@@ -24,7 +24,7 @@ namespace BackOfficeDAL
             NewAppsCnn cnn = new NewAppsCnn(NewAppsConnectionString);
             foreach (DbEntityEntry entity in _auditData)
             {
-                string tableName=entity.Entity.GetType().BaseType.Name;
+                string tableName = entity.Entity.GetType().BaseType.Name;
                 if (!(entity.Entity is Grnl_Audit) && !(entity.Entity is Grnl_AuditDtl) && !(entity.Entity is Gnrl_AuditActions))
                 {
                     Grnl_Audit audit = new Grnl_Audit();
@@ -34,8 +34,8 @@ namespace BackOfficeDAL
                     audit.ActionDate = DateTime.Now;
                     string[] propertyNames;
                     switch (entity.State)
-                    { 
-                        case System.Data.EntityState.Added :
+                    {
+                        case System.Data.EntityState.Added:
                             propertyNames = entity.CurrentValues.PropertyNames.ToArray();
                             break;
                         case System.Data.EntityState.Deleted:
@@ -51,9 +51,10 @@ namespace BackOfficeDAL
                         Grnl_AuditDtl auditDtl = new Grnl_AuditDtl();
                         auditDtl.PropertyName = propertyName;
                         switch (entity.State)
-                        { 
+                        {
                             case System.Data.EntityState.Added:
-                                auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
+                                if (entity.CurrentValues[propertyName] != null)
+                                    auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
                                 break;
                             case System.Data.EntityState.Modified:
                                 auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
@@ -66,6 +67,7 @@ namespace BackOfficeDAL
                                 auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
                                 break;
                         }
+                        if(!string.IsNullOrEmpty(auditDtl.PropertyCurrentValues))
                         audit.Grnl_AuditDtl.Add(auditDtl);
                     }
                     cnn.Grnl_Audit.Add(audit);
@@ -74,6 +76,6 @@ namespace BackOfficeDAL
             }
         }
 
-       
+
     }
 }

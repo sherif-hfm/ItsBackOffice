@@ -88,15 +88,14 @@ namespace BackOfficeBL.Accounting
             {
                 Acc_VouchersType AccVouchersType;
                 NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-                if (_Voucher.VoucherTypeId != null)
+
+                AccVouchersType = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == _Voucher.VoucherTypeId).ToList().FirstOrDefault();
+                if (AccVouchersType != null)
                 {
-                    AccVouchersType = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == _Voucher.VoucherTypeId).ToList().FirstOrDefault();
-                    if (AccVouchersType != null)
-                    {
-                        AccVouchersType = BuildDBRecord(AccVouchersType, _Voucher);
-                        newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
-                    }
+                    AccVouchersType = BuildDBRecord(AccVouchersType, _Voucher);
+                    newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
                 }
+
                 else
                 {
                     AccVouchersType = new Acc_VouchersType();
@@ -107,7 +106,7 @@ namespace BackOfficeBL.Accounting
 
 
                 newAppsCnn.SaveChanges();
-                Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Acc_VouchersType", this);
+                //   Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Acc_VouchersType", this);
 
                 return new DataSaveResult() { SaveStatus = true };
             }
