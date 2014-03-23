@@ -77,6 +77,9 @@
             this.cbxArCurrency = new BackOfficeUI.Controls.ComboBox();
             this.cbxEnCurrency = new BackOfficeUI.Controls.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new BackOfficeUI.Controls.Label();
+            this.txtEliasEn = new BackOfficeUI.Controls.TextBox();
+            this.txtEliasAr = new BackOfficeUI.Controls.TextBox();
             this.dgrdVouchers = new System.Windows.Forms.DataGridView();
             this.clmVoucherCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEnglishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -490,6 +493,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtEliasEn);
+            this.groupBox1.Controls.Add(this.txtEliasAr);
             this.groupBox1.Controls.Add(this.cbxEnCurrency);
             this.groupBox1.Controls.Add(this.cbxArCurrency);
             this.groupBox1.Controls.Add(this.cbxDepitAccounts);
@@ -507,6 +513,29 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.IsRequired = false;
+            this.label1.LockedInModes = 25;
+            this.label1.Name = "label1";
+            // 
+            // txtEliasEn
+            // 
+            this.txtEliasEn.BackColor = System.Drawing.Color.White;
+            this.txtEliasEn.IsRequired = false;
+            resources.ApplyResources(this.txtEliasEn, "txtEliasEn");
+            this.txtEliasEn.LockedInModes = 25;
+            this.txtEliasEn.Name = "txtEliasEn";
+            // 
+            // txtEliasAr
+            // 
+            this.txtEliasAr.BackColor = System.Drawing.Color.White;
+            this.txtEliasAr.IsRequired = false;
+            resources.ApplyResources(this.txtEliasAr, "txtEliasAr");
+            this.txtEliasAr.LockedInModes = 25;
+            this.txtEliasAr.Name = "txtEliasAr";
             // 
             // dgrdVouchers
             // 
@@ -643,5 +672,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmArVoucherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEnEliasName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEliasAr;
+        private Controls.TextBox txtEliasEn;
+        private Controls.TextBox txtEliasAr;
+        private Controls.Label label1;
     }
 }

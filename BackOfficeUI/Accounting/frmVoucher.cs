@@ -290,9 +290,13 @@ namespace BackOfficeUI.Accounting
                 cbxDepitAccounts.SelectedValue = vouchertype.DepitAccountId;
             }
 
+
             txtVoucherCode.Text = vouchertype.VoucherTypeId;
             txtArabicName.Text = vouchertype.VoucherArName;
             txtEnglishName.Text = vouchertype.VoucherEnName;
+            txtEliasAr.Text = vouchertype.ShortName_Ara;
+            txtEliasEn.Text = vouchertype.ShortName_Eng;
+
 
             txtArDtlExtraField1.Text = vouchertype.DetailExtraField1;
             txtArDtlExtraField2.Text = vouchertype.DetailExtraField2;
@@ -371,6 +375,8 @@ namespace BackOfficeUI.Accounting
             //CrVoucher.VoucherTypeId = txtVoucherCode.Text;
             CrVoucher.VoucherArName = txtArabicName.Text;
             CrVoucher.VoucherEnName = txtEnglishName.Text;
+            CrVoucher.ShortName_Ara = txtEliasAr.Text;
+            CrVoucher.ShortName_Eng = txtEliasEn.Text;
 
             CrVoucher.DetailExtraField1 = txtArDtlExtraField1.Text;
             CrVoucher.DetailExtraField2 = txtArDtlExtraField2.Text;

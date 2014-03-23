@@ -89,17 +89,17 @@ namespace BackOfficeBL.Accounting
                 Acc_VouchersType AccVouchersType;
                 NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
 
-                AccVouchersType = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == _Voucher.VoucherTypeId).ToList().FirstOrDefault();
+                AccVouchersType = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == _Voucher.VoucherTypeId).FirstOrDefault();
                 if (AccVouchersType != null)
                 {
-                    AccVouchersType = BuildDBRecord(AccVouchersType, _Voucher);
-                    newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
+                     BuildDBRecord(AccVouchersType, _Voucher);
+                    //newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
                 }
 
                 else
                 {
-                    AccVouchersType = new Acc_VouchersType();
 
+                    AccVouchersType = new Acc_VouchersType();
                     AccVouchersType = BuildDBRecord(AccVouchersType, _Voucher);
                     newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
                 }
