@@ -10,6 +10,7 @@
           <EntitySet Name="Acc_Accounts" EntityType="NewApps.Store.Acc_Accounts" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Accountype" EntityType="NewApps.Store.Acc_Accountype" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_CostCenter" EntityType="NewApps.Store.Acc_CostCenter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Acc_Currancy" EntityType="NewApps.Store.Acc_Currancy" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Voucher" EntityType="NewApps.Store.Acc_Voucher" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_VoucherDtl" EntityType="NewApps.Store.Acc_VoucherDtl" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_VouchersType" EntityType="NewApps.Store.Acc_VouchersType" store:Type="Tables" Schema="dbo" />
@@ -55,6 +56,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Acc_VouchersTemplate_Acc_Accounts" Association="NewApps.Store.FK_Acc_VouchersTemplate_Acc_Accounts">
             <End Role="Acc_Accounts" EntitySet="Acc_Accounts" />
+            <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Acc_VouchersTemplate_Acc_Currancy" Association="NewApps.Store.FK_Acc_VouchersTemplate_Acc_Currancy">
+            <End Role="Acc_Currancy" EntitySet="Acc_Currancy" />
             <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
           </AssociationSet>
           <AssociationSet Name="FK_Grnl_AuditDtl_Grnl_Audit" Association="NewApps.Store.FK_Grnl_AuditDtl_Grnl_Audit">
@@ -134,6 +139,21 @@
           <Property Name="ClosingBalance" Type="decimal" Precision="16" Scale="3" />
           <Property Name="ParentId" Type="nvarchar" MaxLength="20" />
           <Property Name="Notes" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Acc_Currancy">
+          <Key>
+            <PropertyRef Name="CurrancyId" />
+          </Key>
+          <Property Name="CurrancyId" Type="int" Nullable="false" />
+          <Property Name="CurrancyName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CurrancyName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsLocalCurrancy" Type="bit" Nullable="false" />
+          <Property Name="CurrancyRate" Type="decimal" Nullable="false" Precision="16" Scale="5" />
+          <Property Name="CurrancySymbolName_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="CyrrancySymbolName_Eng" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrancySubUnitNmae_Ara" Type="nvarchar" MaxLength="50" />
+          <Property Name="CUrrancySubUnitName_Eng" Type="nvarchar" MaxLength="50" />
+          <Property Name="FractionLength" Type="int" />
         </EntityType>
         <EntityType Name="Acc_Voucher">
           <Key>
@@ -466,6 +486,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Acc_VouchersTemplate_Acc_Currancy">
+          <End Role="Acc_Currancy" Type="NewApps.Store.Acc_Currancy" Multiplicity="0..1" />
+          <End Role="Acc_VouchersType" Type="NewApps.Store.Acc_VouchersType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_Currancy">
+              <PropertyRef Name="CurrancyId" />
+            </Principal>
+            <Dependent Role="Acc_VouchersType">
+              <PropertyRef Name="VoucherCurrancyid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Grnl_AuditDtl_Grnl_Audit">
           <End Role="Grnl_Audit" Type="NewApps.Store.Grnl_Audit" Multiplicity="1" />
           <End Role="Grnl_AuditDtl" Type="NewApps.Store.Grnl_AuditDtl" Multiplicity="*" />
@@ -628,6 +660,11 @@
           <AssociationSet Name="FK_Acc_VoucherDtl_Acc_CostCenter" Association="NewApps.FK_Acc_VoucherDtl_Acc_CostCenter">
             <End Role="Acc_CostCenter" EntitySet="Acc_CostCenter" />
             <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
+          </AssociationSet>
+          <EntitySet Name="Acc_Currancy" EntityType="NewApps.Acc_Currancy" />
+          <AssociationSet Name="FK_Acc_VouchersTemplate_Acc_Currancy" Association="NewApps.FK_Acc_VouchersTemplate_Acc_Currancy">
+            <End Role="Acc_Currancy" EntitySet="Acc_Currancy" />
+            <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
@@ -951,6 +988,7 @@
           <Property Type="String" Name="MainValidationField5" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Acc_Accounts" Relationship="NewApps.FK_Acc_VouchersTemplate_Acc_Accounts" FromRole="Acc_VouchersType" ToRole="Acc_Accounts" />
           <NavigationProperty Name="Acc_Voucher" Relationship="NewApps.FK_Acc_Voucher_Acc_VouchersTemplate" FromRole="Acc_VouchersType" ToRole="Acc_Voucher" />
+          <NavigationProperty Name="Acc_Currancy" Relationship="NewApps.FK_Acc_VouchersTemplate_Acc_Currancy" FromRole="Acc_VouchersType" ToRole="Acc_Currancy" />
         </EntityType>
         <EntityType Name="Acc_VoucherValidation">
           <Key>
@@ -1091,6 +1129,34 @@
             </Principal>
             <Dependent Role="Acc_VoucherDtl">
               <PropertyRef Name="CostCenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Acc_Currancy">
+          <Key>
+            <PropertyRef Name="CurrancyId" />
+          </Key>
+          <Property Type="Int32" Name="CurrancyId" Nullable="false" />
+          <Property Type="String" Name="CurrancyName_Ara" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CurrancyName_Eng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsLocalCurrancy" Nullable="false" />
+          <Property Type="Decimal" Name="CurrancyRate" Nullable="false" Precision="16" Scale="5" />
+          <Property Type="String" Name="CurrancySymbolName_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CyrrancySymbolName_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CurrancySubUnitNmae_Ara" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CUrrancySubUnitName_Eng" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FractionLength" />
+          <NavigationProperty Name="Acc_VouchersType" Relationship="NewApps.FK_Acc_VouchersTemplate_Acc_Currancy" FromRole="Acc_Currancy" ToRole="Acc_VouchersType" />
+        </EntityType>
+        <Association Name="FK_Acc_VouchersTemplate_Acc_Currancy">
+          <End Type="NewApps.Acc_Currancy" Role="Acc_Currancy" Multiplicity="0..1" />
+          <End Type="NewApps.Acc_VouchersType" Role="Acc_VouchersType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Acc_Currancy">
+              <PropertyRef Name="CurrancyId" />
+            </Principal>
+            <Dependent Role="Acc_VouchersType">
+              <PropertyRef Name="VoucherCurrancyid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1388,6 +1454,22 @@
                 <ScalarProperty Name="CostCenterName_Eng" ColumnName="CostCenterName_Eng" />
                 <ScalarProperty Name="CostCenterName_Ara" ColumnName="CostCenterName_Ara" />
                 <ScalarProperty Name="CostCenterId" ColumnName="CostCenterId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Acc_Currancy">
+            <EntityTypeMapping TypeName="NewApps.Acc_Currancy">
+              <MappingFragment StoreEntitySet="Acc_Currancy">
+                <ScalarProperty Name="FractionLength" ColumnName="FractionLength" />
+                <ScalarProperty Name="CUrrancySubUnitName_Eng" ColumnName="CUrrancySubUnitName_Eng" />
+                <ScalarProperty Name="CurrancySubUnitNmae_Ara" ColumnName="CurrancySubUnitNmae_Ara" />
+                <ScalarProperty Name="CyrrancySymbolName_Eng" ColumnName="CyrrancySymbolName_Eng" />
+                <ScalarProperty Name="CurrancySymbolName_Ara" ColumnName="CurrancySymbolName_Ara" />
+                <ScalarProperty Name="CurrancyRate" ColumnName="CurrancyRate" />
+                <ScalarProperty Name="IsLocalCurrancy" ColumnName="IsLocalCurrancy" />
+                <ScalarProperty Name="CurrancyName_Eng" ColumnName="CurrancyName_Eng" />
+                <ScalarProperty Name="CurrancyName_Ara" ColumnName="CurrancyName_Ara" />
+                <ScalarProperty Name="CurrancyId" ColumnName="CurrancyId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

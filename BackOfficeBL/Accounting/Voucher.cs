@@ -61,17 +61,25 @@ namespace BackOfficeBL.Accounting
                 valid.VaidationID = validation.ValidationId;
                 valid.ValidationArName = validation.ValidationName_Ara;
                 valid.ValidationEnName = validation.ValidationName_Eng;
+                VoucherValidationList.Add(valid);
             }
             return VoucherValidationList;
         }
-        //public static VoucherType GetSelectedVoucher(string ID)
-        //{
-        //    NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-
-        //    Acc_VouchersType q = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == ID).ToList().FirstOrDefault();
-
-        //    return q;
-        //}
+        public static List<Currency> GetAllCurrency()
+        {
+            List<Currency> CurrencyList = new List<Currency>();
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var Currency = from val in newAppsCnn.Acc_Currancy select val;
+            foreach (var Cur in Currency)
+            {
+                Currency CurrencyCla = new Currency();
+                CurrencyCla.CurrencyID = Cur.CurrancyId;
+                CurrencyCla.CurrencyArName = Cur.CurrancyName_Ara;
+                CurrencyCla.CurrencyEnName = Cur.CurrancyName_Eng;
+                CurrencyList.Add(CurrencyCla);
+            }
+            return CurrencyList;
+        }
         public DataSaveResult Save(VoucherType _Voucher)
         {
 

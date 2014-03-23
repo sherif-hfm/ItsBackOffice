@@ -32,12 +32,40 @@ namespace BackOfficeDAL
                     audit.UserId = CrUserID;
                     audit.AuditActionId = (int)entity.State;
                     audit.ActionDate = DateTime.Now;
-                    foreach (var propertyName in entity.OriginalValues.PropertyNames)
+                    string[] propertyNames;
+                    switch (entity.State)
+                    { 
+                        case System.Data.EntityState.Added :
+                            propertyNames = entity.CurrentValues.PropertyNames.ToArray();
+                            break;
+                        case System.Data.EntityState.Deleted:
+                            propertyNames = entity.OriginalValues.PropertyNames.ToArray();
+                            break;
+                        default:
+                            propertyNames = entity.CurrentValues.PropertyNames.ToArray();
+                            break;
+                    }
+
+                    foreach (var propertyName in propertyNames)
                     {
                         Grnl_AuditDtl auditDtl = new Grnl_AuditDtl();
                         auditDtl.PropertyName = propertyName;
-                        auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
-                        auditDtl.PropertyOriginalValues = entity.OriginalValues[propertyName].ToString();
+                        switch (entity.State)
+                        { 
+                            case System.Data.EntityState.Added:
+                                auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
+                                break;
+                            case System.Data.EntityState.Modified:
+                                auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
+                                auditDtl.PropertyOriginalValues = entity.OriginalValues[propertyName].ToString();
+                                break;
+                            case System.Data.EntityState.Deleted:
+                                auditDtl.PropertyOriginalValues = entity.OriginalValues[propertyName].ToString();
+                                break;
+                            default:
+                                auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
+                                break;
+                        }
                         audit.Grnl_AuditDtl.Add(auditDtl);
                     }
                     cnn.Grnl_Audit.Add(audit);

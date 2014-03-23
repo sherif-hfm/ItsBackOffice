@@ -43,5 +43,6 @@ namespace BackOfficeDAL
         public DbSet<Grnl_Audit> Grnl_Audit { get; set; }
         public DbSet<Grnl_AuditDtl> Grnl_AuditDtl { get; set; }
         public DbSet<Acc_CostCenter> Acc_CostCenter { get; set; }
+        public DbSet<Acc_Currancy> Acc_Currancy { get; set; }
     }
 }
