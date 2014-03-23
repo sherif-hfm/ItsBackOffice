@@ -555,6 +555,7 @@
             // 
             // frmVoucher
             // 
+            this.AllowedFunctions = 25;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgrdVouchers);

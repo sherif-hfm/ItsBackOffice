@@ -80,6 +80,7 @@ namespace BackOfficeBL.Accounting
             }
             return CurrencyList;
         }
+
         public DataSaveResult Save(VoucherType _Voucher)
         {
 
@@ -87,7 +88,7 @@ namespace BackOfficeBL.Accounting
             {
                 Acc_VouchersType AccVouchersType;
                 NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-                if (_Voucher.VoucherTypeId != "")
+                if (_Voucher.VoucherTypeId != null)
                 {
                     AccVouchersType = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == _Voucher.VoucherTypeId).ToList().FirstOrDefault();
                     if (AccVouchersType != null)
@@ -135,6 +136,7 @@ namespace BackOfficeBL.Accounting
                 return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = ex.Message };
             }
         }
+
         private Acc_VouchersType BuildDBRecord(Acc_VouchersType _AccVouchersType, VoucherType _VoucherType)
         {
             _AccVouchersType.VoucherTypeId = _VoucherType.VoucherTypeId;

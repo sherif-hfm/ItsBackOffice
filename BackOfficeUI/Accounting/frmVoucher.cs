@@ -17,6 +17,7 @@ namespace BackOfficeUI.Accounting
         List<VoucherType> VouchersList;
         private VoucherType CrVoucher;
         private string VOUCHERTYPEID = null;
+        int GridSelectedRow;
         //private bool IsEdit = false;
         //private bool IsAdd = false;
 
@@ -35,7 +36,7 @@ namespace BackOfficeUI.Accounting
             LoadComboCurrency(Voucher.GetAllCurrency());
             VouchersList = Voucher.GetAllVouchers();
             LoadDataGrid(VouchersList);
-            dgrdVouchers.Rows[1].Selected = true;
+
 
 
         }
@@ -44,21 +45,28 @@ namespace BackOfficeUI.Accounting
         {
             if (dgrdVouchers.SelectedRows.Count != 0)
             {
+
                 VOUCHERTYPEID = dgrdVouchers.SelectedRows[0].Cells[0].Value.ToString();
                 VoucherType v = VouchersList.Find(a => a.VoucherTypeId == VOUCHERTYPEID);
                 ShowGUI(v);
-                GetDataFromGUI();
+                //GetDataFromGUI();
+                CrVoucher = v;
             }
+
         }
 
         private void frmVoucher_AddNew(object sender, ref bool _status)
         {
+            GridSelectedRow = dgrdVouchers.SelectedRows[0].Index;
             VOUCHERTYPEID = null;
             CrVoucher = new VoucherType();
+
         }
 
         private void frmVoucher_Cancel(object sender)
         {
+            dgrdVouchers.Rows[GridSelectedRow].Selected = true;
+            dgrdVouchers_SelectionChanged(dgrdVouchers, new EventArgs());
             VOUCHERTYPEID = CrVoucher.VoucherTypeId;
             ShowGUI(CrVoucher);
 
@@ -66,7 +74,8 @@ namespace BackOfficeUI.Accounting
 
         private void frmVoucher_Edit(object sender, ref bool _status)
         {
-            //CollectScreenValues();
+            GridSelectedRow = dgrdVouchers.SelectedRows[0].Index;
+
 
         }
 
@@ -127,18 +136,28 @@ namespace BackOfficeUI.Accounting
             {
 
                 case MoveCommandEnum.MoveFirst:
+                    dgrdVouchers.Rows[dgrdVouchers.SelectedRows[0].Index].Selected = false;
                     dgrdVouchers.Rows[0].Selected = true;
                     break;
                 case MoveCommandEnum.MoveLast:
+                    dgrdVouchers.Rows[dgrdVouchers.SelectedRows[0].Index].Selected = false;
                     dgrdVouchers.Rows[VouchersList.Count - 1].Selected = true;
                     break;
                 case MoveCommandEnum.MoveNext:
                     CurrentRow = dgrdVouchers.SelectedRows[0].Index;
-                    dgrdVouchers.Rows[CurrentRow + 1].Selected = true;
+                    if (CurrentRow != VouchersList.Count - 1)
+                    {
+                        dgrdVouchers.Rows[dgrdVouchers.SelectedRows[0].Index].Selected = false;
+                        dgrdVouchers.Rows[CurrentRow + 1].Selected = true;
+                    }
                     break;
                 case MoveCommandEnum.MovePrev:
                     CurrentRow = dgrdVouchers.SelectedRows[0].Index;
-                    dgrdVouchers.Rows[CurrentRow - 1].Selected = true;
+                    if (CurrentRow != 0)
+                    {
+                        dgrdVouchers.Rows[dgrdVouchers.SelectedRows[0].Index].Selected = false;
+                        dgrdVouchers.Rows[CurrentRow - 1].Selected = true;
+                    }
                     break;
             }
         }
@@ -349,7 +368,7 @@ namespace BackOfficeUI.Accounting
             {
                 CrVoucher.DepitAccountId = cbxDepitAccounts.SelectedValue.ToString();
             }
-            CrVoucher.VoucherTypeId = txtVoucherCode.Text;
+            //CrVoucher.VoucherTypeId = txtVoucherCode.Text;
             CrVoucher.VoucherArName = txtArabicName.Text;
             CrVoucher.VoucherEnName = txtEnglishName.Text;
 

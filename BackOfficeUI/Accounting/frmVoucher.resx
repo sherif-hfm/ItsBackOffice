@@ -117,230 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;cbxValidation5.Name" xml:space="preserve">
-    <value>cbxValidation5</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation5.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation4.Name" xml:space="preserve">
-    <value>cbxValidation4</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.Name" xml:space="preserve">
-    <value>cbxValidation3</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.Name" xml:space="preserve">
-    <value>cbxValidation2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.Name" xml:space="preserve">
-    <value>cbxValidation1</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblCheckValueAdding.Name" xml:space="preserve">
-    <value>lblCheckValueAdding</value>
-  </data>
-  <data name="&gt;&gt;lblCheckValueAdding.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblCheckValueAdding.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblCheckValueAdding.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField5.Name" xml:space="preserve">
-    <value>txtEnExtraField5</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField5.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField2.Name" xml:space="preserve">
-    <value>txtEnExtraField2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField3.Name" xml:space="preserve">
-    <value>txtEnExtraField3</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField4.Name" xml:space="preserve">
-    <value>txtEnExtraField4</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField4.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.Name" xml:space="preserve">
-    <value>lblExtraField2</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.Name" xml:space="preserve">
-    <value>lblExtraField3</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField4.Name" xml:space="preserve">
-    <value>lblExtraField4</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField4.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField5.Name" xml:space="preserve">
-    <value>lblExtraField5</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField5.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField5.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField1.Name" xml:space="preserve">
-    <value>txtEnExtraField1</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField1.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField1.Name" xml:space="preserve">
-    <value>lblExtraField1</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 347</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 192</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Main</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="cbxValidation5.Location" type="System.Drawing.Point, System.Drawing">
     <value>410, 148</value>
   </data>
   <data name="cbxValidation5.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 27</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbxValidation5.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
@@ -706,6 +490,30 @@
   </data>
   <data name="&gt;&gt;lblExtraField1.ZOrder" xml:space="preserve">
     <value>15</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 347</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 192</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="lblDtlExtraField1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1339,7 +1147,7 @@
     <value>191, 111</value>
   </data>
   <data name="cbxCreditAccounts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 27</value>
+    <value>220, 27</value>
   </data>
   <data name="cbxCreditAccounts.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -1363,7 +1171,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblDepitAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 115</value>
+    <value>435, 115</value>
   </data>
   <data name="lblDepitAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 19</value>
@@ -1387,10 +1195,10 @@
     <value>3</value>
   </data>
   <data name="cbxDepitAccounts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>552, 111</value>
+    <value>616, 111</value>
   </data>
   <data name="cbxDepitAccounts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 27</value>
+    <value>220, 27</value>
   </data>
   <data name="cbxDepitAccounts.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
