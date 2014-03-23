@@ -33,10 +33,12 @@ namespace BackOfficeDAL
         public string ParentId { get; set; }
         public string CurrancyId { get; set; }
         public string GroupAccount { get; set; }
+        public string CostCenterId { get; set; }
     
         public virtual Acc_AccountCategory Acc_AccountCategory { get; set; }
         public virtual Acc_Accountype Acc_Accountype { get; set; }
         public virtual ICollection<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
         public virtual ICollection<Acc_VouchersType> Acc_VouchersType { get; set; }
+        public virtual Acc_CostCenter Acc_CostCenter { get; set; }
     }
 }

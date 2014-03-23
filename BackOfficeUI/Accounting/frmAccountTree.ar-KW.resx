@@ -231,6 +231,15 @@
   <data name="cmbAccountType.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 287</value>
   </data>
+  <data name="cmbCostCenter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 320</value>
+  </data>
+  <data name="lblCostCenter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 323</value>
+  </data>
+  <data name="lblCostCenter.Text" xml:space="preserve">
+    <value>مركز التكلفة</value>
+  </data>
   <data name="cmbAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 125</value>
   </data>
@@ -241,7 +250,7 @@
     <value>Yes</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>472, 320</value>
+    <value>472, 396</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>البيانات الرئيسية</value>
