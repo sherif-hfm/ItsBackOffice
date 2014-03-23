@@ -180,6 +180,7 @@ namespace BackOfficeUI.Accounting
             CrAccount = new BackOfficeBL.Accounting.Account();
             CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
             CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
+            txtAccountNo.Text = Account.getNewId(trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "");
         }
 
         #endregion

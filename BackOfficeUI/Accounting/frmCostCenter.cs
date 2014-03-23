@@ -165,6 +165,7 @@ namespace BackOfficeUI.Accounting
         private void frmCostCenter_AddNew(object sender, ref bool _status)
         {
             CrCostCenter = new BackOfficeBL.Accounting.CostCenter();
+            txtNo.Text = CostCenter.getNewId(trvCostCenterTree.SelectedNode != null ? trvCostCenterTree.SelectedNode.Tag.ToString() : "");
         }
 
         #endregion

@@ -20,6 +20,45 @@ namespace BackOfficeBL.Accounting
         public string ParentId { get; set; }
         public bool IsNew { get; set; }
 
+
+        public static string getNewId(string ParentId)
+        {
+            string CostCenterId = "";
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbAccounts = from g in newAppsCnn.Acc_CostCenter where g.CostCenterId != null || g.CostCenterId != "" select g;
+            if (ParentId == null || ParentId == "")
+            {
+                var PChild = (from ac in dbAccounts where ac.ParentId == "" || ac.ParentId == null select ac).ToList();
+                CostCenterId = string.Format("{0}000000000", PChild.Count + 1);
+            }
+            else
+            {
+                var PrntVal = FindByCostCenterId(ParentId);
+                var PChild = (from ac in dbAccounts where ac.ParentId == ParentId select ac).ToList();
+                char[] charArr = PrntVal.CostCenterId.ToCharArray();
+                charArr[(getNodeLevel(0, PrntVal.ParentId) + 1)] = (char)(PChild.Count + 1).ToString()[0]; // freely modify the array
+                CostCenterId = new string(charArr);
+            }
+            return CostCenterId;
+        }
+
+        private static int getNodeLevel(int IntCount, string CostCenterId)
+        {
+            var CurrCostCenter = FindByCostCenterId(CostCenterId);
+            if (CurrCostCenter == null)
+            {
+                return IntCount;
+            }
+            else if (CurrCostCenter.ParentId == null || CurrCostCenter.ParentId == "")
+            {
+                return ++IntCount;
+            }
+            else
+            {
+                return getNodeLevel(++IntCount, CurrCostCenter.ParentId);
+            }
+        }
+
         public static List<CostCenter> GetAllCostCenterTree()
         {
             List<CostCenter> result = new List<CostCenter>();
@@ -102,7 +141,7 @@ namespace BackOfficeBL.Accounting
             _dbCostCenter.CostOpenBalance = this.CostOpenBalance;
             _dbCostCenter.ClosingBalance = this.ClosingBalance;
             _dbCostCenter.IsDisable = this.IsDisable;
-            if (this.IsNew == false)
+            if (this.IsNew == true)
             {
                 _dbCostCenter.ParentId = this.ParentId;
             }
