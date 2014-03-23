@@ -91,8 +91,8 @@
             // txtAccountNo
             // 
             this.txtAccountNo.BackColor = System.Drawing.Color.White;
-            this.txtAccountNo.IsRequired = true;
             resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
+            this.txtAccountNo.IsRequired = true;
             this.txtAccountNo.LockedInModes = 25;
             this.txtAccountNo.Name = "txtAccountNo";
             // 

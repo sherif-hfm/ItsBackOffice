@@ -47,9 +47,9 @@
             // 
             // txtNo
             // 
+            resources.ApplyResources(this.txtNo, "txtNo");
             this.txtNo.BackColor = System.Drawing.Color.White;
             this.txtNo.IsRequired = true;
-            resources.ApplyResources(this.txtNo, "txtNo");
             this.txtNo.LockedInModes = 25;
             this.txtNo.Name = "txtNo";
             // 
@@ -92,17 +92,17 @@
             // 
             // txtNameAr
             // 
+            resources.ApplyResources(this.txtNameAr, "txtNameAr");
             this.txtNameAr.BackColor = System.Drawing.Color.White;
             this.txtNameAr.IsRequired = false;
-            resources.ApplyResources(this.txtNameAr, "txtNameAr");
             this.txtNameAr.LockedInModes = 25;
             this.txtNameAr.Name = "txtNameAr";
             // 
             // txtNameEng
             // 
+            resources.ApplyResources(this.txtNameEng, "txtNameEng");
             this.txtNameEng.BackColor = System.Drawing.Color.White;
             this.txtNameEng.IsRequired = false;
-            resources.ApplyResources(this.txtNameEng, "txtNameEng");
             this.txtNameEng.LockedInModes = 25;
             this.txtNameEng.Name = "txtNameEng";
             // 
@@ -115,22 +115,23 @@
             // 
             // txtClosingBalance
             // 
+            resources.ApplyResources(this.txtClosingBalance, "txtClosingBalance");
             this.txtClosingBalance.BackColor = System.Drawing.Color.White;
             this.txtClosingBalance.IsRequired = false;
-            resources.ApplyResources(this.txtClosingBalance, "txtClosingBalance");
             this.txtClosingBalance.LockedInModes = 25;
             this.txtClosingBalance.Name = "txtClosingBalance";
             // 
             // txtStartBalance
             // 
+            resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
             this.txtStartBalance.BackColor = System.Drawing.Color.White;
             this.txtStartBalance.IsRequired = false;
-            resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
             this.txtStartBalance.LockedInModes = 25;
             this.txtStartBalance.Name = "txtStartBalance";
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.txtNo);
             this.groupBox1.Controls.Add(this.lblNo);
             this.groupBox1.Controls.Add(this.chkIsDiable);
@@ -143,7 +144,6 @@
             this.groupBox1.Controls.Add(this.txtClosingBalance);
             this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.lblStartBalance);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -156,9 +156,9 @@
             // 
             // trvCostCenterTree
             // 
+            resources.ApplyResources(this.trvCostCenterTree, "trvCostCenterTree");
             this.trvCostCenterTree.BackColor = System.Drawing.Color.White;
             this.trvCostCenterTree.IsRequired = false;
-            resources.ApplyResources(this.trvCostCenterTree, "trvCostCenterTree");
             this.trvCostCenterTree.LockedInModes = 25;
             this.trvCostCenterTree.Name = "trvCostCenterTree";
             // 

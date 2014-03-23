@@ -24,11 +24,32 @@ namespace BackOfficeBL.Accounting
         public string ParentId { get; set; }
         public bool IsNew { get; set; }
 
+        public static string getNewId(string ParentId)
+        {
+            string AccountId = "";
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbAccounts = from g in newAppsCnn.Acc_Accounts where g.AccountID != null || g.AccountID != "" select g;
+            if (ParentId == null || ParentId == "")
+            {
+                var PChild = (from ac in dbAccounts where ac.ParentId == "" || ac.ParentId == null select ac).ToList();
+                AccountId = string.Format("{0}000000000", PChild.Count + 1);
+            }
+            else 
+            {
+                var PrntVal = FindByAccountID(ParentId);
+                var PChild = (from ac in dbAccounts where ac.ParentId == ParentId select ac).ToList();
+                char[] charArr = PrntVal.AccountID.ToCharArray();
+                charArr[PrntVal.AccountLevel + 1] = (char)(PChild.Count + 1).ToString()[0]; // freely modify the array
+                AccountId = new string(charArr);
+            }
+            return AccountId;
+        }
+
         public static List<Account> GetAllAccountTree()
         {
             List<Account> result = new List<Account>();
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-            var dbAccounts = from g in newAppsCnn.Acc_Accounts select g;
+            var dbAccounts = from g in newAppsCnn.Acc_Accounts where g.AccountID != null || g.AccountID != "" select g;
             foreach (var dbAccount in dbAccounts)
             {
                 Account account = new Account();
@@ -38,6 +59,23 @@ namespace BackOfficeBL.Accounting
             return result;
         }
 
+        private static int getNodeLevel(int IntCount, string AccountId)
+        {
+            var CurrAccount = FindByAccountID(AccountId);
+            
+            if (CurrAccount==null)
+            {
+                return IntCount;
+            }
+            else if (CurrAccount.ParentId == null || CurrAccount.ParentId == "")
+            {
+                return ++IntCount;
+            }
+            else
+            {
+                return getNodeLevel(++IntCount, CurrAccount.ParentId);
+            }
+        }
         public static Account FindByAccountID(string _VaidationID)
         {
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
@@ -110,7 +148,7 @@ namespace BackOfficeBL.Accounting
             _dbAccount.AccountCategoryId = this.AccountCategoryId;
             _dbAccount.IsSubAccount = this.IsSubAccount;
             _dbAccount.IsDisableAccount = this.IsDisableAccount;
-            if (this.IsNew == false)
+            if (this.IsNew == true)
             {
                 _dbAccount.ParentId = this.ParentId;
             }
@@ -127,11 +165,13 @@ namespace BackOfficeBL.Accounting
                 {
                     dbAccount = dbAccounts.First();
                     this.ToDbAccount(dbAccount);
+                    dbAccount.AccountLevel = getNodeLevel(0, dbAccount.ParentId);
                 }
                 else
                 {
                     dbAccount = new Acc_Accounts();
                     this.ToDbAccount(dbAccount);
+                    dbAccount.AccountLevel = getNodeLevel(0, dbAccount.ParentId);
                     newAppsCnn.Acc_Accounts.Add(dbAccount);
                 }
                 newAppsCnn.SaveChanges();
