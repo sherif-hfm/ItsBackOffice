@@ -18,6 +18,7 @@ namespace BackOfficeDAL
         {
             this.Acc_CostCenter1 = new HashSet<Acc_CostCenter>();
             this.Acc_VoucherDtl = new HashSet<Acc_VoucherDtl>();
+            this.Acc_Accounts = new HashSet<Acc_Accounts>();
         }
     
         public string CostCenterId { get; set; }
@@ -32,5 +33,6 @@ namespace BackOfficeDAL
         public virtual ICollection<Acc_CostCenter> Acc_CostCenter1 { get; set; }
         public virtual Acc_CostCenter Acc_CostCenter2 { get; set; }
         public virtual ICollection<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
+        public virtual ICollection<Acc_Accounts> Acc_Accounts { get; set; }
     }
 }

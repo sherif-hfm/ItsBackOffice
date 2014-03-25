@@ -73,6 +73,19 @@ namespace BackOfficeBL.Accounting
             return result;
         }
 
+        public static List<CostCenter> GetAllCmbCostCenter()
+        {
+            List<CostCenter> result = new List<CostCenter>();
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbCostCenters = from g in newAppsCnn.Acc_CostCenter where g.IsDisable==false select g;
+            foreach (var dbCostCenter in dbCostCenters)
+            {
+                CostCenter account = new CostCenter();
+                account.FromDbCostCenter(dbCostCenter);
+                result.Add(account);
+            }
+            return result;
+        }
         public static CostCenter FindByCostCenterId(string _VaidationID)
         {
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
