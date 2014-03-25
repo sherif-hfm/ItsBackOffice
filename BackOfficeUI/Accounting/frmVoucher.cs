@@ -392,23 +392,23 @@ namespace BackOfficeUI.Accounting
 
             if (cbxValidation1.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField1 = Convert.ToInt32(cbxValidation1.SelectedValue);
+                CrVoucher.MainValidationField1 = cbxValidation1.SelectedValue.ToString();// Elhaddad update convert from int to string
             }
             if (cbxValidation2.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField2 = Convert.ToInt32(cbxValidation2.SelectedValue);
+                CrVoucher.MainValidationField2 = cbxValidation2.SelectedValue.ToString();// Elhaddad update convert from int to string
             }
             if (cbxValidation3.SelectedIndex != -1)
             {
-                CrVoucher.mainValidationField3 = Convert.ToInt32(cbxValidation3.SelectedValue);
+                CrVoucher.mainValidationField3 = cbxValidation3.SelectedValue.ToString();// Elhaddad update convert from int to string
             }
             if (cbxValidation4.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField4 = Convert.ToInt32(cbxValidation4.SelectedValue);
+                CrVoucher.MainValidationField4 = cbxValidation4.SelectedValue.ToString();// Elhaddad update convert from int to string
             }
             if (cbxValidation5.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField5 = Convert.ToInt32(cbxValidation5.SelectedValue);
+                CrVoucher.MainValidationField5 = cbxValidation5.SelectedValue.ToString();// Elhaddad update convert from int to string
             }
 
             if (cbxDtlValidation1.SelectedIndex != -1)

@@ -39,11 +39,11 @@ namespace BackOfficeBL.Accounting
         public int? DtlValidationField4 { get; set; }
         public int? DtlValidationField5 { get; set; }
 
-        public int? MainValidationField1 { get; set; }
-        public int? MainValidationField2 { get; set; }
-        public int? mainValidationField3 { get; set; }
-        public int? MainValidationField4 { get; set; }
-        public int? MainValidationField5 { get; set; }
+        public string MainValidationField1 { get; set; }// Elhaddad update convert from int to string
+        public string MainValidationField2 { get; set; }// Elhaddad update convert from int to string
+        public string mainValidationField3 { get; set; }// Elhaddad update convert from int to string
+        public string MainValidationField4 { get; set; }// Elhaddad update convert from int to string
+        public string MainValidationField5 { get; set; }// Elhaddad update convert from int to string
 
 
 

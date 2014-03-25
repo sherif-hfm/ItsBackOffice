@@ -67,6 +67,10 @@
             <End Role="Acc_Currancy" EntitySet="Acc_Currancy" />
             <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
           </AssociationSet>
+          <AssociationSet Name="FK_Ast_AssetCatogry_Ast_AssetCatogry" Association="NewApps.Store.FK_Ast_AssetCatogry_Ast_AssetCatogry">
+            <End Role="Ast_AssetCatogry" EntitySet="Ast_AssetCatogry" />
+            <End Role="Ast_AssetCatogry1" EntitySet="Ast_AssetCatogry" />
+          </AssociationSet>
           <AssociationSet Name="FK_Grnl_AuditDtl_Grnl_Audit" Association="NewApps.Store.FK_Grnl_AuditDtl_Grnl_Audit">
             <End Role="Grnl_Audit" EntitySet="Grnl_Audit" />
             <End Role="Grnl_AuditDtl" EntitySet="Grnl_AuditDtl" />
@@ -268,10 +272,11 @@
           <Key>
             <PropertyRef Name="AstCatId" />
           </Key>
-          <Property Name="AstCatId" Type="int" Nullable="false" />
+          <Property Name="AstCatId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="AstCatName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="AstCatName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="IsDisable" Type="bit" Nullable="false" />
+          <Property Name="ParentId" Type="int" />
         </EntityType>
         <EntityType Name="Gnrl_AuditActions">
           <Key>
@@ -525,6 +530,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Ast_AssetCatogry_Ast_AssetCatogry">
+          <End Role="Ast_AssetCatogry" Type="NewApps.Store.Ast_AssetCatogry" Multiplicity="0..1" />
+          <End Role="Ast_AssetCatogry1" Type="NewApps.Store.Ast_AssetCatogry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ast_AssetCatogry">
+              <PropertyRef Name="AstCatId" />
+            </Principal>
+            <Dependent Role="Ast_AssetCatogry1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Grnl_AuditDtl_Grnl_Audit">
           <End Role="Grnl_Audit" Type="NewApps.Store.Grnl_Audit" Multiplicity="1" />
           <End Role="Grnl_AuditDtl" Type="NewApps.Store.Grnl_AuditDtl" Multiplicity="*" />
@@ -689,7 +706,6 @@
             <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
           </AssociationSet>
           <EntitySet Name="Acc_Voucher" EntityType="NewApps.Acc_Voucher" />
-          <EntitySet Name="Ast_AssetCatogry" EntityType="NewApps.Ast_AssetCatogry" />
           <AssociationSet Name="FK_Acc_Voucher_Acc_VouchersType" Association="NewApps.FK_Acc_Voucher_Acc_VouchersType">
             <End Role="Acc_VouchersType" EntitySet="Acc_VouchersType" />
             <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
@@ -697,6 +713,11 @@
           <AssociationSet Name="FK_Acc_VoucherDtl_Acc_Voucher" Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher">
             <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
             <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
+          </AssociationSet>
+          <EntitySet Name="Ast_AssetCatogry" EntityType="NewApps.Ast_AssetCatogry" />
+          <AssociationSet Name="FK_Ast_AssetCatogry_Ast_AssetCatogry" Association="NewApps.FK_Ast_AssetCatogry_Ast_AssetCatogry">
+            <End Role="Ast_AssetCatogry" EntitySet="Ast_AssetCatogry" />
+            <End Role="Ast_AssetCatogry1" EntitySet="Ast_AssetCatogry" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
@@ -1179,15 +1200,6 @@
           <NavigationProperty Name="Acc_VouchersType" Relationship="NewApps.FK_Acc_Voucher_Acc_VouchersType" FromRole="Acc_Voucher" ToRole="Acc_VouchersType" />
           <NavigationProperty Name="Acc_VoucherDtl" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" FromRole="Acc_Voucher" ToRole="Acc_VoucherDtl" />
         </EntityType>
-        <EntityType Name="Ast_AssetCatogry">
-          <Key>
-            <PropertyRef Name="AstCatId" />
-          </Key>
-          <Property Type="Int32" Name="AstCatId" Nullable="false" />
-          <Property Type="String" Name="AstCatName_Ara" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="AstCatName_Eng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="IsDisable" Nullable="false" />
-        </EntityType>
         <Association Name="FK_Acc_Voucher_Acc_VouchersType">
           <End Type="NewApps.Acc_VouchersType" Role="Acc_VouchersType" Multiplicity="1" />
           <End Type="NewApps.Acc_Voucher" Role="Acc_Voucher" Multiplicity="*" />
@@ -1213,6 +1225,30 @@
               <PropertyRef Name="VoucherTypeId" />
               <PropertyRef Name="VoucherId" />
               <PropertyRef Name="YearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Ast_AssetCatogry">
+          <Key>
+            <PropertyRef Name="AstCatId" />
+          </Key>
+          <Property Type="Int32" Name="AstCatId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="AstCatName_Ara" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AstCatName_Eng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsDisable" Nullable="false" />
+          <Property Type="Int32" Name="ParentId" />
+          <NavigationProperty Name="Ast_AssetCatogry1" Relationship="NewApps.FK_Ast_AssetCatogry_Ast_AssetCatogry" FromRole="Ast_AssetCatogry" ToRole="Ast_AssetCatogry1" />
+          <NavigationProperty Name="Ast_AssetCatogry2" Relationship="NewApps.FK_Ast_AssetCatogry_Ast_AssetCatogry" FromRole="Ast_AssetCatogry1" ToRole="Ast_AssetCatogry" />
+        </EntityType>
+        <Association Name="FK_Ast_AssetCatogry_Ast_AssetCatogry">
+          <End Type="NewApps.Ast_AssetCatogry" Role="Ast_AssetCatogry" Multiplicity="0..1" />
+          <End Type="NewApps.Ast_AssetCatogry" Role="Ast_AssetCatogry1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ast_AssetCatogry">
+              <PropertyRef Name="AstCatId" />
+            </Principal>
+            <Dependent Role="Ast_AssetCatogry1">
+              <PropertyRef Name="ParentId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1533,6 +1569,7 @@
           <EntitySetMapping Name="Ast_AssetCatogry">
             <EntityTypeMapping TypeName="NewApps.Ast_AssetCatogry">
               <MappingFragment StoreEntitySet="Ast_AssetCatogry">
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
                 <ScalarProperty Name="IsDisable" ColumnName="IsDisable" />
                 <ScalarProperty Name="AstCatName_Eng" ColumnName="AstCatName_Eng" />
                 <ScalarProperty Name="AstCatName_Ara" ColumnName="AstCatName_Ara" />

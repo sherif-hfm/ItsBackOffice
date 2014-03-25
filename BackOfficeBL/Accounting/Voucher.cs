@@ -40,11 +40,11 @@ namespace BackOfficeBL.Accounting
                 vt.DetailExtraField4 = voucher.DetailExtraField4;
                 vt.DetailExtraField5 = voucher.DetailExtraField5;
 
-                vt.MainValidationField1 = voucher.MainValidationField1;
-                vt.MainValidationField2 = voucher.MainValidationField2;
-                vt.mainValidationField3 = voucher.mainValidationField3;
-                vt.MainValidationField4 = voucher.MainValidationField4;
-                vt.MainValidationField5 = Convert.ToInt32(voucher.MainValidationField5);
+                vt.MainValidationField1 = voucher.MainValidationField1;// Elhaddad update convert from int to string
+                vt.MainValidationField2 = voucher.MainValidationField2;// Elhaddad update convert from int to string
+                vt.mainValidationField3 = voucher.mainValidationField3;// Elhaddad update convert from int to string
+                vt.MainValidationField4 = voucher.MainValidationField4;// Elhaddad update convert from int to string
+                vt.MainValidationField5 = voucher.MainValidationField5;// Elhaddad update convert from int to string
 
                 VoucherTypeList.Add(vt);
             }

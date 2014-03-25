@@ -39,9 +39,10 @@
         <EntityTypeShape EntityType="NewApps.Acc_VouchersType" Width="1.5" PointX="0.1454964448444063" PointY="27.405911652094645" />
         <AssociationConnector Association="NewApps.FK_Acc_VouchersTemplate_Acc_Accounts" />
         <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="1.2857953632649943" PointY="23.554398905278369" />
-        <EntityTypeShape EntityType="NewApps.Ast_AssetCatogry" Width="1.5" PointX="11.654386270630353" PointY="16.548211254434758" />
         <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_VouchersType" />
         <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetCatogry" Width="1.5" PointX="9.8268385090990176" PointY="30.048058404609588" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetCatogry_Ast_AssetCatogry" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

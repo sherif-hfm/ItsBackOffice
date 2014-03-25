@@ -14,9 +14,18 @@ namespace BackOfficeDAL
     
     public partial class Ast_AssetCatogry
     {
+        public Ast_AssetCatogry()
+        {
+            this.Ast_AssetCatogry1 = new HashSet<Ast_AssetCatogry>();
+        }
+    
         public int AstCatId { get; set; }
         public string AstCatName_Ara { get; set; }
         public string AstCatName_Eng { get; set; }
         public bool IsDisable { get; set; }
+        public Nullable<int> ParentId { get; set; }
+    
+        public virtual ICollection<Ast_AssetCatogry> Ast_AssetCatogry1 { get; set; }
+        public virtual Ast_AssetCatogry Ast_AssetCatogry2 { get; set; }
     }
 }

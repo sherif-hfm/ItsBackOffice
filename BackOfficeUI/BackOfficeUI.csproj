@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounting\frmAssetCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmAssetCategory.Designer.cs">
+      <DependentUpon>frmAssetCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\frmCostCenter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,12 @@
     <Compile Include="Security\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Accounting\frmAssetCategory.ar-KW.resx">
+      <DependentUpon>frmAssetCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmAssetCategory.resx">
+      <DependentUpon>frmAssetCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmCostCenter.ar-KW.resx">
       <DependentUpon>frmCostCenter.cs</DependentUpon>
     </EmbeddedResource>
