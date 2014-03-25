@@ -74,6 +74,9 @@
     <Compile Include="Acc_VoucherValidation.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Ast_AssetCatogry.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Audit.cs" />
     <Compile Include="DataUtils.cs" />
     <Compile Include="DbContext.cs" />

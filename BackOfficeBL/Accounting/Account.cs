@@ -16,7 +16,6 @@ namespace BackOfficeBL.Accounting
         public bool IsDisable { get; set; }
         public string AccountName_Ar { get; set; }
         public string AccountName_Eng { get; set; }
-        public string CostCenterId { get; set; }
         public int AccountTypeId { get; set; }
         public int AccountLevel { get; set; }
         public int? AccountCategoryId { get; set; }
@@ -133,7 +132,6 @@ namespace BackOfficeBL.Accounting
             this.AccountTypeId = _dbAccount.AccountTypeId;
             this.AccountLevel = _dbAccount.AccountLevel;
             this.AccountCategoryId = _dbAccount.AccountCategoryId;
-            this.CostCenterId = _dbAccount.CostCenterId;
             this.IsSubAccount = _dbAccount.IsSubAccount;
             this.IsDisableAccount = _dbAccount.IsDisableAccount;
             this.ParentId = _dbAccount.ParentId;
@@ -148,7 +146,6 @@ namespace BackOfficeBL.Accounting
             _dbAccount.AccountTypeId = this.AccountTypeId;
             _dbAccount.AccountLevel = this.AccountLevel;
             _dbAccount.AccountCategoryId = this.AccountCategoryId;
-            _dbAccount.CostCenterId = this.CostCenterId;
             _dbAccount.IsSubAccount = this.IsSubAccount;
             _dbAccount.IsDisableAccount = this.IsDisableAccount;
             if (this.IsNew == true)

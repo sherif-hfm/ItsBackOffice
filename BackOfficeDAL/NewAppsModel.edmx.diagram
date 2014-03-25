@@ -21,24 +21,27 @@
         <EntityTypeShape EntityType="NewApps.Grnl_Audit" Width="1.5" PointX="1.5" PointY="14.5" />
         <EntityTypeShape EntityType="NewApps.Grnl_AuditDtl" Width="1.5" PointX="5.125" PointY="14.75" />
         <AssociationConnector Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" />
-        <EntityTypeShape EntityType="NewApps.Acc_CostCenter" Width="1.5" PointX="6.125" PointY="2.875" />
-        <AssociationConnector Association="NewApps.FK_Acc_CostCenter_Acc_CostCenter" />
         <EntityTypeShape EntityType="NewApps.Acc_Currancy" Width="1.5" PointX="8.625" PointY="15.5" />
         </Diagram>
-      <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="45" >
+      <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="75" >
         <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="0.75" PointY="6.5" />
-        <EntityTypeShape EntityType="NewApps.Acc_Accounts" Width="1.5" PointX="3" PointY="5.5" />
-        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_AccountCategory" />
         <EntityTypeShape EntityType="NewApps.Acc_Accountype" Width="1.5" PointX="0.75" PointY="3.5" />
-        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_Accountype" />
-        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="7.5" PointY="11.125" />
         <EntityTypeShape EntityType="NewApps.Acc_VoucherDtl" Width="1.5" PointX="9.75" PointY="8.125" />
-        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Accounts" />
-        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" />
-        <EntityTypeShape EntityType="NewApps.Acc_VouchersType" Width="1.5" PointX="5.25" PointY="10.625" />
-        <AssociationConnector Association="NewApps.FK_Acc_VouchersTemplate_Acc_Accounts" />
-        <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_VouchersTemplate" />
         <EntityTypeShape EntityType="NewApps.Acc_VoucherValidation" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NewApps.Acc_Accounts" Width="1.5" PointX="8.44277499823029" PointY="7.07720733018462" />
+        <EntityTypeShape EntityType="NewApps.Acc_CostCenter" Width="1.5" PointX="7.2947010264241605" PointY="3.8622136730059116" />
+        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_AccountCategory" />
+        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_Accountype" />
+        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_CostCenter" />
+        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_CostCenter_Acc_CostCenter" />
+        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_CostCenter" />
+        <EntityTypeShape EntityType="NewApps.Acc_VouchersType" Width="1.5" PointX="0.1454964448444063" PointY="27.405911652094645" />
+        <AssociationConnector Association="NewApps.FK_Acc_VouchersTemplate_Acc_Accounts" />
+        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="1.2857953632649943" PointY="23.554398905278369" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetCatogry" Width="1.5" PointX="11.654386270630353" PointY="16.548211254434758" />
+        <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_VouchersType" />
+        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -164,7 +164,7 @@ namespace BackOfficeBL.Accounting
             _AccVouchersType.MainValidationField2 = _VoucherType.MainValidationField2;
             _AccVouchersType.mainValidationField3 = _VoucherType.mainValidationField3;
             _AccVouchersType.MainValidationField4 = _VoucherType.MainValidationField4;
-            _AccVouchersType.MainValidationField5 = _VoucherType.MainValidationField5.ToString();
+            _AccVouchersType.MainValidationField5 = _VoucherType.MainValidationField5;
             return _AccVouchersType;
         }
     }

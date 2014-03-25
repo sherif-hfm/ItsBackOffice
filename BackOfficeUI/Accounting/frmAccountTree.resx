@@ -117,556 +117,504 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;lblStartBalance.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="trvAccountTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 47</value>
   </data>
-  <data name="&gt;&gt;trvAccountTree.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblDebit.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblCostCenter.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblDebit.Text" xml:space="preserve">
-    <value>Debit</value>
-  </data>
-  <data name="&gt;&gt;lblAccountType.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblCreditor.Text" xml:space="preserve">
-    <value>Creditor</value>
+  <data name="trvAccountTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 678</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="chkStopAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="txtAccountNameEng.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;cmbAccountCategory.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblStartBalance.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblStopAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 261</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNameEng.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblStartBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 162</value>
-  </data>
-  <data name="lblAccountNameAr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 63</value>
-  </data>
   <data name="trvAccountTree.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="lblDebit.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="lblAccountType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 294</value>
-  </data>
-  <data name="lblStartBalance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 19</value>
-  </data>
-  <data name="lblAccountNameEng.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCreditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 228</value>
-  </data>
-  <data name="cmbAccountType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 288</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameAr.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="txtCreditor.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lblAccountNo.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lblStartBalance.Text" xml:space="preserve">
-    <value>Start Balance</value>
-  </data>
-  <data name="&gt;&gt;lblStopAccount.Name" xml:space="preserve">
-    <value>lblStopAccount</value>
-  </data>
-  <data name="lblCreditor.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtCreditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 27</value>
-  </data>
-  <data name="&gt;&gt;cmbCostCenter.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblStartBalance.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;lblStopAccount.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameAr.Name" xml:space="preserve">
-    <value>lblAccountNameAr</value>
-  </data>
-  <data name="lblAccountNo.Text" xml:space="preserve">
-    <value>Account No</value>
-  </data>
-  <data name="cmbAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 27</value>
-  </data>
-  <data name="&gt;&gt;cmbAccountType.Name" xml:space="preserve">
-    <value>cmbAccountType</value>
-  </data>
-  <data name="&gt;&gt;lblAccountCategory.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblCostCenter.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblCreditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 19</value>
-  </data>
-  <data name="&gt;&gt;lblDebit.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;cmbAccountType.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;cmbAccountCategory.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;txtDebit.Name" xml:space="preserve">
-    <value>txtDebit</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameEng.Name" xml:space="preserve">
-    <value>lblAccountNameEng</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNo.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtDebit.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameAr.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="txtStartBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 159</value>
-  </data>
-  <data name="&gt;&gt;txtStartBalance.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblDebit.Name" xml:space="preserve">
-    <value>lblDebit</value>
-  </data>
-  <data name="lblAccountType.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAccountNameEng.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 19</value>
-  </data>
-  <data name="&gt;&gt;lblAccountType.Name" xml:space="preserve">
-    <value>lblAccountType</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="lblAccountNo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCreditor.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;lblAccountType.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNo.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblCostCenter.Text" xml:space="preserve">
-    <value>Cost Center</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNo.Name" xml:space="preserve">
-    <value>lblAccountNo</value>
-  </data>
-  <data name="lblDebit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblCreditor.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblStopAccount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblCreditor.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <data name="&gt;&gt;trvAccountTree.Name" xml:space="preserve">
     <value>trvAccountTree</value>
   </data>
-  <data name="lblAccountCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameEng.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNo.Name" xml:space="preserve">
-    <value>txtAccountNo</value>
-  </data>
-  <data name="&gt;&gt;cmbAccountType.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAccountCategory.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmAccountTree</value>
-  </data>
-  <data name="txtAccountNameEng.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 27</value>
-  </data>
-  <data name="cmbCostCenter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 27</value>
-  </data>
-  <data name="&gt;&gt;txtCreditor.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtCreditor.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="txtAccountNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 27</value>
-  </data>
-  <data name="&gt;&gt;txtCreditor.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 129</value>
-  </data>
   <data name="&gt;&gt;trvAccountTree.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.TreeView, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="lblDebit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 195</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cmbAccountType.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblAccountCategory.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;chkStopAccount.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblDebit.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblAccountType.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="txtCreditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 225</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;trvAccountTree.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtAccountNo.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;trvAccountTree.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;txtAccountNo.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNameEng.Name" xml:space="preserve">
-    <value>txtAccountNameEng</value>
-  </data>
-  <data name="lblAccountNameAr.Text" xml:space="preserve">
-    <value>Account Name Arabic</value>
-  </data>
-  <data name="cmbCostCenter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 331</value>
-  </data>
-  <data name="&gt;&gt;lblStopAccount.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblDebit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 19</value>
-  </data>
-  <data name="lblStopAccount.Text" xml:space="preserve">
-    <value>Stop Account</value>
-  </data>
-  <data name="lblStopAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 19</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>623, 47</value>
-  </data>
-  <data name="&gt;&gt;lblAccountType.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="chkStopAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="&gt;&gt;txtCreditor.Name" xml:space="preserve">
-    <value>txtCreditor</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNameAr.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;chkStopAccount.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtDebit.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lblAccountCategory.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="chkStopAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 263</value>
-  </data>
-  <data name="&gt;&gt;cmbCostCenter.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblCostCenter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 337</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNameEng.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblStopAccount.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="txtAccountNo.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblCostCenter.Name" xml:space="preserve">
-    <value>lblCostCenter</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNo.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="cmbAccountType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 27</value>
-  </data>
-  <data name="trvAccountTree.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 47</value>
-  </data>
-  <data name="lblStopAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="lblAccountNameEng.Text" xml:space="preserve">
-    <value>Account Name English</value>
-  </data>
-  <data name="lblCostCenter.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.frmBaseDB, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtStartBalance.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="txtDebit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 27</value>
-  </data>
-  <data name="lblCostCenter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 19</value>
-  </data>
-  <data name="&gt;&gt;chkStopAccount.Name" xml:space="preserve">
-    <value>chkStopAccount</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameAr.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblStartBalance.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblAccountNo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblAccountNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 30</value>
   </data>
-  <data name="&gt;&gt;cmbAccountCategory.Name" xml:space="preserve">
-    <value>cmbAccountCategory</value>
+  <data name="lblAccountNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 19</value>
   </data>
-  <data name="&gt;&gt;lblAccountCategory.Name" xml:space="preserve">
-    <value>lblAccountCategory</value>
+  <data name="lblAccountNo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;txtStartBalance.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="lblAccountNo.Text" xml:space="preserve">
+    <value>Account No</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblCostCenter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;lblAccountNo.Name" xml:space="preserve">
+    <value>lblAccountNo</value>
   </data>
-  <data name="&gt;&gt;txtAccountNameAr.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;lblAccountNo.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="lblAccountNameEng.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 19</value>
-  </data>
-  <data name="lblAccountCategory.Text" xml:space="preserve">
-    <value>Account Category</value>
-  </data>
-  <data name="lblCostCenter.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="lblAccountType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 19</value>
-  </data>
-  <data name="txtAccountNo.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameEng.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lblAccountNameAr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 19</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNameAr.Name" xml:space="preserve">
-    <value>txtAccountNameAr</value>
-  </data>
-  <data name="chkStopAccount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblCreditor.Name" xml:space="preserve">
-    <value>lblCreditor</value>
-  </data>
-  <data name="&gt;&gt;lblCreditor.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblAccountNo.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;lblStartBalance.Name" xml:space="preserve">
-    <value>lblStartBalance</value>
-  </data>
-  <data name="&gt;&gt;chkStopAccount.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.CheckBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblAccountNameEng.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 96</value>
-  </data>
-  <data name="&gt;&gt;cmbAccountCategory.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtStartBalance.Name" xml:space="preserve">
-    <value>txtStartBalance</value>
-  </data>
-  <data name="cmbCostCenter.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="txtAccountNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 27</value>
-  </data>
-  <data name="&gt;&gt;cmbCostCenter.Name" xml:space="preserve">
-    <value>cmbCostCenter</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1141, 750</value>
-  </data>
   <data name="&gt;&gt;lblAccountNo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="txtDebit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 192</value>
-  </data>
-  <data name="&gt;&gt;cmbCostCenter.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtAccountNameEng.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="txtAccountNameAr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 27</value>
-  </data>
-  <data name="&gt;&gt;lblStartBalance.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAccountNameEng.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>512, 390</value>
-  </data>
-  <data name="trvAccountTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 678</value>
-  </data>
-  <data name="txtAccountNameEng.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 93</value>
-  </data>
-  <data name="&gt;&gt;txtDebit.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="lblAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 19</value>
-  </data>
-  <data name="cmbAccountCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>3</value>
   </data>
   <data name="lblAccountNameAr.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblAccountNameAr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 63</value>
+  </data>
+  <data name="lblAccountNameAr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 19</value>
+  </data>
   <data name="lblAccountNameAr.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="lblAccountNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 19</value>
+  <data name="lblAccountNameAr.Text" xml:space="preserve">
+    <value>Account Name Arabic</value>
   </data>
-  <data name="txtAccountNameAr.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;lblAccountNameAr.Name" xml:space="preserve">
+    <value>lblAccountNameAr</value>
+  </data>
+  <data name="&gt;&gt;lblAccountNameAr.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAccountNameAr.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblAccountNameAr.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblAccountNameEng.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblAccountNameEng.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 96</value>
+  </data>
+  <data name="lblAccountNameEng.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 19</value>
+  </data>
+  <data name="lblAccountNameEng.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblAccountNameEng.Text" xml:space="preserve">
+    <value>Account Name English</value>
+  </data>
+  <data name="&gt;&gt;lblAccountNameEng.Name" xml:space="preserve">
+    <value>lblAccountNameEng</value>
+  </data>
+  <data name="&gt;&gt;lblAccountNameEng.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAccountNameEng.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblAccountNameEng.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblAccountCategory.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 129</value>
+  </data>
+  <data name="lblAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 19</value>
+  </data>
+  <data name="lblAccountCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblAccountCategory.Text" xml:space="preserve">
+    <value>Account Category</value>
+  </data>
+  <data name="&gt;&gt;lblAccountCategory.Name" xml:space="preserve">
+    <value>lblAccountCategory</value>
+  </data>
+  <data name="&gt;&gt;lblAccountCategory.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAccountCategory.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblAccountCategory.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;txtDebit.Parent" xml:space="preserve">
+  <data name="txtAccountNo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAccountNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 27</value>
+  </data>
+  <data name="txtAccountNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
+  </data>
+  <data name="txtAccountNo.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNo.Name" xml:space="preserve">
+    <value>txtAccountNo</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNo.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNo.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNo.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="txtAccountNameAr.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 60</value>
   </data>
+  <data name="txtAccountNameAr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
+  </data>
+  <data name="txtAccountNameAr.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNameAr.Name" xml:space="preserve">
+    <value>txtAccountNameAr</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNameAr.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;txtAccountNameAr.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;lblCostCenter.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtAccountNameAr.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtAccountNameEng.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 93</value>
+  </data>
+  <data name="txtAccountNameEng.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
+  </data>
+  <data name="txtAccountNameEng.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNameEng.Name" xml:space="preserve">
+    <value>txtAccountNameEng</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNameEng.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNameEng.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;trvAccountTree.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;txtAccountNameEng.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
-  <data name="cmbAccountType.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="txtStartBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 159</value>
   </data>
   <data name="txtStartBalance.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 27</value>
   </data>
-  <data name="cmbAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 126</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Master Data</value>
-  </data>
   <data name="txtStartBalance.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtStartBalance.Name" xml:space="preserve">
+    <value>txtStartBalance</value>
+  </data>
+  <data name="&gt;&gt;txtStartBalance.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtStartBalance.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtStartBalance.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lblStartBalance.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblStartBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 162</value>
+  </data>
+  <data name="lblStartBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="lblStartBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblStartBalance.Text" xml:space="preserve">
+    <value>Start Balance</value>
+  </data>
+  <data name="&gt;&gt;lblStartBalance.Name" xml:space="preserve">
+    <value>lblStartBalance</value>
+  </data>
+  <data name="&gt;&gt;lblStartBalance.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblStartBalance.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblStartBalance.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lblDebit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDebit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 195</value>
+  </data>
+  <data name="lblDebit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 19</value>
+  </data>
+  <data name="lblDebit.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblDebit.Text" xml:space="preserve">
+    <value>Debit</value>
+  </data>
+  <data name="&gt;&gt;lblDebit.Name" xml:space="preserve">
+    <value>lblDebit</value>
+  </data>
+  <data name="&gt;&gt;lblDebit.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDebit.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblDebit.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txtDebit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 192</value>
+  </data>
+  <data name="txtDebit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
+  </data>
+  <data name="txtDebit.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txtDebit.Name" xml:space="preserve">
+    <value>txtDebit</value>
+  </data>
+  <data name="&gt;&gt;txtDebit.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtDebit.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtDebit.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lblCreditor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCreditor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 228</value>
+  </data>
+  <data name="lblCreditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 19</value>
+  </data>
+  <data name="lblCreditor.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblCreditor.Text" xml:space="preserve">
+    <value>Creditor</value>
+  </data>
+  <data name="&gt;&gt;lblCreditor.Name" xml:space="preserve">
+    <value>lblCreditor</value>
+  </data>
+  <data name="&gt;&gt;lblCreditor.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblCreditor.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblCreditor.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtCreditor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 225</value>
+  </data>
+  <data name="txtCreditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
+  </data>
+  <data name="txtCreditor.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;txtCreditor.Name" xml:space="preserve">
+    <value>txtCreditor</value>
+  </data>
+  <data name="&gt;&gt;txtCreditor.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCreditor.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtCreditor.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblStopAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblStopAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 261</value>
+  </data>
+  <data name="lblStopAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 19</value>
+  </data>
+  <data name="lblStopAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblStopAccount.Text" xml:space="preserve">
+    <value>Stop Account</value>
+  </data>
+  <data name="&gt;&gt;lblStopAccount.Name" xml:space="preserve">
+    <value>lblStopAccount</value>
+  </data>
+  <data name="&gt;&gt;lblStopAccount.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblStopAccount.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblStopAccount.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblAccountType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblAccountType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 294</value>
+  </data>
+  <data name="lblAccountType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 19</value>
+  </data>
+  <data name="lblAccountType.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
   </data>
   <data name="lblAccountType.Text" xml:space="preserve">
     <value>Account Type</value>
   </data>
+  <data name="&gt;&gt;lblAccountType.Name" xml:space="preserve">
+    <value>lblAccountType</value>
+  </data>
+  <data name="&gt;&gt;lblAccountType.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAccountType.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblAccountType.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chkStopAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkStopAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 263</value>
+  </data>
+  <data name="chkStopAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="chkStopAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;chkStopAccount.Name" xml:space="preserve">
+    <value>chkStopAccount</value>
+  </data>
+  <data name="&gt;&gt;chkStopAccount.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.CheckBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chkStopAccount.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chkStopAccount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmbAccountType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 288</value>
+  </data>
+  <data name="cmbAccountType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 27</value>
+  </data>
+  <data name="cmbAccountType.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountType.Name" xml:space="preserve">
+    <value>cmbAccountType</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountType.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountType.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountType.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cmbAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 126</value>
+  </data>
+  <data name="cmbAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 27</value>
+  </data>
+  <data name="cmbAccountCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.Name" xml:space="preserve">
+    <value>cmbAccountCategory</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>623, 47</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 390</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Master Data</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
   <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1141, 750</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAccountTree</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.frmBaseDB, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

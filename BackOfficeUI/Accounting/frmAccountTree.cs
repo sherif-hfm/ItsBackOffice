@@ -16,7 +16,6 @@ namespace BackOfficeUI.Accounting
         private BackOfficeBL.Accounting.Account CrAccount;
         private BackOfficeBL.Accounting.Accounttype CrAccounttype;
         private BackOfficeBL.Accounting.AccountCategory CrAccountCategory;
-        private BackOfficeBL.Accounting.CostCenter CrCostCenter;
         public frmAccountTree()
         {
             InitializeComponent();
@@ -38,7 +37,6 @@ namespace BackOfficeUI.Accounting
                 txtAccountNo.Text = CrAccount.AccountID;
                 cmbAccountType.SelectedValue = CrAccount.AccountTypeId;
                 cmbAccountCategory.SelectedValue = CrAccount.AccountCategoryId;
-                cmbCostCenter.SelectedValue = CrAccount.CostCenterId == null ? "-1" : CrAccount.CostCenterId;
                 chkStopAccount.Checked = CrAccount.IsDisableAccount;
             }
             else
@@ -58,16 +56,12 @@ namespace BackOfficeUI.Accounting
         {
             cmbAccountType.Items.Clear();
             cmbAccountCategory.Items.Clear();
-            cmbCostCenter.Items.Clear();
             cmbAccountType.ValueMember = "TypeID";
             cmbAccountType.DisplayMember = "Name";
             cmbAccountType.DataSource = Accounttype.GetAllAccounttype();
             cmbAccountCategory.ValueMember = "CategoryId";
             cmbAccountCategory.DisplayMember = "Name";
             cmbAccountCategory.DataSource = AccountCategory.GetAllAccountCategory();
-            cmbCostCenter.ValueMember = "CostCenterId";
-            cmbCostCenter.DisplayMember = "Name";
-            cmbCostCenter.DataSource = CostCenter.GetAllCmbCostCenter();
         }
 
         private void LoadAccountTree()
@@ -116,7 +110,6 @@ namespace BackOfficeUI.Accounting
             if (CrAccount.IsNew == true && trvAccountTree.SelectedNode!=null)
                 CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
             CrAccount.AccountID = txtAccountNo.Text;
-            CrAccount.CostCenterId = cmbCostCenter.SelectedValue.ToString();
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
         }
 
@@ -187,7 +180,6 @@ namespace BackOfficeUI.Accounting
             CrAccount = new BackOfficeBL.Accounting.Account();
             CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
             CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
-            CrCostCenter = new BackOfficeBL.Accounting.CostCenter();
             txtAccountNo.Text = Account.getNewId(trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "");
         }
 

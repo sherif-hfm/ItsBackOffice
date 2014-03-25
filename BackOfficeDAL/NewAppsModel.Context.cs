@@ -33,16 +33,17 @@ namespace BackOfficeDAL
         public DbSet<Srch_SearchMaster> Srch_SearchMaster { get; set; }
         public DbSet<Srch_SearchParameters> Srch_SearchParameters { get; set; }
         public DbSet<Acc_AccountCategory> Acc_AccountCategory { get; set; }
-        public DbSet<Acc_Accounts> Acc_Accounts { get; set; }
         public DbSet<Acc_Accountype> Acc_Accountype { get; set; }
-        public DbSet<Acc_Voucher> Acc_Voucher { get; set; }
         public DbSet<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
-        public DbSet<Acc_VouchersType> Acc_VouchersType { get; set; }
         public DbSet<Acc_VoucherValidation> Acc_VoucherValidation { get; set; }
         public DbSet<Gnrl_AuditActions> Gnrl_AuditActions { get; set; }
         public DbSet<Grnl_Audit> Grnl_Audit { get; set; }
         public DbSet<Grnl_AuditDtl> Grnl_AuditDtl { get; set; }
-        public DbSet<Acc_CostCenter> Acc_CostCenter { get; set; }
         public DbSet<Acc_Currancy> Acc_Currancy { get; set; }
+        public DbSet<Acc_Accounts> Acc_Accounts { get; set; }
+        public DbSet<Acc_CostCenter> Acc_CostCenter { get; set; }
+        public DbSet<Acc_VouchersType> Acc_VouchersType { get; set; }
+        public DbSet<Acc_Voucher> Acc_Voucher { get; set; }
+        public DbSet<Ast_AssetCatogry> Ast_AssetCatogry { get; set; }
     }
 }

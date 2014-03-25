@@ -28,12 +28,12 @@ namespace BackOfficeDAL
         public string VoucherNotes { get; set; }
         public Nullable<int> VoucherPrintCount { get; set; }
         public bool IsExtrnalVoucher { get; set; }
-        public string VoucherExtrnalField1 { get; set; }
-        public string VoucherExtrnalField2 { get; set; }
-        public string VoucherExtrnalField3 { get; set; }
-        public string VoucherExtrnalField4 { get; set; }
-        public string VoucherExtrnalField5 { get; set; }
-        public bool VoucherPost { get; set; }
+        public string MainExtraField1 { get; set; }
+        public string MainExtraField2 { get; set; }
+        public string MainExtraField3 { get; set; }
+        public string MainExtraField4 { get; set; }
+        public string MainExtraField5 { get; set; }
+        public bool IsPost { get; set; }
         public decimal TotalDtlDebitAmount { get; set; }
         public decimal TotalCreditAmount { get; set; }
         public bool AnulTrans { get; set; }
