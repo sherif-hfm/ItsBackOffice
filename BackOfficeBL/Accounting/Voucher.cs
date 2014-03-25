@@ -80,6 +80,7 @@ namespace BackOfficeBL.Accounting
             }
             return CurrencyList;
         }
+
         public DataSaveResult Save(VoucherType _Voucher)
         {
 
@@ -87,26 +88,25 @@ namespace BackOfficeBL.Accounting
             {
                 Acc_VouchersType AccVouchersType;
                 NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-                if (_Voucher.VoucherTypeId != "")
+
+                AccVouchersType = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == _Voucher.VoucherTypeId).FirstOrDefault();
+                if (AccVouchersType != null)
                 {
-                    AccVouchersType = newAppsCnn.Acc_VouchersType.Where(a => a.VoucherTypeId == _Voucher.VoucherTypeId).ToList().FirstOrDefault();
-                    if (AccVouchersType != null)
-                    {
-                        AccVouchersType = BuildDBRecord(AccVouchersType, _Voucher);
-                        newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
-                    }
+                     BuildDBRecord(AccVouchersType, _Voucher);
+                    //newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
                 }
+
                 else
                 {
-                    AccVouchersType = new Acc_VouchersType();
 
+                    AccVouchersType = new Acc_VouchersType();
                     AccVouchersType = BuildDBRecord(AccVouchersType, _Voucher);
                     newAppsCnn.Acc_VouchersType.Add(AccVouchersType);
                 }
 
 
                 newAppsCnn.SaveChanges();
-                Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Acc_VouchersType", this);
+                //   Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Acc_VouchersType", this);
 
                 return new DataSaveResult() { SaveStatus = true };
             }
@@ -135,6 +135,7 @@ namespace BackOfficeBL.Accounting
                 return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = ex.Message };
             }
         }
+
         private Acc_VouchersType BuildDBRecord(Acc_VouchersType _AccVouchersType, VoucherType _VoucherType)
         {
             _AccVouchersType.VoucherTypeId = _VoucherType.VoucherTypeId;

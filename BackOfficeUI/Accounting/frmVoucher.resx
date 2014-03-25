@@ -1093,7 +1093,7 @@
     <value>1</value>
   </data>
   <data name="txtArabicName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 47</value>
+    <value>330, 47</value>
   </data>
   <data name="txtArabicName.Size" type="System.Drawing.Size, System.Drawing">
     <value>287, 27</value>
@@ -1111,10 +1111,10 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtArabicName.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="txtEnglishName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 78</value>
+    <value>330, 78</value>
   </data>
   <data name="txtEnglishName.Size" type="System.Drawing.Size, System.Drawing">
     <value>287, 27</value>
@@ -1132,7 +1132,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtEnglishName.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="lblEnglishName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1141,7 +1141,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblEnglishName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 82</value>
+    <value>221, 82</value>
   </data>
   <data name="lblEnglishName.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
@@ -1162,7 +1162,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblEnglishName.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="lblArabicName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1171,7 +1171,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblArabicName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 51</value>
+    <value>221, 51</value>
   </data>
   <data name="lblArabicName.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 19</value>
@@ -1192,7 +1192,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblArabicName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="lblCurrency.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1201,7 +1201,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblCurrency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>643, 17</value>
+    <value>726, 17</value>
   </data>
   <data name="lblCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 19</value>
@@ -1222,7 +1222,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblCurrency.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="lblVoucherName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1231,7 +1231,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblVoucherName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 17</value>
+    <value>334, 17</value>
   </data>
   <data name="lblVoucherName.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 19</value>
@@ -1252,10 +1252,10 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblVoucherName.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="txtVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 47</value>
+    <value>118, 47</value>
   </data>
   <data name="txtVoucherCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 27</value>
@@ -1273,7 +1273,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtVoucherCode.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="lblVoucherCode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1282,7 +1282,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 51</value>
+    <value>6, 51</value>
   </data>
   <data name="lblVoucherCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 19</value>
@@ -1303,7 +1303,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblVoucherCode.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="lblCreditAccount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1312,7 +1312,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblCreditAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 115</value>
+    <value>6, 115</value>
   </data>
   <data name="lblCreditAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 19</value>
@@ -1333,13 +1333,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblCreditAccount.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="cbxCreditAccounts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 111</value>
+    <value>188, 111</value>
   </data>
   <data name="cbxCreditAccounts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 27</value>
+    <value>220, 27</value>
   </data>
   <data name="cbxCreditAccounts.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -1354,7 +1354,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;cbxCreditAccounts.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="lblDepitAccount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1363,7 +1363,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblDepitAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 115</value>
+    <value>435, 115</value>
   </data>
   <data name="lblDepitAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 19</value>
@@ -1384,13 +1384,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblDepitAccount.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="cbxDepitAccounts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>552, 111</value>
+    <value>616, 111</value>
   </data>
   <data name="cbxDepitAccounts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 27</value>
+    <value>220, 27</value>
   </data>
   <data name="cbxDepitAccounts.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -1405,10 +1405,10 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;cbxDepitAccounts.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="cbxArCurrency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 47</value>
+    <value>726, 47</value>
   </data>
   <data name="cbxArCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 27</value>
@@ -1426,10 +1426,10 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;cbxArCurrency.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="cbxEnCurrency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 78</value>
+    <value>726, 78</value>
   </data>
   <data name="cbxEnCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 27</value>
@@ -1447,7 +1447,79 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;cbxEnCurrency.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 23</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Elias</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="txtEliasEn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>621, 78</value>
+  </data>
+  <data name="txtEliasEn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 27</value>
+  </data>
+  <data name="txtEliasEn.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Name" xml:space="preserve">
+    <value>txtEliasEn</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtEliasAr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>621, 47</value>
+  </data>
+  <data name="txtEliasAr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 27</value>
+  </data>
+  <data name="txtEliasAr.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Name" xml:space="preserve">
+    <value>txtEliasAr</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 187</value>
@@ -1469,6 +1541,45 @@
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <metadata name="clmVoucherCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmEnglishName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmArVoucherName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmEnEliasName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmEliasAr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dgrdVouchers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dgrdVouchers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 44</value>
+  </data>
+  <data name="dgrdVouchers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 150</value>
+  </data>
+  <data name="dgrdVouchers.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Name" xml:space="preserve">
+    <value>dgrdVouchers</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="clmVoucherCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1514,30 +1625,6 @@
   </data>
   <data name="clmEliasAr.Width" type="System.Int32, mscorlib">
     <value>140</value>
-  </data>
-  <data name="dgrdVouchers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="dgrdVouchers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 44</value>
-  </data>
-  <data name="dgrdVouchers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 150</value>
-  </data>
-  <data name="dgrdVouchers.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="&gt;&gt;dgrdVouchers.Name" xml:space="preserve">
-    <value>dgrdVouchers</value>
-  </data>
-  <data name="&gt;&gt;dgrdVouchers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgrdVouchers.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dgrdVouchers.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

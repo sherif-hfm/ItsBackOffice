@@ -134,13 +134,26 @@ namespace BackOfficeUI.Controls
 
             foreach (Control crControl in _container.Controls)
             {
-                LockControls(crControl);
-
-                if (crControl is IControl)
-                {
-                    IControl control = (IControl)crControl;
-                    control.ClearData();
+                if (crControl.HasChildren) {
+                    foreach (Control crChildControlitem in crControl.Controls)
+                    {
+                        ClearControl(crChildControlitem);
+                    }
                 }
+
+                ClearControl(crControl);
+            }
+        }
+
+        private void ClearControl(Control crControl)
+        {
+
+            LockControls(crControl);
+
+            if (crControl is IControl)
+            {
+                IControl control = (IControl)crControl;
+                control.ClearData();
             }
         }
 
