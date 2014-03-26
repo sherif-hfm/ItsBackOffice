@@ -189,7 +189,7 @@ namespace BackOfficeBL.Accounting
             }
             catch (Exception ex)
             {
-                return new DataSaveResult() { SaveStatus = false };
+                return new DataSaveResult() { SaveStatus = false,ErrorMessage=ex.Message };
             }
         }
 
@@ -211,7 +211,7 @@ namespace BackOfficeBL.Accounting
                     }
                     else
                     {
-                        return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = "" };
+                        return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = "This Item has childs" };
                     }
                 }
                 return new DataDeleteResult() { DeleteStatus = true };

@@ -181,11 +181,11 @@ namespace BackOfficeBL.Accounting
                 newAppsCnn.SaveChanges();
                 Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Acc_CostCenter", this);
                 this.FromDbCostCenter(dbCostCenter);
-                return new DataSaveResult() { SaveStatus = true };
+                return new DataSaveResult() { SaveStatus = true};
             }
             catch (Exception ex)
             {
-                return new DataSaveResult() { SaveStatus = false };
+                return new DataSaveResult() { SaveStatus = false ,ErrorMessage= ex.Message };
             }
         }
 

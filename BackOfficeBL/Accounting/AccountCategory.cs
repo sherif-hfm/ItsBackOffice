@@ -108,7 +108,7 @@ namespace BackOfficeBL.Accounting
             }
             catch (Exception ex)
             {
-                return new DataSaveResult() { SaveStatus = false };
+                return new DataSaveResult() { SaveStatus = false ,ErrorMessage=ex.Message};
             }
         }
 
