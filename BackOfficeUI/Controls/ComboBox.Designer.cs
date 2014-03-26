@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ComboBox
+            // 
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ComboBox_KeyDown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -65,6 +65,7 @@ namespace BackOfficeUI.Accounting
         private void frmVoucher_AddNew(object sender, ref bool _status)
         {
             txtVoucherCode.Text = GetNewID();
+            dgrdVouchers.Enabled = false;
             GridSelectedRow = dgrdVouchers.SelectedRows[0].Index;
             CrVoucher = new VoucherType();
 
@@ -76,11 +77,12 @@ namespace BackOfficeUI.Accounting
             dgrdVouchers_SelectionChanged(dgrdVouchers, new EventArgs());
             VOUCHERTYPEID = CrVoucher.VoucherTypeId;
             ShowGUI(CrVoucher);
-
+            dgrdVouchers.Enabled = true;
         }
 
         private void frmVoucher_Edit(object sender, ref bool _status)
         {
+            dgrdVouchers.Enabled = false;
             GridSelectedRow = dgrdVouchers.SelectedRows[0].Index;
 
 
@@ -112,6 +114,7 @@ namespace BackOfficeUI.Accounting
         {
             VoucherType vu = new VoucherType();
             GetDataFromGUI();
+
             DataSaveResult saveResult = vu.Save(CrVoucher);
             if (saveResult.SaveStatus == false)
             {
@@ -123,7 +126,9 @@ namespace BackOfficeUI.Accounting
                 VouchersList = VoucherType.GetAllVouchers();
                 LoadDataGrid(VouchersList);
             }
-
+            dgrdVouchers.Enabled = true;
+            dgrdVouchers.Rows[GridSelectedRow].Selected = true;
+            dgrdVouchers_SelectionChanged(dgrdVouchers, new EventArgs());
 
         }
 
