@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BackOfficeUI.Controls
 {
-    public partial class Label : System.Windows.Forms.Label, IControl
+    public partial class CheckedListBox : System.Windows.Forms.CheckedListBox,IControl
     {
-        public Label()
+        public CheckedListBox()
         {
             InitializeComponent();
         }
@@ -29,14 +29,14 @@ namespace BackOfficeUI.Controls
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 
-        private bool mClearable = true;
-        public bool Clearable { get { return mClearable; } set { mClearable = value; } }
+
         #endregion
 
         #region ************************** Methods **************************
 
         public void Lock()
         {
+            this.Enabled = false;
         }
 
         public void UnLock()
@@ -46,13 +46,20 @@ namespace BackOfficeUI.Controls
 
         public bool IsEmpty()
         {
-            return false;
+            if (this.SelectedItems.Count > 0)
+                return false;
+            else
+                return true;
         }
 
         public void ClearData()
         {
+            this.SelectedItems.Clear();
         }
 
         #endregion
+
+        public bool Clearable { get; set; }
+       
     }
 }

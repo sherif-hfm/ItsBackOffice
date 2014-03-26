@@ -184,5 +184,100 @@ namespace BackOfficeUI.Accounting
         }
 
         #endregion
+
+        private void trvAccountTree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string AccountNo = trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "";
+            if (AccountNo != "")
+            {
+                CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
+                ShowGUI();
+            }
+            trvAccountTree.Focus();
+        }
+
+        private void trvAccountTree_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button != MouseButtons.Right) return;
+
+
+            var treeNodeAtMousePosition = trvAccountTree.GetNodeAt(trvAccountTree.PointToClient(Control.MousePosition));
+            var selectedTreeNode = trvAccountTree.SelectedNode;
+            if (treeNodeAtMousePosition != null)
+            {
+                if (treeNodeAtMousePosition != selectedTreeNode)
+                    trvAccountTree.SelectedNode = treeNodeAtMousePosition;
+            }
+
+            TreeViewContext.Text = trvAccountTree.SelectedNode.Text;
+
+            TreeViewContext.Show(e.Location.X + this.Parent.Location.X + this.Parent.Parent.Location.X + 30, e.Location.Y + this.Parent.Location.Y + this.Parent.Parent.Location.Y + 80);
+            trvAccountTree.Focus();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrAccount = null;
+            ShowGUI();
+            CrAccount = new BackOfficeBL.Accounting.Account();
+            CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
+            CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
+            txtAccountNo.Text = Account.getNewId(trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "");
+            var parent = Account.FindByAccountID(trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "");
+            cmbAccountType.SelectedValue = parent != null?parent.AccountTypeId:1;
+            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
+            {
+                string data = trvAccountTree.SelectedNode.ToString();
+                CrAccount.ParentId = data;
+
+            }
+            this.FormStatus = FormStatusEnum.AddNew;
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrAccount = new BackOfficeBL.Accounting.Account();
+            CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
+            CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
+            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
+            {
+                this.FormStatus = FormStatusEnum.Edit;
+                CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
+            }
+            ShowGUI();
+        }
+
+        private void copyAndPasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
+            {
+                CrAccount = null;
+                ShowGUI();
+                string data = trvAccountTree.SelectedNode.ToString();
+                CrAccount.ParentId = data;
+                copyAndPasteToolStripMenuItem.Enabled = !pasteToolStripMenuItem.Enabled;
+                pasteToolStripMenuItem.Enabled = !copyAndPasteToolStripMenuItem.Enabled;
+            }
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
+            {
+                ShowGUI();
+                string data = trvAccountTree.SelectedNode.ToString();
+                CrAccount.ParentId = data;
+                copyAndPasteToolStripMenuItem.Enabled = !pasteToolStripMenuItem.Enabled;
+                pasteToolStripMenuItem.Enabled = !copyAndPasteToolStripMenuItem.Enabled;
+                ShowGUI();
+            }
+        }
+
+        private void frmAccountTree_Find(object sender, Dictionary<string, object> _findFields)
+        {
+
+        }
+
     }
 }

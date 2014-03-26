@@ -164,6 +164,14 @@ namespace BackOfficeBL.Accounting
                 if (dbAccounts.Count() > 0)
                 {
                     dbAccount = dbAccounts.First();
+                    if (this.AccountTypeId != dbAccount.AccountTypeId && (dbAccount.ParentId==null||dbAccount.ParentId==""))
+                    {
+                        var dbAccountChilds = from u in newAppsCnn.Acc_Accounts where u.ParentId == this.AccountID select u;
+                        foreach (var itm in dbAccountChilds)
+                        {
+                            itm.AccountTypeId = this.AccountTypeId;
+                        }
+                    }
                     this.ToDbAccount(dbAccount);
                     dbAccount.AccountLevel = getNodeLevel(0, dbAccount.ParentId);
                 }
@@ -181,7 +189,7 @@ namespace BackOfficeBL.Accounting
             }
             catch (Exception ex)
             {
-                return new DataSaveResult() { SaveStatus = false };
+                return new DataSaveResult() { SaveStatus = false,ErrorMessage=ex.Message };
             }
         }
 
@@ -195,8 +203,16 @@ namespace BackOfficeBL.Accounting
                 if (dbAccounts.Count() > 0)
                 {
                     dbAccount = dbAccounts.First();
-                    newAppsCnn.Acc_Accounts.Remove(dbAccount);
-                    newAppsCnn.SaveChanges();
+                    var dbAccountChilds = from u in newAppsCnn.Acc_Accounts where u.ParentId == this.AccountID select u;
+                    if (dbAccountChilds.Count() == 0 && DontHaveTransaction())//Transaction Condition
+                    {
+                        newAppsCnn.Acc_Accounts.Remove(dbAccount);
+                        newAppsCnn.SaveChanges();
+                    }
+                    else
+                    {
+                        return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = "This Item has childs" };
+                    }
                 }
                 return new DataDeleteResult() { DeleteStatus = true };
             }
@@ -204,6 +220,12 @@ namespace BackOfficeBL.Accounting
             {
                 return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = ex.Message };
             }
+        }
+
+        public bool DontHaveTransaction()
+        {
+            //TODO : in transaction implemantation
+            return true;
         }
 
     }
