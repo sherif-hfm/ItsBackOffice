@@ -74,7 +74,7 @@
             this.cbxCreditAccounts = new BackOfficeUI.Controls.ComboBox();
             this.lblDepitAccount = new BackOfficeUI.Controls.Label();
             this.cbxDepitAccounts = new BackOfficeUI.Controls.ComboBox();
-            this.cbxArCurrency = new BackOfficeUI.Controls.ComboBox();
+            this.cbxCurrency = new BackOfficeUI.Controls.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new BackOfficeUI.Controls.Label();
             this.txtEliasEn = new BackOfficeUI.Controls.TextBox();
@@ -484,22 +484,22 @@
             this.cbxDepitAccounts.LockedInModes = 25;
             this.cbxDepitAccounts.Name = "cbxDepitAccounts";
             // 
-            // cbxArCurrency
+            // cbxCurrency
             // 
-            this.cbxArCurrency.BackColor = System.Drawing.Color.White;
-            this.cbxArCurrency.DefaultIndex = -1;
-            this.cbxArCurrency.FormattingEnabled = true;
-            this.cbxArCurrency.IsRequired = false;
-            resources.ApplyResources(this.cbxArCurrency, "cbxArCurrency");
-            this.cbxArCurrency.LockedInModes = 25;
-            this.cbxArCurrency.Name = "cbxArCurrency";
+            this.cbxCurrency.BackColor = System.Drawing.Color.White;
+            this.cbxCurrency.DefaultIndex = -1;
+            this.cbxCurrency.FormattingEnabled = true;
+            this.cbxCurrency.IsRequired = false;
+            resources.ApplyResources(this.cbxCurrency, "cbxCurrency");
+            this.cbxCurrency.LockedInModes = 25;
+            this.cbxCurrency.Name = "cbxCurrency";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtEliasEn);
             this.groupBox1.Controls.Add(this.txtEliasAr);
-            this.groupBox1.Controls.Add(this.cbxArCurrency);
+            this.groupBox1.Controls.Add(this.cbxCurrency);
             this.groupBox1.Controls.Add(this.cbxDepitAccounts);
             this.groupBox1.Controls.Add(this.lblDepitAccount);
             this.groupBox1.Controls.Add(this.cbxCreditAccounts);
@@ -552,6 +552,7 @@
             this.dgrdVouchers.MultiSelect = false;
             this.dgrdVouchers.Name = "dgrdVouchers";
             this.dgrdVouchers.ReadOnly = true;
+            this.dgrdVouchers.RowHeadersVisible = false;
             this.dgrdVouchers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrdVouchers.SelectionChanged += new System.EventHandler(this.dgrdVouchers_SelectionChanged);
             // 
@@ -666,7 +667,7 @@
         private Controls.ComboBox cbxCreditAccounts;
         private Controls.Label lblDepitAccount;
         private Controls.ComboBox cbxDepitAccounts;
-        private Controls.ComboBox cbxArCurrency;
+        private Controls.ComboBox cbxCurrency;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgrdVouchers;
         private Controls.TextBox txtEliasEn;
