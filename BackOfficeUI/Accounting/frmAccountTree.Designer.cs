@@ -210,6 +210,7 @@
             // 
             this.cmbAccountType.BackColor = System.Drawing.Color.White;
             this.cmbAccountType.Clearable = true;
+            this.cmbAccountType.DefaultIndex = -1;
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.IsRequired = true;
             resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
@@ -244,6 +245,7 @@
             // 
             this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
             this.cmbAccountCategory.Clearable = true;
+            this.cmbAccountCategory.DefaultIndex = -1;
             this.cmbAccountCategory.FormattingEnabled = true;
             this.cmbAccountCategory.IsRequired = true;
             resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
@@ -295,6 +297,7 @@
             this.Delete += new BackOfficeUI.Controls.frmBaseDB.DeleteDelegate(this.frmAccountTree_Delete);
             this.Save += new BackOfficeUI.Controls.frmBaseDB.SaveDelegate(this.frmAccountTree_Save);
             this.Cancel += new BackOfficeUI.Controls.frmBaseDB.CancelDelegate(this.frmAccountTree_Cancel);
+            this.Find += new BackOfficeUI.Controls.frmBaseDB.FindDelegate(this.frmAccountTree_Find);
             this.Load += new System.EventHandler(this.frmAccountTree_Load);
             this.Controls.SetChildIndex(this.trvAccountTree, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);

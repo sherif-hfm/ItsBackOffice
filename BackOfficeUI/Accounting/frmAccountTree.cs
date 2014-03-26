@@ -274,5 +274,10 @@ namespace BackOfficeUI.Accounting
             }
         }
 
+        private void frmAccountTree_Find(object sender, Dictionary<string, object> _findFields)
+        {
+
+        }
+
     }
 }

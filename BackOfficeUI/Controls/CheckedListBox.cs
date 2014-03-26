@@ -58,5 +58,8 @@ namespace BackOfficeUI.Controls
         }
 
         #endregion
+
+        public bool Clearable { get; set; }
+       
     }
 }

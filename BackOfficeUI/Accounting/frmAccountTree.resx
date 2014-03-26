@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;trvAccountTree.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="lblAccountNo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -557,15 +557,6 @@
   <data name="&gt;&gt;cmbAccountType.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="cmbAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 161</value>
-  </data>
-  <data name="cmbAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 27</value>
-  </data>
-  <data name="cmbAccountCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
   <data name="&gt;&gt;cmbAccountCategory.Name" xml:space="preserve">
     <value>cmbAccountCategory</value>
   </data>
@@ -600,25 +591,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
+  </data>
+  <data name="cmbAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 161</value>
+  </data>
+  <data name="cmbAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 27</value>
+  </data>
+  <data name="cmbAccountCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.Name" xml:space="preserve">
+    <value>cmbAccountCategory</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cmbAccountCategory.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="TreeViewContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>217, 17</value>
+    <value>208, 17</value>
   </metadata>
+  <data name="TreeViewContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 92</value>
+  </data>
+  <data name="&gt;&gt;TreeViewContext.Name" xml:space="preserve">
+    <value>TreeViewContext</value>
+  </data>
+  <data name="&gt;&gt;TreeViewContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>101, 22</value>
   </data>
   <data name="addToolStripMenuItem.Text" xml:space="preserve">
     <value>Add</value>
   </data>
   <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>101, 22</value>
   </data>
   <data name="editToolStripMenuItem.Text" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="copyAndPasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>101, 22</value>
   </data>
   <data name="copyAndPasteToolStripMenuItem.Text" xml:space="preserve">
     <value>Copy</value>
@@ -627,19 +648,10 @@
     <value>False</value>
   </data>
   <data name="pasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>101, 22</value>
   </data>
   <data name="pasteToolStripMenuItem.Text" xml:space="preserve">
     <value>Paste</value>
-  </data>
-  <data name="TreeViewContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 114</value>
-  </data>
-  <data name="&gt;&gt;TreeViewContext.Name" xml:space="preserve">
-    <value>TreeViewContext</value>
-  </data>
-  <data name="&gt;&gt;TreeViewContext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
