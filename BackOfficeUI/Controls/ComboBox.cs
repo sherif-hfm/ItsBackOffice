@@ -30,6 +30,8 @@ namespace BackOfficeUI.Controls
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 
+        private int mDefaultIndex = -1;
+        public int DefaultIndex { get { return mDefaultIndex; } set { mDefaultIndex = value; } }
 
         #endregion
 
@@ -55,8 +57,9 @@ namespace BackOfficeUI.Controls
 
         public void ClearData()
         {
-
+            this.SelectedIndex = mDefaultIndex;
         }
+
 
         #endregion
     }
