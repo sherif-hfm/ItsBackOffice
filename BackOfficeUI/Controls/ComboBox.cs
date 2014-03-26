@@ -32,6 +32,8 @@ namespace BackOfficeUI.Controls
 
         private int mDefaultIndex = -1;
         public int DefaultIndex { get { return mDefaultIndex; } set { mDefaultIndex = value; } }
+        private bool mClearable = true;
+        public bool Clearable { get { return mClearable; } set { mClearable = value; } }
 
         #endregion
 

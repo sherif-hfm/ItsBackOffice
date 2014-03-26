@@ -153,7 +153,8 @@ namespace BackOfficeUI.Controls
             if (crControl is IControl)
             {
                 IControl control = (IControl)crControl;
-                control.ClearData();
+                if (control.Clearable)
+                    control.ClearData();
             }
         }
 
@@ -186,6 +187,7 @@ namespace BackOfficeUI.Controls
                 if (status == true)
                 {
                     this.FormStatus = FormStatusEnum.AddNew;
+                    
                     ClearAllControls(this);
                 }
         }
