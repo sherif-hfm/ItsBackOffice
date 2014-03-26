@@ -30,7 +30,17 @@ namespace BackOfficeUI.Accounting
 
         private void frmVoucher_Load(object sender, EventArgs e)
         {
-            LoadComboValidation(Voucher.GetAllValidations());
+            LoadComboValidation1(Voucher.GetAllValidations());
+            LoadComboValidation2(Voucher.GetAllValidations());
+            LoadComboValidation3(Voucher.GetAllValidations());
+            LoadComboValidation4(Voucher.GetAllValidations());
+            LoadComboValidation5(Voucher.GetAllValidations());
+            LoadCombodtlValidation1(Voucher.GetAllValidations());
+            LoadCombodtlValidation2(Voucher.GetAllValidations());
+            LoadCombodtlValidation3(Voucher.GetAllValidations());
+            LoadCombodtlValidation4(Voucher.GetAllValidations());
+            LoadCombodtlValidation5(Voucher.GetAllValidations());
+
             LoadCreditComboAccount(Account.GetAllAccountTree());
             LoadDepitComboAccount(Account.GetAllAccountTree());
             LoadComboCurrency(Voucher.GetAllCurrency());
@@ -183,61 +193,128 @@ namespace BackOfficeUI.Accounting
             }
         }
 
-        private void LoadComboValidation(List<VoucherValidation> _VotVal)
+        private void LoadComboValidation1(List<VoucherValidation> _VotVal)
         {
             if (_VotVal.Count != 0)
             {
                 cbxValidation1.DataSource = _VotVal;
                 cbxValidation1.ValueMember = "VaidationID";
                 cbxValidation1.DisplayMember = "ValidationName";
-                cbxValidation1.SelectedIndex = -1;
+                cbxValidation1.SelectedIndex = 0;
 
+            }
+
+        }
+        private void LoadComboValidation2(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxValidation2.DataSource = _VotVal;
                 cbxValidation2.ValueMember = "VaidationID";
                 cbxValidation2.DisplayMember = "ValidationName";
-                cbxValidation2.SelectedIndex = -1;
+                cbxValidation2.SelectedIndex = 0;
 
+            }
+
+        }
+        private void LoadComboValidation3(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxValidation3.DataSource = _VotVal;
                 cbxValidation3.ValueMember = "VaidationID";
                 cbxValidation3.DisplayMember = "ValidationName";
-                cbxValidation3.SelectedIndex = -1;
+                cbxValidation3.SelectedIndex = 0;
 
+            }
+        }
+
+
+
+        private void LoadComboValidation4(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxValidation4.DataSource = _VotVal;
                 cbxValidation4.ValueMember = "VaidationID";
                 cbxValidation4.DisplayMember = "ValidationName";
-                cbxValidation4.SelectedIndex = -1;
+                cbxValidation4.SelectedIndex = 0;
 
+            }
+        }
+
+
+        private void LoadComboValidation5(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxValidation5.DataSource = _VotVal;
                 cbxValidation5.ValueMember = "VaidationID";
                 cbxValidation5.DisplayMember = "ValidationName";
-                cbxValidation5.SelectedIndex = -1;
+                cbxValidation5.SelectedIndex = 0;
 
+            }
+        }
+
+
+        private void LoadCombodtlValidation1(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxDtlValidation1.DataSource = _VotVal;
                 cbxDtlValidation1.ValueMember = "VaidationID";
                 cbxDtlValidation1.DisplayMember = "ValidationName";
-                cbxDtlValidation1.SelectedIndex = -1;
+                cbxDtlValidation1.SelectedIndex = 0;
 
+            }
+        }
+
+        private void LoadCombodtlValidation2(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxDtlValidation2.DataSource = _VotVal;
                 cbxDtlValidation2.ValueMember = "VaidationID";
                 cbxDtlValidation2.DisplayMember = "ValidationName";
-                cbxDtlValidation2.SelectedIndex = -1;
+                cbxDtlValidation2.SelectedIndex = 0;
 
+            }
+        }
+
+        private void LoadCombodtlValidation3(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxDtlValidation3.DataSource = _VotVal;
                 cbxDtlValidation3.ValueMember = "VaidationID";
                 cbxDtlValidation3.DisplayMember = "ValidationName";
-                cbxDtlValidation3.SelectedIndex = -1;
+                cbxDtlValidation3.SelectedIndex = 0;
 
+            }
+        }
+
+        private void LoadCombodtlValidation4(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxDtlValidation4.DataSource = _VotVal;
                 cbxDtlValidation4.ValueMember = "VaidationID";
                 cbxDtlValidation4.DisplayMember = "ValidationName";
-                cbxDtlValidation4.SelectedIndex = -1;
+                cbxDtlValidation4.SelectedIndex = 0;
 
+            }
+        }
+
+        private void LoadCombodtlValidation5(List<VoucherValidation> _VotVal)
+        {
+            if (_VotVal.Count != 0)
+            {
                 cbxDtlValidation5.DataSource = _VotVal;
                 cbxDtlValidation5.ValueMember = "VaidationID";
                 cbxDtlValidation5.DisplayMember = "ValidationName";
-                cbxDtlValidation5.SelectedIndex = -1;
-            }
+                cbxDtlValidation5.SelectedIndex = 0;
 
+            }
         }
 
         private void LoadCreditComboAccount(List<Account> AccountList)
@@ -264,13 +341,10 @@ namespace BackOfficeUI.Accounting
         {
             if (_CurrencyList.Count != 0)
             {
-                cbxArCurrency.DisplayMember = "CurrencyArName";
+                cbxArCurrency.DisplayMember = "CurrencyName";
                 cbxArCurrency.ValueMember = "CurrencyID";
                 cbxArCurrency.DataSource = _CurrencyList;
 
-                cbxEnCurrency.DisplayMember = "CurrencyEnName";
-                cbxEnCurrency.ValueMember = "CurrencyID";
-                cbxEnCurrency.DataSource = _CurrencyList;
             }
         }
 
@@ -278,7 +352,6 @@ namespace BackOfficeUI.Accounting
         {
             if (vouchertype.CurrencyID != 0)
             {
-                cbxEnCurrency.SelectedValue = vouchertype.CurrencyID;
                 cbxArCurrency.SelectedValue = vouchertype.CurrencyID;
             }
             if (!string.IsNullOrEmpty(vouchertype.CriedtAccountID))
@@ -356,9 +429,9 @@ namespace BackOfficeUI.Accounting
         private void GetDataFromGUI()
         {
             CrVoucher = new VoucherType();
-            if (cbxEnCurrency.SelectedIndex != -1)
+            if (cbxArCurrency.SelectedIndex != -1)
             {
-                CrVoucher.CurrencyID = Convert.ToInt32(cbxEnCurrency.SelectedValue);
+                CrVoucher.CurrencyID = Convert.ToInt32(cbxArCurrency.SelectedValue);
             }
             if (!string.IsNullOrEmpty(txtVoucherCode.Text))
             {
@@ -392,23 +465,23 @@ namespace BackOfficeUI.Accounting
 
             if (cbxValidation1.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField1 = cbxValidation1.SelectedValue.ToString();// Elhaddad update convert from int to string
+                CrVoucher.MainValidationField1 = Convert.ToInt32(cbxValidation1.SelectedValue);// Elhaddad update convert from int to string
             }
             if (cbxValidation2.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField2 = cbxValidation2.SelectedValue.ToString();// Elhaddad update convert from int to string
+                CrVoucher.MainValidationField2 = Convert.ToInt32(cbxValidation2.SelectedValue);// Elhaddad update convert from int to string
             }
             if (cbxValidation3.SelectedIndex != -1)
             {
-                CrVoucher.mainValidationField3 = cbxValidation3.SelectedValue.ToString();// Elhaddad update convert from int to string
+                CrVoucher.mainValidationField3 = Convert.ToInt32(cbxValidation3.SelectedValue);// Elhaddad update convert from int to string
             }
             if (cbxValidation4.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField4 = cbxValidation4.SelectedValue.ToString();// Elhaddad update convert from int to string
+                CrVoucher.MainValidationField4 = Convert.ToInt32(cbxValidation4.SelectedValue);// Elhaddad update convert from int to string
             }
             if (cbxValidation5.SelectedIndex != -1)
             {
-                CrVoucher.MainValidationField5 = cbxValidation5.SelectedValue.ToString();// Elhaddad update convert from int to string
+                CrVoucher.MainValidationField5 = Convert.ToInt32(cbxValidation5.SelectedValue);// Elhaddad update convert from int to string
             }
 
             if (cbxDtlValidation1.SelectedIndex != -1)

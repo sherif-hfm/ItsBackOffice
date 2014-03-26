@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BackOfficeBL.Accounting
 {
-   public class VoucherType
+    public class VoucherType
     {
         public string VoucherTypeId { get; set; }
 
@@ -39,15 +39,15 @@ namespace BackOfficeBL.Accounting
         public int? DtlValidationField4 { get; set; }
         public int? DtlValidationField5 { get; set; }
 
-        public string MainValidationField1 { get; set; }// Elhaddad update convert from int to string
-        public string MainValidationField2 { get; set; }// Elhaddad update convert from int to string
-        public string mainValidationField3 { get; set; }// Elhaddad update convert from int to string
-        public string MainValidationField4 { get; set; }// Elhaddad update convert from int to string
-        public string MainValidationField5 { get; set; }// Elhaddad update convert from int to string
+        public int? MainValidationField1 { get; set; }// Elhaddad update convert from int to string
+        public int? MainValidationField2 { get; set; }// Elhaddad update convert from int to string
+        public int? mainValidationField3 { get; set; }// Elhaddad update convert from int to string
+        public int? MainValidationField4 { get; set; }// Elhaddad update convert from int to string
+        public int? MainValidationField5 { get; set; }// Elhaddad update convert from int to string
 
 
 
-       
+
         private string GetVoucherName()
         {
             CultureInfo cultureinfo = CultureInfo.CurrentUICulture;
@@ -63,14 +63,15 @@ namespace BackOfficeBL.Accounting
         }
 
     }
-   public class Gidlist {
+    public class Gidlist
+    {
 
-     //  public string VoucherTypeId { get; set; }
+        //  public string VoucherTypeId { get; set; }
 
-      // public string VoucherName { get { return GetVoucherName(); } }
-       public string VoucherArName { get; set; }
-       public string VoucherEnName { get; set; }
-       public string ShortName_Ara { get; set; }
-       public string ShortName_Eng { get; set; }
-   }
+        // public string VoucherName { get { return GetVoucherName(); } }
+        public string VoucherArName { get; set; }
+        public string VoucherEnName { get; set; }
+        public string ShortName_Ara { get; set; }
+        public string ShortName_Eng { get; set; }
+    }
 }
