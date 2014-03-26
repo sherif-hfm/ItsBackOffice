@@ -20,6 +20,7 @@ namespace BackOfficeBL.Security
         public bool IsNew { get; set; }
         [XmlIgnore]
         public List<User> Users = new List<User>();
+        public List<GroupRight> GroupRights = new List<GroupRight>();
 
         #region ************************** Static Methods **************************
         
@@ -146,6 +147,25 @@ namespace BackOfficeBL.Security
             }
         }
 
+        public void LoadGroupRights()
+        {
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbGroups = from g in newAppsCnn.Sec_GroupRights where g.GroupID == this.GroupID select g;
+            foreach (var dbGroup in dbGroups)
+            {
+                GroupRight groupRight = new GroupRight();
+                groupRight.GroupID = this.GroupID;
+                groupRight.MenuID = dbGroup.MenuID;
+                groupRight.AllowedFunctions = dbGroup.AllowedFunctions;
+                GroupRights.Add(groupRight);
+            }
+        }
+
+        public void SaveGroupRights()
+        {
+
+        }
+
         public void SaveGroupUsers(Sec_Groups _dbGroup, NewAppsCnn newAppsCnn)
         {
             // Add New User To Group
@@ -220,5 +240,12 @@ namespace BackOfficeBL.Security
                return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = ex.Message };
             }
         }
+    }
+
+    public class GroupRight
+    {
+        public string GroupID { get; set; }
+        public string MenuID { get; set; }
+        public int AllowedFunctions { get; set; }
     }
 }
