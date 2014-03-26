@@ -29,6 +29,8 @@ namespace BackOfficeUI.Controls
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 
+        private bool mClearable = true;
+        public bool Clearable { get { return mClearable; } set { mClearable = value; } }
 
         #endregion
 

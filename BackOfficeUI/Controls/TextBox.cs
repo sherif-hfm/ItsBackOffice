@@ -37,6 +37,11 @@ namespace BackOfficeUI.Controls
         private int mLockedInModes = 25;
         public int LockedInModes { get { return mLockedInModes; } set { mLockedInModes = value; } }
 
+
+        private bool mClearable = true;
+        public bool Clearable { get { return mClearable; } set { mClearable = value; } }
+
+
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccountTree));
             this.trvAccountTree = new BackOfficeUI.Controls.TreeView();
             this.lblAccountNo = new BackOfficeUI.Controls.Label();
@@ -49,20 +50,30 @@
             this.cmbAccountType = new BackOfficeUI.Controls.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbAccountCategory = new BackOfficeUI.Controls.ComboBox();
+            this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // trvAccountTree
             // 
             this.trvAccountTree.BackColor = System.Drawing.Color.White;
+            this.trvAccountTree.Clearable = true;
             this.trvAccountTree.IsRequired = false;
             resources.ApplyResources(this.trvAccountTree, "trvAccountTree");
             this.trvAccountTree.LockedInModes = 25;
             this.trvAccountTree.Name = "trvAccountTree";
+            this.trvAccountTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvAccountTree_AfterSelect);
+            this.trvAccountTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trvAccountTree_MouseDown);
             // 
             // lblAccountNo
             // 
             resources.ApplyResources(this.lblAccountNo, "lblAccountNo");
+            this.lblAccountNo.Clearable = true;
             this.lblAccountNo.IsRequired = false;
             this.lblAccountNo.LockedInModes = 25;
             this.lblAccountNo.Name = "lblAccountNo";
@@ -70,6 +81,7 @@
             // lblAccountNameAr
             // 
             resources.ApplyResources(this.lblAccountNameAr, "lblAccountNameAr");
+            this.lblAccountNameAr.Clearable = true;
             this.lblAccountNameAr.IsRequired = false;
             this.lblAccountNameAr.LockedInModes = 25;
             this.lblAccountNameAr.Name = "lblAccountNameAr";
@@ -77,6 +89,7 @@
             // lblAccountNameEng
             // 
             resources.ApplyResources(this.lblAccountNameEng, "lblAccountNameEng");
+            this.lblAccountNameEng.Clearable = true;
             this.lblAccountNameEng.IsRequired = false;
             this.lblAccountNameEng.LockedInModes = 25;
             this.lblAccountNameEng.Name = "lblAccountNameEng";
@@ -84,6 +97,7 @@
             // lblAccountCategory
             // 
             resources.ApplyResources(this.lblAccountCategory, "lblAccountCategory");
+            this.lblAccountCategory.Clearable = true;
             this.lblAccountCategory.IsRequired = false;
             this.lblAccountCategory.LockedInModes = 25;
             this.lblAccountCategory.Name = "lblAccountCategory";
@@ -91,6 +105,7 @@
             // txtAccountNo
             // 
             this.txtAccountNo.BackColor = System.Drawing.Color.White;
+            this.txtAccountNo.Clearable = false;
             resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.IsRequired = true;
             this.txtAccountNo.LockedInModes = 25;
@@ -99,6 +114,7 @@
             // txtAccountNameAr
             // 
             this.txtAccountNameAr.BackColor = System.Drawing.Color.White;
+            this.txtAccountNameAr.Clearable = true;
             this.txtAccountNameAr.IsRequired = true;
             resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.LockedInModes = 25;
@@ -107,6 +123,7 @@
             // txtAccountNameEng
             // 
             this.txtAccountNameEng.BackColor = System.Drawing.Color.White;
+            this.txtAccountNameEng.Clearable = true;
             this.txtAccountNameEng.IsRequired = true;
             resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.LockedInModes = 25;
@@ -115,6 +132,7 @@
             // txtStartBalance
             // 
             this.txtStartBalance.BackColor = System.Drawing.Color.White;
+            this.txtStartBalance.Clearable = true;
             this.txtStartBalance.IsRequired = false;
             resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
             this.txtStartBalance.LockedInModes = 25;
@@ -123,6 +141,7 @@
             // lblStartBalance
             // 
             resources.ApplyResources(this.lblStartBalance, "lblStartBalance");
+            this.lblStartBalance.Clearable = true;
             this.lblStartBalance.IsRequired = false;
             this.lblStartBalance.LockedInModes = 25;
             this.lblStartBalance.Name = "lblStartBalance";
@@ -130,6 +149,7 @@
             // lblDebit
             // 
             resources.ApplyResources(this.lblDebit, "lblDebit");
+            this.lblDebit.Clearable = true;
             this.lblDebit.IsRequired = false;
             this.lblDebit.LockedInModes = 25;
             this.lblDebit.Name = "lblDebit";
@@ -137,6 +157,7 @@
             // txtDebit
             // 
             this.txtDebit.BackColor = System.Drawing.Color.White;
+            this.txtDebit.Clearable = true;
             this.txtDebit.IsRequired = false;
             resources.ApplyResources(this.txtDebit, "txtDebit");
             this.txtDebit.LockedInModes = 25;
@@ -145,6 +166,7 @@
             // lblCreditor
             // 
             resources.ApplyResources(this.lblCreditor, "lblCreditor");
+            this.lblCreditor.Clearable = true;
             this.lblCreditor.IsRequired = false;
             this.lblCreditor.LockedInModes = 25;
             this.lblCreditor.Name = "lblCreditor";
@@ -152,6 +174,7 @@
             // txtCreditor
             // 
             this.txtCreditor.BackColor = System.Drawing.Color.White;
+            this.txtCreditor.Clearable = true;
             this.txtCreditor.IsRequired = false;
             resources.ApplyResources(this.txtCreditor, "txtCreditor");
             this.txtCreditor.LockedInModes = 25;
@@ -160,6 +183,7 @@
             // lblStopAccount
             // 
             resources.ApplyResources(this.lblStopAccount, "lblStopAccount");
+            this.lblStopAccount.Clearable = true;
             this.lblStopAccount.IsRequired = false;
             this.lblStopAccount.LockedInModes = 25;
             this.lblStopAccount.Name = "lblStopAccount";
@@ -167,6 +191,7 @@
             // lblAccountType
             // 
             resources.ApplyResources(this.lblAccountType, "lblAccountType");
+            this.lblAccountType.Clearable = true;
             this.lblAccountType.IsRequired = false;
             this.lblAccountType.LockedInModes = 25;
             this.lblAccountType.Name = "lblAccountType";
@@ -174,6 +199,7 @@
             // chkStopAccount
             // 
             resources.ApplyResources(this.chkStopAccount, "chkStopAccount");
+            this.chkStopAccount.Clearable = true;
             this.chkStopAccount.ForeColor = System.Drawing.Color.Black;
             this.chkStopAccount.IsRequired = false;
             this.chkStopAccount.LockedInModes = 25;
@@ -183,6 +209,7 @@
             // cmbAccountType
             // 
             this.cmbAccountType.BackColor = System.Drawing.Color.White;
+            this.cmbAccountType.Clearable = true;
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.IsRequired = true;
             resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
@@ -216,11 +243,46 @@
             // cmbAccountCategory
             // 
             this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
+            this.cmbAccountCategory.Clearable = true;
             this.cmbAccountCategory.FormattingEnabled = true;
             this.cmbAccountCategory.IsRequired = true;
             resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
             this.cmbAccountCategory.LockedInModes = 25;
             this.cmbAccountCategory.Name = "cmbAccountCategory";
+            // 
+            // TreeViewContext
+            // 
+            this.TreeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.copyAndPasteToolStripMenuItem,
+            this.pasteToolStripMenuItem});
+            this.TreeViewContext.Name = "TreeViewContext";
+            resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // copyAndPasteToolStripMenuItem
+            // 
+            this.copyAndPasteToolStripMenuItem.Name = "copyAndPasteToolStripMenuItem";
+            resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
+            this.copyAndPasteToolStripMenuItem.Click += new System.EventHandler(this.copyAndPasteToolStripMenuItem_Click);
+            // 
+            // pasteToolStripMenuItem
+            // 
+            resources.ApplyResources(this.pasteToolStripMenuItem, "pasteToolStripMenuItem");
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // frmAccountTree
             // 
@@ -238,6 +300,7 @@
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.TreeViewContext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,6 +328,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private Controls.ComboBox cmbAccountCategory;
         private Controls.TextBox txtDebit;
+        private System.Windows.Forms.ContextMenuStrip TreeViewContext;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
 
     }
 }

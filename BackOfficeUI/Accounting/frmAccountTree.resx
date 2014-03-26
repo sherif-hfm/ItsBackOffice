@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;trvAccountTree.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblAccountNo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -225,7 +225,7 @@
     <value>True</value>
   </data>
   <data name="lblAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 129</value>
+    <value>6, 164</value>
   </data>
   <data name="lblAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 19</value>
@@ -315,7 +315,7 @@
     <value>13</value>
   </data>
   <data name="txtStartBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 159</value>
+    <value>227, 194</value>
   </data>
   <data name="txtStartBalance.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 27</value>
@@ -339,7 +339,7 @@
     <value>True</value>
   </data>
   <data name="lblStartBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 162</value>
+    <value>6, 197</value>
   </data>
   <data name="lblStartBalance.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 19</value>
@@ -366,7 +366,7 @@
     <value>True</value>
   </data>
   <data name="lblDebit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 195</value>
+    <value>6, 227</value>
   </data>
   <data name="lblDebit.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 19</value>
@@ -390,7 +390,7 @@
     <value>14</value>
   </data>
   <data name="txtDebit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 192</value>
+    <value>227, 227</value>
   </data>
   <data name="txtDebit.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 27</value>
@@ -414,16 +414,16 @@
     <value>True</value>
   </data>
   <data name="lblCreditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 228</value>
+    <value>6, 263</value>
   </data>
   <data name="lblCreditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 19</value>
+    <value>51, 19</value>
   </data>
   <data name="lblCreditor.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="lblCreditor.Text" xml:space="preserve">
-    <value>Creditor</value>
+    <value>Credit</value>
   </data>
   <data name="&gt;&gt;lblCreditor.Name" xml:space="preserve">
     <value>lblCreditor</value>
@@ -438,7 +438,7 @@
     <value>10</value>
   </data>
   <data name="txtCreditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 225</value>
+    <value>227, 260</value>
   </data>
   <data name="txtCreditor.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 27</value>
@@ -462,7 +462,7 @@
     <value>True</value>
   </data>
   <data name="lblStopAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 261</value>
+    <value>6, 296</value>
   </data>
   <data name="lblStopAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 19</value>
@@ -489,7 +489,7 @@
     <value>True</value>
   </data>
   <data name="lblAccountType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 294</value>
+    <value>6, 133</value>
   </data>
   <data name="lblAccountType.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
@@ -516,7 +516,7 @@
     <value>True</value>
   </data>
   <data name="chkStopAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 263</value>
+    <value>352, 298</value>
   </data>
   <data name="chkStopAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 14</value>
@@ -537,7 +537,7 @@
     <value>4</value>
   </data>
   <data name="cmbAccountType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 288</value>
+    <value>228, 127</value>
   </data>
   <data name="cmbAccountType.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 27</value>
@@ -558,7 +558,7 @@
     <value>2</value>
   </data>
   <data name="cmbAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 126</value>
+    <value>228, 161</value>
   </data>
   <data name="cmbAccountCategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 27</value>
@@ -600,7 +600,46 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <metadata name="TreeViewContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>217, 17</value>
+  </metadata>
+  <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="addToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="copyAndPasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="copyAndPasteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="TreeViewContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 114</value>
+  </data>
+  <data name="&gt;&gt;TreeViewContext.Name" xml:space="preserve">
+    <value>TreeViewContext</value>
+  </data>
+  <data name="&gt;&gt;TreeViewContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -610,6 +649,30 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1141, 750</value>
+  </data>
+  <data name="&gt;&gt;addToolStripMenuItem.Name" xml:space="preserve">
+    <value>addToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;addToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Name" xml:space="preserve">
+    <value>editToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyAndPasteToolStripMenuItem.Name" xml:space="preserve">
+    <value>copyAndPasteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;copyAndPasteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pasteToolStripMenuItem.Name" xml:space="preserve">
+    <value>pasteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pasteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmAccountTree</value>
