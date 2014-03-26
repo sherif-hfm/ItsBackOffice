@@ -37,16 +37,16 @@ namespace BackOfficeDAL
         public string DepitAccountId { get; set; }
         public string ShortName_Ara { get; set; }
         public string ShortName_Eng { get; set; }
-        public string DtlValidationField1 { get; set; }
-        public string DtlValidationField2 { get; set; }
-        public string DtlValidationField3 { get; set; }
-        public string DtlValidationField4 { get; set; }
-        public string DtlValidationField5 { get; set; }
-        public string MainValidationField1 { get; set; }
-        public string MainValidationField2 { get; set; }
-        public string mainValidationField3 { get; set; }
-        public string MainValidationField4 { get; set; }
-        public string MainValidationField5 { get; set; }
+        public Nullable<int> DtlValidationField1 { get; set; }
+        public Nullable<int> DtlValidationField2 { get; set; }
+        public Nullable<int> DtlValidationField3 { get; set; }
+        public Nullable<int> DtlValidationField4 { get; set; }
+        public Nullable<int> DtlValidationField5 { get; set; }
+        public Nullable<int> MainValidationField1 { get; set; }
+        public Nullable<int> MainValidationField2 { get; set; }
+        public Nullable<int> mainValidationField3 { get; set; }
+        public Nullable<int> MainValidationField4 { get; set; }
+        public Nullable<int> MainValidationField5 { get; set; }
     
         public virtual Acc_Accounts Acc_Accounts { get; set; }
         public virtual Acc_Currancy Acc_Currancy { get; set; }

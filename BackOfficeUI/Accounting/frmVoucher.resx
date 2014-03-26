@@ -117,941 +117,929 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cbxDtlValidation4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 104</value>
+  <data name="&gt;&gt;cbxValidation5.Name" xml:space="preserve">
+    <value>cbxValidation5</value>
   </data>
-  <data name="&gt;&gt;cbxCreditAccounts.Type" xml:space="preserve">
+  <data name="&gt;&gt;cbxValidation5.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="txtVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 47</value>
+  <data name="&gt;&gt;cbxValidation5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
-  <data name="txtArDtlExtraField1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 23</value>
+  <data name="&gt;&gt;cbxValidation5.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblDtlExtraField1.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
+  <data name="&gt;&gt;cbxValidation4.Name" xml:space="preserve">
+    <value>cbxValidation4</value>
   </data>
-  <data name="clmVoucherCode.Width" type="System.Int32, mscorlib">
-    <value>140</value>
+  <data name="&gt;&gt;cbxValidation4.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cbxValidation4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.Name" xml:space="preserve">
+    <value>cbxValidation3</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.Name" xml:space="preserve">
+    <value>cbxValidation2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.Name" xml:space="preserve">
+    <value>cbxValidation1</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblCheckValueAdding.Name" xml:space="preserve">
+    <value>lblCheckValueAdding</value>
+  </data>
+  <data name="&gt;&gt;lblCheckValueAdding.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblCheckValueAdding.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblCheckValueAdding.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="txtArDtlExtraField2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 50</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation2.Name" xml:space="preserve">
-    <value>cbxDtlValidation2</value>
-  </data>
-  <data name="txtArDtlExtraField4.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="lblEnglishName.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="cbxCreditAccounts.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField2.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="lblVoucherCode.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtArDtlExtraField1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="&gt;&gt;cbxArCurrency.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation1.Name" xml:space="preserve">
-    <value>cbxDtlValidation1</value>
-  </data>
-  <data name="&gt;&gt;txtEliasEn.Name" xml:space="preserve">
-    <value>txtEliasEn</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="cbxDtlValidation5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 131</value>
-  </data>
-  <data name="lblExtraField3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField2.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="txtEnExtraField5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="lblCurrency.Text" xml:space="preserve">
-    <value>Currency</value>
-  </data>
-  <data name="cbxArCurrency.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField4.Name" xml:space="preserve">
-    <value>txtArDtlExtraField4</value>
-  </data>
-  <data name="&gt;&gt;dgrdVouchers.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cbxValidation3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="clmVoucherCode.HeaderText" xml:space="preserve">
-    <value>Voucher Code</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation3.Name" xml:space="preserve">
-    <value>cbxDtlValidation3</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField2.Name" xml:space="preserve">
-    <value>lblDtlExtraField2</value>
+  <data name="&gt;&gt;txtEnExtraField5.Name" xml:space="preserve">
+    <value>txtEnExtraField5</value>
   </data>
   <data name="&gt;&gt;txtEnExtraField5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.Name" xml:space="preserve">
+    <value>txtEnExtraField2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.Name" xml:space="preserve">
+    <value>txtEnExtraField3</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.Name" xml:space="preserve">
+    <value>txtEnExtraField4</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.Name" xml:space="preserve">
+    <value>lblExtraField2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.Name" xml:space="preserve">
+    <value>lblExtraField3</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.Name" xml:space="preserve">
+    <value>lblExtraField4</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.Name" xml:space="preserve">
+    <value>lblExtraField5</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField1.Name" xml:space="preserve">
+    <value>txtEnExtraField1</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField1.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;txtEnExtraField1.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;txtEnExtraField4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="txtArabicName.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="dgrdVouchers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 44</value>
-  </data>
-  <data name="lblDtlExtraField3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbxDtlValidation2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 50</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField5.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblExtraField4.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;clmEliasAr.Name" xml:space="preserve">
-    <value>clmEliasAr</value>
-  </data>
-  <data name="&gt;&gt;lblDepitAccount.Name" xml:space="preserve">
-    <value>lblDepitAccount</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblDtlExtraField2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;txtEnglishName.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="clmEnglishName.Width" type="System.Int32, mscorlib">
-    <value>180</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField5.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lblDtlExtraField5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
-  </data>
-  <data name="&gt;&gt;txtEnglishName.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;cbxDepitAccounts.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblCreditAccount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txtEnglishName.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="cbxValidation4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 192</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField3.Name" xml:space="preserve">
-    <value>txtEnExtraField3</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField4.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;clmVoucherCode.Name" xml:space="preserve">
-    <value>clmVoucherCode</value>
-  </data>
-  <data name="&gt;&gt;txtEliasEn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblCheckValueAdding.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="cbxDtlValidation3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 77</value>
-  </data>
-  <data name="lblCurrency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 17</value>
-  </data>
-  <data name="lblVoucherCode.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="clmEliasAr.HeaderText" xml:space="preserve">
-    <value>Arabic Elias</value>
-  </data>
-  <data name="txtEnglishName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 78</value>
-  </data>
-  <data name="&gt;&gt;cbxDepitAccounts.Name" xml:space="preserve">
-    <value>cbxDepitAccounts</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblVoucherName.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblDtlExtraField5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField4.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lblVoucherCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 19</value>
-  </data>
-  <data name="lblCurrency.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDtlExtraField1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbxValidation4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 121</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.Name" xml:space="preserve">
-    <value>cbxValidation2</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 172</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblDtlExtraField3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblVoucherName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.Name" xml:space="preserve">
-    <value>cbxValidation3</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCheckValueAdding.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 19</value>
-  </data>
-  <data name="lblDtlExtraField14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblExtraField5.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="cbxEnCurrency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 78</value>
-  </data>
-  <data name="lblCurrency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 19</value>
-  </data>
-  <data name="txtEliasAr.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField14.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField14.Name" xml:space="preserve">
-    <value>lblDtlExtraField14</value>
-  </data>
-  <data name="cbxValidation1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="lblVoucherName.Text" xml:space="preserve">
-    <value>Voucher Name</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtEliasAr.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.Name" xml:space="preserve">
-    <value>cbxValidation1</value>
-  </data>
-  <data name="&gt;&gt;clmEnEliasName.Name" xml:space="preserve">
-    <value>clmEnEliasName</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation5.Name" xml:space="preserve">
-    <value>cbxDtlValidation5</value>
-  </data>
-  <data name="lblDtlExtraField1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblExtraField3.Text" xml:space="preserve">
-    <value>Extra Field 3</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtEnExtraField1.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;txtEliasEn.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField5.Name" xml:space="preserve">
-    <value>lblExtraField5</value>
-  </data>
-  <data name="txtVoucherCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 27</value>
-  </data>
-  <data name="&gt;&gt;txtVoucherCode.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtEliasEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 27</value>
-  </data>
-  <data name="&gt;&gt;clmArVoucherName.Name" xml:space="preserve">
-    <value>clmArVoucherName</value>
-  </data>
-  <data name="lblDtlExtraField5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="txtEnExtraField1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="lblExtraField3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDtlExtraField3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 80</value>
-  </data>
-  <data name="&gt;&gt;txtEnglishName.Name" xml:space="preserve">
-    <value>txtEnglishName</value>
-  </data>
-  <data name="lblDepitAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.frmBaseDB, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField4.Name" xml:space="preserve">
-    <value>lblExtraField4</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField1.Name" xml:space="preserve">
-    <value>lblDtlExtraField1</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblExtraField2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="dgrdVouchers.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtVoucherCode.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;dgrdVouchers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;clmArVoucherName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCreditAccount.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblVoucherName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="txtEnExtraField4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 121</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.Name" xml:space="preserve">
-    <value>lblExtraField2</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField14.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblDepitAccount.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;lblExtraField1.Name" xml:space="preserve">
+    <value>lblExtraField1</value>
   </data>
   <data name="&gt;&gt;lblExtraField1.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;cbxArCurrency.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cbxDepitAccounts.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="txtEnExtraField3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 94</value>
-  </data>
-  <data name="lblExtraField5.Text" xml:space="preserve">
-    <value>Extra Field 5</value>
-  </data>
-  <data name="lblVoucherCode.Text" xml:space="preserve">
-    <value>Vouchre Code</value>
-  </data>
-  <data name="lblDepitAccount.Text" xml:space="preserve">
-    <value>Depit Account Number</value>
-  </data>
-  <data name="txtEliasAr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>621, 47</value>
-  </data>
-  <data name="&gt;&gt;txtEliasAr.Name" xml:space="preserve">
-    <value>txtEliasAr</value>
-  </data>
-  <data name="txtEnglishName.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField1.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtEliasEn.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="cbxDtlValidation1.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="txtEnglishName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblExtraField4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 124</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField5.Name" xml:space="preserve">
-    <value>lblDtlExtraField5</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblDtlExtraField2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;clmEliasAr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblCurrency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation4.Name" xml:space="preserve">
-    <value>cbxDtlValidation4</value>
-  </data>
-  <data name="&gt;&gt;lblCurrency.Name" xml:space="preserve">
-    <value>lblCurrency</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblExtraField1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Elias</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation2.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="lblDtlExtraField3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblDepitAccount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblExtraField5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="&gt;&gt;lblArabicName.Name" xml:space="preserve">
-    <value>lblArabicName</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 187</value>
-  </data>
-  <data name="dgrdVouchers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblExtraField1.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="cbxValidation5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
+  <data name="&gt;&gt;lblExtraField1.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="lblArabicName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 19</value>
-  </data>
-  <data name="lblArabicName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblEnglishName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cbxDepitAccounts.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblExtraField2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 70</value>
-  </data>
-  <data name="lblEnglishName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 82</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="txtArDtlExtraField5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 131</value>
-  </data>
-  <data name="cbxValidation2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="clmEnglishName.HeaderText" xml:space="preserve">
-    <value>English Name</value>
-  </data>
-  <data name="&gt;&gt;cbxEnCurrency.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtVoucherCode.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblCheckValueAdding.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 347</value>
   </data>
-  <data name="lblExtraField2.Text" xml:space="preserve">
-    <value>Extra Field 2</value>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 192</value>
   </data>
-  <data name="&gt;&gt;lblCreditAccount.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="lblDtlExtraField3.Text" xml:space="preserve">
-    <value>Extra Field 3</value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Main</value>
   </data>
-  <data name="txtEnExtraField1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="lblCheckValueAdding.Location" type="System.Drawing.Point, System.Drawing">
-    <value>411, 18</value>
-  </data>
-  <data name="clmEnEliasName.Width" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
     <value>groupBox2</value>
-  </data>
-  <data name="cbxDepitAccounts.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="txtEnExtraField3.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="lblVoucherName.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="lblExtraField5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDtlExtraField5.Text" xml:space="preserve">
-    <value>Extra Field 5</value>
-  </data>
-  <data name="cbxDtlValidation5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 158</value>
-  </data>
-  <data name="&gt;&gt;lblCreditAccount.Name" xml:space="preserve">
-    <value>lblCreditAccount</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblDtlExtraField2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 53</value>
-  </data>
-  <data name="cbxValidation2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 67</value>
-  </data>
-  <data name="lblCheckValueAdding.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="lblExtraField4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="txtVoucherCode.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField14.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lblExtraField3.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="cbxValidation3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 94</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation2.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtArDtlExtraField4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 104</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 545</value>
-  </data>
-  <data name="&gt;&gt;lblCheckValueAdding.Name" xml:space="preserve">
-    <value>lblCheckValueAdding</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="txtEliasEn.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblExtraField1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 43</value>
-  </data>
-  <data name="&gt;&gt;clmEnglishName.Name" xml:space="preserve">
-    <value>clmEnglishName</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtVoucherCode.Name" xml:space="preserve">
-    <value>txtVoucherCode</value>
-  </data>
-  <data name="lblEnglishName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;cbxEnCurrency.Name" xml:space="preserve">
-    <value>cbxEnCurrency</value>
-  </data>
-  <data name="&gt;&gt;txtArabicName.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblExtraField5.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="txtEnExtraField4.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="cbxValidation5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 148</value>
   </data>
-  <data name="&gt;&gt;cbxArCurrency.Name" xml:space="preserve">
-    <value>cbxArCurrency</value>
+  <data name="cbxValidation5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
   </data>
-  <data name="lblExtraField2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
+  <data name="cbxValidation5.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
-  <data name="lblCheckValueAdding.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;cbxValidation5.Name" xml:space="preserve">
+    <value>cbxValidation5</value>
   </data>
-  <data name="&gt;&gt;lblCurrency.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;cbxValidation5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtEliasAr.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;cbxValidation5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;lblEnglishName.Name" xml:space="preserve">
-    <value>lblEnglishName</value>
+  <data name="&gt;&gt;cbxValidation5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbxValidation4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 121</value>
+  </data>
+  <data name="cbxValidation4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="cbxValidation4.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation4.Name" xml:space="preserve">
+    <value>cbxValidation4</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation4.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;cbxValidation4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblCreditAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+  <data name="cbxValidation3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 94</value>
+  </data>
+  <data name="cbxValidation3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="cbxValidation3.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.Name" xml:space="preserve">
+    <value>cbxValidation3</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbxValidation2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 67</value>
+  </data>
+  <data name="cbxValidation2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="cbxValidation2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.Name" xml:space="preserve">
+    <value>cbxValidation2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbxValidation1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 40</value>
+  </data>
+  <data name="cbxValidation1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="cbxValidation1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.Name" xml:space="preserve">
+    <value>cbxValidation1</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxValidation1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblCheckValueAdding.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCheckValueAdding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>411, 18</value>
+  </data>
+  <data name="lblCheckValueAdding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 19</value>
+  </data>
+  <data name="lblCheckValueAdding.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="lblCheckValueAdding.Text" xml:space="preserve">
+    <value>Add Check Value</value>
+  </data>
+  <data name="&gt;&gt;lblCheckValueAdding.Name" xml:space="preserve">
+    <value>lblCheckValueAdding</value>
+  </data>
+  <data name="&gt;&gt;lblCheckValueAdding.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblCheckValueAdding.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblCheckValueAdding.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtEnExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 148</value>
+  </data>
+  <data name="txtEnExtraField5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtEnExtraField5.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField5.Name" xml:space="preserve">
+    <value>txtEnExtraField5</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtEnExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 67</value>
+  </data>
+  <data name="txtEnExtraField2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtEnExtraField2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.Name" xml:space="preserve">
+    <value>txtEnExtraField2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtEnExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 94</value>
+  </data>
+  <data name="txtEnExtraField3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtEnExtraField3.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.Name" xml:space="preserve">
+    <value>txtEnExtraField3</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtEnExtraField4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 121</value>
+  </data>
+  <data name="txtEnExtraField4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtEnExtraField4.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.Name" xml:space="preserve">
+    <value>txtEnExtraField4</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblExtraField2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 70</value>
+  </data>
+  <data name="lblExtraField2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblExtraField2.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblExtraField2.Text" xml:space="preserve">
+    <value>Extra Field 2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.Name" xml:space="preserve">
+    <value>lblExtraField2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblExtraField3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 97</value>
+  </data>
+  <data name="lblExtraField3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblExtraField3.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lblExtraField3.Text" xml:space="preserve">
+    <value>Extra Field 3</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.Name" xml:space="preserve">
+    <value>lblExtraField3</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblExtraField4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExtraField4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 124</value>
+  </data>
+  <data name="lblExtraField4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblExtraField4.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblExtraField4.Text" xml:space="preserve">
+    <value>Extra Field 4</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.Name" xml:space="preserve">
+    <value>lblExtraField4</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblExtraField5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 151</value>
+  </data>
+  <data name="lblExtraField5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblExtraField5.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="lblExtraField5.Text" xml:space="preserve">
+    <value>Extra Field 5</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.Name" xml:space="preserve">
+    <value>lblExtraField5</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField5.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtEnExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 40</value>
+  </data>
+  <data name="txtEnExtraField1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtEnExtraField1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField1.Name" xml:space="preserve">
+    <value>txtEnExtraField1</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtEnExtraField1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblExtraField1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 43</value>
+  </data>
+  <data name="lblExtraField1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblExtraField1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lblExtraField1.Text" xml:space="preserve">
     <value>Extra Field 1</value>
   </data>
-  <data name="lblCurrency.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+  <data name="&gt;&gt;lblExtraField1.Name" xml:space="preserve">
+    <value>lblExtraField1</value>
   </data>
-  <data name="lblCreditAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="&gt;&gt;lblExtraField1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblExtraField1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lblDtlExtraField1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblDtlExtraField1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDtlExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 26</value>
+  </data>
+  <data name="lblDtlExtraField1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblDtlExtraField1.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="lblDtlExtraField1.Text" xml:space="preserve">
+    <value>Extra Field 1</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField1.Name" xml:space="preserve">
+    <value>lblDtlExtraField1</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txtArDtlExtraField1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 23</value>
+  </data>
+  <data name="txtArDtlExtraField1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtArDtlExtraField1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField1.Name" xml:space="preserve">
+    <value>txtArDtlExtraField1</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField1.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblDtlExtraField5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDtlExtraField5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDtlExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 134</value>
+  </data>
+  <data name="lblDtlExtraField5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblDtlExtraField5.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="lblDtlExtraField5.Text" xml:space="preserve">
+    <value>Extra Field 5</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField5.Name" xml:space="preserve">
+    <value>lblDtlExtraField5</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField5.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField5.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblDtlExtraField14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDtlExtraField14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblDtlExtraField14.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 107</value>
   </data>
-  <data name="lblVoucherCode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="clmEnEliasName.HeaderText" xml:space="preserve">
-    <value>English Elias</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField5.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="txtArDtlExtraField1.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="cbxValidation1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 40</value>
-  </data>
-  <data name="clmEliasAr.Width" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
-  <data name="&gt;&gt;lblDepitAccount.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="cbxValidation1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="lblEnglishName.Text" xml:space="preserve">
-    <value>English Name</value>
-  </data>
-  <data name="cbxDepitAccounts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 111</value>
-  </data>
-  <data name="&gt;&gt;lblEnglishName.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="dgrdVouchers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 150</value>
-  </data>
-  <data name="cbxCreditAccounts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 111</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>625, 23</value>
-  </data>
-  <data name="&gt;&gt;lblVoucherCode.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblDtlExtraField1.Text" xml:space="preserve">
-    <value>Extra Field 1</value>
-  </data>
-  <data name="lblDtlExtraField2.Text" xml:space="preserve">
-    <value>Extra Field 2</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblVoucherCode.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="cbxDtlValidation1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="cbxArCurrency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 27</value>
-  </data>
-  <data name="cbxDtlValidation2.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblDtlExtraField1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblDtlExtraField14.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 19</value>
   </data>
-  <data name="&gt;&gt;cbxDtlValidation2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField3.Name" xml:space="preserve">
-    <value>lblExtraField3</value>
-  </data>
-  <data name="cbxDtlValidation5.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;lblVoucherCode.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="lblExtraField1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="clmArVoucherName.HeaderText" xml:space="preserve">
-    <value>Arabic Name</value>
+  <data name="lblDtlExtraField14.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
   </data>
   <data name="lblDtlExtraField14.Text" xml:space="preserve">
     <value>Extra Field 4</value>
   </data>
-  <data name="&gt;&gt;lblExtraField1.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;lblDtlExtraField14.Name" xml:space="preserve">
+    <value>lblDtlExtraField14</value>
   </data>
-  <data name="cbxEnCurrency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 27</value>
+  <data name="&gt;&gt;lblDtlExtraField14.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="cbxValidation2.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;lblDtlExtraField14.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
-  <data name="lblExtraField2.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;lblDtlExtraField14.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblDtlExtraField3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDtlExtraField3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDtlExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 80</value>
+  </data>
+  <data name="lblDtlExtraField3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblDtlExtraField3.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="lblDtlExtraField3.Text" xml:space="preserve">
+    <value>Extra Field 3</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField3.Name" xml:space="preserve">
+    <value>lblDtlExtraField3</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField3.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField3.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblDtlExtraField2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDtlExtraField2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDtlExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 53</value>
+  </data>
+  <data name="lblDtlExtraField2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="lblDtlExtraField2.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="lblDtlExtraField2.Text" xml:space="preserve">
+    <value>Extra Field 2</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField2.Name" xml:space="preserve">
+    <value>lblDtlExtraField2</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField2.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;lblDtlExtraField2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtArDtlExtraField4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 104</value>
+  </data>
+  <data name="txtArDtlExtraField4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtArDtlExtraField4.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField4.Name" xml:space="preserve">
+    <value>txtArDtlExtraField4</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField4.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField4.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtArDtlExtraField3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 77</value>
+  </data>
+  <data name="txtArDtlExtraField3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtArDtlExtraField3.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField3.Name" xml:space="preserve">
+    <value>txtArDtlExtraField3</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField3.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtArDtlExtraField2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 50</value>
+  </data>
+  <data name="txtArDtlExtraField2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtArDtlExtraField2.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField2.Name" xml:space="preserve">
+    <value>txtArDtlExtraField2</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField2.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtArDtlExtraField5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 131</value>
+  </data>
+  <data name="txtArDtlExtraField5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtArDtlExtraField5.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField5.Name" xml:space="preserve">
+    <value>txtArDtlExtraField5</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField5.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;txtArDtlExtraField5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbxDtlValidation1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 23</value>
+  </data>
+  <data name="cbxDtlValidation1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="cbxDtlValidation1.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation1.Name" xml:space="preserve">
+    <value>cbxDtlValidation1</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbxDtlValidation2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 50</value>
   </data>
   <data name="cbxDtlValidation2.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 27</value>
   </data>
-  <data name="lblExtraField4.Text" xml:space="preserve">
-    <value>Extra Field 4</value>
+  <data name="cbxDtlValidation2.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
   </data>
-  <data name="&gt;&gt;txtEliasAr.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;cbxDtlValidation2.Name" xml:space="preserve">
+    <value>cbxDtlValidation2</value>
   </data>
-  <data name="cbxArCurrency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 47</value>
+  <data name="&gt;&gt;cbxDtlValidation2.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="lblExtraField4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;cbxDtlValidation2.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
-  <data name="&gt;&gt;lblExtraField4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;cbxDtlValidation2.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;txtEnExtraField2.Name" xml:space="preserve">
-    <value>txtEnExtraField2</value>
+  <data name="cbxDtlValidation3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 77</value>
   </data>
-  <data name="txtEnExtraField4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
+  <data name="cbxDtlValidation3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
   </data>
-  <data name="&gt;&gt;txtArDtlExtraField1.Name" xml:space="preserve">
-    <value>txtArDtlExtraField1</value>
+  <data name="cbxDtlValidation3.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
-  <data name="&gt;&gt;lblExtraField1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;cbxDtlValidation3.Name" xml:space="preserve">
+    <value>cbxDtlValidation3</value>
   </data>
-  <data name="lblVoucherName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 19</value>
+  <data name="&gt;&gt;cbxDtlValidation3.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;clmEnEliasName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cbxDtlValidation3.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
-  <data name="&gt;&gt;cbxValidation5.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;cbxDtlValidation3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbxDtlValidation4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 104</value>
+  </data>
+  <data name="cbxDtlValidation4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="cbxDtlValidation4.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation4.Name" xml:space="preserve">
+    <value>cbxDtlValidation4</value>
   </data>
   <data name="&gt;&gt;cbxDtlValidation4.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblDepitAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 19</value>
   </data>
   <data name="&gt;&gt;cbxDtlValidation4.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -1059,415 +1047,631 @@
   <data name="&gt;&gt;cbxDtlValidation4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Main</value>
+  <data name="cbxDtlValidation5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 131</value>
   </data>
-  <data name="txtEnExtraField5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 148</value>
+  <data name="cbxDtlValidation5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
   </data>
-  <data name="lblArabicName.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+  <data name="cbxDtlValidation5.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
   </data>
-  <data name="lblExtraField1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;cbxDtlValidation5.Name" xml:space="preserve">
+    <value>cbxDtlValidation5</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation5.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation5.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;cbxDtlValidation5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lblDtlExtraField2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 545</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 172</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtArabicName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 47</value>
+  </data>
+  <data name="txtArabicName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtArabicName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtArabicName.Name" xml:space="preserve">
+    <value>txtArabicName</value>
+  </data>
+  <data name="&gt;&gt;txtArabicName.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtArabicName.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtArabicName.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="txtEnglishName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 78</value>
+  </data>
+  <data name="txtEnglishName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 27</value>
+  </data>
+  <data name="txtEnglishName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtEnglishName.Name" xml:space="preserve">
+    <value>txtEnglishName</value>
+  </data>
+  <data name="&gt;&gt;txtEnglishName.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEnglishName.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtEnglishName.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblEnglishName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;txtEnExtraField5.Name" xml:space="preserve">
-    <value>txtEnExtraField5</value>
+  <data name="lblEnglishName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="lblCreditAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 115</value>
-  </data>
-  <data name="&gt;&gt;dgrdVouchers.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblEnglishName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 82</value>
   </data>
   <data name="lblEnglishName.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
   </data>
-  <data name="txtEnExtraField2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 67</value>
+  <data name="lblEnglishName.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
   </data>
-  <data name="txtArDtlExtraField3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
+  <data name="lblEnglishName.Text" xml:space="preserve">
+    <value>English Name</value>
   </data>
-  <data name="cbxDtlValidation4.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="lblDtlExtraField5.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="lblArabicName.Text" xml:space="preserve">
-    <value>Arabic Name</value>
-  </data>
-  <data name="txtArDtlExtraField2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="cbxValidation5.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;lblVoucherName.Name" xml:space="preserve">
-    <value>lblVoucherName</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmVoucher</value>
-  </data>
-  <data name="&gt;&gt;lblEnglishName.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="cbxEnCurrency.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="cbxDtlValidation4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="cbxDtlValidation3.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;lblVoucherName.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;lblEnglishName.Name" xml:space="preserve">
+    <value>lblEnglishName</value>
   </data>
   <data name="&gt;&gt;lblEnglishName.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;lblCurrency.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;lblEnglishName.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="lblDepitAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 115</value>
+  <data name="&gt;&gt;lblEnglishName.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;txtArDtlExtraField2.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="lblArabicName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="lblExtraField3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 97</value>
+  <data name="lblArabicName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;cbxEnCurrency.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="lblArabicName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 51</value>
   </data>
-  <data name="lblDtlExtraField5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
+  <data name="lblArabicName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
   </data>
-  <data name="txtArDtlExtraField2.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="lblArabicName.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
-  <data name="cbxDtlValidation1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 23</value>
+  <data name="lblArabicName.Text" xml:space="preserve">
+    <value>Arabic Name</value>
   </data>
-  <data name="&gt;&gt;lblExtraField4.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;lblArabicName.Name" xml:space="preserve">
+    <value>lblArabicName</value>
   </data>
-  <data name="&gt;&gt;txtArabicName.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField2.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblArabicName.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblArabicName.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;lblDtlExtraField1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;lblArabicName.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="txtArDtlExtraField4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
+  <data name="lblCurrency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="lblVoucherName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>334, 17</value>
+  <data name="lblCurrency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="lblCreditAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 19</value>
+  <data name="lblCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 17</value>
   </data>
-  <data name="&gt;&gt;lblDtlExtraField3.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="lblCurrency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 19</value>
   </data>
-  <data name="&gt;&gt;txtArDtlExtraField1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="lblCurrency.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
   </data>
-  <data name="&gt;&gt;cbxCreditAccounts.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="lblCurrency.Text" xml:space="preserve">
+    <value>Currency</value>
   </data>
-  <data name="lblDtlExtraField14.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
+  <data name="&gt;&gt;lblCurrency.Name" xml:space="preserve">
+    <value>lblCurrency</value>
   </data>
-  <data name="&gt;&gt;cbxDtlValidation1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 19</value>
+  <data name="&gt;&gt;lblCurrency.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblCurrency.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;txtArDtlExtraField5.Name" xml:space="preserve">
-    <value>txtArDtlExtraField5</value>
+  <data name="&gt;&gt;lblCurrency.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
-  <data name="txtEnExtraField5.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField4.Name" xml:space="preserve">
-    <value>txtEnExtraField4</value>
-  </data>
-  <data name="&gt;&gt;lblCreditAccount.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txtEliasAr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 27</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbxDtlValidation3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="txtEnExtraField3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="lblExtraField5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 151</value>
-  </data>
-  <data name="cbxValidation3.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lblArabicName.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblVoucherName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtEnExtraField2.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="lblVoucherName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="clmArVoucherName.Width" type="System.Int32, mscorlib">
-    <value>180</value>
+  <data name="lblVoucherName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 17</value>
   </data>
-  <data name="cbxValidation4.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="lblVoucherName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 19</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="lblVoucherName.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
-  <data name="&gt;&gt;cbxValidation4.Name" xml:space="preserve">
-    <value>cbxValidation4</value>
+  <data name="lblVoucherName.Text" xml:space="preserve">
+    <value>Voucher Name</value>
   </data>
-  <data name="&gt;&gt;cbxValidation4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;clmEnglishName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtArDtlExtraField3.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblExtraField1.Name" xml:space="preserve">
-    <value>lblExtraField1</value>
-  </data>
-  <data name="cbxDepitAccounts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 27</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 51</value>
-  </data>
-  <data name="&gt;&gt;lblArabicName.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbxValidation2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>859, 782</value>
+  <data name="&gt;&gt;lblVoucherName.Name" xml:space="preserve">
+    <value>lblVoucherName</value>
   </data>
   <data name="&gt;&gt;lblVoucherName.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="txtArDtlExtraField5.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="lblDtlExtraField14.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtEnExtraField2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="&gt;&gt;txtArabicName.Name" xml:space="preserve">
-    <value>txtArabicName</value>
-  </data>
-  <data name="lblDtlExtraField3.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>frmVoucher</value>
-  </data>
-  <data name="lblCreditAccount.Text" xml:space="preserve">
-    <value>Credit Account Number</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 19</value>
-  </data>
-  <data name="&gt;&gt;txtEnExtraField2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField3.Name" xml:space="preserve">
-    <value>txtArDtlExtraField3</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="txtArDtlExtraField5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="&gt;&gt;cbxEnCurrency.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblVoucherName.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;txtArDtlExtraField3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;lblVoucherName.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;cbxValidation5.Name" xml:space="preserve">
-    <value>cbxValidation5</value>
+  <data name="txtVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 47</value>
   </data>
-  <data name="txtArDtlExtraField3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 77</value>
+  <data name="txtVoucherCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 27</value>
   </data>
-  <data name="&gt;&gt;lblDepitAccount.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="txtVoucherCode.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;dgrdVouchers.Name" xml:space="preserve">
-    <value>dgrdVouchers</value>
+  <data name="&gt;&gt;txtVoucherCode.Name" xml:space="preserve">
+    <value>txtVoucherCode</value>
   </data>
-  <data name="&gt;&gt;lblArabicName.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;txtVoucherCode.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="lblDtlExtraField2.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
+  <data name="&gt;&gt;txtVoucherCode.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="lblDepitAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="&gt;&gt;txtVoucherCode.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblVoucherCode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblVoucherCode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="txtEnExtraField1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 40</value>
+  <data name="lblVoucherCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 51</value>
   </data>
-  <data name="&gt;&gt;cbxDtlValidation5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="lblVoucherCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 19</value>
   </data>
-  <data name="&gt;&gt;txtArDtlExtraField2.Name" xml:space="preserve">
-    <value>txtArDtlExtraField2</value>
+  <data name="lblVoucherCode.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="lblVoucherCode.Text" xml:space="preserve">
+    <value>Voucher Code</value>
   </data>
   <data name="&gt;&gt;lblVoucherCode.Name" xml:space="preserve">
     <value>lblVoucherCode</value>
   </data>
-  <data name="&gt;&gt;cbxDtlValidation5.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;lblVoucherCode.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtEnExtraField3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="txtArabicName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 27</value>
-  </data>
-  <data name="&gt;&gt;clmVoucherCode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxArCurrency.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblVoucherCode.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblVoucherCode.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblCreditAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCreditAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCreditAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 115</value>
+  </data>
+  <data name="lblCreditAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 19</value>
+  </data>
+  <data name="lblCreditAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="lblCreditAccount.Text" xml:space="preserve">
+    <value>Credit Account Number</value>
+  </data>
+  <data name="&gt;&gt;lblCreditAccount.Name" xml:space="preserve">
+    <value>lblCreditAccount</value>
+  </data>
+  <data name="&gt;&gt;lblCreditAccount.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblCreditAccount.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblCreditAccount.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbxCreditAccounts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 111</value>
   </data>
   <data name="cbxCreditAccounts.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 27</value>
   </data>
-  <data name="&gt;&gt;txtArabicName.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="cbxValidation5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 148</value>
-  </data>
-  <data name="txtArabicName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 47</value>
-  </data>
-  <data name="&gt;&gt;cbxCreditAccounts.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField1.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="lblDtlExtraField14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="cbxDtlValidation3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 27</value>
-  </data>
-  <data name="lblDtlExtraField1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 26</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;lblDtlExtraField3.Name" xml:space="preserve">
-    <value>lblDtlExtraField3</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="lblArabicName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 51</value>
-  </data>
-  <data name="&gt;&gt;txtArDtlExtraField4.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="cbxCreditAccounts.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;cbxCreditAccounts.Name" xml:space="preserve">
     <value>cbxCreditAccounts</value>
   </data>
-  <data name="lblCheckValueAdding.Text" xml:space="preserve">
-    <value>Add Check Value</value>
+  <data name="&gt;&gt;cbxCreditAccounts.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxCreditAccounts.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cbxCreditAccounts.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblDepitAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDepitAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDepitAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 115</value>
+  </data>
+  <data name="lblDepitAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 19</value>
+  </data>
+  <data name="lblDepitAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="lblDepitAccount.Text" xml:space="preserve">
+    <value>Depit Account Number</value>
+  </data>
+  <data name="&gt;&gt;lblDepitAccount.Name" xml:space="preserve">
+    <value>lblDepitAccount</value>
+  </data>
+  <data name="&gt;&gt;lblDepitAccount.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDepitAccount.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblDepitAccount.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbxDepitAccounts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>616, 111</value>
+  </data>
+  <data name="cbxDepitAccounts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 27</value>
+  </data>
+  <data name="cbxDepitAccounts.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cbxDepitAccounts.Name" xml:space="preserve">
+    <value>cbxDepitAccounts</value>
+  </data>
+  <data name="&gt;&gt;cbxDepitAccounts.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxDepitAccounts.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cbxDepitAccounts.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbxArCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 47</value>
+  </data>
+  <data name="cbxArCurrency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 27</value>
+  </data>
+  <data name="cbxArCurrency.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cbxArCurrency.Name" xml:space="preserve">
+    <value>cbxArCurrency</value>
+  </data>
+  <data name="&gt;&gt;cbxArCurrency.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.ComboBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxArCurrency.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cbxArCurrency.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Name" xml:space="preserve">
+    <value>txtEliasEn</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Name" xml:space="preserve">
+    <value>txtEliasAr</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 187</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 158</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 23</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="txtEliasEn.Location" type="System.Drawing.Point, System.Drawing">
     <value>621, 78</value>
   </data>
-  <data name="&gt;&gt;txtEnExtraField1.Name" xml:space="preserve">
-    <value>txtEnExtraField1</value>
+  <data name="txtEliasEn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 27</value>
+  </data>
+  <data name="txtEliasEn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Name" xml:space="preserve">
+    <value>txtEliasEn</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtEliasEn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtEliasAr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>621, 47</value>
+  </data>
+  <data name="txtEliasAr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 27</value>
+  </data>
+  <data name="txtEliasAr.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Name" xml:space="preserve">
+    <value>txtEliasAr</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtEliasAr.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="clmVoucherCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="clmEnEliasName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="clmArVoucherName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ar-KW</value>
-  </metadata>
-  <metadata name="clmEliasAr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="clmVoucherCode.HeaderText" xml:space="preserve">
+    <value>Voucher Code</value>
+  </data>
+  <data name="clmVoucherCode.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
   <metadata name="clmEnglishName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="clmEnglishName.HeaderText" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="clmEnglishName.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <metadata name="clmArVoucherName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="clmArVoucherName.HeaderText" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="clmArVoucherName.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <metadata name="clmEnEliasName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="clmEnEliasName.HeaderText" xml:space="preserve">
+    <value>English Alias</value>
+  </data>
+  <data name="clmEnEliasName.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <metadata name="clmEliasAr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="clmEliasAr.HeaderText" xml:space="preserve">
+    <value>Arabic Alias</value>
+  </data>
+  <data name="clmEliasAr.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="dgrdVouchers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dgrdVouchers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 44</value>
+  </data>
+  <data name="dgrdVouchers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 150</value>
+  </data>
+  <data name="dgrdVouchers.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Name" xml:space="preserve">
+    <value>dgrdVouchers</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>859, 782</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmVoucher</value>
+  </data>
+  <data name="&gt;&gt;clmVoucherCode.Name" xml:space="preserve">
+    <value>clmVoucherCode</value>
+  </data>
+  <data name="&gt;&gt;clmVoucherCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clmEnglishName.Name" xml:space="preserve">
+    <value>clmEnglishName</value>
+  </data>
+  <data name="&gt;&gt;clmEnglishName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clmArVoucherName.Name" xml:space="preserve">
+    <value>clmArVoucherName</value>
+  </data>
+  <data name="&gt;&gt;clmArVoucherName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clmEnEliasName.Name" xml:space="preserve">
+    <value>clmEnEliasName</value>
+  </data>
+  <data name="&gt;&gt;clmEnEliasName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clmEliasAr.Name" xml:space="preserve">
+    <value>clmEliasAr</value>
+  </data>
+  <data name="&gt;&gt;clmEliasAr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmVoucher</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.frmBaseDB, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

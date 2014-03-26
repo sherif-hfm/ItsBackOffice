@@ -42,8 +42,8 @@ namespace BackOfficeDAL
         public DbSet<Acc_Currancy> Acc_Currancy { get; set; }
         public DbSet<Acc_Accounts> Acc_Accounts { get; set; }
         public DbSet<Acc_CostCenter> Acc_CostCenter { get; set; }
-        public DbSet<Acc_VouchersType> Acc_VouchersType { get; set; }
         public DbSet<Acc_Voucher> Acc_Voucher { get; set; }
         public DbSet<Ast_AssetCatogry> Ast_AssetCatogry { get; set; }
+        public DbSet<Acc_VouchersType> Acc_VouchersType { get; set; }
     }
 }
