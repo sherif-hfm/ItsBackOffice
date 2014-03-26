@@ -57,14 +57,18 @@ namespace BackOfficeDAL
                                     auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
                                 break;
                             case System.Data.EntityState.Modified:
-                                auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
-                                auditDtl.PropertyOriginalValues = entity.OriginalValues[propertyName].ToString();
+                                if (entity.CurrentValues[propertyName] != null)
+                                    auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
+                                if (entity.OriginalValues[propertyName] != null)
+                                    auditDtl.PropertyOriginalValues = entity.OriginalValues[propertyName].ToString();
                                 break;
                             case System.Data.EntityState.Deleted:
+                                if (entity.OriginalValues[propertyName] != null)
                                 auditDtl.PropertyOriginalValues = entity.OriginalValues[propertyName].ToString();
                                 break;
                             default:
-                                auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
+                                if (entity.CurrentValues[propertyName] != null)
+                                    auditDtl.PropertyCurrentValues = entity.CurrentValues[propertyName].ToString();
                                 break;
                         }
                         if(!string.IsNullOrEmpty(auditDtl.PropertyCurrentValues))
