@@ -26,6 +26,20 @@ namespace BackOfficeBL.Security
         public string TooBarText_Ara { get; set; }
         public string TooBarText_Eng { get; set; }
 
+        public static List<MenuItem> LoadAllForms()
+        {
+            List<MenuItem> result = new List<MenuItem>();
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var dbForms = from f in newAppsCnn.Sec_MainMenu orderby f.MenuID ascending select f;
+            foreach (var dbForm in dbForms)
+            {
+                MenuItem menuItem = new MenuItem();
+                menuItem.FromDbMenuItem(dbForm);
+                result.Add(menuItem);
+            }
+            return result;
+        }
+
         public MenuItem()
         { 
         }
