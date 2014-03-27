@@ -118,7 +118,6 @@ namespace BackOfficeUI.Accounting
                 ShowGUI();
             }
             trvCostCenterTree.Enabled = true;
-            CrCostCenter.IsCopy = false;
         }
 
         private void frmCostCenter_Edit(object sender, ref bool _status)
