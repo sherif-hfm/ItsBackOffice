@@ -76,6 +76,7 @@ namespace BackOfficeUI.Accounting
             foreach (var i in newSource)
             {
                 TreeNode newnode = new TreeNode(i.Name);
+                newnode.Name = i.CostCenterId.ToString();
                 newnode.Tag = i.CostCenterId;
                 if (parentNode == null)
                 {
@@ -230,7 +231,11 @@ namespace BackOfficeUI.Accounting
         private void frmCostCenterTree_Find(object sender, Dictionary<string, object> _findFields)
         {
 
+            var CostCenterId = _findFields["CostCenterId"];
+
+            trvCostCenterTree.SelectedNode = trvCostCenterTree.Nodes.Find(CostCenterId.ToString(), true)[0];
         }
+
 
     }
 }
