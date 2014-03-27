@@ -19,6 +19,7 @@ namespace BackOfficeBL.Accounting
         public bool IsDisable { get; set; }
         public int? ParentId { get; set; }
         public bool IsNew { get; set; }
+        public bool IsCopy { get; set; }
 
 
 
@@ -76,6 +77,7 @@ namespace BackOfficeBL.Accounting
                 CostCenter account = new CostCenter();
                 account.FromDbCostCenter(dbCostCenter);
                 account.IsNew = false;
+                account.IsCopy = false;
                 return account;
             }
             else
@@ -84,6 +86,7 @@ namespace BackOfficeBL.Accounting
         public CostCenter()
         {
             this.IsNew = true;
+            this.IsCopy = false;
         }
 
         private string GetCostCenterNameAndNo()
@@ -124,6 +127,7 @@ namespace BackOfficeBL.Accounting
             this.IsDisable = _dbCostCenter.IsDisable;
             this.ParentId = _dbCostCenter.ParentId;
             this.IsNew = false;
+            this.IsCopy = false;
         }
 
         public void ToDbCostCenter(Acc_CostCenter _dbCostCenter)
@@ -138,10 +142,12 @@ namespace BackOfficeBL.Accounting
             {
                 _dbCostCenter.ParentId = this.ParentId;
             }
+            this.IsCopy = false;
         }
 
         public DataSaveResult Save()
         {
+            this.IsCopy = false;
             Acc_CostCenter dbCostCenter;
             try
             {
@@ -171,6 +177,7 @@ namespace BackOfficeBL.Accounting
 
         public DataDeleteResult Delete()
         {
+            this.IsCopy = false;
             Acc_CostCenter dbCostCenter;
             try
             {
@@ -179,8 +186,16 @@ namespace BackOfficeBL.Accounting
                 if (dbCostCenters.Count() > 0)
                 {
                     dbCostCenter = dbCostCenters.First();
-                    newAppsCnn.Acc_CostCenter.Remove(dbCostCenter);
-                    newAppsCnn.SaveChanges();
+                    var dbAccountChilds = from u in newAppsCnn.Acc_CostCenter where u.ParentId == this.CostCenterId select u;
+                    if (dbAccountChilds.Count() == 0 && DontHaveTransaction())//Transaction Condition
+                    {
+                        newAppsCnn.Acc_CostCenter.Remove(dbCostCenter);
+                        newAppsCnn.SaveChanges();
+                    }
+                    else
+                    {
+                        return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = "This Item has childs" };
+                    }
                 }
                 return new DataDeleteResult() { DeleteStatus = true };
             }
@@ -188,6 +203,12 @@ namespace BackOfficeBL.Accounting
             {
                 return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = ex.Message };
             }
+        }
+
+        public bool DontHaveTransaction()
+        {
+            //TODO : in transaction implemantation
+            return true;
         }
 
     }

@@ -110,7 +110,7 @@ namespace BackOfficeUI.Accounting
             CrAccount.AccountName_Eng = txtAccountNameEng.Text;
             CrAccount.AccountTypeId = int.Parse(cmbAccountType.SelectedValue.ToString());
             CrAccount.AccountCategoryId = int.Parse(cmbAccountCategory.SelectedValue.ToString());
-            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode != null && CrAccount.ParentId==null)
+            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode != null && CrAccount.IsCopy==false)
                 CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
             CrAccount.AccountID = txtAccountNo.Text;
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
@@ -243,6 +243,7 @@ namespace BackOfficeUI.Accounting
                 CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
                 CrAccount.AccountID = Account.getNewId(CrAccount.ParentId);
                 CrAccount.IsNew = true;
+                CrAccount.IsCopy = true;
                 ShowGUI();
                 this.FormStatus = FormStatusEnum.Edit;
                 trvAccountTree.Enabled = false;

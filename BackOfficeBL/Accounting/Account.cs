@@ -27,7 +27,7 @@ namespace BackOfficeBL.Accounting
         public bool IsDisableAccount { get; set; }
         public string ParentId { get; set; }
         public bool IsNew { get; set; }
-        public bool IsCopied { get; set; }
+        public bool IsCopy { get; set; }
 
         public static string getNewId(string ParentId)
         {
@@ -99,7 +99,7 @@ namespace BackOfficeBL.Accounting
         public Account()
         {
             this.IsNew = true;
-            this.IsCopied = false;
+            this.IsCopy = false;
         }
 
         private string GetAccountNameAndNo()
@@ -146,6 +146,7 @@ namespace BackOfficeBL.Accounting
             this.IsDisableAccount = _dbAccount.IsDisableAccount;
             this.ParentId = _dbAccount.ParentId;
             this.IsNew = false;
+            this.IsCopy = false;
         }
 
         public void ToDbAccount(Acc_Accounts _dbAccount)
@@ -166,10 +167,12 @@ namespace BackOfficeBL.Accounting
             {
                 _dbAccount.ParentId = this.ParentId;
             }
+            this.IsCopy = false;
         }
 
         public DataSaveResult Save()
         {
+            this.IsCopy = false;
             Acc_Accounts dbAccount;
             try
             {
@@ -210,6 +213,7 @@ namespace BackOfficeBL.Accounting
 
         public DataDeleteResult Delete()
         {
+            this.IsCopy = false;
             Acc_Accounts dbAccount;
             try
             {
