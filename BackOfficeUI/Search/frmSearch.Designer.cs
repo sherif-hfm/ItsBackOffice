@@ -42,7 +42,7 @@
             this.pnlParameter.Location = new System.Drawing.Point(10, 10);
             this.pnlParameter.Margin = new System.Windows.Forms.Padding(10);
             this.pnlParameter.Name = "pnlParameter";
-            this.pnlParameter.Size = new System.Drawing.Size(764, 2);
+            this.pnlParameter.Size = new System.Drawing.Size(862, 2);
             this.pnlParameter.TabIndex = 0;
             // 
             // errProv
@@ -54,7 +54,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(784, 92);
+            this.ClientSize = new System.Drawing.Size(882, 92);
             this.ControlBox = false;
             this.Controls.Add(this.pnlParameter);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -54,6 +54,7 @@ namespace BackOfficeUI.Search
                 // Add Prm Lable
                 System.Windows.Forms.Label lbl = new System.Windows.Forms.Label();
                 lbl.Text = prm.ParameterText;
+                lbl.Width = 170;
                 lbl.Visible = true;
                 tblParameter.Controls.Add(lbl, col, row);
                 col++;
