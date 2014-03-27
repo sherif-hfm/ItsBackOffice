@@ -136,6 +136,7 @@ namespace BackOfficeUI.Accounting
                 CrAccount = null;
                 ShowGUI();
                 trvAccountTree.Enabled = true;
+                cmbAccountType.Enabled = true;
             }
         }
 
@@ -181,6 +182,7 @@ namespace BackOfficeUI.Accounting
         {
             CrAccount = null;
             trvAccountTree.Enabled = true;
+            cmbAccountType.Enabled = true;
             ShowGUI();
         }
 
@@ -247,6 +249,7 @@ namespace BackOfficeUI.Accounting
                 CrAccount.IsCopy = true;
                 ShowGUI();
                 this.FormStatus = FormStatusEnum.Edit;
+                cmbAccountType.Enabled = false;
                 trvAccountTree.Enabled = false;
             }
         }
