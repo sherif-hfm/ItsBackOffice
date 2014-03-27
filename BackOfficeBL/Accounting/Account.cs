@@ -16,6 +16,10 @@ namespace BackOfficeBL.Accounting
         public bool IsDisable { get; set; }
         public string AccountName_Ar { get; set; }
         public string AccountName_Eng { get; set; }
+
+        public string AccountRef1 { get; set; }
+        public string AccountRef2 { get; set; }
+
         public int AccountTypeId { get; set; }
         public int AccountLevel { get; set; }
         public int? AccountCategoryId { get; set; }
@@ -23,6 +27,7 @@ namespace BackOfficeBL.Accounting
         public bool IsDisableAccount { get; set; }
         public string ParentId { get; set; }
         public bool IsNew { get; set; }
+        public bool IsCopied { get; set; }
 
         public static string getNewId(string ParentId)
         {
@@ -94,6 +99,7 @@ namespace BackOfficeBL.Accounting
         public Account()
         {
             this.IsNew = true;
+            this.IsCopied = false;
         }
 
         private string GetAccountNameAndNo()
@@ -129,6 +135,10 @@ namespace BackOfficeBL.Accounting
             this.AccountID = _dbAccount.AccountID;
             this.AccountName_Ar = _dbAccount.AccountName_Ar;
             this.AccountName_Eng = _dbAccount.AccountName_Eng;
+
+            this.AccountRef1 = _dbAccount.AccountRef1;
+            this.AccountRef2 = _dbAccount.AccountRef2;
+
             this.AccountTypeId = _dbAccount.AccountTypeId;
             this.AccountLevel = _dbAccount.AccountLevel;
             this.AccountCategoryId = _dbAccount.AccountCategoryId;
@@ -143,6 +153,10 @@ namespace BackOfficeBL.Accounting
             _dbAccount.AccountID = this.AccountID;
             _dbAccount.AccountName_Ar = this.AccountName_Ar;
             _dbAccount.AccountName_Eng = this.AccountName_Eng;
+
+            _dbAccount.AccountRef1 = this.AccountRef1;
+            _dbAccount.AccountRef2 = this.AccountRef2;
+
             _dbAccount.AccountTypeId = this.AccountTypeId;
             _dbAccount.AccountLevel = this.AccountLevel;
             _dbAccount.AccountCategoryId = this.AccountCategoryId;
@@ -192,6 +206,7 @@ namespace BackOfficeBL.Accounting
                 return new DataSaveResult() { SaveStatus = false,ErrorMessage=ex.Message };
             }
         }
+
 
         public DataDeleteResult Delete()
         {

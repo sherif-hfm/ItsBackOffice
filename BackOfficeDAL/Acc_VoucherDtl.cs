@@ -19,7 +19,7 @@ namespace BackOfficeDAL
         public int YearId { get; set; }
         public int Line_No { get; set; }
         public string AccountId { get; set; }
-        public string CostCenterId { get; set; }
+        public Nullable<int> CostCenterId { get; set; }
         public string DetailRefNo { get; set; }
         public decimal Debit { get; set; }
         public decimal Credit { get; set; }

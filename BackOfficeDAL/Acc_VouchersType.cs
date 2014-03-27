@@ -48,8 +48,8 @@ namespace BackOfficeDAL
         public Nullable<int> MainValidationField4 { get; set; }
         public Nullable<int> MainValidationField5 { get; set; }
     
-        public virtual Acc_Accounts Acc_Accounts { get; set; }
         public virtual Acc_Currancy Acc_Currancy { get; set; }
         public virtual ICollection<Acc_Voucher> Acc_Voucher { get; set; }
+        public virtual Acc_Accounts Acc_Accounts { get; set; }
     }
 }

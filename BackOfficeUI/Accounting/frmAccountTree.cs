@@ -25,6 +25,7 @@ namespace BackOfficeUI.Accounting
         {
             LoadAccountTree();
             LoadLookup();
+            trvAccountTree.ContextMenuStrip = this.TreeViewContext;
         }
 
         #region Functions for loading data from or to controls
@@ -35,9 +36,12 @@ namespace BackOfficeUI.Accounting
                 txtAccountNameAr.Text = CrAccount.AccountName_Ar;
                 txtAccountNameEng.Text = CrAccount.AccountName_Eng;
                 txtAccountNo.Text = CrAccount.AccountID;
-                cmbAccountType.SelectedValue = CrAccount.AccountTypeId;
-                cmbAccountCategory.SelectedValue = CrAccount.AccountCategoryId;
-                chkStopAccount.Checked = CrAccount.IsDisableAccount;
+                cmbAccountType.SelectedValue = CrAccount.AccountTypeId!=null?CrAccount.AccountTypeId:1;
+                cmbAccountCategory.SelectedValue = CrAccount.AccountCategoryId != null ? CrAccount.AccountCategoryId : 1;
+                chkStopAccount.Checked = CrAccount.IsDisableAccount!=null?CrAccount.IsDisableAccount:false;
+                ///
+                txtAccountRef1.Text = CrAccount.AccountRef1;
+                txtAccountRef2.Text = CrAccount.AccountRef2;
             }
             else
             {
@@ -45,9 +49,8 @@ namespace BackOfficeUI.Accounting
                 txtAccountNameEng.Text = "";
                 txtAccountNo.Text = "";
                 chkStopAccount.Checked = false;
-                txtStartBalance.Text = "";
-                txtDebit.Text = "";
-                txtCreditor.Text = "";
+                txtAccountRef1.Text = "";
+                txtAccountRef2.Text = "";
                 LoadAccountTree();
             }
         }
@@ -107,10 +110,12 @@ namespace BackOfficeUI.Accounting
             CrAccount.AccountName_Eng = txtAccountNameEng.Text;
             CrAccount.AccountTypeId = int.Parse(cmbAccountType.SelectedValue.ToString());
             CrAccount.AccountCategoryId = int.Parse(cmbAccountCategory.SelectedValue.ToString());
-            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode!=null)
+            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode != null && CrAccount.ParentId==null)
                 CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
             CrAccount.AccountID = txtAccountNo.Text;
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
+            CrAccount.AccountRef1 = txtAccountRef1.Text;
+            CrAccount.AccountRef2 = txtAccountRef2.Text;
         }
 
         #endregion
@@ -129,12 +134,14 @@ namespace BackOfficeUI.Accounting
             {
                 CrAccount = null;
                 ShowGUI();
+                trvAccountTree.Enabled=true;
             }
         }
 
         private void frmAccountTree_Edit(object sender, ref bool _status)
         {
             CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
+            trvAccountTree.Enabled = false;
             if (CrAccount == null)
             {
                 _status = false;
@@ -169,9 +176,10 @@ namespace BackOfficeUI.Accounting
             }
         }
 
-        private void frmAccountTree_Cancel(object sender)
+        private void frmAccountTree_Cancel(object sender)   
         {
             CrAccount = null;
+            trvAccountTree.Enabled = true;
             ShowGUI();
         }
 
@@ -198,10 +206,7 @@ namespace BackOfficeUI.Accounting
 
         private void trvAccountTree_MouseDown(object sender, MouseEventArgs e)
         {
-
             if (e.Button != MouseButtons.Right) return;
-
-
             var treeNodeAtMousePosition = trvAccountTree.GetNodeAt(trvAccountTree.PointToClient(Control.MousePosition));
             var selectedTreeNode = trvAccountTree.SelectedNode;
             if (treeNodeAtMousePosition != null)
@@ -209,70 +214,41 @@ namespace BackOfficeUI.Accounting
                 if (treeNodeAtMousePosition != selectedTreeNode)
                     trvAccountTree.SelectedNode = treeNodeAtMousePosition;
             }
-
             TreeViewContext.Text = trvAccountTree.SelectedNode.Text;
-
-            TreeViewContext.Show(e.Location.X + this.Parent.Location.X + this.Parent.Parent.Location.X + 30, e.Location.Y + this.Parent.Location.Y + this.Parent.Parent.Location.Y + 80);
             trvAccountTree.Focus();
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CrAccount = null;
-            ShowGUI();
             CrAccount = new BackOfficeBL.Accounting.Account();
             CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
             CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
-            txtAccountNo.Text = Account.getNewId(trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "");
-            var parent = Account.FindByAccountID(trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "");
-            cmbAccountType.SelectedValue = parent != null?parent.AccountTypeId:1;
+            CrAccount.AccountID = Account.getNewId(trvAccountTree.SelectedNode.Tag.ToString());
             if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
             {
-                string data = trvAccountTree.SelectedNode.ToString();
-                CrAccount.ParentId = data;
-
+                var parent = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
+                CrAccount.AccountTypeId = parent.AccountTypeId;
+                CrAccount.ParentId = trvAccountTree.SelectedNode.ToString();
             }
+            ShowGUI();
             this.FormStatus = FormStatusEnum.AddNew;
+            trvAccountTree.Enabled = false;
         }
 
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CrAccount = new BackOfficeBL.Accounting.Account();
-            CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
-            CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
-            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
-            {
-                this.FormStatus = FormStatusEnum.Edit;
-                CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
-            }
-            ShowGUI();
-        }
 
         private void copyAndPasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
             {
-                CrAccount = null;
+                CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
+                CrAccount.AccountID = Account.getNewId(CrAccount.ParentId);
+                CrAccount.IsNew = true;
                 ShowGUI();
-                string data = trvAccountTree.SelectedNode.ToString();
-                CrAccount.ParentId = data;
-                copyAndPasteToolStripMenuItem.Enabled = !pasteToolStripMenuItem.Enabled;
-                pasteToolStripMenuItem.Enabled = !copyAndPasteToolStripMenuItem.Enabled;
+                this.FormStatus = FormStatusEnum.Edit;
+                trvAccountTree.Enabled = false;
             }
         }
 
-        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
-            {
-                ShowGUI();
-                string data = trvAccountTree.SelectedNode.ToString();
-                CrAccount.ParentId = data;
-                copyAndPasteToolStripMenuItem.Enabled = !pasteToolStripMenuItem.Enabled;
-                pasteToolStripMenuItem.Enabled = !copyAndPasteToolStripMenuItem.Enabled;
-                ShowGUI();
-            }
-        }
 
         private void frmAccountTree_Find(object sender, Dictionary<string, object> _findFields)
         {

@@ -16,8 +16,8 @@ namespace BackOfficeDAL
     {
         public Acc_Accounts()
         {
-            this.Acc_VoucherDtl = new HashSet<Acc_VoucherDtl>();
             this.Acc_VouchersType = new HashSet<Acc_VouchersType>();
+            this.Acc_VoucherDtl = new HashSet<Acc_VoucherDtl>();
         }
     
         public string AccountID { get; set; }
@@ -26,7 +26,6 @@ namespace BackOfficeDAL
         public int AccountTypeId { get; set; }
         public int AccountLevel { get; set; }
         public Nullable<int> AccountCategoryId { get; set; }
-        public string CostCenterId { get; set; }
         public bool IsSubAccount { get; set; }
         public bool IsDisableAccount { get; set; }
         public string AccountRef1 { get; set; }
@@ -37,8 +36,7 @@ namespace BackOfficeDAL
     
         public virtual Acc_AccountCategory Acc_AccountCategory { get; set; }
         public virtual Acc_Accountype Acc_Accountype { get; set; }
-        public virtual Acc_CostCenter Acc_CostCenter { get; set; }
-        public virtual ICollection<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
         public virtual ICollection<Acc_VouchersType> Acc_VouchersType { get; set; }
+        public virtual ICollection<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
     }
 }

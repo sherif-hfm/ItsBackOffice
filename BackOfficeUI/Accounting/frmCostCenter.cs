@@ -32,7 +32,7 @@ namespace BackOfficeUI.Accounting
             {
                 txtNameAr.Text = CrCostCenter.CostCenterName_Ara;
                 txtNameEng.Text = CrCostCenter.CostCenterName_Eng;
-                txtNo.Text = CrCostCenter.CostCenterId;
+                txtNo.Text = CrCostCenter.CostCenterId.ToString();
                 
                 txtStartBalance.Text = CrCostCenter.CostOpenBalance.ToString();
                 txtClosingBalance.Text = CrCostCenter.ClosingBalance.ToString();
@@ -56,15 +56,15 @@ namespace BackOfficeUI.Accounting
             List<CostCenter> Acc_List = CostCenter.GetAllCostCenterTree();
             // Call function here for bind treeview
             trvCostCenterTree.Nodes.Clear();
-            CreateTreeView(Acc_List, "", null);
+            CreateTreeView(Acc_List, null, null);
         }
 
         // recursion function
-        private void CreateTreeView(List<CostCenter> source, string parentID, TreeNode parentNode)
+        private void CreateTreeView(List<CostCenter> source, int? parentID, TreeNode parentNode)
         {
 
             List<CostCenter> newSource = CostCenter.GetAllCostCenterTree();
-            if (parentID == "")
+            if (parentID == null)
             {
                 newSource = source.FindAll(a => a.ParentId == null);
             }
@@ -95,8 +95,7 @@ namespace BackOfficeUI.Accounting
             CrCostCenter.CostOpenBalance =decimal.Parse( txtStartBalance.Text);
             CrCostCenter.ClosingBalance = decimal.Parse(txtClosingBalance.Text);
             if (CrCostCenter.IsNew == true && trvCostCenterTree.SelectedNode!=null)
-                CrCostCenter.ParentId = trvCostCenterTree.SelectedNode.Tag.ToString();
-            CrCostCenter.CostCenterId = txtNo.Text;
+                CrCostCenter.ParentId = Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString());
             CrCostCenter.IsDisable = chkIsDiable.Checked;
         }
 
@@ -121,7 +120,7 @@ namespace BackOfficeUI.Accounting
 
         private void frmCostCenter_Edit(object sender, ref bool _status)
         {
-            CrCostCenter = CostCenter.FindByCostCenterId(trvCostCenterTree.SelectedNode.Tag.ToString());
+            CrCostCenter = CostCenter.FindByCostCenterId(Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString()));
             if (CrCostCenter == null)
             {
                 _status = false;
@@ -141,7 +140,7 @@ namespace BackOfficeUI.Accounting
 
         private void frmCostCenter_Delete(object sender, ref bool _status)
         {
-            CrCostCenter = CostCenter.FindByCostCenterId(trvCostCenterTree.SelectedNode.Tag.ToString());
+            CrCostCenter = CostCenter.FindByCostCenterId(Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString()));
             DataDeleteResult result = CrCostCenter.Delete();
 
             _status = result.DeleteStatus;
@@ -165,7 +164,6 @@ namespace BackOfficeUI.Accounting
         private void frmCostCenter_AddNew(object sender, ref bool _status)
         {
             CrCostCenter = new BackOfficeBL.Accounting.CostCenter();
-            txtNo.Text = CostCenter.getNewId(trvCostCenterTree.SelectedNode != null ? trvCostCenterTree.SelectedNode.Tag.ToString() : "");
         }
 
         #endregion

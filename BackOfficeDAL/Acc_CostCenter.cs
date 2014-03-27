@@ -16,21 +16,19 @@ namespace BackOfficeDAL
     {
         public Acc_CostCenter()
         {
-            this.Acc_Accounts = new HashSet<Acc_Accounts>();
             this.Acc_CostCenter1 = new HashSet<Acc_CostCenter>();
             this.Acc_VoucherDtl = new HashSet<Acc_VoucherDtl>();
         }
     
-        public string CostCenterId { get; set; }
+        public int CostCenterId { get; set; }
         public string CostCenterName_Ara { get; set; }
         public string CostCenterName_Eng { get; set; }
         public bool IsDisable { get; set; }
         public Nullable<decimal> CostOpenBalance { get; set; }
         public Nullable<decimal> ClosingBalance { get; set; }
-        public string ParentId { get; set; }
+        public Nullable<int> ParentId { get; set; }
         public string Notes { get; set; }
     
-        public virtual ICollection<Acc_Accounts> Acc_Accounts { get; set; }
         public virtual ICollection<Acc_CostCenter> Acc_CostCenter1 { get; set; }
         public virtual Acc_CostCenter Acc_CostCenter2 { get; set; }
         public virtual ICollection<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
