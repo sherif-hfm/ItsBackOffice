@@ -141,7 +141,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtNo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblNo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -363,29 +363,71 @@
   <data name="&gt;&gt;lblClosingBalance.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;txtClosingBalance.Name" xml:space="preserve">
-    <value>txtClosingBalance</value>
+  <data name="txtStartBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 127</value>
   </data>
-  <data name="&gt;&gt;txtClosingBalance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtStartBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
   </data>
-  <data name="&gt;&gt;txtClosingBalance.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="txtStartBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
-  <data name="&gt;&gt;txtClosingBalance.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="txtStartBalance.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtStartBalance.Name" xml:space="preserve">
     <value>txtStartBalance</value>
   </data>
   <data name="&gt;&gt;txtStartBalance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BackOfficeUI.Controls.NumericUpDown, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;txtStartBalance.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtStartBalance.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
+  </data>
+  <data name="txtClosingBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 160</value>
+  </data>
+  <data name="txtClosingBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
+  </data>
+  <data name="txtClosingBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="txtClosingBalance.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtClosingBalance.Name" xml:space="preserve">
+    <value>txtClosingBalance</value>
+  </data>
+  <data name="&gt;&gt;txtClosingBalance.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.NumericUpDown, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtClosingBalance.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtClosingBalance.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblStartBalance.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblStartBalance.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblStartBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 127</value>
+  </data>
+  <data name="lblStartBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="lblStartBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblStartBalance.Text" xml:space="preserve">
+    <value>Start Balance</value>
   </data>
   <data name="&gt;&gt;lblStartBalance.Name" xml:space="preserve">
     <value>lblStartBalance</value>
@@ -423,84 +465,6 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txtClosingBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 160</value>
-  </data>
-  <data name="txtClosingBalance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 27</value>
-  </data>
-  <data name="txtClosingBalance.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="txtClosingBalance.ThousandsSeparator" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txtClosingBalance.Name" xml:space="preserve">
-    <value>txtClosingBalance</value>
-  </data>
-  <data name="&gt;&gt;txtClosingBalance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtClosingBalance.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;txtClosingBalance.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtStartBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 127</value>
-  </data>
-  <data name="txtStartBalance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 27</value>
-  </data>
-  <data name="txtStartBalance.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="txtStartBalance.ThousandsSeparator" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txtStartBalance.Name" xml:space="preserve">
-    <value>txtStartBalance</value>
-  </data>
-  <data name="&gt;&gt;txtStartBalance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtStartBalance.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;txtStartBalance.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblStartBalance.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblStartBalance.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblStartBalance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 127</value>
-  </data>
-  <data name="lblStartBalance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 19</value>
-  </data>
-  <data name="lblStartBalance.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="lblStartBalance.Text" xml:space="preserve">
-    <value>Start Balance</value>
-  </data>
-  <data name="&gt;&gt;lblStartBalance.Name" xml:space="preserve">
-    <value>lblStartBalance</value>
-  </data>
-  <data name="&gt;&gt;lblStartBalance.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblStartBalance.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblStartBalance.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <data name="trvCostCenterTree.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 60</value>
   </data>
@@ -525,15 +489,6 @@
   <metadata name="TreeViewContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>217, 17</value>
   </metadata>
-  <data name="TreeViewContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 48</value>
-  </data>
-  <data name="&gt;&gt;TreeViewContext.Name" xml:space="preserve">
-    <value>TreeViewContext</value>
-  </data>
-  <data name="&gt;&gt;TreeViewContext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 22</value>
   </data>
@@ -545,6 +500,15 @@
   </data>
   <data name="copyAndPasteToolStripMenuItem.Text" xml:space="preserve">
     <value>Copy</value>
+  </data>
+  <data name="TreeViewContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 48</value>
+  </data>
+  <data name="&gt;&gt;TreeViewContext.Name" xml:space="preserve">
+    <value>TreeViewContext</value>
+  </data>
+  <data name="&gt;&gt;TreeViewContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

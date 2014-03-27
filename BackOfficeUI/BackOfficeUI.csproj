@@ -121,6 +121,12 @@
     <Compile Include="Controls\ComboBox.Designer.cs">
       <DependentUpon>ComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumericUpDown.Designer.cs">
+      <DependentUpon>NumericUpDown.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\frmBase.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -39,16 +39,16 @@
             this.txtNameEng = new BackOfficeUI.Controls.TextBox();
             this.lblClosingBalance = new BackOfficeUI.Controls.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtClosingBalance = new System.Windows.Forms.NumericUpDown();
-            this.txtStartBalance = new System.Windows.Forms.NumericUpDown();
+            this.txtStartBalance = new BackOfficeUI.Controls.NumericUpDown();
+            this.txtClosingBalance = new BackOfficeUI.Controls.NumericUpDown();
             this.lblStartBalance = new BackOfficeUI.Controls.Label();
             this.trvCostCenterTree = new BackOfficeUI.Controls.TreeView();
             this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClosingBalance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClosingBalance)).BeginInit();
             this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,9 +131,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.txtClosingBalance);
             this.groupBox1.Controls.Add(this.txtNo);
-            this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.lblNo);
             this.groupBox1.Controls.Add(this.chkIsDiable);
             this.groupBox1.Controls.Add(this.lblNameAr);
@@ -147,25 +147,33 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // txtClosingBalance
-            // 
-            resources.ApplyResources(this.txtClosingBalance, "txtClosingBalance");
-            this.txtClosingBalance.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
-            0,
-            0});
-            this.txtClosingBalance.Name = "txtClosingBalance";
-            // 
             // txtStartBalance
             // 
+            this.txtStartBalance.BackColor = System.Drawing.Color.White;
+            this.txtStartBalance.Clearable = true;
+            this.txtStartBalance.IsRequired = false;
             resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
+            this.txtStartBalance.LockedInModes = 25;
             this.txtStartBalance.Maximum = new decimal(new int[] {
             1874919423,
             2328306,
             0,
             0});
             this.txtStartBalance.Name = "txtStartBalance";
+            // 
+            // txtClosingBalance
+            // 
+            this.txtClosingBalance.BackColor = System.Drawing.Color.White;
+            this.txtClosingBalance.Clearable = true;
+            this.txtClosingBalance.IsRequired = false;
+            resources.ApplyResources(this.txtClosingBalance, "txtClosingBalance");
+            this.txtClosingBalance.LockedInModes = 25;
+            this.txtClosingBalance.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
+            this.txtClosingBalance.Name = "txtClosingBalance";
             // 
             // lblStartBalance
             // 
@@ -223,8 +231,8 @@
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClosingBalance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClosingBalance)).EndInit();
             this.TreeViewContext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,8 +256,8 @@
         private System.Windows.Forms.ContextMenuStrip TreeViewContext;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
-        private System.Windows.Forms.NumericUpDown txtStartBalance;
-        private System.Windows.Forms.NumericUpDown txtClosingBalance;
+        private Controls.NumericUpDown txtClosingBalance;
+        private Controls.NumericUpDown txtStartBalance;
 
 
     }
