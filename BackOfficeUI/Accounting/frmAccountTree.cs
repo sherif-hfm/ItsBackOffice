@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using BackOfficeUI.Controls;
 using BackOfficeBL;
 using BackOfficeBL.Accounting;
+using System.Linq;
 
 namespace BackOfficeUI.Accounting
 {
@@ -36,9 +37,9 @@ namespace BackOfficeUI.Accounting
                 txtAccountNameAr.Text = CrAccount.AccountName_Ar;
                 txtAccountNameEng.Text = CrAccount.AccountName_Eng;
                 txtAccountNo.Text = CrAccount.AccountID;
-                cmbAccountType.SelectedValue = CrAccount.AccountTypeId!=null?CrAccount.AccountTypeId:1;
+                cmbAccountType.SelectedValue = CrAccount.AccountTypeId != null ? CrAccount.AccountTypeId : 1;
                 cmbAccountCategory.SelectedValue = CrAccount.AccountCategoryId != null ? CrAccount.AccountCategoryId : 1;
-                chkStopAccount.Checked = CrAccount.IsDisableAccount!=null?CrAccount.IsDisableAccount:false;
+                chkStopAccount.Checked = CrAccount.IsDisableAccount != null ? CrAccount.IsDisableAccount : false;
                 ///
                 txtAccountRef1.Text = CrAccount.AccountRef1;
                 txtAccountRef2.Text = CrAccount.AccountRef2;
@@ -91,6 +92,7 @@ namespace BackOfficeUI.Accounting
             foreach (var i in newSource)
             {
                 TreeNode newnode = new TreeNode(i.NameAndNo);
+                newnode.Name = i.AccountID;
                 newnode.Tag = i.AccountID;
                 if (parentNode == null)
                 {
@@ -110,7 +112,7 @@ namespace BackOfficeUI.Accounting
             CrAccount.AccountName_Eng = txtAccountNameEng.Text;
             CrAccount.AccountTypeId = int.Parse(cmbAccountType.SelectedValue.ToString());
             CrAccount.AccountCategoryId = int.Parse(cmbAccountCategory.SelectedValue.ToString());
-            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode != null && CrAccount.ParentId==null)
+            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode != null && CrAccount.ParentId == null)
                 CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
             CrAccount.AccountID = txtAccountNo.Text;
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
@@ -134,7 +136,7 @@ namespace BackOfficeUI.Accounting
             {
                 CrAccount = null;
                 ShowGUI();
-                trvAccountTree.Enabled=true;
+                trvAccountTree.Enabled = true;
             }
         }
 
@@ -176,7 +178,7 @@ namespace BackOfficeUI.Accounting
             }
         }
 
-        private void frmAccountTree_Cancel(object sender)   
+        private void frmAccountTree_Cancel(object sender)
         {
             CrAccount = null;
             trvAccountTree.Enabled = true;
@@ -248,11 +250,22 @@ namespace BackOfficeUI.Accounting
                 trvAccountTree.Enabled = false;
             }
         }
+        IEnumerable<TreeNode> GetNodeAndChildren(TreeNode node)
+        {
+            return new[] { node }.Concat(node.Nodes
+                                            .OfType<TreeNode>()
+                                            .SelectMany(x => GetNodeAndChildren(x)));
+        }
+
 
 
         private void frmAccountTree_Find(object sender, Dictionary<string, object> _findFields)
         {
+            var accountId = _findFields["AccountID"];
+  
+            trvAccountTree.SelectedNode = trvAccountTree.Nodes.Find(accountId.ToString(), true)[0]; 
 
+      
         }
 
     }
