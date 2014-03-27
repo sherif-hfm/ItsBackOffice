@@ -275,9 +275,6 @@
     <EmbeddedResource Include="Accounting\frmVoucher.resx">
       <DependentUpon>frmVoucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ComboBox.resx">
-      <DependentUpon>ComboBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
