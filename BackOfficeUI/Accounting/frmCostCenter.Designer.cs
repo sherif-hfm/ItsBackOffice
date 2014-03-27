@@ -217,6 +217,7 @@
             this.Delete += new BackOfficeUI.Controls.frmBaseDB.DeleteDelegate(this.frmCostCenter_Delete);
             this.Save += new BackOfficeUI.Controls.frmBaseDB.SaveDelegate(this.frmCostCenter_Save);
             this.Cancel += new BackOfficeUI.Controls.frmBaseDB.CancelDelegate(this.frmCostCenter_Cancel);
+            this.Find += new BackOfficeUI.Controls.frmBaseDB.FindDelegate(this.frmCostCenterTree_Find);
             this.Load += new System.EventHandler(this.frmCostCenter_Load);
             this.Controls.SetChildIndex(this.trvCostCenterTree, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
