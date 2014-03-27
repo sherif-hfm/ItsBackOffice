@@ -10,46 +10,26 @@ namespace BackOfficeBL.Accounting
 {
     public class CostCenter
     {
-        public string CostCenterId { get; set; }
+        public int CostCenterId { get; set; }
         public string Name { get { return GetCostCenterName(); } }
         public string CostCenterName_Ara { get; set; }
         public string CostCenterName_Eng { get; set; }
         public decimal CostOpenBalance { get; set; }
         public decimal ClosingBalance { get; set; }
         public bool IsDisable { get; set; }
-        public string ParentId { get; set; }
+        public int? ParentId { get; set; }
         public bool IsNew { get; set; }
 
 
-        public static string getNewId(string ParentId)
-        {
-            string CostCenterId = "";
-            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-            var dbAccounts = from g in newAppsCnn.Acc_CostCenter where g.CostCenterId != null || g.CostCenterId != "" select g;
-            if (ParentId == null || ParentId == "")
-            {
-                var PChild = (from ac in dbAccounts where ac.ParentId == "" || ac.ParentId == null select ac).ToList();
-                CostCenterId = string.Format("{0}000000000", PChild.Count + 1);
-            }
-            else
-            {
-                var PrntVal = FindByCostCenterId(ParentId);
-                var PChild = (from ac in dbAccounts where ac.ParentId == ParentId select ac).ToList();
-                char[] charArr = PrntVal.CostCenterId.ToCharArray();
-                charArr[(getNodeLevel(0, PrntVal.ParentId) + 1)] = (char)(PChild.Count + 1).ToString()[0]; // freely modify the array
-                CostCenterId = new string(charArr);
-            }
-            return CostCenterId;
-        }
 
-        private static int getNodeLevel(int IntCount, string CostCenterId)
+        private static int getNodeLevel(int IntCount, int? CostCenterId)
         {
             var CurrCostCenter = FindByCostCenterId(CostCenterId);
             if (CurrCostCenter == null)
             {
                 return IntCount;
             }
-            else if (CurrCostCenter.ParentId == null || CurrCostCenter.ParentId == "")
+            else if (CurrCostCenter.ParentId == null )
             {
                 return ++IntCount;
             }
@@ -86,7 +66,7 @@ namespace BackOfficeBL.Accounting
             }
             return result;
         }
-        public static CostCenter FindByCostCenterId(string _VaidationID)
+        public static CostCenter FindByCostCenterId(int? _VaidationID)
         {
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
             var dbCostCenters = from u in newAppsCnn.Acc_CostCenter where u.CostCenterId == _VaidationID select u;
