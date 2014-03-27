@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using BackOfficeUI.Controls;
 using BackOfficeBL;
 using BackOfficeBL.Accounting;
-using System.Linq;
 
 namespace BackOfficeUI.Accounting
 {
@@ -112,7 +111,7 @@ namespace BackOfficeUI.Accounting
             CrAccount.AccountName_Eng = txtAccountNameEng.Text;
             CrAccount.AccountTypeId = int.Parse(cmbAccountType.SelectedValue.ToString());
             CrAccount.AccountCategoryId = int.Parse(cmbAccountCategory.SelectedValue.ToString());
-            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode != null && CrAccount.ParentId == null)
+            if (CrAccount.IsNew == true && trvAccountTree.SelectedNode != null && CrAccount.IsCopy == false)
                 CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
             CrAccount.AccountID = txtAccountNo.Text;
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
@@ -245,27 +244,21 @@ namespace BackOfficeUI.Accounting
                 CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
                 CrAccount.AccountID = Account.getNewId(CrAccount.ParentId);
                 CrAccount.IsNew = true;
+                CrAccount.IsCopy = true;
                 ShowGUI();
                 this.FormStatus = FormStatusEnum.Edit;
                 trvAccountTree.Enabled = false;
             }
         }
-        IEnumerable<TreeNode> GetNodeAndChildren(TreeNode node)
-        {
-            return new[] { node }.Concat(node.Nodes
-                                            .OfType<TreeNode>()
-                                            .SelectMany(x => GetNodeAndChildren(x)));
-        }
-
 
 
         private void frmAccountTree_Find(object sender, Dictionary<string, object> _findFields)
         {
             var accountId = _findFields["AccountID"];
-  
-            trvAccountTree.SelectedNode = trvAccountTree.Nodes.Find(accountId.ToString(), true)[0]; 
 
-      
+            trvAccountTree.SelectedNode = trvAccountTree.Nodes.Find(accountId.ToString(), true)[0];
+
+
         }
 
     }

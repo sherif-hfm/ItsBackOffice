@@ -23,6 +23,7 @@ namespace BackOfficeUI.Accounting
         private void frmCostCenter_Load(object sender, EventArgs e)
         {
             LoadCostCenterTree();
+            trvCostCenterTree.ContextMenuStrip = this.TreeViewContext;
         }
 
         #region Functions for loading data from or to controls
@@ -34,8 +35,8 @@ namespace BackOfficeUI.Accounting
                 txtNameEng.Text = CrCostCenter.CostCenterName_Eng;
                 txtNo.Text = CrCostCenter.CostCenterId.ToString();
                 
-                txtStartBalance.Text = CrCostCenter.CostOpenBalance.ToString();
-                txtClosingBalance.Text = CrCostCenter.ClosingBalance.ToString();
+                txtStartBalance.Value = CrCostCenter.CostOpenBalance;
+                txtClosingBalance.Value = CrCostCenter.ClosingBalance;
                 chkIsDiable.Checked = CrCostCenter.IsDisable;
             }
             else
@@ -44,8 +45,8 @@ namespace BackOfficeUI.Accounting
                 txtNameEng.Text = "";
                 chkIsDiable.Checked = false;
                 txtNo.Text = "";
-                txtStartBalance.Text = "";
-                txtClosingBalance.Text = "";
+                txtStartBalance.Value = 0;
+                txtClosingBalance.Value = 0;
                 LoadCostCenterTree();
             }
         }
@@ -92,9 +93,9 @@ namespace BackOfficeUI.Accounting
         {
             CrCostCenter.CostCenterName_Ara = txtNameAr.Text;
             CrCostCenter.CostCenterName_Eng = txtNameEng.Text;
-            CrCostCenter.CostOpenBalance =decimal.Parse( txtStartBalance.Text);
-            CrCostCenter.ClosingBalance = decimal.Parse(txtClosingBalance.Text);
-            if (CrCostCenter.IsNew == true && trvCostCenterTree.SelectedNode!=null)
+            CrCostCenter.CostOpenBalance =txtStartBalance.Value;
+            CrCostCenter.ClosingBalance = txtClosingBalance.Value;
+            if (CrCostCenter.IsNew == true && trvCostCenterTree.SelectedNode != null && CrCostCenter.IsCopy==false)
                 CrCostCenter.ParentId = Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString());
             CrCostCenter.IsDisable = chkIsDiable.Checked;
         }
@@ -116,6 +117,7 @@ namespace BackOfficeUI.Accounting
                 CrCostCenter = null;
                 ShowGUI();
             }
+            trvCostCenterTree.Enabled = true;
         }
 
         private void frmCostCenter_Edit(object sender, ref bool _status)
@@ -153,12 +155,14 @@ namespace BackOfficeUI.Accounting
                 CrCostCenter = null;
                 ShowGUI();
             }
+                trvCostCenterTree.Enabled = true;
         }
 
         private void frmCostCenter_Cancel(object sender)
         {
             CrCostCenter = null;
             ShowGUI();
+            trvCostCenterTree.Enabled = true;
         }
 
         private void frmCostCenter_AddNew(object sender, ref bool _status)
@@ -167,6 +171,66 @@ namespace BackOfficeUI.Accounting
         }
 
         #endregion
+
+
+        private void trvCostCenterTree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string CostCenterNo = trvCostCenterTree.SelectedNode != null ? trvCostCenterTree.SelectedNode.Tag.ToString() : "";
+            if (CostCenterNo != "")
+            {
+                CrCostCenter = CostCenter.FindByCostCenterId(Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString()));
+                ShowGUI();
+            }
+            trvCostCenterTree.Focus();
+        }
+
+        private void trvCostCenterTree_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Right) return;
+            var treeNodeAtMousePosition = trvCostCenterTree.GetNodeAt(trvCostCenterTree.PointToClient(Control.MousePosition));
+            var selectedTreeNode = trvCostCenterTree.SelectedNode;
+            if (treeNodeAtMousePosition != null)
+            {
+                if (treeNodeAtMousePosition != selectedTreeNode)
+                    trvCostCenterTree.SelectedNode = treeNodeAtMousePosition;
+            }
+            TreeViewContext.Text = trvCostCenterTree.SelectedNode.Text;
+            trvCostCenterTree.Focus();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrCostCenter = new BackOfficeBL.Accounting.CostCenter();
+            if (trvCostCenterTree.SelectedNode != null && trvCostCenterTree.SelectedNode.ToString() != "")
+            {
+                var parent = CostCenter.FindByCostCenterId(Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString()));
+                CrCostCenter.ParentId = (Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString()));
+            }
+            ShowGUI();
+            this.FormStatus = FormStatusEnum.AddNew;
+            trvCostCenterTree.Enabled = false;
+        }
+
+
+        private void copyAndPasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvCostCenterTree.SelectedNode != null && trvCostCenterTree.SelectedNode.ToString() != "")
+            {
+                CrCostCenter = CostCenter.FindByCostCenterId(Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag.ToString()));
+                CrCostCenter.IsNew = true;
+                CrCostCenter.IsCopy = true;
+                CrCostCenter.CostCenterId = Convert.ToInt32(null);
+                ShowGUI();
+                this.FormStatus = FormStatusEnum.Edit;
+                trvCostCenterTree.Enabled = false;
+            }
+        }
+
+
+        private void frmCostCenterTree_Find(object sender, Dictionary<string, object> _findFields)
+        {
+
+        }
 
     }
 }

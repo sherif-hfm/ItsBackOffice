@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCostCenter));
             this.txtNo = new BackOfficeUI.Controls.TextBox();
             this.lblNo = new BackOfficeUI.Controls.Label();
@@ -37,18 +38,25 @@
             this.txtNameAr = new BackOfficeUI.Controls.TextBox();
             this.txtNameEng = new BackOfficeUI.Controls.TextBox();
             this.lblClosingBalance = new BackOfficeUI.Controls.Label();
-            this.txtClosingBalance = new BackOfficeUI.Controls.TextBox();
-            this.txtStartBalance = new BackOfficeUI.Controls.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtClosingBalance = new System.Windows.Forms.NumericUpDown();
+            this.txtStartBalance = new System.Windows.Forms.NumericUpDown();
             this.lblStartBalance = new BackOfficeUI.Controls.Label();
             this.trvCostCenterTree = new BackOfficeUI.Controls.TreeView();
+            this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClosingBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartBalance)).BeginInit();
+            this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNo
             // 
-            resources.ApplyResources(this.txtNo, "txtNo");
             this.txtNo.BackColor = System.Drawing.Color.White;
+            this.txtNo.Clearable = true;
+            resources.ApplyResources(this.txtNo, "txtNo");
             this.txtNo.IsRequired = true;
             this.txtNo.LockedInModes = 25;
             this.txtNo.Name = "txtNo";
@@ -56,6 +64,7 @@
             // lblNo
             // 
             resources.ApplyResources(this.lblNo, "lblNo");
+            this.lblNo.Clearable = true;
             this.lblNo.IsRequired = false;
             this.lblNo.LockedInModes = 25;
             this.lblNo.Name = "lblNo";
@@ -63,6 +72,7 @@
             // chkIsDiable
             // 
             resources.ApplyResources(this.chkIsDiable, "chkIsDiable");
+            this.chkIsDiable.Clearable = true;
             this.chkIsDiable.ForeColor = System.Drawing.Color.Black;
             this.chkIsDiable.IsRequired = false;
             this.chkIsDiable.LockedInModes = 25;
@@ -72,6 +82,7 @@
             // lblNameAr
             // 
             resources.ApplyResources(this.lblNameAr, "lblNameAr");
+            this.lblNameAr.Clearable = true;
             this.lblNameAr.IsRequired = false;
             this.lblNameAr.LockedInModes = 25;
             this.lblNameAr.Name = "lblNameAr";
@@ -79,6 +90,7 @@
             // lblNameEng
             // 
             resources.ApplyResources(this.lblNameEng, "lblNameEng");
+            this.lblNameEng.Clearable = true;
             this.lblNameEng.IsRequired = false;
             this.lblNameEng.LockedInModes = 25;
             this.lblNameEng.Name = "lblNameEng";
@@ -86,53 +98,42 @@
             // lblIsDisable
             // 
             resources.ApplyResources(this.lblIsDisable, "lblIsDisable");
+            this.lblIsDisable.Clearable = true;
             this.lblIsDisable.IsRequired = false;
             this.lblIsDisable.LockedInModes = 25;
             this.lblIsDisable.Name = "lblIsDisable";
             // 
             // txtNameAr
             // 
-            resources.ApplyResources(this.txtNameAr, "txtNameAr");
             this.txtNameAr.BackColor = System.Drawing.Color.White;
+            this.txtNameAr.Clearable = true;
             this.txtNameAr.IsRequired = false;
+            resources.ApplyResources(this.txtNameAr, "txtNameAr");
             this.txtNameAr.LockedInModes = 25;
             this.txtNameAr.Name = "txtNameAr";
             // 
             // txtNameEng
             // 
-            resources.ApplyResources(this.txtNameEng, "txtNameEng");
             this.txtNameEng.BackColor = System.Drawing.Color.White;
+            this.txtNameEng.Clearable = true;
             this.txtNameEng.IsRequired = false;
+            resources.ApplyResources(this.txtNameEng, "txtNameEng");
             this.txtNameEng.LockedInModes = 25;
             this.txtNameEng.Name = "txtNameEng";
             // 
             // lblClosingBalance
             // 
             resources.ApplyResources(this.lblClosingBalance, "lblClosingBalance");
+            this.lblClosingBalance.Clearable = true;
             this.lblClosingBalance.IsRequired = false;
             this.lblClosingBalance.LockedInModes = 25;
             this.lblClosingBalance.Name = "lblClosingBalance";
             // 
-            // txtClosingBalance
-            // 
-            resources.ApplyResources(this.txtClosingBalance, "txtClosingBalance");
-            this.txtClosingBalance.BackColor = System.Drawing.Color.White;
-            this.txtClosingBalance.IsRequired = false;
-            this.txtClosingBalance.LockedInModes = 25;
-            this.txtClosingBalance.Name = "txtClosingBalance";
-            // 
-            // txtStartBalance
-            // 
-            resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
-            this.txtStartBalance.BackColor = System.Drawing.Color.White;
-            this.txtStartBalance.IsRequired = false;
-            this.txtStartBalance.LockedInModes = 25;
-            this.txtStartBalance.Name = "txtStartBalance";
-            // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.txtClosingBalance);
             this.groupBox1.Controls.Add(this.txtNo);
+            this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.lblNo);
             this.groupBox1.Controls.Add(this.chkIsDiable);
             this.groupBox1.Controls.Add(this.lblNameAr);
@@ -141,26 +142,69 @@
             this.groupBox1.Controls.Add(this.txtNameAr);
             this.groupBox1.Controls.Add(this.txtNameEng);
             this.groupBox1.Controls.Add(this.lblClosingBalance);
-            this.groupBox1.Controls.Add(this.txtClosingBalance);
-            this.groupBox1.Controls.Add(this.txtStartBalance);
             this.groupBox1.Controls.Add(this.lblStartBalance);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // txtClosingBalance
+            // 
+            resources.ApplyResources(this.txtClosingBalance, "txtClosingBalance");
+            this.txtClosingBalance.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
+            this.txtClosingBalance.Name = "txtClosingBalance";
+            // 
+            // txtStartBalance
+            // 
+            resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
+            this.txtStartBalance.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
+            this.txtStartBalance.Name = "txtStartBalance";
             // 
             // lblStartBalance
             // 
             resources.ApplyResources(this.lblStartBalance, "lblStartBalance");
+            this.lblStartBalance.Clearable = true;
             this.lblStartBalance.IsRequired = false;
             this.lblStartBalance.LockedInModes = 25;
             this.lblStartBalance.Name = "lblStartBalance";
             // 
             // trvCostCenterTree
             // 
-            resources.ApplyResources(this.trvCostCenterTree, "trvCostCenterTree");
             this.trvCostCenterTree.BackColor = System.Drawing.Color.White;
+            this.trvCostCenterTree.Clearable = true;
             this.trvCostCenterTree.IsRequired = false;
+            resources.ApplyResources(this.trvCostCenterTree, "trvCostCenterTree");
             this.trvCostCenterTree.LockedInModes = 25;
             this.trvCostCenterTree.Name = "trvCostCenterTree";
+            this.trvCostCenterTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvCostCenterTree_AfterSelect);
+            this.trvCostCenterTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trvCostCenterTree_MouseDown);
+            // 
+            // TreeViewContext
+            // 
+            this.TreeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.copyAndPasteToolStripMenuItem});
+            this.TreeViewContext.Name = "TreeViewContext";
+            resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // copyAndPasteToolStripMenuItem
+            // 
+            this.copyAndPasteToolStripMenuItem.Name = "copyAndPasteToolStripMenuItem";
+            resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
+            this.copyAndPasteToolStripMenuItem.Click += new System.EventHandler(this.copyAndPasteToolStripMenuItem_Click);
             // 
             // frmCostCenter
             // 
@@ -178,6 +222,9 @@
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClosingBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartBalance)).EndInit();
+            this.TreeViewContext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,11 +241,14 @@
         private Controls.TextBox txtNameAr;
         private Controls.TextBox txtNameEng;
         private Controls.Label lblClosingBalance;
-        private Controls.TextBox txtClosingBalance;
-        private Controls.TextBox txtStartBalance;
         private System.Windows.Forms.GroupBox groupBox1;
         private Controls.Label lblStartBalance;
         private Controls.TreeView trvCostCenterTree;
+        private System.Windows.Forms.ContextMenuStrip TreeViewContext;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown txtStartBalance;
+        private System.Windows.Forms.NumericUpDown txtClosingBalance;
 
 
     }

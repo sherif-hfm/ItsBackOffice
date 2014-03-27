@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssetCatogry));
             this.chkIsDiable = new BackOfficeUI.Controls.CheckBox();
             this.lblNameAr = new BackOfficeUI.Controls.Label();
@@ -36,12 +37,17 @@
             this.txtNameEng = new BackOfficeUI.Controls.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.trvAssetCatogryTree = new BackOfficeUI.Controls.TreeView();
+            this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // chkIsDiable
             // 
             resources.ApplyResources(this.chkIsDiable, "chkIsDiable");
+            this.chkIsDiable.Clearable = true;
             this.chkIsDiable.ForeColor = System.Drawing.Color.Black;
             this.chkIsDiable.IsRequired = false;
             this.chkIsDiable.LockedInModes = 25;
@@ -51,6 +57,7 @@
             // lblNameAr
             // 
             resources.ApplyResources(this.lblNameAr, "lblNameAr");
+            this.lblNameAr.Clearable = true;
             this.lblNameAr.IsRequired = false;
             this.lblNameAr.LockedInModes = 25;
             this.lblNameAr.Name = "lblNameAr";
@@ -58,6 +65,7 @@
             // lblNameEng
             // 
             resources.ApplyResources(this.lblNameEng, "lblNameEng");
+            this.lblNameEng.Clearable = true;
             this.lblNameEng.IsRequired = false;
             this.lblNameEng.LockedInModes = 25;
             this.lblNameEng.Name = "lblNameEng";
@@ -65,6 +73,7 @@
             // lblIsDisable
             // 
             resources.ApplyResources(this.lblIsDisable, "lblIsDisable");
+            this.lblIsDisable.Clearable = true;
             this.lblIsDisable.IsRequired = false;
             this.lblIsDisable.LockedInModes = 25;
             this.lblIsDisable.Name = "lblIsDisable";
@@ -72,6 +81,7 @@
             // txtNameAr
             // 
             this.txtNameAr.BackColor = System.Drawing.Color.White;
+            this.txtNameAr.Clearable = true;
             this.txtNameAr.IsRequired = false;
             resources.ApplyResources(this.txtNameAr, "txtNameAr");
             this.txtNameAr.LockedInModes = 25;
@@ -80,6 +90,7 @@
             // txtNameEng
             // 
             this.txtNameEng.BackColor = System.Drawing.Color.White;
+            this.txtNameEng.Clearable = true;
             this.txtNameEng.IsRequired = false;
             resources.ApplyResources(this.txtNameEng, "txtNameEng");
             this.txtNameEng.LockedInModes = 25;
@@ -100,10 +111,29 @@
             // trvAssetCatogryTree
             // 
             this.trvAssetCatogryTree.BackColor = System.Drawing.Color.White;
+            this.trvAssetCatogryTree.Clearable = true;
             this.trvAssetCatogryTree.IsRequired = false;
             resources.ApplyResources(this.trvAssetCatogryTree, "trvAssetCatogryTree");
             this.trvAssetCatogryTree.LockedInModes = 25;
             this.trvAssetCatogryTree.Name = "trvAssetCatogryTree";
+            // 
+            // TreeViewContext
+            // 
+            this.TreeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.copyAndPasteToolStripMenuItem});
+            this.TreeViewContext.Name = "TreeViewContext";
+            resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
+            // 
+            // copyAndPasteToolStripMenuItem
+            // 
+            this.copyAndPasteToolStripMenuItem.Name = "copyAndPasteToolStripMenuItem";
+            resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
             // 
             // frmAssetCatogry
             // 
@@ -121,6 +151,7 @@
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.TreeViewContext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +167,9 @@
         private Controls.TextBox txtNameEng;
         private System.Windows.Forms.GroupBox groupBox1;
         private Controls.TreeView trvAssetCatogryTree;
+        private System.Windows.Forms.ContextMenuStrip TreeViewContext;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
 
 
     }
