@@ -64,5 +64,10 @@ namespace BackOfficeUI.Controls
 
 
         #endregion
+
+        private void ComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
     }
 }

@@ -74,7 +74,7 @@
             this.cbxCreditAccounts = new BackOfficeUI.Controls.ComboBox();
             this.lblDepitAccount = new BackOfficeUI.Controls.Label();
             this.cbxDepitAccounts = new BackOfficeUI.Controls.ComboBox();
-            this.cbxArCurrency = new BackOfficeUI.Controls.ComboBox();
+            this.cbxCurrency = new BackOfficeUI.Controls.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new BackOfficeUI.Controls.Label();
             this.txtEliasEn = new BackOfficeUI.Controls.TextBox();
@@ -116,6 +116,7 @@
             // cbxValidation5
             // 
             this.cbxValidation5.BackColor = System.Drawing.Color.White;
+            this.cbxValidation5.Clearable = true;
             this.cbxValidation5.DefaultIndex = 0;
             this.cbxValidation5.FormattingEnabled = true;
             this.cbxValidation5.IsRequired = false;
@@ -126,6 +127,7 @@
             // cbxValidation4
             // 
             this.cbxValidation4.BackColor = System.Drawing.Color.White;
+            this.cbxValidation4.Clearable = true;
             this.cbxValidation4.DefaultIndex = 0;
             this.cbxValidation4.FormattingEnabled = true;
             this.cbxValidation4.IsRequired = false;
@@ -136,6 +138,7 @@
             // cbxValidation3
             // 
             this.cbxValidation3.BackColor = System.Drawing.Color.White;
+            this.cbxValidation3.Clearable = true;
             this.cbxValidation3.DefaultIndex = 0;
             this.cbxValidation3.FormattingEnabled = true;
             this.cbxValidation3.IsRequired = false;
@@ -146,6 +149,7 @@
             // cbxValidation2
             // 
             this.cbxValidation2.BackColor = System.Drawing.Color.White;
+            this.cbxValidation2.Clearable = true;
             this.cbxValidation2.DefaultIndex = 0;
             this.cbxValidation2.FormattingEnabled = true;
             this.cbxValidation2.IsRequired = false;
@@ -156,6 +160,7 @@
             // cbxValidation1
             // 
             this.cbxValidation1.BackColor = System.Drawing.Color.White;
+            this.cbxValidation1.Clearable = true;
             this.cbxValidation1.DefaultIndex = 0;
             this.cbxValidation1.FormattingEnabled = true;
             this.cbxValidation1.IsRequired = false;
@@ -166,6 +171,7 @@
             // lblCheckValueAdding
             // 
             resources.ApplyResources(this.lblCheckValueAdding, "lblCheckValueAdding");
+            this.lblCheckValueAdding.Clearable = true;
             this.lblCheckValueAdding.IsRequired = false;
             this.lblCheckValueAdding.LockedInModes = 25;
             this.lblCheckValueAdding.Name = "lblCheckValueAdding";
@@ -173,6 +179,7 @@
             // txtEnExtraField5
             // 
             this.txtEnExtraField5.BackColor = System.Drawing.Color.White;
+            this.txtEnExtraField5.Clearable = true;
             this.txtEnExtraField5.IsRequired = false;
             resources.ApplyResources(this.txtEnExtraField5, "txtEnExtraField5");
             this.txtEnExtraField5.LockedInModes = 25;
@@ -181,6 +188,7 @@
             // txtEnExtraField2
             // 
             this.txtEnExtraField2.BackColor = System.Drawing.Color.White;
+            this.txtEnExtraField2.Clearable = true;
             this.txtEnExtraField2.IsRequired = false;
             resources.ApplyResources(this.txtEnExtraField2, "txtEnExtraField2");
             this.txtEnExtraField2.LockedInModes = 25;
@@ -189,6 +197,7 @@
             // txtEnExtraField3
             // 
             this.txtEnExtraField3.BackColor = System.Drawing.Color.White;
+            this.txtEnExtraField3.Clearable = true;
             this.txtEnExtraField3.IsRequired = false;
             resources.ApplyResources(this.txtEnExtraField3, "txtEnExtraField3");
             this.txtEnExtraField3.LockedInModes = 25;
@@ -197,6 +206,7 @@
             // txtEnExtraField4
             // 
             this.txtEnExtraField4.BackColor = System.Drawing.Color.White;
+            this.txtEnExtraField4.Clearable = true;
             this.txtEnExtraField4.IsRequired = false;
             resources.ApplyResources(this.txtEnExtraField4, "txtEnExtraField4");
             this.txtEnExtraField4.LockedInModes = 25;
@@ -205,6 +215,7 @@
             // lblExtraField2
             // 
             resources.ApplyResources(this.lblExtraField2, "lblExtraField2");
+            this.lblExtraField2.Clearable = true;
             this.lblExtraField2.IsRequired = false;
             this.lblExtraField2.LockedInModes = 25;
             this.lblExtraField2.Name = "lblExtraField2";
@@ -212,6 +223,7 @@
             // lblExtraField3
             // 
             resources.ApplyResources(this.lblExtraField3, "lblExtraField3");
+            this.lblExtraField3.Clearable = true;
             this.lblExtraField3.IsRequired = false;
             this.lblExtraField3.LockedInModes = 25;
             this.lblExtraField3.Name = "lblExtraField3";
@@ -219,6 +231,7 @@
             // lblExtraField4
             // 
             resources.ApplyResources(this.lblExtraField4, "lblExtraField4");
+            this.lblExtraField4.Clearable = true;
             this.lblExtraField4.IsRequired = false;
             this.lblExtraField4.LockedInModes = 25;
             this.lblExtraField4.Name = "lblExtraField4";
@@ -226,6 +239,7 @@
             // lblExtraField5
             // 
             resources.ApplyResources(this.lblExtraField5, "lblExtraField5");
+            this.lblExtraField5.Clearable = true;
             this.lblExtraField5.IsRequired = false;
             this.lblExtraField5.LockedInModes = 25;
             this.lblExtraField5.Name = "lblExtraField5";
@@ -233,6 +247,7 @@
             // txtEnExtraField1
             // 
             this.txtEnExtraField1.BackColor = System.Drawing.Color.White;
+            this.txtEnExtraField1.Clearable = true;
             this.txtEnExtraField1.IsRequired = false;
             resources.ApplyResources(this.txtEnExtraField1, "txtEnExtraField1");
             this.txtEnExtraField1.LockedInModes = 25;
@@ -241,6 +256,7 @@
             // lblExtraField1
             // 
             resources.ApplyResources(this.lblExtraField1, "lblExtraField1");
+            this.lblExtraField1.Clearable = true;
             this.lblExtraField1.IsRequired = false;
             this.lblExtraField1.LockedInModes = 25;
             this.lblExtraField1.Name = "lblExtraField1";
@@ -248,6 +264,7 @@
             // lblDtlExtraField1
             // 
             resources.ApplyResources(this.lblDtlExtraField1, "lblDtlExtraField1");
+            this.lblDtlExtraField1.Clearable = true;
             this.lblDtlExtraField1.IsRequired = false;
             this.lblDtlExtraField1.LockedInModes = 25;
             this.lblDtlExtraField1.Name = "lblDtlExtraField1";
@@ -255,6 +272,7 @@
             // txtArDtlExtraField1
             // 
             this.txtArDtlExtraField1.BackColor = System.Drawing.Color.White;
+            this.txtArDtlExtraField1.Clearable = true;
             this.txtArDtlExtraField1.IsRequired = false;
             resources.ApplyResources(this.txtArDtlExtraField1, "txtArDtlExtraField1");
             this.txtArDtlExtraField1.LockedInModes = 25;
@@ -263,6 +281,7 @@
             // lblDtlExtraField5
             // 
             resources.ApplyResources(this.lblDtlExtraField5, "lblDtlExtraField5");
+            this.lblDtlExtraField5.Clearable = true;
             this.lblDtlExtraField5.IsRequired = false;
             this.lblDtlExtraField5.LockedInModes = 25;
             this.lblDtlExtraField5.Name = "lblDtlExtraField5";
@@ -270,6 +289,7 @@
             // lblDtlExtraField14
             // 
             resources.ApplyResources(this.lblDtlExtraField14, "lblDtlExtraField14");
+            this.lblDtlExtraField14.Clearable = true;
             this.lblDtlExtraField14.IsRequired = false;
             this.lblDtlExtraField14.LockedInModes = 25;
             this.lblDtlExtraField14.Name = "lblDtlExtraField14";
@@ -277,6 +297,7 @@
             // lblDtlExtraField3
             // 
             resources.ApplyResources(this.lblDtlExtraField3, "lblDtlExtraField3");
+            this.lblDtlExtraField3.Clearable = true;
             this.lblDtlExtraField3.IsRequired = false;
             this.lblDtlExtraField3.LockedInModes = 25;
             this.lblDtlExtraField3.Name = "lblDtlExtraField3";
@@ -284,6 +305,7 @@
             // lblDtlExtraField2
             // 
             resources.ApplyResources(this.lblDtlExtraField2, "lblDtlExtraField2");
+            this.lblDtlExtraField2.Clearable = true;
             this.lblDtlExtraField2.IsRequired = false;
             this.lblDtlExtraField2.LockedInModes = 25;
             this.lblDtlExtraField2.Name = "lblDtlExtraField2";
@@ -291,6 +313,7 @@
             // txtArDtlExtraField4
             // 
             this.txtArDtlExtraField4.BackColor = System.Drawing.Color.White;
+            this.txtArDtlExtraField4.Clearable = true;
             this.txtArDtlExtraField4.IsRequired = false;
             resources.ApplyResources(this.txtArDtlExtraField4, "txtArDtlExtraField4");
             this.txtArDtlExtraField4.LockedInModes = 25;
@@ -299,6 +322,7 @@
             // txtArDtlExtraField3
             // 
             this.txtArDtlExtraField3.BackColor = System.Drawing.Color.White;
+            this.txtArDtlExtraField3.Clearable = true;
             this.txtArDtlExtraField3.IsRequired = false;
             resources.ApplyResources(this.txtArDtlExtraField3, "txtArDtlExtraField3");
             this.txtArDtlExtraField3.LockedInModes = 25;
@@ -307,6 +331,7 @@
             // txtArDtlExtraField2
             // 
             this.txtArDtlExtraField2.BackColor = System.Drawing.Color.White;
+            this.txtArDtlExtraField2.Clearable = true;
             this.txtArDtlExtraField2.IsRequired = false;
             resources.ApplyResources(this.txtArDtlExtraField2, "txtArDtlExtraField2");
             this.txtArDtlExtraField2.LockedInModes = 25;
@@ -315,6 +340,7 @@
             // txtArDtlExtraField5
             // 
             this.txtArDtlExtraField5.BackColor = System.Drawing.Color.White;
+            this.txtArDtlExtraField5.Clearable = true;
             this.txtArDtlExtraField5.IsRequired = false;
             resources.ApplyResources(this.txtArDtlExtraField5, "txtArDtlExtraField5");
             this.txtArDtlExtraField5.LockedInModes = 25;
@@ -323,6 +349,7 @@
             // cbxDtlValidation1
             // 
             this.cbxDtlValidation1.BackColor = System.Drawing.Color.White;
+            this.cbxDtlValidation1.Clearable = true;
             this.cbxDtlValidation1.DefaultIndex = 0;
             this.cbxDtlValidation1.FormattingEnabled = true;
             this.cbxDtlValidation1.IsRequired = false;
@@ -333,6 +360,7 @@
             // cbxDtlValidation2
             // 
             this.cbxDtlValidation2.BackColor = System.Drawing.Color.White;
+            this.cbxDtlValidation2.Clearable = true;
             this.cbxDtlValidation2.DefaultIndex = 0;
             this.cbxDtlValidation2.FormattingEnabled = true;
             this.cbxDtlValidation2.IsRequired = false;
@@ -343,6 +371,7 @@
             // cbxDtlValidation3
             // 
             this.cbxDtlValidation3.BackColor = System.Drawing.Color.White;
+            this.cbxDtlValidation3.Clearable = true;
             this.cbxDtlValidation3.DefaultIndex = 0;
             this.cbxDtlValidation3.FormattingEnabled = true;
             this.cbxDtlValidation3.IsRequired = false;
@@ -353,6 +382,7 @@
             // cbxDtlValidation4
             // 
             this.cbxDtlValidation4.BackColor = System.Drawing.Color.White;
+            this.cbxDtlValidation4.Clearable = true;
             this.cbxDtlValidation4.DefaultIndex = 0;
             this.cbxDtlValidation4.FormattingEnabled = true;
             this.cbxDtlValidation4.IsRequired = false;
@@ -363,6 +393,7 @@
             // cbxDtlValidation5
             // 
             this.cbxDtlValidation5.BackColor = System.Drawing.Color.White;
+            this.cbxDtlValidation5.Clearable = true;
             this.cbxDtlValidation5.DefaultIndex = 0;
             this.cbxDtlValidation5.FormattingEnabled = true;
             this.cbxDtlValidation5.IsRequired = false;
@@ -394,6 +425,7 @@
             // txtArabicName
             // 
             this.txtArabicName.BackColor = System.Drawing.Color.White;
+            this.txtArabicName.Clearable = true;
             this.txtArabicName.IsRequired = false;
             resources.ApplyResources(this.txtArabicName, "txtArabicName");
             this.txtArabicName.LockedInModes = 25;
@@ -402,6 +434,7 @@
             // txtEnglishName
             // 
             this.txtEnglishName.BackColor = System.Drawing.Color.White;
+            this.txtEnglishName.Clearable = true;
             this.txtEnglishName.IsRequired = false;
             resources.ApplyResources(this.txtEnglishName, "txtEnglishName");
             this.txtEnglishName.LockedInModes = 25;
@@ -410,6 +443,7 @@
             // lblEnglishName
             // 
             resources.ApplyResources(this.lblEnglishName, "lblEnglishName");
+            this.lblEnglishName.Clearable = true;
             this.lblEnglishName.IsRequired = false;
             this.lblEnglishName.LockedInModes = 25;
             this.lblEnglishName.Name = "lblEnglishName";
@@ -417,6 +451,7 @@
             // lblArabicName
             // 
             resources.ApplyResources(this.lblArabicName, "lblArabicName");
+            this.lblArabicName.Clearable = true;
             this.lblArabicName.IsRequired = false;
             this.lblArabicName.LockedInModes = 25;
             this.lblArabicName.Name = "lblArabicName";
@@ -424,6 +459,7 @@
             // lblCurrency
             // 
             resources.ApplyResources(this.lblCurrency, "lblCurrency");
+            this.lblCurrency.Clearable = true;
             this.lblCurrency.IsRequired = false;
             this.lblCurrency.LockedInModes = 25;
             this.lblCurrency.Name = "lblCurrency";
@@ -431,6 +467,7 @@
             // lblVoucherName
             // 
             resources.ApplyResources(this.lblVoucherName, "lblVoucherName");
+            this.lblVoucherName.Clearable = true;
             this.lblVoucherName.IsRequired = false;
             this.lblVoucherName.LockedInModes = 25;
             this.lblVoucherName.Name = "lblVoucherName";
@@ -438,14 +475,16 @@
             // txtVoucherCode
             // 
             this.txtVoucherCode.BackColor = System.Drawing.Color.White;
+            this.txtVoucherCode.Clearable = false;
             this.txtVoucherCode.IsRequired = false;
             resources.ApplyResources(this.txtVoucherCode, "txtVoucherCode");
-            this.txtVoucherCode.LockedInModes = 25;
+            this.txtVoucherCode.LockedInModes = 31;
             this.txtVoucherCode.Name = "txtVoucherCode";
             // 
             // lblVoucherCode
             // 
             resources.ApplyResources(this.lblVoucherCode, "lblVoucherCode");
+            this.lblVoucherCode.Clearable = true;
             this.lblVoucherCode.IsRequired = false;
             this.lblVoucherCode.LockedInModes = 25;
             this.lblVoucherCode.Name = "lblVoucherCode";
@@ -453,6 +492,7 @@
             // lblCreditAccount
             // 
             resources.ApplyResources(this.lblCreditAccount, "lblCreditAccount");
+            this.lblCreditAccount.Clearable = true;
             this.lblCreditAccount.IsRequired = false;
             this.lblCreditAccount.LockedInModes = 25;
             this.lblCreditAccount.Name = "lblCreditAccount";
@@ -460,6 +500,7 @@
             // cbxCreditAccounts
             // 
             this.cbxCreditAccounts.BackColor = System.Drawing.Color.White;
+            this.cbxCreditAccounts.Clearable = true;
             this.cbxCreditAccounts.DefaultIndex = -1;
             this.cbxCreditAccounts.FormattingEnabled = true;
             this.cbxCreditAccounts.IsRequired = false;
@@ -470,6 +511,7 @@
             // lblDepitAccount
             // 
             resources.ApplyResources(this.lblDepitAccount, "lblDepitAccount");
+            this.lblDepitAccount.Clearable = true;
             this.lblDepitAccount.IsRequired = false;
             this.lblDepitAccount.LockedInModes = 25;
             this.lblDepitAccount.Name = "lblDepitAccount";
@@ -477,6 +519,7 @@
             // cbxDepitAccounts
             // 
             this.cbxDepitAccounts.BackColor = System.Drawing.Color.White;
+            this.cbxDepitAccounts.Clearable = true;
             this.cbxDepitAccounts.DefaultIndex = -1;
             this.cbxDepitAccounts.FormattingEnabled = true;
             this.cbxDepitAccounts.IsRequired = false;
@@ -484,22 +527,23 @@
             this.cbxDepitAccounts.LockedInModes = 25;
             this.cbxDepitAccounts.Name = "cbxDepitAccounts";
             // 
-            // cbxArCurrency
+            // cbxCurrency
             // 
-            this.cbxArCurrency.BackColor = System.Drawing.Color.White;
-            this.cbxArCurrency.DefaultIndex = -1;
-            this.cbxArCurrency.FormattingEnabled = true;
-            this.cbxArCurrency.IsRequired = false;
-            resources.ApplyResources(this.cbxArCurrency, "cbxArCurrency");
-            this.cbxArCurrency.LockedInModes = 25;
-            this.cbxArCurrency.Name = "cbxArCurrency";
+            this.cbxCurrency.BackColor = System.Drawing.Color.White;
+            this.cbxCurrency.Clearable = true;
+            this.cbxCurrency.DefaultIndex = -1;
+            this.cbxCurrency.FormattingEnabled = true;
+            this.cbxCurrency.IsRequired = false;
+            resources.ApplyResources(this.cbxCurrency, "cbxCurrency");
+            this.cbxCurrency.LockedInModes = 25;
+            this.cbxCurrency.Name = "cbxCurrency";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtEliasEn);
             this.groupBox1.Controls.Add(this.txtEliasAr);
-            this.groupBox1.Controls.Add(this.cbxArCurrency);
+            this.groupBox1.Controls.Add(this.cbxCurrency);
             this.groupBox1.Controls.Add(this.cbxDepitAccounts);
             this.groupBox1.Controls.Add(this.lblDepitAccount);
             this.groupBox1.Controls.Add(this.cbxCreditAccounts);
@@ -519,6 +563,7 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.Clearable = true;
             this.label1.IsRequired = false;
             this.label1.LockedInModes = 25;
             this.label1.Name = "label1";
@@ -526,6 +571,7 @@
             // txtEliasEn
             // 
             this.txtEliasEn.BackColor = System.Drawing.Color.White;
+            this.txtEliasEn.Clearable = true;
             this.txtEliasEn.IsRequired = false;
             resources.ApplyResources(this.txtEliasEn, "txtEliasEn");
             this.txtEliasEn.LockedInModes = 25;
@@ -534,6 +580,7 @@
             // txtEliasAr
             // 
             this.txtEliasAr.BackColor = System.Drawing.Color.White;
+            this.txtEliasAr.Clearable = true;
             this.txtEliasAr.IsRequired = false;
             resources.ApplyResources(this.txtEliasAr, "txtEliasAr");
             this.txtEliasAr.LockedInModes = 25;
@@ -552,6 +599,7 @@
             this.dgrdVouchers.MultiSelect = false;
             this.dgrdVouchers.Name = "dgrdVouchers";
             this.dgrdVouchers.ReadOnly = true;
+            this.dgrdVouchers.RowHeadersVisible = false;
             this.dgrdVouchers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrdVouchers.SelectionChanged += new System.EventHandler(this.dgrdVouchers_SelectionChanged);
             // 
@@ -666,7 +714,7 @@
         private Controls.ComboBox cbxCreditAccounts;
         private Controls.Label lblDepitAccount;
         private Controls.ComboBox cbxDepitAccounts;
-        private Controls.ComboBox cbxArCurrency;
+        private Controls.ComboBox cbxCurrency;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgrdVouchers;
         private Controls.TextBox txtEliasEn;

@@ -14,7 +14,7 @@ namespace BackOfficeBL.Security
 
         public int UserID { get; set; }
         public string UserLogin { get; set; }
-        public string Name { get {return GetUserName(); } }
+        public string Name { get { return GetUserName(); } }
         public string Name_Ara { get; set; }
         public string Name_Eng { get; set; }
         public string Password { get; set; }
@@ -25,7 +25,7 @@ namespace BackOfficeBL.Security
         [XmlIgnore]
         public List<Group> Groups = new List<Group>();
 
-        public User() 
+        public User()
         {
             this.IsNew = true;
         }
@@ -35,7 +35,7 @@ namespace BackOfficeBL.Security
         public static User FindByUserID(int _userID)
         {
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
-            var dbUsers = from u in newAppsCnn.Sec_Users where u.UserID == _userID  select u;
+            var dbUsers = from u in newAppsCnn.Sec_Users where u.UserID == _userID select u;
             if (dbUsers.Count() > 0)
             {
                 Sec_Users dbUser = dbUsers.First();
@@ -48,7 +48,7 @@ namespace BackOfficeBL.Security
                 return null;
         }
 
-        public static User CheckUser(string _userName,string _password)
+        public static User CheckUser(string _userName, string _password)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace BackOfficeBL.Security
             }
             catch (Exception ex)
             {
-                
+
                 throw ex;
             }
         }
@@ -204,7 +204,7 @@ namespace BackOfficeBL.Security
             this.Password = _dbUser.Password;
             this.IsAdmin = _dbUser.IsAdmin;
             this.IsNew = false;
-            
+
         }
 
         public void LoadDbUserGroups(Sec_Users _dbUser)
@@ -265,7 +265,7 @@ namespace BackOfficeBL.Security
                 {
                     dbUser = new Sec_Users();
                     this.ToDbUser(dbUser);
-                    this.SaveDbUserGroups(dbUser,newAppsCnn);
+                    this.SaveDbUserGroups(dbUser, newAppsCnn);
                     newAppsCnn.Sec_Users.Add(dbUser);
                 }
                 newAppsCnn.SaveChanges();
@@ -275,7 +275,7 @@ namespace BackOfficeBL.Security
             }
             catch (Exception ex)
             {
-                return new DataSaveResult() { SaveStatus = false };
+                return new DataSaveResult() { SaveStatus = false, ErrorMessage = ex.Message };
             }
         }
 
@@ -300,6 +300,6 @@ namespace BackOfficeBL.Security
             }
         }
 
-        
+
     }
 }
