@@ -17,6 +17,7 @@ namespace BackOfficeBL.Accounting
         public bool IsDisable { get; set; }
         public int? ParentId { get; set; }
         public bool IsNew { get; set; }
+        public bool IsCopy { get; set; }
 
 
 
@@ -74,6 +75,8 @@ namespace BackOfficeBL.Accounting
                 AssetCatogry account = new AssetCatogry();
                 account.FromDbAssetCatogry(dbAssetCatogry);
                 account.IsNew = false;
+                account.IsNew = false;
+                account.IsCopy = false;
                 return account;
             }
             else
@@ -82,6 +85,7 @@ namespace BackOfficeBL.Accounting
         public AssetCatogry()
         {
             this.IsNew = true;
+            this.IsCopy = false;
         }
 
         private string GetAssetCatogryNameAndNo()
@@ -120,6 +124,7 @@ namespace BackOfficeBL.Accounting
             this.IsDisable = _dbAssetCatogry.IsDisable;
             this.ParentId = _dbAssetCatogry.ParentId;
             this.IsNew = false;
+            this.IsCopy = false;
         }
 
         public void ToDbAssetCatogry(Ast_AssetCatogry _dbAssetCatogry)
@@ -132,10 +137,12 @@ namespace BackOfficeBL.Accounting
             {
                 _dbAssetCatogry.ParentId = this.ParentId;
             }
+            this.IsCopy = false;
         }
 
         public DataSaveResult Save()
         {
+            this.IsCopy = false;
             Ast_AssetCatogry dbAssetCatogry;
             try
             {
@@ -165,6 +172,7 @@ namespace BackOfficeBL.Accounting
 
         public DataDeleteResult Delete()
         {
+            this.IsCopy = false;
             Ast_AssetCatogry dbAssetCatogry;
             try
             {

@@ -23,6 +23,7 @@ namespace BackOfficeUI.Accounting
         private void frmAssetCatogry_Load(object sender, EventArgs e)
         {
             LoadAssetCatogryTree();
+            trvAssetCatogryTree.ContextMenuStrip = this.TreeViewContext;
         }
 
         #region Functions for loading data from or to controls
@@ -32,7 +33,7 @@ namespace BackOfficeUI.Accounting
             {
                 txtNameAr.Text = CrAssetCatogry.AstCatName_Ara;
                 txtNameEng.Text = CrAssetCatogry.AstCatName_Eng;
-                
+                txtNo.Text = CrAssetCatogry.AstCatId.ToString();
                 chkIsDiable.Checked = CrAssetCatogry.IsDisable;
             }
             else
@@ -86,7 +87,7 @@ namespace BackOfficeUI.Accounting
         {
             CrAssetCatogry.AstCatName_Ara = txtNameAr.Text;
             CrAssetCatogry.AstCatName_Eng = txtNameEng.Text;
-            if (CrAssetCatogry.IsNew == true && trvAssetCatogryTree.SelectedNode!=null)
+            if (CrAssetCatogry.IsNew == true && trvAssetCatogryTree.SelectedNode != null && CrAssetCatogry.IsCopy == false)
                 CrAssetCatogry.ParentId = Convert.ToInt32(trvAssetCatogryTree.SelectedNode.Tag);
             CrAssetCatogry.IsDisable = chkIsDiable.Checked;
         }
@@ -108,6 +109,7 @@ namespace BackOfficeUI.Accounting
                 CrAssetCatogry = null;
                 ShowGUI();
             }
+            trvAssetCatogryTree.Enabled = true;
         }
 
         private void frmAssetCatogry_Edit(object sender, ref bool _status)
@@ -128,6 +130,7 @@ namespace BackOfficeUI.Accounting
                     ShowGUI();
                 }
             }
+            trvAssetCatogryTree.Enabled = false;
         }
 
         private void frmAssetCatogry_Delete(object sender, ref bool _status)
@@ -145,12 +148,14 @@ namespace BackOfficeUI.Accounting
                 CrAssetCatogry = null;
                 ShowGUI();
             }
+            trvAssetCatogryTree.Enabled = true;
         }
 
         private void frmAssetCatogry_Cancel(object sender)
         {
             CrAssetCatogry = null;
             ShowGUI();
+            trvAssetCatogryTree.Enabled = true;
         }
 
         private void frmAssetCatogry_AddNew(object sender, ref bool _status)
@@ -159,6 +164,62 @@ namespace BackOfficeUI.Accounting
         }
 
         #endregion
+
+
+
+        private void trvAssetCatogryTree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string AssetCatogryNo = trvAssetCatogryTree.SelectedNode != null ? trvAssetCatogryTree.SelectedNode.Tag.ToString() : "";
+            if (AssetCatogryNo != "")
+            {
+                CrAssetCatogry = AssetCatogry.FindByAstCatId(Convert.ToInt32(trvAssetCatogryTree.SelectedNode.Tag.ToString()));
+                ShowGUI();
+            }
+            trvAssetCatogryTree.Focus();
+        }
+
+        private void trvAssetCatogryTree_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Right) return;
+            var treeNodeAtMousePosition = trvAssetCatogryTree.GetNodeAt(trvAssetCatogryTree.PointToClient(Control.MousePosition));
+            var selectedTreeNode = trvAssetCatogryTree.SelectedNode;
+            if (treeNodeAtMousePosition != null)
+            {
+                if (treeNodeAtMousePosition != selectedTreeNode)
+                    trvAssetCatogryTree.SelectedNode = treeNodeAtMousePosition;
+            }
+            TreeViewContext.Text = trvAssetCatogryTree.SelectedNode.Text;
+            trvAssetCatogryTree.Focus();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrAssetCatogry = new BackOfficeBL.Accounting.AssetCatogry();
+            if (trvAssetCatogryTree.SelectedNode != null && trvAssetCatogryTree.SelectedNode.ToString() != "")
+            {
+                var parent = AssetCatogry.FindByAstCatId(Convert.ToInt32(trvAssetCatogryTree.SelectedNode.Tag.ToString()));
+                CrAssetCatogry.ParentId = (Convert.ToInt32(trvAssetCatogryTree.SelectedNode.Tag.ToString()));
+            }
+            ShowGUI();
+            this.FormStatus = FormStatusEnum.AddNew;
+            trvAssetCatogryTree.Enabled = false;
+        }
+
+
+        private void copyAndPasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvAssetCatogryTree.SelectedNode != null && trvAssetCatogryTree.SelectedNode.ToString() != "")
+            {
+                CrAssetCatogry = AssetCatogry.FindByAstCatId(Convert.ToInt32(trvAssetCatogryTree.SelectedNode.Tag.ToString()));
+                CrAssetCatogry.IsNew = true;
+                CrAssetCatogry.IsCopy = true;
+                CrAssetCatogry.AstCatId = Convert.ToInt32(null);
+                ShowGUI();
+                this.FormStatus = FormStatusEnum.Edit;
+                trvAssetCatogryTree.Enabled = false;
+            }
+        }
+
 
     }
 }

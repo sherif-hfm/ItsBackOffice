@@ -145,7 +145,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;chkIsDiable.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="lblNameAr.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -175,7 +175,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblNameAr.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lblNameEng.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -205,7 +205,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblNameEng.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="lblIsDisable.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -235,7 +235,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblIsDisable.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="txtNameAr.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 60</value>
@@ -256,7 +256,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtNameAr.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="txtNameEng.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 93</value>
@@ -277,7 +277,61 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtNameEng.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
+  </data>
+  <data name="txtNo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 27</value>
+  </data>
+  <data name="txtNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 27</value>
+  </data>
+  <data name="txtNo.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;txtNo.Name" xml:space="preserve">
+    <value>txtNo</value>
+  </data>
+  <data name="&gt;&gt;txtNo.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtNo.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtNo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblNo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
+  </data>
+  <data name="lblNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 19</value>
+  </data>
+  <data name="lblNo.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="lblNo.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;lblNo.Name" xml:space="preserve">
+    <value>lblNo</value>
+  </data>
+  <data name="&gt;&gt;lblNo.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblNo.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblNo.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>623, 60</value>
@@ -301,7 +355,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="trvAssetCatogryTree.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 47</value>
@@ -322,7 +376,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;trvAssetCatogryTree.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="TreeViewContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>217, 17</value>

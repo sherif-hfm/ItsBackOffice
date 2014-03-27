@@ -40,6 +40,8 @@
             this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtNo = new BackOfficeUI.Controls.TextBox();
+            this.lblNo = new BackOfficeUI.Controls.Label();
             this.groupBox1.SuspendLayout();
             this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +100,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNo);
+            this.groupBox1.Controls.Add(this.lblNo);
             this.groupBox1.Controls.Add(this.chkIsDiable);
             this.groupBox1.Controls.Add(this.lblNameAr);
             this.groupBox1.Controls.Add(this.lblNameEng);
@@ -116,6 +120,8 @@
             resources.ApplyResources(this.trvAssetCatogryTree, "trvAssetCatogryTree");
             this.trvAssetCatogryTree.LockedInModes = 25;
             this.trvAssetCatogryTree.Name = "trvAssetCatogryTree";
+            this.trvAssetCatogryTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvAssetCatogryTree_AfterSelect);
+            this.trvAssetCatogryTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trvAssetCatogryTree_MouseDown);
             // 
             // TreeViewContext
             // 
@@ -129,11 +135,30 @@
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // copyAndPasteToolStripMenuItem
             // 
             this.copyAndPasteToolStripMenuItem.Name = "copyAndPasteToolStripMenuItem";
             resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
+            this.copyAndPasteToolStripMenuItem.Click += new System.EventHandler(this.copyAndPasteToolStripMenuItem_Click);
+            // 
+            // txtNo
+            // 
+            this.txtNo.BackColor = System.Drawing.Color.White;
+            this.txtNo.Clearable = true;
+            resources.ApplyResources(this.txtNo, "txtNo");
+            this.txtNo.IsRequired = true;
+            this.txtNo.LockedInModes = 25;
+            this.txtNo.Name = "txtNo";
+            // 
+            // lblNo
+            // 
+            resources.ApplyResources(this.lblNo, "lblNo");
+            this.lblNo.Clearable = true;
+            this.lblNo.IsRequired = false;
+            this.lblNo.LockedInModes = 25;
+            this.lblNo.Name = "lblNo";
             // 
             // frmAssetCatogry
             // 
@@ -170,6 +195,8 @@
         private System.Windows.Forms.ContextMenuStrip TreeViewContext;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
+        private Controls.TextBox txtNo;
+        private Controls.Label lblNo;
 
 
     }

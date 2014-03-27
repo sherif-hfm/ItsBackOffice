@@ -91,6 +91,7 @@ namespace BackOfficeBL.Accounting
                 Account account = new Account();
                 account.FromDbAccount(dbAccount);
                 account.IsNew = false;
+                account.IsCopy = false;
                 return account;
             }
             else
