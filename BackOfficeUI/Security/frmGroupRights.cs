@@ -23,7 +23,15 @@ namespace BackOfficeUI.Security
         private void frmGroupRights_Load(object sender, EventArgs e)
         {
             LoadAllForms();
+            LoadFormFunctions();
             treeMenu.ContextMenuStrip = this.menu;
+        }
+
+        private void LoadFormFunctions()
+        {
+             lstRights.DataSource= FormFunction.GetFormFunctions();
+             lstRights.DisplayMember = "FunctionText";
+             lstRights.ValueMember = "FunctionID";
         }
 
         private void LoadAllForms()
@@ -121,14 +129,34 @@ namespace BackOfficeUI.Security
             {
                 txtGroupID.Text = CrGroup.GroupID;
                 txtGroupName.Text = CrGroup.Name;
-
                 CrGroup.LoadGroupRights();
+                ApplayGroupRightToNode(null);
             }
         }
 
-        private void ApplayGroupRightToNode(SecurityTreeNode _node)
-        { 
-        
+        private void ApplayGroupRightToNode(List<SecurityTreeNode> _nodes)
+        {
+            List<SecurityTreeNode> nodes;
+            if (_nodes == null)
+                nodes = treeMenu.Nodes.OfType<SecurityTreeNode>().ToList();
+            else
+                nodes = _nodes;
+            foreach (SecurityTreeNode node in nodes)
+            { 
+                var groupRight=CrGroup.GroupRights.Find(g=>g.MenuID==node.Name);
+                if (groupRight != null)
+                {
+                    node.Checked = true;
+                    node.GroupAllowedFunctions = groupRight.AllowedFunctions;
+                    ApplayGroupRightToNode(node.Nodes.OfType<SecurityTreeNode>().ToList());
+                }
+                else
+                {
+                    node.Checked = false;
+                    node.GroupAllowedFunctions = 0;
+                }
+
+            }
         }
     }
 }
