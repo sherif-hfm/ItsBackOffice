@@ -51,16 +51,17 @@
             this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // trvAccountTree
             // 
-            resources.ApplyResources(this.trvAccountTree, "trvAccountTree");
             this.trvAccountTree.BackColor = System.Drawing.Color.White;
             this.trvAccountTree.Clearable = true;
             this.trvAccountTree.IsRequired = false;
+            resources.ApplyResources(this.trvAccountTree, "trvAccountTree");
             this.trvAccountTree.LockedInModes = 25;
             this.trvAccountTree.Name = "trvAccountTree";
             this.trvAccountTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvAccountTree_AfterSelect);
@@ -100,28 +101,28 @@
             // 
             // txtAccountNo
             // 
-            resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.BackColor = System.Drawing.Color.White;
             this.txtAccountNo.Clearable = false;
+            resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.IsRequired = true;
             this.txtAccountNo.LockedInModes = 25;
             this.txtAccountNo.Name = "txtAccountNo";
             // 
             // txtAccountNameAr
             // 
-            resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.BackColor = System.Drawing.Color.White;
             this.txtAccountNameAr.Clearable = true;
             this.txtAccountNameAr.IsRequired = true;
+            resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.LockedInModes = 25;
             this.txtAccountNameAr.Name = "txtAccountNameAr";
             // 
             // txtAccountNameEng
             // 
-            resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.BackColor = System.Drawing.Color.White;
             this.txtAccountNameEng.Clearable = true;
             this.txtAccountNameEng.IsRequired = true;
+            resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.LockedInModes = 25;
             this.txtAccountNameEng.Name = "txtAccountNameEng";
             // 
@@ -135,10 +136,10 @@
             // 
             // txtAccountRef1
             // 
-            resources.ApplyResources(this.txtAccountRef1, "txtAccountRef1");
             this.txtAccountRef1.BackColor = System.Drawing.Color.White;
             this.txtAccountRef1.Clearable = true;
             this.txtAccountRef1.IsRequired = false;
+            resources.ApplyResources(this.txtAccountRef1, "txtAccountRef1");
             this.txtAccountRef1.LockedInModes = 25;
             this.txtAccountRef1.Name = "txtAccountRef1";
             // 
@@ -152,10 +153,10 @@
             // 
             // txtAccountRef2
             // 
-            resources.ApplyResources(this.txtAccountRef2, "txtAccountRef2");
             this.txtAccountRef2.BackColor = System.Drawing.Color.White;
             this.txtAccountRef2.Clearable = true;
             this.txtAccountRef2.IsRequired = false;
+            resources.ApplyResources(this.txtAccountRef2, "txtAccountRef2");
             this.txtAccountRef2.LockedInModes = 25;
             this.txtAccountRef2.Name = "txtAccountRef2";
             // 
@@ -187,18 +188,17 @@
             // 
             // cmbAccountType
             // 
-            resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
             this.cmbAccountType.BackColor = System.Drawing.Color.White;
             this.cmbAccountType.Clearable = true;
             this.cmbAccountType.DefaultIndex = -1;
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.IsRequired = true;
+            resources.ApplyResources(this.cmbAccountType, "cmbAccountType");
             this.cmbAccountType.LockedInModes = 25;
             this.cmbAccountType.Name = "cmbAccountType";
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.cmbAccountCategory);
             this.groupBox1.Controls.Add(this.txtAccountNo);
             this.groupBox1.Controls.Add(this.cmbAccountType);
@@ -215,39 +215,47 @@
             this.groupBox1.Controls.Add(this.txtAccountNameEng);
             this.groupBox1.Controls.Add(this.lblAccountRef1);
             this.groupBox1.Controls.Add(this.txtAccountRef1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // cmbAccountCategory
             // 
-            resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
             this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
             this.cmbAccountCategory.Clearable = true;
             this.cmbAccountCategory.DefaultIndex = -1;
             this.cmbAccountCategory.FormattingEnabled = true;
             this.cmbAccountCategory.IsRequired = true;
+            resources.ApplyResources(this.cmbAccountCategory, "cmbAccountCategory");
             this.cmbAccountCategory.LockedInModes = 25;
             this.cmbAccountCategory.Name = "cmbAccountCategory";
             // 
             // TreeViewContext
             // 
-            resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
             this.TreeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.copyAndPasteToolStripMenuItem});
+            this.copyAndPasteToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.TreeViewContext.Name = "TreeViewContext";
+            resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
             // 
             // addToolStripMenuItem
             // 
-            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // copyAndPasteToolStripMenuItem
             // 
-            resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
             this.copyAndPasteToolStripMenuItem.Name = "copyAndPasteToolStripMenuItem";
+            resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
             this.copyAndPasteToolStripMenuItem.Click += new System.EventHandler(this.copyAndPasteToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // frmAccountTree
             // 
@@ -295,6 +303,7 @@
         private System.Windows.Forms.ContextMenuStrip TreeViewContext;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
 
     }
 }

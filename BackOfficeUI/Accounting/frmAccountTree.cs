@@ -135,7 +135,7 @@ namespace BackOfficeUI.Accounting
             {
                 CrAccount = null;
                 ShowGUI();
-                trvAccountTree.Enabled = true;
+                //trvAccountTree.Enabled = true;
                 cmbAccountType.Enabled = true;
             }
         }
@@ -143,7 +143,6 @@ namespace BackOfficeUI.Accounting
         private void frmAccountTree_Edit(object sender, ref bool _status)
         {
             CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
-            trvAccountTree.Enabled = false;
             if (CrAccount == null)
             {
                 _status = false;
@@ -181,7 +180,6 @@ namespace BackOfficeUI.Accounting
         private void frmAccountTree_Cancel(object sender)
         {
             CrAccount = null;
-            trvAccountTree.Enabled = true;
             cmbAccountType.Enabled = true;
             ShowGUI();
         }
@@ -198,6 +196,11 @@ namespace BackOfficeUI.Accounting
 
         private void trvAccountTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            if (this.FormStatus == FormStatusEnum.Edit)
+            {
+                trvAccountTree.SelectedNode = trvAccountTree.Nodes.Find(trvAccountTree.SelectedNode.Tag.ToString(), true)[0];
+                return;
+            }
             string AccountNo = trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "";
             if (AccountNo != "")
             {
@@ -209,7 +212,12 @@ namespace BackOfficeUI.Accounting
 
         private void trvAccountTree_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button != MouseButtons.Right) return;
+            if (e.Button != MouseButtons.Right || this.FormStatus != FormStatusEnum.Edit)
+            {
+                TreeViewContext.Enabled = false;
+                return;
+            }
+            TreeViewContext.Enabled = true;
             var treeNodeAtMousePosition = trvAccountTree.GetNodeAt(trvAccountTree.PointToClient(Control.MousePosition));
             var selectedTreeNode = trvAccountTree.SelectedNode;
             if (treeNodeAtMousePosition != null)
@@ -221,6 +229,8 @@ namespace BackOfficeUI.Accounting
             trvAccountTree.Focus();
         }
 
+
+        #region context menu events
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CrAccount = new BackOfficeBL.Accounting.Account();
@@ -235,9 +245,27 @@ namespace BackOfficeUI.Accounting
             }
             ShowGUI();
             this.FormStatus = FormStatusEnum.AddNew;
-            trvAccountTree.Enabled = false;
+            //trvAccountTree.Enabled = false;
         }
 
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
+            {
+                CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
+                DataDeleteResult result = CrAccount.Delete();
+                if (result.DeleteStatus == false)
+                {
+                    MessageBox.Show(result.ErrorMessage);
+                }
+                else
+                {
+                    CrAccount = null;
+                    ShowGUI();
+                    this.FormStatus = FormStatusEnum.DataPreview;
+                }
+            }
+        }
 
         private void copyAndPasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -250,19 +278,20 @@ namespace BackOfficeUI.Accounting
                 ShowGUI();
                 this.FormStatus = FormStatusEnum.Edit;
                 cmbAccountType.Enabled = false;
-                trvAccountTree.Enabled = false;
+                //trvAccountTree.Enabled = false;
             }
         }
 
+        #endregion
 
+        #region search area
         private void frmAccountTree_Find(object sender, Dictionary<string, object> _findFields)
         {
             var accountId = _findFields["AccountID"];
-
             trvAccountTree.SelectedNode = trvAccountTree.Nodes.Find(accountId.ToString(), true)[0];
-
-
         }
+        #endregion
+
 
     }
 }
