@@ -17,9 +17,11 @@ namespace BackOfficeUI.Search
 
         private ContextSearch contextSearchManager;
 
+        IControl Parent;
         public frmContextSearch(IControl parentControl)
         {
             InitializeComponent();
+            Parent = parentControl;
             ContextSearchId = parentControl.ContextSearchId;
             contextSearchManager = new ContextSearch(ContextSearchId);
 
@@ -71,13 +73,39 @@ namespace BackOfficeUI.Search
                 gridCol.HeaderText = colStyle.HeaderText;
                 gridCol.DataPropertyName = colStyle.DataPropertyName;
                 grdResult.Columns.Add(gridCol);
+
+                grdResult.DoubleClick += grdResult_DoubleClick;
             }
 
         }
 
+        void grdResult_DoubleClick(object sender, EventArgs e)
+        {
+            if (grdResult.SelectedRows.Count > 0 && string.IsNullOrWhiteSpace(contextSearchManager.ReturnFields) == false)
+            {
+                Dictionary<string, object> result = new Dictionary<string, object>();
+                DataGridViewRow grdRow = grdResult.SelectedRows[0];
+                DataRowView rowData = (DataRowView)grdRow.DataBoundItem;
+                foreach (string fieldStr in contextSearchManager.ReturnFields.Split(','))
+                {
+                    result[fieldStr] = rowData.Row.Field<object>(fieldStr);
+                }
+
+
+                Parent.DoContextualFind(result);
+            }
+        }
+
+
         private void frmContextSearch_Load(object sender, EventArgs e)
         {
             SetWindowUI();
+        }
+
+        private void grdResult_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
         }
     }
 }

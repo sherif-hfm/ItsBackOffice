@@ -17,5 +17,9 @@ namespace BackOfficeUI.Controls
         bool IsEmpty();
         void ClearData();
 
+
+
+        void DoContextualFind(Dictionary<string, object> _findFields);
+
     }
 }

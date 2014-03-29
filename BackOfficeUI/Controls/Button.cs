@@ -46,7 +46,7 @@ namespace BackOfficeUI.Controls
 
         public void UnLock()
         {
-            this.Enabled = true ;
+            this.Enabled = true;
         }
 
         public bool IsEmpty()
@@ -58,8 +58,18 @@ namespace BackOfficeUI.Controls
         {
         }
 
+
+
+        public delegate void FindDelegate(object sender, Dictionary<string, object> _findFields);
+        public event FindDelegate ContextualFind;
+        public void DoContextualFind(Dictionary<string, object> _findFields)
+        {
+            if (ContextualFind != null && _findFields.Count > 0)
+                if (ContextualFind != null)
+                    ContextualFind(this, _findFields);
+        }
         #endregion
 
-        
+
     }
 }

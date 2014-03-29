@@ -53,6 +53,7 @@
             this.grdResult.Name = "grdResult";
             this.grdResult.Size = new System.Drawing.Size(466, 211);
             this.grdResult.TabIndex = 1;
+            this.grdResult.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdResult_KeyDown);
             // 
             // frmContextSearch
             // 

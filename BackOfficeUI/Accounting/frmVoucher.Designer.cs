@@ -513,7 +513,7 @@
             // 
             this.txtVoucherCode.BackColor = System.Drawing.Color.White;
             this.txtVoucherCode.Clearable = false;
-            this.txtVoucherCode.ContextSearchId = 1;
+            this.txtVoucherCode.ContextSearchId = 0;
             this.txtVoucherCode.IsRequired = false;
             resources.ApplyResources(this.txtVoucherCode, "txtVoucherCode");
             this.txtVoucherCode.LockedInModes = 31;
