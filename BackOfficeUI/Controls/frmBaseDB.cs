@@ -29,6 +29,7 @@ namespace BackOfficeUI.Controls
             if (e.KeyCode == Keys.F2 && (this.FormStatus == FormStatusEnum.AddNew || this.FormStatus == FormStatusEnum.Edit))
             {
                 var ParentControl = FindFocusedControl(this);
+
                 if (ParentControl is IControl && (ParentControl as IControl).ContextSearchId != 0)
                 {
                     BackOfficeUI.Search.frmContextSearch searchfrm = new Search.frmContextSearch((IControl)ParentControl);

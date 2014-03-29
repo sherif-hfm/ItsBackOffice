@@ -299,6 +299,9 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search\frmContextSearch.resx">
+      <DependentUpon>frmContextSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search\frmSearch.resx">
       <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
