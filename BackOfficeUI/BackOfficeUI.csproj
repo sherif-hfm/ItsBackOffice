@@ -296,6 +296,9 @@
     <EmbeddedResource Include="Controls\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TreeView.resx">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>

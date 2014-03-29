@@ -33,7 +33,7 @@ namespace BackOfficeUI.Controls
         private int mContextSearchId = 0;
         public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
 
-       
+
 
         private bool mClearable = true;
         public bool Clearable { get { return mClearable; } set { mClearable = value; } }
@@ -41,14 +41,15 @@ namespace BackOfficeUI.Controls
 
         #region ************************** Methods **************************
 
+        private bool locked;
         public void Lock()
         {
-           // this.Enabled = false;
+            this.locked = true;
         }
 
         public void UnLock()
         {
-          //  this.Enabled = true;
+            this.locked = false;
         }
 
         public bool IsEmpty()
@@ -74,5 +75,13 @@ namespace BackOfficeUI.Controls
                     ContextualFind(this, _findFields);
         }
         #endregion
+
+        private void TreeView_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            if (!locked)
+                e.Cancel = true;
+        }
+
+        
     }
 }
