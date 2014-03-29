@@ -83,6 +83,9 @@
     <Compile Include="Gnrl_AuditActions.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Gnrl_FinancialYear.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Grnl_Audit.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>

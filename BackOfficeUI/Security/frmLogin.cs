@@ -31,7 +31,7 @@ namespace BackOfficeUI.Security
             {
                 AppInfo.CurrentUser = user;
                 this.Hide();
-                frmMenu frm = new frmMenu();
+               frmFinancialYear frm = new frmFinancialYear();
                 frm.Show();
             }
             else

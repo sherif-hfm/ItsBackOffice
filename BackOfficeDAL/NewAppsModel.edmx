@@ -17,6 +17,7 @@
           <EntitySet Name="Acc_VoucherValidation" EntityType="NewApps.Store.Acc_VoucherValidation" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Ast_AssetCatogry" EntityType="NewApps.Store.Ast_AssetCatogry" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Gnrl_AuditActions" EntityType="NewApps.Store.Gnrl_AuditActions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Gnrl_FinancialYear" EntityType="NewApps.Store.Gnrl_FinancialYear" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Grnl_Audit" EntityType="NewApps.Store.Grnl_Audit" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Grnl_AuditDtl" EntityType="NewApps.Store.Grnl_AuditDtl" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_FormFunctions" EntityType="NewApps.Store.Sec_FormFunctions" store:Type="Tables" Schema="dbo" />
@@ -280,6 +281,17 @@
           <Property Name="AuditActionId" Type="int" Nullable="false" />
           <Property Name="AuditActionName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="AuditActionName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Gnrl_FinancialYear">
+          <Key>
+            <PropertyRef Name="YearId" />
+          </Key>
+          <Property Name="YearId" Type="int" Nullable="false" />
+          <Property Name="YearName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="YearBegin" Type="datetime" Nullable="false" />
+          <Property Name="YearEnd" Type="datetime" Nullable="false" />
+          <Property Name="IsDefaultYear" Type="bit" Nullable="false" />
+          <Property Name="IsClosedYear" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Grnl_Audit">
           <Key>
@@ -698,6 +710,7 @@
             <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
             <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
           </AssociationSet>
+          <EntitySet Name="Gnrl_FinancialYear" EntityType="NewApps.Gnrl_FinancialYear" />
           </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
           <Key>
@@ -1216,6 +1229,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Gnrl_FinancialYear">
+          <Key>
+            <PropertyRef Name="YearId" />
+          </Key>
+          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <Property Type="String" Name="YearName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="YearBegin" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="YearEnd" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsDefaultYear" Nullable="false" />
+          <Property Type="Boolean" Name="IsClosedYear" Nullable="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1540,6 +1564,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Gnrl_FinancialYear">
+            <EntityTypeMapping TypeName="NewApps.Gnrl_FinancialYear">
+              <MappingFragment StoreEntitySet="Gnrl_FinancialYear">
+                <ScalarProperty Name="IsClosedYear" ColumnName="IsClosedYear" />
+                <ScalarProperty Name="IsDefaultYear" ColumnName="IsDefaultYear" />
+                <ScalarProperty Name="YearEnd" ColumnName="YearEnd" />
+                <ScalarProperty Name="YearBegin" ColumnName="YearBegin" />
+                <ScalarProperty Name="YearName" ColumnName="YearName" />
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1554,7 +1590,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

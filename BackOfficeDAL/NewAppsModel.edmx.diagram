@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9fdb143b02234e69bee2a83e806d773a" Name="Security" ZoomLevel="94">
+      <Diagram DiagramId="9fdb143b02234e69bee2a83e806d773a" Name="Security" ZoomLevel="78">
         <EntityTypeShape EntityType="NewApps.Sec_FormFunctions" Width="1.75" PointX="0.5" PointY="5.75" />
         <EntityTypeShape EntityType="NewApps.Sec_GroupRights" Width="1.875" PointX="3.875" PointY="1.875" />
         <EntityTypeShape EntityType="NewApps.Sec_Groups" Width="1.875" PointX="3.875" PointY="4.5" />
@@ -24,6 +24,7 @@
         <EntityTypeShape EntityType="NewApps.Grnl_Audit" Width="1.5" PointX="7.0115945744382193" PointY="26.368671131491972" />
         <EntityTypeShape EntityType="NewApps.Grnl_AuditDtl" Width="1.5" PointX="7.9114138073806721" PointY="1.7595373847333422" />
         <AssociationConnector Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_FinancialYear" Width="1.5" PointX="9.8503921040568478" PointY="22.882885064409528" />
         </Diagram>
       <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="30" >
         <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="0.75" PointY="6.5" />

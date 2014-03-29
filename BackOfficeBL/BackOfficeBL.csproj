@@ -60,6 +60,7 @@
     <Compile Include="Search\SearchMaster.cs" />
     <Compile Include="Search\SearchParameter.cs" />
     <Compile Include="General\Enums.cs" />
+    <Compile Include="Security\FinancialYear.cs" />
     <Compile Include="Security\FormFunction.cs" />
     <Compile Include="Security\Group.cs" />
     <Compile Include="Security\MenuItem.cs" />
