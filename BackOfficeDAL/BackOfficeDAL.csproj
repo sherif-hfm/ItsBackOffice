@@ -123,6 +123,9 @@
     <Compile Include="Sec_Users.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Srch_ContextualSearch.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Srch_SearchMaster.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>

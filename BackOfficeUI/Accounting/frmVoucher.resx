@@ -988,7 +988,7 @@
     <value>221, 82</value>
   </data>
   <data name="lblEnglishName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 19</value>
+    <value>105, 19</value>
   </data>
   <data name="lblEnglishName.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -1018,7 +1018,7 @@
     <value>221, 51</value>
   </data>
   <data name="lblArabicName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 19</value>
+    <value>99, 19</value>
   </data>
   <data name="lblArabicName.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -1078,7 +1078,7 @@
     <value>333, 17</value>
   </data>
   <data name="lblVoucherName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 19</value>
+    <value>112, 19</value>
   </data>
   <data name="lblVoucherName.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -1162,7 +1162,7 @@
     <value>6, 115</value>
   </data>
   <data name="lblCreditAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 19</value>
+    <value>174, 19</value>
   </data>
   <data name="lblCreditAccount.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -1213,7 +1213,7 @@
     <value>435, 115</value>
   </data>
   <data name="lblDepitAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 19</value>
+    <value>169, 19</value>
   </data>
   <data name="lblDepitAccount.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -1450,7 +1450,7 @@
     <value>9, 19</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>859, 782</value>
+    <value>859, 749</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmVoucher</value>

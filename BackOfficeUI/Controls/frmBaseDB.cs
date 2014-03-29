@@ -33,7 +33,8 @@ namespace BackOfficeUI.Controls
                 if (ParentControl is IControl && (ParentControl as IControl).ContextSearchId != 0)
                 {
                     BackOfficeUI.Search.frmContextSearch searchfrm = new Search.frmContextSearch((IControl)ParentControl);
-                    searchfrm.Show();
+                                       
+                    searchfrm.ShowDialog();
                 }
 
 

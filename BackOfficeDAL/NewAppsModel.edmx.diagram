@@ -25,6 +25,7 @@
         <EntityTypeShape EntityType="NewApps.Grnl_AuditDtl" Width="1.5" PointX="7.9114138073806721" PointY="1.7595373847333422" />
         <AssociationConnector Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" />
         <EntityTypeShape EntityType="NewApps.Gnrl_FinancialYear" Width="1.5" PointX="9.8503921040568478" PointY="22.882885064409528" />
+        <EntityTypeShape EntityType="NewApps.Srch_ContextualSearch" Width="1.5" PointX="5.4775179128523535" PointY="30.371796756224612" />
         </Diagram>
       <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="30" >
         <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="0.75" PointY="6.5" />

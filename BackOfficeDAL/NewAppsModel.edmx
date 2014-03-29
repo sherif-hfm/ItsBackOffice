@@ -26,6 +26,7 @@
           <EntitySet Name="Sec_MainMenu" EntityType="NewApps.Store.Sec_MainMenu" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_Users" EntityType="NewApps.Store.Sec_Users" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_UsersGroup" EntityType="NewApps.Store.Sec_UsersGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Srch_ContextualSearch" EntityType="NewApps.Store.Srch_ContextualSearch" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Srch_SearchMaster" EntityType="NewApps.Store.Srch_SearchMaster" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Srch_SearchParameters" EntityType="NewApps.Store.Srch_SearchParameters" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_Acc_Accounts_Acc_AccountCategory" Association="NewApps.Store.FK_Acc_Accounts_Acc_AccountCategory">
@@ -377,6 +378,17 @@
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="GroupID" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Srch_ContextualSearch">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Name="SearchID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SearchSQL_Ara" Type="nvarchar(max)" />
+          <Property Name="SearchSQL_Eng" Type="nvarchar(max)" />
+          <Property Name="SearchResultStyle_Ara" Type="xml" />
+          <Property Name="SearchResultStyle_Eng" Type="xml" />
+          <Property Name="ReturnsFields" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Srch_SearchMaster">
           <Key>
             <PropertyRef Name="SearchID" />
@@ -711,6 +723,7 @@
             <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
           </AssociationSet>
           <EntitySet Name="Gnrl_FinancialYear" EntityType="NewApps.Gnrl_FinancialYear" />
+          <EntitySet Name="Srch_ContextualSearch" EntityType="NewApps.Srch_ContextualSearch" />
           </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
           <Key>
@@ -1240,6 +1253,17 @@
           <Property Type="Boolean" Name="IsDefaultYear" Nullable="false" />
           <Property Type="Boolean" Name="IsClosedYear" Nullable="false" />
         </EntityType>
+        <EntityType Name="Srch_ContextualSearch">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SearchSQL_Ara" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchSQL_Eng" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchResultStyle_Ara" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchResultStyle_Eng" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnsFields" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1573,6 +1597,18 @@
                 <ScalarProperty Name="YearBegin" ColumnName="YearBegin" />
                 <ScalarProperty Name="YearName" ColumnName="YearName" />
                 <ScalarProperty Name="YearId" ColumnName="YearId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Srch_ContextualSearch">
+            <EntityTypeMapping TypeName="NewApps.Srch_ContextualSearch">
+              <MappingFragment StoreEntitySet="Srch_ContextualSearch">
+                <ScalarProperty Name="ReturnsFields" ColumnName="ReturnsFields" />
+                <ScalarProperty Name="SearchResultStyle_Eng" ColumnName="SearchResultStyle_Eng" />
+                <ScalarProperty Name="SearchResultStyle_Ara" ColumnName="SearchResultStyle_Ara" />
+                <ScalarProperty Name="SearchSQL_Eng" ColumnName="SearchSQL_Eng" />
+                <ScalarProperty Name="SearchSQL_Ara" ColumnName="SearchSQL_Ara" />
+                <ScalarProperty Name="SearchID" ColumnName="SearchID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

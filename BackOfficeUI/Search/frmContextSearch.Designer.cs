@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.textBoxSearch = new BackOfficeUI.Controls.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grdResult = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grdResult)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxSearch
@@ -46,24 +46,25 @@
             this.textBoxSearch.TabIndex = 0;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
-            // dataGridView1
+            // grdResult
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(466, 211);
-            this.dataGridView1.TabIndex = 1;
+            this.grdResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdResult.Location = new System.Drawing.Point(12, 50);
+            this.grdResult.Name = "grdResult";
+            this.grdResult.Size = new System.Drawing.Size(466, 211);
+            this.grdResult.TabIndex = 1;
             // 
             // frmContextSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 271);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grdResult);
             this.Controls.Add(this.textBoxSearch);
             this.Name = "frmContextSearch";
             this.Text = "frmContextSearch";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmContextSearch_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdResult)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,6 +73,6 @@
         #endregion
 
         private BackOfficeUI.Controls.TextBox textBoxSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grdResult;
     }
 }
