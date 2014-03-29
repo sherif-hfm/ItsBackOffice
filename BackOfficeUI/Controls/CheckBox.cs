@@ -26,6 +26,9 @@ namespace BackOfficeUI.Controls
         private int mLockedInModes = 25;
         public int LockedInModes { get { return mLockedInModes; } set { mLockedInModes = value; } }
 
+        private int mContextSearchId = 0;
+        public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
+
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 

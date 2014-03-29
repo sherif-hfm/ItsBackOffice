@@ -26,11 +26,28 @@ namespace BackOfficeUI.Controls
 
         void frmBaseDB_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.F2 && (this.FormStatus == FormStatusEnum.AddNew || this.FormStatus == FormStatusEnum.Edit))
+            {
+                var ParentControl = FindFocusedControl(this);
+                if (ParentControl is IControl && (ParentControl as IControl).ContextSearchId != 0)
+                {
+                    BackOfficeUI.Search.frmContextSearch searchfrm = new Search.frmContextSearch((IControl)ParentControl);
+                    searchfrm.Show();
+                }
+
+
+
+            }
+            else if (e.KeyCode == Keys.Escape)
                 if (this.FormStatus != FormStatusEnum.AddNew && this.FormStatus != FormStatusEnum.Edit)
                     ExitForm();
                 else
-                    btnCancel_Click(this,null);
+                    btnCancel_Click(this, null);
+
+
+
+
+
         }
 
         #endregion
@@ -47,6 +64,12 @@ namespace BackOfficeUI.Controls
 
         #region ************************** Methods **************************
 
+        public static Control FindFocusedControl(Form form)
+        {
+            return form.ActiveControl;
+
+        }
+
         private void UpdateToolBar()
         {
             if (DesignMode == true)
@@ -56,7 +79,7 @@ namespace BackOfficeUI.Controls
                 if (ctrl is ToolStripButton)
                 {
                     ToolStripButton btn = (ToolStripButton)ctrl;
-                    if ((btn.ShowInModes & (int)this.FormStatus) > 0 && (btn.FunctionsCode & this.AllowedFunctions ) > 0)
+                    if ((btn.ShowInModes & (int)this.FormStatus) > 0 && (btn.FunctionsCode & this.AllowedFunctions) > 0)
                         btn.Visible = true;
                     else
                         btn.Visible = false;
@@ -134,7 +157,8 @@ namespace BackOfficeUI.Controls
 
             foreach (Control crControl in _container.Controls)
             {
-                if (crControl.HasChildren) {
+                if (crControl.HasChildren)
+                {
                     foreach (Control crChildControlitem in crControl.Controls)
                     {
                         ClearControl(crChildControlitem);
@@ -162,7 +186,7 @@ namespace BackOfficeUI.Controls
         {
             //DialogResult result = MessageBox.Show(NewAppsResources.Messages.ConfirmExit, NewAppsResources.Messages.MessageBoxTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             //if (result == System.Windows.Forms.DialogResult.Yes)
-                this.Close();
+            this.Close();
         }
 
         #endregion
@@ -182,14 +206,14 @@ namespace BackOfficeUI.Controls
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             bool status = true;
-               
-                DoAddNew(ref status);
-                if (status == true)
-                {
-                    this.FormStatus = FormStatusEnum.AddNew;
-                    
-                    ClearAllControls(this);
-                }
+
+            DoAddNew(ref status);
+            if (status == true)
+            {
+                this.FormStatus = FormStatusEnum.AddNew;
+
+                ClearAllControls(this);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -309,7 +333,7 @@ namespace BackOfficeUI.Controls
         private void DoAddNew(ref bool _status)
         {
             if (AddNew != null)
-                AddNew(this,ref _status);
+                AddNew(this, ref _status);
         }
 
         public delegate void EditDelegate(object sender, ref bool _status);
@@ -335,7 +359,7 @@ namespace BackOfficeUI.Controls
             if (Post1 != null)
                 Post1(this, ref _status);
         }
-       
+
         public delegate void Post2Delegate(object sender, ref bool _status);
         public event Post2Delegate Post2;
         private void DoPost2(ref bool _status)
@@ -368,7 +392,7 @@ namespace BackOfficeUI.Controls
                 Search(this);
         }
 
-        public delegate void DataMoveDelegate(object sender,MoveCommandEnum _moveCommand);
+        public delegate void DataMoveDelegate(object sender, MoveCommandEnum _moveCommand);
         public event DataMoveDelegate DataMove;
         private void DoDataMove(MoveCommandEnum _moveCommand)
         {
@@ -394,14 +418,15 @@ namespace BackOfficeUI.Controls
 
         public delegate void FindDelegate(object sender, Dictionary<string, object> _findFields);
         public event FindDelegate Find;
-        public void DoFind(Dictionary<string,object> _findFields)
+        public void DoFind(Dictionary<string, object> _findFields)
         {
-            if (Find != null && _findFields.Count > 0) 
-            if (Find != null)
-                Find(this, _findFields);
+            if (Find != null && _findFields.Count > 0)
+                if (Find != null)
+                    Find(this, _findFields);
         }
 
         #endregion
+
 
     }
 }

@@ -213,6 +213,12 @@
     <Compile Include="Search\Controls\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Search\frmContextSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmContextSearch.Designer.cs">
+      <DependentUpon>frmContextSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search\frmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\frmBaseDB.resx">
       <DependentUpon>frmBaseDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBox.resx">
+      <DependentUpon>TextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

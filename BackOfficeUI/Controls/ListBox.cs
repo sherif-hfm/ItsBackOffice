@@ -30,6 +30,9 @@ namespace BackOfficeUI.Controls
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 
+        private int mContextSearchId = 0;
+        public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
+        
         private bool mClearable = true;
         public bool Clearable { get { return mClearable; } set { mClearable = value; } }
 

@@ -35,6 +35,10 @@ namespace BackOfficeUI.Controls
         private bool mClearable = true;
         public bool Clearable { get { return mClearable; } set { mClearable = value; } }
 
+        private int mContextSearchId = 0;
+        public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
+
+
         #endregion
 
         #region ************************** Methods **************************

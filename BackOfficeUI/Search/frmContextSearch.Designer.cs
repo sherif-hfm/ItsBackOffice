@@ -1,6 +1,6 @@
-﻿namespace BackOfficeUI.Controls
+﻿namespace BackOfficeUI.Search
 {
-    partial class TextBox
+    partial class frmContextSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -20,17 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify 
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            this.ResumeLayout(false);
-
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Text = "frmContextSearch";
         }
 
         #endregion

@@ -45,6 +45,10 @@ namespace BackOfficeUI.Controls
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 
+        private int mContextSearchId = 0;
+        public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
+
+
         #endregion
 
         #region ************************** Methods **************************

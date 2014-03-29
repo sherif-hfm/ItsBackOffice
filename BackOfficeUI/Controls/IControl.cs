@@ -10,7 +10,7 @@ namespace BackOfficeUI.Controls
         int LockedInModes { get; set; }
         bool IsRequired { get; set; }
         bool Clearable { get; set; }
-
+        int ContextSearchId { get; set; }
 
         void Lock();
         void UnLock();
