@@ -78,7 +78,8 @@ namespace BackOfficeUI.Controls
 
         private void TreeView_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
-            if (!locked)
+            // Modified By Sherif 30-4-2014 cancel the selection when the control is locked
+            if (locked)
                 e.Cancel = true;
         }
 
