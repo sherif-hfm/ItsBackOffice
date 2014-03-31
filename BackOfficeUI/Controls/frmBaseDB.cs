@@ -14,7 +14,7 @@ namespace BackOfficeUI.Controls
     {
         public enum FormStatusEnum { DataPreview = 1, AddNew = 2, Edit = 4, Confirmed = 8, Posted = 16 };
 
-        public enum MoveCommandEnum { MoveFirst = 1, MovePrev = 2, MoveNext = 3, MoveLast = 4 };
+        public enum MoveCommandEnum { MoveFirst = 1, MovePrev = 2, MoveNext = 3, MoveLast = 4};
 
         public frmBaseDB()
         {

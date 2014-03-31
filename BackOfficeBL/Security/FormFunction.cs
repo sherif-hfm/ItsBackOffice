@@ -27,7 +27,6 @@ namespace BackOfficeBL.Security
             return result;
         }
 
-
         private string GetFunctionText()
         {
             CultureInfo cultureinfo = CultureInfo.CurrentUICulture;
