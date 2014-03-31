@@ -47,5 +47,7 @@ namespace BackOfficeDAL
         public DbSet<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
         public DbSet<Gnrl_FinancialYear> Gnrl_FinancialYear { get; set; }
         public DbSet<Srch_ContextualSearch> Srch_ContextualSearch { get; set; }
+        public DbSet<Acc_Budgets> Acc_Budgets { get; set; }
+        public DbSet<Acc_BudgetsDtl> Acc_BudgetsDtl { get; set; }
     }
 }
