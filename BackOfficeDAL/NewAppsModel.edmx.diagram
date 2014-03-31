@@ -24,6 +24,10 @@
         <EntityTypeShape EntityType="NewApps.Grnl_Audit" Width="1.5" PointX="7.0115945744382193" PointY="26.368671131491972" />
         <EntityTypeShape EntityType="NewApps.Grnl_AuditDtl" Width="1.5" PointX="7.9114138073806721" PointY="1.7595373847333422" />
         <AssociationConnector Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" />
+        <EntityTypeShape EntityType="NewApps.Acc_Budgets" Width="1.5" PointX="0.25062705774355076" PointY="21.322547266875649" />
+        <EntityTypeShape EntityType="NewApps.Acc_BudgetsDtl" Width="1.5" PointX="3.5075580568553688" PointY="24.979499575206777" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_FinancialYear" Width="1.5" PointX="9.2248460041474765" PointY="12.718663996420178" />
+        <AssociationConnector Association="NewApps.FK_Acc_BudgetsDtl_Acc_Budgets" />
         </Diagram>
       <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="30" >
         <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="0.75" PointY="6.5" />
