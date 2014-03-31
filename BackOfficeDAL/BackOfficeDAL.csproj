@@ -56,6 +56,8 @@
     <Compile Include="Acc_Accountype.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Acc_Budgets.cs" />
+    <Compile Include="Acc_BudgetsDtl.cs" />
     <Compile Include="Acc_CostCenter.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
@@ -81,6 +83,9 @@
     <Compile Include="DataUtils.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="Gnrl_AuditActions.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gnrl_FinancialYear.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Grnl_Audit.cs">
@@ -118,6 +123,9 @@
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Sec_Users.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Srch_ContextualSearch.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Srch_SearchMaster.cs">
