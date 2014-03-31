@@ -213,11 +213,23 @@
     <Compile Include="Search\Controls\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Search\frmContextSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmContextSearch.Designer.cs">
+      <DependentUpon>frmContextSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search\frmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Search\frmSearch.Designer.cs">
       <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\frmFinancialYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\frmFinancialYear.Designer.cs">
+      <DependentUpon>frmFinancialYear.cs</DependentUpon>
     </Compile>
     <Compile Include="Security\frmGroupRights.cs">
       <SubType>Form</SubType>
@@ -275,20 +287,29 @@
     <EmbeddedResource Include="Accounting\frmVoucher.resx">
       <DependentUpon>frmVoucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ComboBox.resx">
-      <DependentUpon>ComboBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\frmBaseDB.resx">
       <DependentUpon>frmBaseDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBox.resx">
+      <DependentUpon>TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TreeView.resx">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search\frmContextSearch.resx">
+      <DependentUpon>frmContextSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search\frmSearch.resx">
       <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\frmFinancialYear.resx">
+      <DependentUpon>frmFinancialYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\frmGroupRights.resx">
       <DependentUpon>frmGroupRights.cs</DependentUpon>

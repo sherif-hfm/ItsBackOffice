@@ -30,20 +30,26 @@ namespace BackOfficeUI.Controls
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 
+        private int mContextSearchId = 0;
+        public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
+
+
+
         private bool mClearable = true;
         public bool Clearable { get { return mClearable; } set { mClearable = value; } }
         #endregion
 
         #region ************************** Methods **************************
 
+        private bool locked;
         public void Lock()
         {
-           // this.Enabled = false;
+            this.locked = true;
         }
 
         public void UnLock()
         {
-          //  this.Enabled = true;
+            this.locked = false;
         }
 
         public bool IsEmpty()
@@ -59,6 +65,24 @@ namespace BackOfficeUI.Controls
 
         }
 
+
+        public delegate void FindDelegate(object sender, Dictionary<string, object> _findFields);
+        public event FindDelegate ContextualFind;
+        public void DoContextualFind(Dictionary<string, object> _findFields)
+        {
+            if (ContextualFind != null && _findFields.Count > 0)
+                if (ContextualFind != null)
+                    ContextualFind(this, _findFields);
+        }
         #endregion
+
+        private void TreeView_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            // Modified By Sherif 30-4-2014 cancel the selection when the control is locked
+            if (locked)
+                e.Cancel = true;
+        }
+
+        
     }
 }

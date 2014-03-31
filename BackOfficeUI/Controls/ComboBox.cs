@@ -35,6 +35,10 @@ namespace BackOfficeUI.Controls
         private bool mClearable = true;
         public bool Clearable { get { return mClearable; } set { mClearable = value; } }
 
+        private int mContextSearchId = 0;
+        public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
+
+
         #endregion
 
         #region ************************** Methods **************************
@@ -69,5 +73,17 @@ namespace BackOfficeUI.Controls
         {
             e.SuppressKeyPress = true;
         }
+
+
+        public delegate void FindDelegate(object sender, Dictionary<string, object> _findFields);
+        public event FindDelegate ContextualFind;
+        public void DoContextualFind(Dictionary<string, object> _findFields)
+        {
+            if (ContextualFind != null && _findFields.Count > 0)
+                if (ContextualFind != null)
+                    ContextualFind(this, _findFields);
+        }
+
+
     }
 }

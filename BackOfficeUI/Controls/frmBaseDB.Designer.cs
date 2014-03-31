@@ -345,6 +345,7 @@
             this.Name = "frmBaseDB";
             this.Text = "frmBaseDB";
             this.Load += new System.EventHandler(this.frmBaseDB_Load);
+
             this.toolBar.ResumeLayout(false);
             this.toolBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errProv)).EndInit();

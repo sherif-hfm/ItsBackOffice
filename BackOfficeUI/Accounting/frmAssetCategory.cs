@@ -216,7 +216,8 @@ namespace BackOfficeUI.Accounting
                 CrAssetCatogry.AstCatId = Convert.ToInt32(null);
                 ShowGUI();
                 this.FormStatus = FormStatusEnum.Edit;
-                trvAssetCatogryTree.Enabled = false;
+                trvAssetCatogryTree.Lock();
+                trvAssetCatogryTree.Focus();
             }
         }
 

@@ -41,6 +41,9 @@ namespace BackOfficeDAL
                         case System.Data.EntityState.Deleted:
                             propertyNames = entity.OriginalValues.PropertyNames.ToArray();
                             break;
+                        case System.Data.EntityState.Detached:
+                            propertyNames = entity.OriginalValues.PropertyNames.ToArray();
+                            break;
                         default:
                             propertyNames = entity.CurrentValues.PropertyNames.ToArray();
                             break;

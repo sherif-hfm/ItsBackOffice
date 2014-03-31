@@ -57,9 +57,12 @@
     <Compile Include="AppSettings.cs" />
     <Compile Include="DataSaveResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\ContextSearch.cs" />
     <Compile Include="Search\SearchMaster.cs" />
     <Compile Include="Search\SearchParameter.cs" />
     <Compile Include="General\Enums.cs" />
+    <Compile Include="Security\FinancialYear.cs" />
+    <Compile Include="Security\FormFunction.cs" />
     <Compile Include="Security\Group.cs" />
     <Compile Include="Security\MenuItem.cs" />
     <Compile Include="Security\User.cs" />

@@ -26,6 +26,9 @@ namespace BackOfficeUI.Controls
         private int mLockedInModes = 25;
         public int LockedInModes { get { return mLockedInModes; } set { mLockedInModes = value; } }
 
+        private int mContextSearchId = 0;
+        public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
+
         private bool mIsRequired = false;
         public bool IsRequired { get { return mIsRequired; } set { mIsRequired = value; } }
 
@@ -58,5 +61,14 @@ namespace BackOfficeUI.Controls
 
         #endregion
 
+
+        public delegate void FindDelegate(object sender, Dictionary<string, object> _findFields);
+        public event FindDelegate ContextualFind;
+        public void DoContextualFind(Dictionary<string, object> _findFields)
+        {
+            if (ContextualFind != null && _findFields.Count > 0)
+                if (ContextualFind != null)
+                    ContextualFind(this, _findFields);
+        }
     }
 }

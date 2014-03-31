@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // TreeView
+            // 
+            this.LineColor = System.Drawing.Color.Black;
+            this.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeView_BeforeSelect);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

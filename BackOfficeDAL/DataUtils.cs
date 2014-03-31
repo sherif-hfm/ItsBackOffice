@@ -26,7 +26,7 @@ namespace BackOfficeDAL
                 {
                     if (_sql.Contains("@" + prm.ParameterName) == true)
                     {
-                        SqlParameter sqlPrm = new SqlParameter(prm.ParameterName, prm.ParameterValue);
+                        SqlParameter sqlPrm = new SqlParameter(prm.ParameterName, "%"+prm.ParameterValue+"%");
                         adpt.SelectCommand.Parameters.Add(sqlPrm);
                     }
                 }

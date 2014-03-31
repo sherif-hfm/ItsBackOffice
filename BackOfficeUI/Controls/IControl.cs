@@ -10,12 +10,16 @@ namespace BackOfficeUI.Controls
         int LockedInModes { get; set; }
         bool IsRequired { get; set; }
         bool Clearable { get; set; }
-
+        int ContextSearchId { get; set; }
 
         void Lock();
         void UnLock();
         bool IsEmpty();
         void ClearData();
+
+
+
+        void DoContextualFind(Dictionary<string, object> _findFields);
 
     }
 }

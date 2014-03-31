@@ -9,8 +9,6 @@
           <EntitySet Name="Acc_AccountCategory" EntityType="NewApps.Store.Acc_AccountCategory" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Accounts" EntityType="NewApps.Store.Acc_Accounts" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Accountype" EntityType="NewApps.Store.Acc_Accountype" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Acc_Budgets" EntityType="NewApps.Store.Acc_Budgets" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Acc_BudgetsDtl" EntityType="NewApps.Store.Acc_BudgetsDtl" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_CostCenter" EntityType="NewApps.Store.Acc_CostCenter" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Currancy" EntityType="NewApps.Store.Acc_Currancy" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Acc_Voucher" EntityType="NewApps.Store.Acc_Voucher" store:Type="Tables" Schema="dbo" />
@@ -28,6 +26,7 @@
           <EntitySet Name="Sec_MainMenu" EntityType="NewApps.Store.Sec_MainMenu" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_Users" EntityType="NewApps.Store.Sec_Users" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sec_UsersGroup" EntityType="NewApps.Store.Sec_UsersGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Srch_ContextualSearch" EntityType="NewApps.Store.Srch_ContextualSearch" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Srch_SearchMaster" EntityType="NewApps.Store.Srch_SearchMaster" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Srch_SearchParameters" EntityType="NewApps.Store.Srch_SearchParameters" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_Acc_Accounts_Acc_AccountCategory" Association="NewApps.Store.FK_Acc_Accounts_Acc_AccountCategory">
@@ -37,14 +36,6 @@
           <AssociationSet Name="FK_Acc_Accounts_Acc_Accountype" Association="NewApps.Store.FK_Acc_Accounts_Acc_Accountype">
             <End Role="Acc_Accountype" EntitySet="Acc_Accountype" />
             <End Role="Acc_Accounts" EntitySet="Acc_Accounts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Acc_Accounts_Acc_Budgets" Association="NewApps.Store.FK_Acc_Accounts_Acc_Budgets">
-            <End Role="Acc_Accounts" EntitySet="Acc_Accounts" />
-            <End Role="Acc_BudgetsDtl" EntitySet="Acc_BudgetsDtl" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Acc_BudgetsDtl_Acc_Budgets" Association="NewApps.Store.FK_Acc_BudgetsDtl_Acc_Budgets">
-            <End Role="Acc_Budgets" EntitySet="Acc_Budgets" />
-            <End Role="Acc_BudgetsDtl" EntitySet="Acc_BudgetsDtl" />
           </AssociationSet>
           <AssociationSet Name="FK_Acc_CostCenter_Acc_CostCenter" Association="NewApps.Store.FK_Acc_CostCenter_Acc_CostCenter">
             <End Role="Acc_CostCenter" EntitySet="Acc_CostCenter" />
@@ -142,36 +133,6 @@
           <Property Name="TypeName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="TypeName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="IsDisable" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Acc_Budgets">
-          <Key>
-            <PropertyRef Name="BudgetId" />
-            <PropertyRef Name="BudgetYearId" />
-          </Key>
-          <Property Name="BudgetId" Type="int" Nullable="false" />
-          <Property Name="BudgetYearId" Type="int" Nullable="false" />
-          <Property Name="BudgetName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="BudgetName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="IsDisable" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Acc_BudgetsDtl">
-          <Key>
-            <PropertyRef Name="BudgetId" />
-            <PropertyRef Name="BudgetYearId" />
-            <PropertyRef Name="BudgetDtlId" />
-          </Key>
-          <Property Name="BudgetId" Type="int" Nullable="false" />
-          <Property Name="BudgetYearId" Type="int" Nullable="false" />
-          <Property Name="BudgetDtlId" Type="int" Nullable="false" />
-          <Property Name="BudgetYear" Type="int" Nullable="false" />
-          <Property Name="BudgetAccountId" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="BudgetCostCenterId" Type="nvarchar" MaxLength="20" />
-          <Property Name="BudgetLocationId" Type="nvarchar" MaxLength="20" />
-          <Property Name="BdgtDepitAmount" Type="decimal" Nullable="false" Precision="16" Scale="3" />
-          <Property Name="BdgtCreditAmount" Type="decimal" Nullable="false" Precision="16" Scale="3" />
-          <Property Name="BdgttBalance" Type="decimal" Nullable="false" Precision="16" Scale="3" />
-          <Property Name="BdgtFrom" Type="datetime" Nullable="false" />
-          <Property Name="BdgtTo" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Acc_CostCenter">
           <Key>
@@ -417,6 +378,17 @@
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="GroupID" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Srch_ContextualSearch">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Name="SearchID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SearchSQL_Ara" Type="nvarchar(max)" />
+          <Property Name="SearchSQL_Eng" Type="nvarchar(max)" />
+          <Property Name="SearchResultStyle_Ara" Type="xml" />
+          <Property Name="SearchResultStyle_Eng" Type="xml" />
+          <Property Name="ReturnsFields" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Srch_SearchMaster">
           <Key>
             <PropertyRef Name="SearchID" />
@@ -474,32 +446,6 @@
             </Principal>
             <Dependent Role="Acc_Accounts">
               <PropertyRef Name="AccountTypeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Acc_Accounts_Acc_Budgets">
-          <End Role="Acc_Accounts" Type="NewApps.Store.Acc_Accounts" Multiplicity="1" />
-          <End Role="Acc_BudgetsDtl" Type="NewApps.Store.Acc_BudgetsDtl" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Acc_Accounts">
-              <PropertyRef Name="AccountID" />
-            </Principal>
-            <Dependent Role="Acc_BudgetsDtl">
-              <PropertyRef Name="BudgetAccountId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Acc_BudgetsDtl_Acc_Budgets">
-          <End Role="Acc_Budgets" Type="NewApps.Store.Acc_Budgets" Multiplicity="1" />
-          <End Role="Acc_BudgetsDtl" Type="NewApps.Store.Acc_BudgetsDtl" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Acc_Budgets">
-              <PropertyRef Name="BudgetId" />
-              <PropertyRef Name="BudgetYearId" />
-            </Principal>
-            <Dependent Role="Acc_BudgetsDtl">
-              <PropertyRef Name="BudgetId" />
-              <PropertyRef Name="BudgetYearId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -776,17 +722,8 @@
             <End Role="Acc_Voucher" EntitySet="Acc_Voucher" />
             <End Role="Acc_VoucherDtl" EntitySet="Acc_VoucherDtl" />
           </AssociationSet>
-          <EntitySet Name="Acc_Budgets" EntityType="NewApps.Acc_Budgets" />
-          <EntitySet Name="Acc_BudgetsDtl" EntityType="NewApps.Acc_BudgetsDtl" />
           <EntitySet Name="Gnrl_FinancialYear" EntityType="NewApps.Gnrl_FinancialYear" />
-          <AssociationSet Name="FK_Acc_Accounts_Acc_Budgets" Association="NewApps.FK_Acc_Accounts_Acc_Budgets">
-            <End Role="Acc_Accounts" EntitySet="Acc_Accounts" />
-            <End Role="Acc_BudgetsDtl" EntitySet="Acc_BudgetsDtl" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Acc_BudgetsDtl_Acc_Budgets" Association="NewApps.FK_Acc_BudgetsDtl_Acc_Budgets">
-            <End Role="Acc_Budgets" EntitySet="Acc_Budgets" />
-            <End Role="Acc_BudgetsDtl" EntitySet="Acc_BudgetsDtl" />
-          </AssociationSet>
+          <EntitySet Name="Srch_ContextualSearch" EntityType="NewApps.Srch_ContextualSearch" />
           </EntityContainer>
         <EntityType Name="Sec_FormFunctions">
           <Key>
@@ -1150,7 +1087,6 @@
           <NavigationProperty Name="Acc_Accountype" Relationship="NewApps.FK_Acc_Accounts_Acc_Accountype" FromRole="Acc_Accounts" ToRole="Acc_Accountype" />
           <NavigationProperty Name="Acc_VouchersType" Relationship="NewApps.FK_Acc_VouchersTemplate_Acc_Accounts" FromRole="Acc_Accounts" ToRole="Acc_VouchersType" />
           <NavigationProperty Name="Acc_VoucherDtl" Relationship="NewApps.FK_Acc_VoucherDtl_Acc_Accounts" FromRole="Acc_Accounts" ToRole="Acc_VoucherDtl" />
-          <NavigationProperty Name="Acc_BudgetsDtl" Relationship="NewApps.FK_Acc_Accounts_Acc_Budgets" FromRole="Acc_Accounts" ToRole="Acc_BudgetsDtl" />
         </EntityType>
         <Association Name="FK_Acc_Accounts_Acc_AccountCategory">
           <End Type="NewApps.Acc_AccountCategory" Role="Acc_AccountCategory" Multiplicity="0..1" />
@@ -1306,39 +1242,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Acc_Budgets">
-          <Key>
-            <PropertyRef Name="BudgetId" />
-            <PropertyRef Name="BudgetYearId" />
-          </Key>
-          <Property Type="Int32" Name="BudgetId" Nullable="false" />
-          <Property Type="Int32" Name="BudgetYearId" Nullable="false" />
-          <Property Type="String" Name="BudgetName_Ara" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="BudgetName_Eng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="IsDisable" Nullable="false" />
-          <NavigationProperty Name="Acc_BudgetsDtl" Relationship="NewApps.FK_Acc_BudgetsDtl_Acc_Budgets" FromRole="Acc_Budgets" ToRole="Acc_BudgetsDtl" />
-        </EntityType>
-        <EntityType Name="Acc_BudgetsDtl">
-          <Key>
-            <PropertyRef Name="BudgetId" />
-            <PropertyRef Name="BudgetYearId" />
-            <PropertyRef Name="BudgetDtlId" />
-          </Key>
-          <Property Type="Int32" Name="BudgetId" Nullable="false" />
-          <Property Type="Int32" Name="BudgetYearId" Nullable="false" />
-          <Property Type="Int32" Name="BudgetDtlId" Nullable="false" />
-          <Property Type="Int32" Name="BudgetYear" Nullable="false" />
-          <Property Type="String" Name="BudgetAccountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="BudgetCostCenterId" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="BudgetLocationId" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Type="Decimal" Name="BdgtDepitAmount" Nullable="false" Precision="16" Scale="3" />
-          <Property Type="Decimal" Name="BdgtCreditAmount" Nullable="false" Precision="16" Scale="3" />
-          <Property Type="Decimal" Name="BdgttBalance" Nullable="false" Precision="16" Scale="3" />
-          <Property Type="DateTime" Name="BdgtFrom" Nullable="false" Precision="3" />
-          <Property Type="DateTime" Name="BdgtTo" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Acc_Accounts" Relationship="NewApps.FK_Acc_Accounts_Acc_Budgets" FromRole="Acc_BudgetsDtl" ToRole="Acc_Accounts" />
-          <NavigationProperty Name="Acc_Budgets" Relationship="NewApps.FK_Acc_BudgetsDtl_Acc_Budgets" FromRole="Acc_BudgetsDtl" ToRole="Acc_Budgets" />
-        </EntityType>
         <EntityType Name="Gnrl_FinancialYear">
           <Key>
             <PropertyRef Name="YearId" />
@@ -1350,32 +1253,17 @@
           <Property Type="Boolean" Name="IsDefaultYear" Nullable="false" />
           <Property Type="Boolean" Name="IsClosedYear" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Acc_Accounts_Acc_Budgets">
-          <End Type="NewApps.Acc_Accounts" Role="Acc_Accounts" Multiplicity="1" />
-          <End Type="NewApps.Acc_BudgetsDtl" Role="Acc_BudgetsDtl" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Acc_Accounts">
-              <PropertyRef Name="AccountID" />
-            </Principal>
-            <Dependent Role="Acc_BudgetsDtl">
-              <PropertyRef Name="BudgetAccountId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Acc_BudgetsDtl_Acc_Budgets">
-          <End Type="NewApps.Acc_Budgets" Role="Acc_Budgets" Multiplicity="1" />
-          <End Type="NewApps.Acc_BudgetsDtl" Role="Acc_BudgetsDtl" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Acc_Budgets">
-              <PropertyRef Name="BudgetId" />
-              <PropertyRef Name="BudgetYearId" />
-            </Principal>
-            <Dependent Role="Acc_BudgetsDtl">
-              <PropertyRef Name="BudgetId" />
-              <PropertyRef Name="BudgetYearId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <EntityType Name="Srch_ContextualSearch">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SearchSQL_Ara" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchSQL_Eng" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchResultStyle_Ara" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchResultStyle_Eng" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnsFields" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1700,35 +1588,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Acc_Budgets">
-            <EntityTypeMapping TypeName="NewApps.Acc_Budgets">
-              <MappingFragment StoreEntitySet="Acc_Budgets">
-                <ScalarProperty Name="IsDisable" ColumnName="IsDisable" />
-                <ScalarProperty Name="BudgetName_Eng" ColumnName="BudgetName_Eng" />
-                <ScalarProperty Name="BudgetName_Ara" ColumnName="BudgetName_Ara" />
-                <ScalarProperty Name="BudgetYearId" ColumnName="BudgetYearId" />
-                <ScalarProperty Name="BudgetId" ColumnName="BudgetId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Acc_BudgetsDtl">
-            <EntityTypeMapping TypeName="NewApps.Acc_BudgetsDtl">
-              <MappingFragment StoreEntitySet="Acc_BudgetsDtl">
-                <ScalarProperty Name="BdgtTo" ColumnName="BdgtTo" />
-                <ScalarProperty Name="BdgtFrom" ColumnName="BdgtFrom" />
-                <ScalarProperty Name="BdgttBalance" ColumnName="BdgttBalance" />
-                <ScalarProperty Name="BdgtCreditAmount" ColumnName="BdgtCreditAmount" />
-                <ScalarProperty Name="BdgtDepitAmount" ColumnName="BdgtDepitAmount" />
-                <ScalarProperty Name="BudgetLocationId" ColumnName="BudgetLocationId" />
-                <ScalarProperty Name="BudgetCostCenterId" ColumnName="BudgetCostCenterId" />
-                <ScalarProperty Name="BudgetAccountId" ColumnName="BudgetAccountId" />
-                <ScalarProperty Name="BudgetYear" ColumnName="BudgetYear" />
-                <ScalarProperty Name="BudgetDtlId" ColumnName="BudgetDtlId" />
-                <ScalarProperty Name="BudgetYearId" ColumnName="BudgetYearId" />
-                <ScalarProperty Name="BudgetId" ColumnName="BudgetId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Gnrl_FinancialYear">
             <EntityTypeMapping TypeName="NewApps.Gnrl_FinancialYear">
               <MappingFragment StoreEntitySet="Gnrl_FinancialYear">
@@ -1738,6 +1597,18 @@
                 <ScalarProperty Name="YearBegin" ColumnName="YearBegin" />
                 <ScalarProperty Name="YearName" ColumnName="YearName" />
                 <ScalarProperty Name="YearId" ColumnName="YearId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Srch_ContextualSearch">
+            <EntityTypeMapping TypeName="NewApps.Srch_ContextualSearch">
+              <MappingFragment StoreEntitySet="Srch_ContextualSearch">
+                <ScalarProperty Name="ReturnsFields" ColumnName="ReturnsFields" />
+                <ScalarProperty Name="SearchResultStyle_Eng" ColumnName="SearchResultStyle_Eng" />
+                <ScalarProperty Name="SearchResultStyle_Ara" ColumnName="SearchResultStyle_Ara" />
+                <ScalarProperty Name="SearchSQL_Eng" ColumnName="SearchSQL_Eng" />
+                <ScalarProperty Name="SearchSQL_Ara" ColumnName="SearchSQL_Ara" />
+                <ScalarProperty Name="SearchID" ColumnName="SearchID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1755,7 +1626,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
