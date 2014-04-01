@@ -188,6 +188,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\frmFinancialYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmFinancialYear.Designer.cs">
+      <DependentUpon>frmFinancialYear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search\Controls\CheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmFinancialYear.resx">
+      <DependentUpon>frmFinancialYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search\frmContextSearch.resx">
       <DependentUpon>frmContextSearch.cs</DependentUpon>

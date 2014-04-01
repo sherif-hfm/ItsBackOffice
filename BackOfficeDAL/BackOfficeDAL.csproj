@@ -56,8 +56,12 @@
     <Compile Include="Acc_Accountype.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Acc_Budgets.cs" />
-    <Compile Include="Acc_BudgetsDtl.cs" />
+    <Compile Include="Acc_Budgets.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_BudgetsDtl.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Acc_CostCenter.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
