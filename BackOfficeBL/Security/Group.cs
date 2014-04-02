@@ -58,6 +58,10 @@ namespace BackOfficeBL.Security
                 case MoveCommandEnum.MoveLast:
                     dbGroup = (from g in newAppsCnn.Sec_Groups orderby g.GroupID descending select g).FirstOrDefault();
                     break;
+                case MoveCommandEnum.Refresh:
+                    if (_crGroup != null)
+                        dbGroup = (from g in newAppsCnn.Sec_Groups where g.GroupID == _crGroup.GroupID select g).FirstOrDefault();
+                    break;
             }
             if (dbGroup != null)
             {
@@ -161,9 +165,49 @@ namespace BackOfficeBL.Security
             }
         }
 
-        public void SaveGroupRights()
+        public DataSaveResult SaveGroupRights()
         {
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
 
+            // Add And Update Group Rights
+            foreach (var groupRight in GroupRights)
+            {
+                Sec_GroupRights dbGroupRight;
+                var dbGroupRights = from g in newAppsCnn.Sec_GroupRights where g.MenuID == groupRight.MenuID && g.GroupID == groupRight.GroupID select g;
+                if (dbGroupRights.Count() > 0)
+                {
+                    // Update Group Rights
+                    dbGroupRight = dbGroupRights.First();
+                    dbGroupRight.AllowedFunctions = groupRight.AllowedFunctions;
+                }
+                else
+                {
+                    // Add New Group Rights
+                    dbGroupRight = new Sec_GroupRights();
+                    dbGroupRight.GroupID = groupRight.GroupID;
+                    dbGroupRight.MenuID = groupRight.MenuID;
+                    dbGroupRight.AllowedFunctions = groupRight.AllowedFunctions;
+                    newAppsCnn.Sec_GroupRights.Add(dbGroupRight);
+                }
+            }
+            var dbAllGroupRights = from g in newAppsCnn.Sec_GroupRights where  g.GroupID == this.GroupID select g;
+            foreach (var dbGroupRight in dbAllGroupRights.ToList())
+            {
+                GroupRight groupRights = GroupRights.Find(g => g.MenuID == dbGroupRight.MenuID);
+                if (groupRights == null)
+                {
+                    newAppsCnn.Sec_GroupRights.Remove(dbGroupRight);
+                }
+            }
+            try
+            {
+                newAppsCnn.SaveChanges();
+                return new DataSaveResult() { SaveStatus = true, ErrorMessage = "", Data = this };
+            }
+            catch (Exception ex)
+            {
+                return new DataSaveResult() { SaveStatus = false, ErrorMessage = ex.Message, Data = this };
+            }
         }
 
         public void SaveGroupUsers(Sec_Groups _dbGroup, NewAppsCnn newAppsCnn)

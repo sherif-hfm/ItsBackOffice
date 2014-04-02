@@ -5,5 +5,5 @@ using System.Text;
 
 namespace BackOfficeBL.General
 {
-    public enum MoveCommandEnum { MoveFirst = 1, MovePrev = 2, MoveNext = 3, MoveLast = 4 }; 
+    public enum MoveCommandEnum { MoveFirst = 1, MovePrev = 2, MoveNext = 3, MoveLast = 4, Refresh = 5 };
 }
