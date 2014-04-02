@@ -118,7 +118,6 @@ namespace BackOfficeUI.Accounting
                 CrCostCenter = null;
                 ShowGUI();
             }
-            trvCostCenterTree.Enabled = true;
         }
 
         private void frmCostCenter_Edit(object sender, ref bool _status)
@@ -176,6 +175,11 @@ namespace BackOfficeUI.Accounting
 
         private void trvCostCenterTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            if (this.FormStatus == FormStatusEnum.Edit)
+            {
+                trvCostCenterTree.SelectedNode = trvCostCenterTree.Nodes.Find(trvCostCenterTree.SelectedNode.Tag.ToString(), true)[0];
+                return;
+            }
             string CostCenterNo = trvCostCenterTree.SelectedNode != null ? trvCostCenterTree.SelectedNode.Tag.ToString() : "";
             if (CostCenterNo != "")
             {
@@ -187,7 +191,12 @@ namespace BackOfficeUI.Accounting
 
         private void trvCostCenterTree_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button != MouseButtons.Right) return;
+            if (e.Button != MouseButtons.Right || this.FormStatus != FormStatusEnum.Edit)
+            {
+                TreeViewContext.Enabled = false;
+                return;
+            }
+            TreeViewContext.Enabled = true;
             var treeNodeAtMousePosition = trvCostCenterTree.GetNodeAt(trvCostCenterTree.PointToClient(Control.MousePosition));
             var selectedTreeNode = trvCostCenterTree.SelectedNode;
             if (treeNodeAtMousePosition != null)
@@ -209,9 +218,27 @@ namespace BackOfficeUI.Accounting
             }
             ShowGUI();
             this.FormStatus = FormStatusEnum.AddNew;
-            trvCostCenterTree.Enabled = false;
         }
 
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvCostCenterTree.SelectedNode != null && trvCostCenterTree.SelectedNode.ToString() != "")
+            {
+                CrCostCenter = CostCenter.FindByCostCenterId(Convert.ToInt32(trvCostCenterTree.SelectedNode.Tag));
+                DataDeleteResult result = CrCostCenter.Delete();
+                if (result.DeleteStatus == false)
+                {
+                    MessageBox.Show(result.ErrorMessage);
+                }
+                else
+                {
+                    CrCostCenter = null;
+                    ShowGUI();
+                    this.FormStatus = FormStatusEnum.DataPreview;
+                }
+            }
+        }
 
         private void copyAndPasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -223,7 +250,6 @@ namespace BackOfficeUI.Accounting
                 CrCostCenter.CostCenterId = Convert.ToInt32(null);
                 ShowGUI();
                 this.FormStatus = FormStatusEnum.Edit;
-                trvCostCenterTree.Enabled = false;
             }
         }
 
@@ -235,6 +261,7 @@ namespace BackOfficeUI.Accounting
 
             trvCostCenterTree.SelectedNode = trvCostCenterTree.Nodes.Find(CostCenterId.ToString(), true)[0];
         }
+
 
 
     }

@@ -29,7 +29,7 @@ namespace BackOfficeBL.Accounting
         public bool IsNew { get; set; }
         public bool IsCopy { get; set; }
 
-        public static string getNewId(string ParentId)
+        public static string getNewId(string ParentId, bool IsSubAccount)
         {
             string AccountId = "";
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
@@ -37,15 +37,50 @@ namespace BackOfficeBL.Accounting
             if (ParentId == null || ParentId == "")
             {
                 var PChild = (from ac in dbAccounts where ac.ParentId == "" || ac.ParentId == null select ac).ToList();
-                AccountId = string.Format("{0}000000000", PChild.Count + 1);
+                AccountId = string.Format("{0}", PChild.Count + 1);
             }
-            else 
+            else if (IsSubAccount)
             {
+                char[] array = new char[6];
+                var PrntVal = FindByAccountID(ParentId);
+                var PChild = (from ac in dbAccounts where ac.ParentId == ParentId && ac.IsSubAccount == IsSubAccount select ac).ToList();
+
+                int ArrCount = 0;
+                string NwId = (PChild.Count + 1).ToString();
+                for (int idx = array.Length - 1; idx > -1; idx--)
+                {
+                    if (ArrCount < NwId.Length)
+                    {
+                        array[idx] = NwId[ArrCount];
+                        ArrCount++;
+                    }
+                    else
+                    {
+                        array[idx] = '0';
+                    }
+                }
+                AccountId = string.Format("{0}{1}", ParentId, (new string(array)));
+            }
+            else
+            {
+                char[] array = new char[2];
                 var PrntVal = FindByAccountID(ParentId);
                 var PChild = (from ac in dbAccounts where ac.ParentId == ParentId select ac).ToList();
-                char[] charArr = PrntVal.AccountID.ToCharArray();
-                charArr[PrntVal.AccountLevel + 1] = (char)(PChild.Count + 1).ToString()[0]; // freely modify the array
-                AccountId = new string(charArr);
+                int ArrCount = 0;
+                string NwId=(PChild.Count + 1).ToString();
+                for (int idx = array.Length - 1; idx > -1; idx--)
+                {
+                    if (ArrCount < NwId.Length)
+                    {
+                        array[idx] = NwId[ArrCount];
+                        ArrCount++;
+                    }
+                    else
+                    {
+                        array[idx] = '0';
+                    }
+                }
+                AccountId = string.Format("{0}{1}", ParentId, (new string(array)));
             }
             return AccountId;
         }

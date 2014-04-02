@@ -36,12 +36,13 @@
             this.txtNameAr = new BackOfficeUI.Controls.TextBox();
             this.txtNameEng = new BackOfficeUI.Controls.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNo = new BackOfficeUI.Controls.TextBox();
+            this.lblNo = new BackOfficeUI.Controls.Label();
             this.trvAssetCatogryTree = new BackOfficeUI.Controls.TreeView();
             this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtNo = new BackOfficeUI.Controls.TextBox();
-            this.lblNo = new BackOfficeUI.Controls.Label();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             resources.ApplyResources(this.chkIsDiable, "chkIsDiable");
             this.chkIsDiable.Clearable = true;
+            this.chkIsDiable.ContextSearchId = 0;
             this.chkIsDiable.ForeColor = System.Drawing.Color.Black;
             this.chkIsDiable.IsRequired = false;
             this.chkIsDiable.LockedInModes = 25;
@@ -60,6 +62,7 @@
             // 
             resources.ApplyResources(this.lblNameAr, "lblNameAr");
             this.lblNameAr.Clearable = true;
+            this.lblNameAr.ContextSearchId = 0;
             this.lblNameAr.IsRequired = false;
             this.lblNameAr.LockedInModes = 25;
             this.lblNameAr.Name = "lblNameAr";
@@ -68,6 +71,7 @@
             // 
             resources.ApplyResources(this.lblNameEng, "lblNameEng");
             this.lblNameEng.Clearable = true;
+            this.lblNameEng.ContextSearchId = 0;
             this.lblNameEng.IsRequired = false;
             this.lblNameEng.LockedInModes = 25;
             this.lblNameEng.Name = "lblNameEng";
@@ -76,6 +80,7 @@
             // 
             resources.ApplyResources(this.lblIsDisable, "lblIsDisable");
             this.lblIsDisable.Clearable = true;
+            this.lblIsDisable.ContextSearchId = 0;
             this.lblIsDisable.IsRequired = false;
             this.lblIsDisable.LockedInModes = 25;
             this.lblIsDisable.Name = "lblIsDisable";
@@ -84,6 +89,7 @@
             // 
             this.txtNameAr.BackColor = System.Drawing.Color.White;
             this.txtNameAr.Clearable = true;
+            this.txtNameAr.ContextSearchId = 0;
             this.txtNameAr.IsRequired = false;
             resources.ApplyResources(this.txtNameAr, "txtNameAr");
             this.txtNameAr.LockedInModes = 25;
@@ -93,6 +99,7 @@
             // 
             this.txtNameEng.BackColor = System.Drawing.Color.White;
             this.txtNameEng.Clearable = true;
+            this.txtNameEng.ContextSearchId = 0;
             this.txtNameEng.IsRequired = false;
             resources.ApplyResources(this.txtNameEng, "txtNameEng");
             this.txtNameEng.LockedInModes = 25;
@@ -112,13 +119,33 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // txtNo
+            // 
+            this.txtNo.BackColor = System.Drawing.Color.White;
+            this.txtNo.Clearable = true;
+            this.txtNo.ContextSearchId = 0;
+            resources.ApplyResources(this.txtNo, "txtNo");
+            this.txtNo.IsRequired = true;
+            this.txtNo.LockedInModes = 25;
+            this.txtNo.Name = "txtNo";
+            // 
+            // lblNo
+            // 
+            resources.ApplyResources(this.lblNo, "lblNo");
+            this.lblNo.Clearable = true;
+            this.lblNo.ContextSearchId = 0;
+            this.lblNo.IsRequired = false;
+            this.lblNo.LockedInModes = 25;
+            this.lblNo.Name = "lblNo";
+            // 
             // trvAssetCatogryTree
             // 
             this.trvAssetCatogryTree.BackColor = System.Drawing.Color.White;
             this.trvAssetCatogryTree.Clearable = true;
+            this.trvAssetCatogryTree.ContextSearchId = 0;
             this.trvAssetCatogryTree.IsRequired = false;
             resources.ApplyResources(this.trvAssetCatogryTree, "trvAssetCatogryTree");
-            this.trvAssetCatogryTree.LockedInModes = 25;
+            this.trvAssetCatogryTree.LockedInModes = 2;
             this.trvAssetCatogryTree.Name = "trvAssetCatogryTree";
             this.trvAssetCatogryTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvAssetCatogryTree_AfterSelect);
             this.trvAssetCatogryTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trvAssetCatogryTree_MouseDown);
@@ -127,7 +154,8 @@
             // 
             this.TreeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.copyAndPasteToolStripMenuItem});
+            this.copyAndPasteToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.TreeViewContext.Name = "TreeViewContext";
             resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
             // 
@@ -143,22 +171,11 @@
             resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
             this.copyAndPasteToolStripMenuItem.Click += new System.EventHandler(this.copyAndPasteToolStripMenuItem_Click);
             // 
-            // txtNo
+            // deleteToolStripMenuItem
             // 
-            this.txtNo.BackColor = System.Drawing.Color.White;
-            this.txtNo.Clearable = true;
-            resources.ApplyResources(this.txtNo, "txtNo");
-            this.txtNo.IsRequired = true;
-            this.txtNo.LockedInModes = 25;
-            this.txtNo.Name = "txtNo";
-            // 
-            // lblNo
-            // 
-            resources.ApplyResources(this.lblNo, "lblNo");
-            this.lblNo.Clearable = true;
-            this.lblNo.IsRequired = false;
-            this.lblNo.LockedInModes = 25;
-            this.lblNo.Name = "lblNo";
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // frmAssetCatogry
             // 
@@ -197,6 +214,7 @@
         private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
         private Controls.TextBox txtNo;
         private Controls.Label lblNo;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
 
 
     }

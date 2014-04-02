@@ -382,19 +382,25 @@
     <value>217, 17</value>
   </metadata>
   <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="addToolStripMenuItem.Text" xml:space="preserve">
     <value>Add</value>
   </data>
   <data name="copyAndPasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="copyAndPasteToolStripMenuItem.Text" xml:space="preserve">
     <value>Copy</value>
   </data>
+  <data name="deleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 22</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="TreeViewContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 48</value>
+    <value>108, 70</value>
   </data>
   <data name="&gt;&gt;TreeViewContext.Name" xml:space="preserve">
     <value>TreeViewContext</value>
@@ -421,6 +427,12 @@
     <value>copyAndPasteToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;copyAndPasteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deleteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

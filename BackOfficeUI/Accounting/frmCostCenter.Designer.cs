@@ -46,6 +46,7 @@
             this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartBalance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClosingBalance)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             this.txtNo.BackColor = System.Drawing.Color.White;
             this.txtNo.Clearable = true;
+            this.txtNo.ContextSearchId = 0;
             resources.ApplyResources(this.txtNo, "txtNo");
             this.txtNo.IsRequired = true;
             this.txtNo.LockedInModes = 25;
@@ -65,6 +67,7 @@
             // 
             resources.ApplyResources(this.lblNo, "lblNo");
             this.lblNo.Clearable = true;
+            this.lblNo.ContextSearchId = 0;
             this.lblNo.IsRequired = false;
             this.lblNo.LockedInModes = 25;
             this.lblNo.Name = "lblNo";
@@ -73,6 +76,7 @@
             // 
             resources.ApplyResources(this.chkIsDiable, "chkIsDiable");
             this.chkIsDiable.Clearable = true;
+            this.chkIsDiable.ContextSearchId = 0;
             this.chkIsDiable.ForeColor = System.Drawing.Color.Black;
             this.chkIsDiable.IsRequired = false;
             this.chkIsDiable.LockedInModes = 25;
@@ -83,6 +87,7 @@
             // 
             resources.ApplyResources(this.lblNameAr, "lblNameAr");
             this.lblNameAr.Clearable = true;
+            this.lblNameAr.ContextSearchId = 0;
             this.lblNameAr.IsRequired = false;
             this.lblNameAr.LockedInModes = 25;
             this.lblNameAr.Name = "lblNameAr";
@@ -91,6 +96,7 @@
             // 
             resources.ApplyResources(this.lblNameEng, "lblNameEng");
             this.lblNameEng.Clearable = true;
+            this.lblNameEng.ContextSearchId = 0;
             this.lblNameEng.IsRequired = false;
             this.lblNameEng.LockedInModes = 25;
             this.lblNameEng.Name = "lblNameEng";
@@ -99,6 +105,7 @@
             // 
             resources.ApplyResources(this.lblIsDisable, "lblIsDisable");
             this.lblIsDisable.Clearable = true;
+            this.lblIsDisable.ContextSearchId = 0;
             this.lblIsDisable.IsRequired = false;
             this.lblIsDisable.LockedInModes = 25;
             this.lblIsDisable.Name = "lblIsDisable";
@@ -107,6 +114,7 @@
             // 
             this.txtNameAr.BackColor = System.Drawing.Color.White;
             this.txtNameAr.Clearable = true;
+            this.txtNameAr.ContextSearchId = 0;
             this.txtNameAr.IsRequired = false;
             resources.ApplyResources(this.txtNameAr, "txtNameAr");
             this.txtNameAr.LockedInModes = 25;
@@ -116,6 +124,7 @@
             // 
             this.txtNameEng.BackColor = System.Drawing.Color.White;
             this.txtNameEng.Clearable = true;
+            this.txtNameEng.ContextSearchId = 0;
             this.txtNameEng.IsRequired = false;
             resources.ApplyResources(this.txtNameEng, "txtNameEng");
             this.txtNameEng.LockedInModes = 25;
@@ -125,6 +134,7 @@
             // 
             resources.ApplyResources(this.lblClosingBalance, "lblClosingBalance");
             this.lblClosingBalance.Clearable = true;
+            this.lblClosingBalance.ContextSearchId = 0;
             this.lblClosingBalance.IsRequired = false;
             this.lblClosingBalance.LockedInModes = 25;
             this.lblClosingBalance.Name = "lblClosingBalance";
@@ -151,6 +161,7 @@
             // 
             this.txtStartBalance.BackColor = System.Drawing.Color.White;
             this.txtStartBalance.Clearable = true;
+            this.txtStartBalance.ContextSearchId = 0;
             this.txtStartBalance.IsRequired = false;
             resources.ApplyResources(this.txtStartBalance, "txtStartBalance");
             this.txtStartBalance.LockedInModes = 25;
@@ -165,6 +176,7 @@
             // 
             this.txtClosingBalance.BackColor = System.Drawing.Color.White;
             this.txtClosingBalance.Clearable = true;
+            this.txtClosingBalance.ContextSearchId = 0;
             this.txtClosingBalance.IsRequired = false;
             resources.ApplyResources(this.txtClosingBalance, "txtClosingBalance");
             this.txtClosingBalance.LockedInModes = 25;
@@ -179,6 +191,7 @@
             // 
             resources.ApplyResources(this.lblStartBalance, "lblStartBalance");
             this.lblStartBalance.Clearable = true;
+            this.lblStartBalance.ContextSearchId = 0;
             this.lblStartBalance.IsRequired = false;
             this.lblStartBalance.LockedInModes = 25;
             this.lblStartBalance.Name = "lblStartBalance";
@@ -187,9 +200,10 @@
             // 
             this.trvCostCenterTree.BackColor = System.Drawing.Color.White;
             this.trvCostCenterTree.Clearable = true;
+            this.trvCostCenterTree.ContextSearchId = 0;
             this.trvCostCenterTree.IsRequired = false;
             resources.ApplyResources(this.trvCostCenterTree, "trvCostCenterTree");
-            this.trvCostCenterTree.LockedInModes = 25;
+            this.trvCostCenterTree.LockedInModes = 2;
             this.trvCostCenterTree.Name = "trvCostCenterTree";
             this.trvCostCenterTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvCostCenterTree_AfterSelect);
             this.trvCostCenterTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trvCostCenterTree_MouseDown);
@@ -198,7 +212,8 @@
             // 
             this.TreeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.copyAndPasteToolStripMenuItem});
+            this.copyAndPasteToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.TreeViewContext.Name = "TreeViewContext";
             resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
             // 
@@ -213,6 +228,12 @@
             this.copyAndPasteToolStripMenuItem.Name = "copyAndPasteToolStripMenuItem";
             resources.ApplyResources(this.copyAndPasteToolStripMenuItem, "copyAndPasteToolStripMenuItem");
             this.copyAndPasteToolStripMenuItem.Click += new System.EventHandler(this.copyAndPasteToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // frmCostCenter
             // 
@@ -258,6 +279,7 @@
         private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
         private Controls.NumericUpDown txtClosingBalance;
         private Controls.NumericUpDown txtStartBalance;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
 
 
     }

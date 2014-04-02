@@ -75,7 +75,6 @@ namespace BackOfficeBL.Accounting
                 AssetCatogry account = new AssetCatogry();
                 account.FromDbAssetCatogry(dbAssetCatogry);
                 account.IsNew = false;
-                account.IsNew = false;
                 account.IsCopy = false;
                 return account;
             }

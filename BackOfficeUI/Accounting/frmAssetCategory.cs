@@ -130,7 +130,6 @@ namespace BackOfficeUI.Accounting
                     ShowGUI();
                 }
             }
-            trvAssetCatogryTree.Enabled = false;
         }
 
         private void frmAssetCatogry_Delete(object sender, ref bool _status)
@@ -169,6 +168,11 @@ namespace BackOfficeUI.Accounting
 
         private void trvAssetCatogryTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            if (this.FormStatus == FormStatusEnum.Edit)
+            {
+                trvAssetCatogryTree.SelectedNode = trvAssetCatogryTree.Nodes.Find(trvAssetCatogryTree.SelectedNode.Tag.ToString(), true)[0];
+                return;
+            }
             string AssetCatogryNo = trvAssetCatogryTree.SelectedNode != null ? trvAssetCatogryTree.SelectedNode.Tag.ToString() : "";
             if (AssetCatogryNo != "")
             {
@@ -180,7 +184,12 @@ namespace BackOfficeUI.Accounting
 
         private void trvAssetCatogryTree_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button != MouseButtons.Right) return;
+            if (e.Button != MouseButtons.Right || this.FormStatus != FormStatusEnum.Edit)
+            {
+                TreeViewContext.Enabled = false;
+                return;
+            }
+            TreeViewContext.Enabled = true;
             var treeNodeAtMousePosition = trvAssetCatogryTree.GetNodeAt(trvAssetCatogryTree.PointToClient(Control.MousePosition));
             var selectedTreeNode = trvAssetCatogryTree.SelectedNode;
             if (treeNodeAtMousePosition != null)
@@ -202,9 +211,27 @@ namespace BackOfficeUI.Accounting
             }
             ShowGUI();
             this.FormStatus = FormStatusEnum.AddNew;
-            trvAssetCatogryTree.Enabled = false;
+            //trvAssetCatogryTree.Enabled = false;
         }
 
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvAssetCatogryTree.SelectedNode != null && trvAssetCatogryTree.SelectedNode.ToString() != "")
+            {
+                CrAssetCatogry = AssetCatogry.FindByAstCatId(Convert.ToInt32(trvAssetCatogryTree.SelectedNode.Tag));
+                DataDeleteResult result = CrAssetCatogry.Delete();
+                if (result.DeleteStatus == false)
+                {
+                    MessageBox.Show(result.ErrorMessage);
+                }
+                else
+                {
+                    CrAssetCatogry = null;
+                    ShowGUI();
+                    this.FormStatus = FormStatusEnum.DataPreview;
+                }
+            }
+        }
 
         private void copyAndPasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -216,10 +243,9 @@ namespace BackOfficeUI.Accounting
                 CrAssetCatogry.AstCatId = Convert.ToInt32(null);
                 ShowGUI();
                 this.FormStatus = FormStatusEnum.Edit;
-                trvAssetCatogryTree.Lock();
-                trvAssetCatogryTree.Focus();
             }
         }
+
 
 
     }

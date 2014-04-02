@@ -39,6 +39,7 @@ namespace BackOfficeUI.Accounting
                 cmbAccountType.SelectedValue = CrAccount.AccountTypeId != null ? CrAccount.AccountTypeId : 1;
                 cmbAccountCategory.SelectedValue = CrAccount.AccountCategoryId != null ? CrAccount.AccountCategoryId : 1;
                 chkStopAccount.Checked = CrAccount.IsDisableAccount != null ? CrAccount.IsDisableAccount : false;
+                chkSubAccount.Checked = CrAccount.IsSubAccount != null ? CrAccount.IsSubAccount : false;
                 ///
                 txtAccountRef1.Text = CrAccount.AccountRef1;
                 txtAccountRef2.Text = CrAccount.AccountRef2;
@@ -49,6 +50,7 @@ namespace BackOfficeUI.Accounting
                 txtAccountNameEng.Text = "";
                 txtAccountNo.Text = "";
                 chkStopAccount.Checked = false;
+                chkSubAccount.Checked = false;
                 txtAccountRef1.Text = "";
                 txtAccountRef2.Text = "";
                 LoadAccountTree();
@@ -115,6 +117,7 @@ namespace BackOfficeUI.Accounting
                 CrAccount.ParentId = trvAccountTree.SelectedNode.Tag.ToString();
             CrAccount.AccountID = txtAccountNo.Text;
             CrAccount.IsDisableAccount = chkStopAccount.Checked;
+            CrAccount.IsSubAccount = chkSubAccount.Checked;
             CrAccount.AccountRef1 = txtAccountRef1.Text;
             CrAccount.AccountRef2 = txtAccountRef2.Text;
         }
@@ -189,7 +192,7 @@ namespace BackOfficeUI.Accounting
             CrAccount = new BackOfficeBL.Accounting.Account();
             CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
             CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
-            txtAccountNo.Text = Account.getNewId(trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : "");
+            txtAccountNo.Text = Account.getNewId((trvAccountTree.SelectedNode != null ? trvAccountTree.SelectedNode.Tag.ToString() : ""),false);
         }
 
         #endregion
@@ -212,7 +215,7 @@ namespace BackOfficeUI.Accounting
 
         private void trvAccountTree_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button != MouseButtons.Right || this.FormStatus != FormStatusEnum.Edit)
+            if (e.Button != MouseButtons.Right || this.FormStatus != FormStatusEnum.Edit||chkSubAccount.Checked)
             {
                 TreeViewContext.Enabled = false;
                 return;
@@ -236,7 +239,7 @@ namespace BackOfficeUI.Accounting
             CrAccount = new BackOfficeBL.Accounting.Account();
             CrAccounttype = new BackOfficeBL.Accounting.Accounttype();
             CrAccountCategory = new BackOfficeBL.Accounting.AccountCategory();
-            CrAccount.AccountID = Account.getNewId(trvAccountTree.SelectedNode.Tag.ToString());
+            CrAccount.AccountID = Account.getNewId(trvAccountTree.SelectedNode.Tag.ToString(),false);
             if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
             {
                 var parent = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
@@ -272,7 +275,7 @@ namespace BackOfficeUI.Accounting
             if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
             {
                 CrAccount = Account.FindByAccountID(trvAccountTree.SelectedNode.Tag.ToString());
-                CrAccount.AccountID = Account.getNewId(CrAccount.ParentId);
+                CrAccount.AccountID = Account.getNewId(CrAccount.ParentId,CrAccount.IsSubAccount);
                 CrAccount.IsNew = true;
                 CrAccount.IsCopy = true;
                 ShowGUI();
@@ -282,6 +285,10 @@ namespace BackOfficeUI.Accounting
             }
         }
 
+        private void chkSubAccount_CheckedChanged(object sender, EventArgs e)
+        {
+            txtAccountNo.Text = Account.getNewId(trvAccountTree.SelectedNode.Tag.ToString(), chkSubAccount.Checked);
+        }
         #endregion
 
         #region search area
@@ -291,6 +298,7 @@ namespace BackOfficeUI.Accounting
             trvAccountTree.SelectedNode = trvAccountTree.Nodes.Find(accountId.ToString(), true)[0];
         }
         #endregion
+
 
 
     }

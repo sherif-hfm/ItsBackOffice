@@ -47,6 +47,8 @@
             this.chkStopAccount = new BackOfficeUI.Controls.CheckBox();
             this.cmbAccountType = new BackOfficeUI.Controls.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkSubAccount = new BackOfficeUI.Controls.CheckBox();
+            this.lblSubAccount = new BackOfficeUI.Controls.Label();
             this.cmbAccountCategory = new BackOfficeUI.Controls.ComboBox();
             this.TreeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,9 +62,10 @@
             // 
             this.trvAccountTree.BackColor = System.Drawing.Color.White;
             this.trvAccountTree.Clearable = true;
+            this.trvAccountTree.ContextSearchId = 0;
             this.trvAccountTree.IsRequired = false;
             resources.ApplyResources(this.trvAccountTree, "trvAccountTree");
-            this.trvAccountTree.LockedInModes = 25;
+            this.trvAccountTree.LockedInModes = 2;
             this.trvAccountTree.Name = "trvAccountTree";
             this.trvAccountTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvAccountTree_AfterSelect);
             this.trvAccountTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trvAccountTree_MouseDown);
@@ -71,6 +74,7 @@
             // 
             resources.ApplyResources(this.lblAccountNo, "lblAccountNo");
             this.lblAccountNo.Clearable = true;
+            this.lblAccountNo.ContextSearchId = 0;
             this.lblAccountNo.IsRequired = false;
             this.lblAccountNo.LockedInModes = 25;
             this.lblAccountNo.Name = "lblAccountNo";
@@ -79,6 +83,7 @@
             // 
             resources.ApplyResources(this.lblAccountNameAr, "lblAccountNameAr");
             this.lblAccountNameAr.Clearable = true;
+            this.lblAccountNameAr.ContextSearchId = 0;
             this.lblAccountNameAr.IsRequired = false;
             this.lblAccountNameAr.LockedInModes = 25;
             this.lblAccountNameAr.Name = "lblAccountNameAr";
@@ -87,6 +92,7 @@
             // 
             resources.ApplyResources(this.lblAccountNameEng, "lblAccountNameEng");
             this.lblAccountNameEng.Clearable = true;
+            this.lblAccountNameEng.ContextSearchId = 0;
             this.lblAccountNameEng.IsRequired = false;
             this.lblAccountNameEng.LockedInModes = 25;
             this.lblAccountNameEng.Name = "lblAccountNameEng";
@@ -95,6 +101,7 @@
             // 
             resources.ApplyResources(this.lblAccountCategory, "lblAccountCategory");
             this.lblAccountCategory.Clearable = true;
+            this.lblAccountCategory.ContextSearchId = 0;
             this.lblAccountCategory.IsRequired = false;
             this.lblAccountCategory.LockedInModes = 25;
             this.lblAccountCategory.Name = "lblAccountCategory";
@@ -103,6 +110,7 @@
             // 
             this.txtAccountNo.BackColor = System.Drawing.Color.White;
             this.txtAccountNo.Clearable = false;
+            this.txtAccountNo.ContextSearchId = 0;
             resources.ApplyResources(this.txtAccountNo, "txtAccountNo");
             this.txtAccountNo.IsRequired = true;
             this.txtAccountNo.LockedInModes = 25;
@@ -112,6 +120,7 @@
             // 
             this.txtAccountNameAr.BackColor = System.Drawing.Color.White;
             this.txtAccountNameAr.Clearable = true;
+            this.txtAccountNameAr.ContextSearchId = 0;
             this.txtAccountNameAr.IsRequired = true;
             resources.ApplyResources(this.txtAccountNameAr, "txtAccountNameAr");
             this.txtAccountNameAr.LockedInModes = 25;
@@ -121,6 +130,7 @@
             // 
             this.txtAccountNameEng.BackColor = System.Drawing.Color.White;
             this.txtAccountNameEng.Clearable = true;
+            this.txtAccountNameEng.ContextSearchId = 0;
             this.txtAccountNameEng.IsRequired = true;
             resources.ApplyResources(this.txtAccountNameEng, "txtAccountNameEng");
             this.txtAccountNameEng.LockedInModes = 25;
@@ -130,6 +140,7 @@
             // 
             resources.ApplyResources(this.lblAccountRef1, "lblAccountRef1");
             this.lblAccountRef1.Clearable = true;
+            this.lblAccountRef1.ContextSearchId = 0;
             this.lblAccountRef1.IsRequired = false;
             this.lblAccountRef1.LockedInModes = 25;
             this.lblAccountRef1.Name = "lblAccountRef1";
@@ -138,6 +149,7 @@
             // 
             this.txtAccountRef1.BackColor = System.Drawing.Color.White;
             this.txtAccountRef1.Clearable = true;
+            this.txtAccountRef1.ContextSearchId = 0;
             this.txtAccountRef1.IsRequired = false;
             resources.ApplyResources(this.txtAccountRef1, "txtAccountRef1");
             this.txtAccountRef1.LockedInModes = 25;
@@ -147,6 +159,7 @@
             // 
             resources.ApplyResources(this.lblAccountRef2, "lblAccountRef2");
             this.lblAccountRef2.Clearable = true;
+            this.lblAccountRef2.ContextSearchId = 0;
             this.lblAccountRef2.IsRequired = false;
             this.lblAccountRef2.LockedInModes = 25;
             this.lblAccountRef2.Name = "lblAccountRef2";
@@ -155,6 +168,7 @@
             // 
             this.txtAccountRef2.BackColor = System.Drawing.Color.White;
             this.txtAccountRef2.Clearable = true;
+            this.txtAccountRef2.ContextSearchId = 0;
             this.txtAccountRef2.IsRequired = false;
             resources.ApplyResources(this.txtAccountRef2, "txtAccountRef2");
             this.txtAccountRef2.LockedInModes = 25;
@@ -164,6 +178,7 @@
             // 
             resources.ApplyResources(this.lblStopAccount, "lblStopAccount");
             this.lblStopAccount.Clearable = true;
+            this.lblStopAccount.ContextSearchId = 0;
             this.lblStopAccount.IsRequired = false;
             this.lblStopAccount.LockedInModes = 25;
             this.lblStopAccount.Name = "lblStopAccount";
@@ -172,6 +187,7 @@
             // 
             resources.ApplyResources(this.lblAccountType, "lblAccountType");
             this.lblAccountType.Clearable = true;
+            this.lblAccountType.ContextSearchId = 0;
             this.lblAccountType.IsRequired = false;
             this.lblAccountType.LockedInModes = 25;
             this.lblAccountType.Name = "lblAccountType";
@@ -180,6 +196,7 @@
             // 
             resources.ApplyResources(this.chkStopAccount, "chkStopAccount");
             this.chkStopAccount.Clearable = true;
+            this.chkStopAccount.ContextSearchId = 0;
             this.chkStopAccount.ForeColor = System.Drawing.Color.Black;
             this.chkStopAccount.IsRequired = false;
             this.chkStopAccount.LockedInModes = 25;
@@ -190,6 +207,7 @@
             // 
             this.cmbAccountType.BackColor = System.Drawing.Color.White;
             this.cmbAccountType.Clearable = true;
+            this.cmbAccountType.ContextSearchId = 0;
             this.cmbAccountType.DefaultIndex = -1;
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.IsRequired = true;
@@ -199,6 +217,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkSubAccount);
+            this.groupBox1.Controls.Add(this.lblSubAccount);
             this.groupBox1.Controls.Add(this.cmbAccountCategory);
             this.groupBox1.Controls.Add(this.txtAccountNo);
             this.groupBox1.Controls.Add(this.cmbAccountType);
@@ -219,10 +239,32 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // chkSubAccount
+            // 
+            resources.ApplyResources(this.chkSubAccount, "chkSubAccount");
+            this.chkSubAccount.Clearable = true;
+            this.chkSubAccount.ContextSearchId = 0;
+            this.chkSubAccount.ForeColor = System.Drawing.Color.Black;
+            this.chkSubAccount.IsRequired = false;
+            this.chkSubAccount.LockedInModes = 25;
+            this.chkSubAccount.Name = "chkSubAccount";
+            this.chkSubAccount.UseVisualStyleBackColor = true;
+            this.chkSubAccount.CheckedChanged += new System.EventHandler(this.chkSubAccount_CheckedChanged);
+            // 
+            // lblSubAccount
+            // 
+            resources.ApplyResources(this.lblSubAccount, "lblSubAccount");
+            this.lblSubAccount.Clearable = true;
+            this.lblSubAccount.ContextSearchId = 0;
+            this.lblSubAccount.IsRequired = false;
+            this.lblSubAccount.LockedInModes = 25;
+            this.lblSubAccount.Name = "lblSubAccount";
+            // 
             // cmbAccountCategory
             // 
             this.cmbAccountCategory.BackColor = System.Drawing.Color.White;
             this.cmbAccountCategory.Clearable = true;
+            this.cmbAccountCategory.ContextSearchId = 0;
             this.cmbAccountCategory.DefaultIndex = -1;
             this.cmbAccountCategory.FormattingEnabled = true;
             this.cmbAccountCategory.IsRequired = true;
@@ -304,6 +346,8 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyAndPasteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private Controls.CheckBox chkSubAccount;
+        private Controls.Label lblSubAccount;
 
     }
 }

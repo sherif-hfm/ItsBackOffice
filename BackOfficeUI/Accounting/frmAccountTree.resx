@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;trvAccountTree.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="lblAccountNo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -165,7 +165,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAccountNo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="lblAccountNameAr.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -192,7 +192,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAccountNameAr.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="lblAccountNameEng.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -219,7 +219,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAccountNameEng.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="lblAccountCategory.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -246,7 +246,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAccountCategory.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="txtAccountNo.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -273,7 +273,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtAccountNo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="txtAccountNameAr.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 60</value>
@@ -297,7 +297,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtAccountNameAr.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="txtAccountNameEng.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 93</value>
@@ -321,7 +321,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtAccountNameEng.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="lblAccountRef1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -348,7 +348,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAccountRef1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="txtAccountRef1.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 195</value>
@@ -372,7 +372,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtAccountRef1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="lblAccountRef2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -403,7 +403,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAccountRef2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="txtAccountRef2.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 228</value>
@@ -427,7 +427,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtAccountRef2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="lblStopAccount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -454,7 +454,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblStopAccount.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="lblAccountType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,7 +481,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAccountType.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="chkStopAccount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -505,7 +505,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;chkStopAccount.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="cmbAccountType.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 127</value>
@@ -526,7 +526,64 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;cmbAccountType.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="chkSubAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkSubAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkSubAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 295</value>
+  </data>
+  <data name="chkSubAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="chkSubAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;chkSubAccount.Name" xml:space="preserve">
+    <value>chkSubAccount</value>
+  </data>
+  <data name="&gt;&gt;chkSubAccount.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.CheckBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chkSubAccount.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chkSubAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblSubAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSubAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSubAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 293</value>
+  </data>
+  <data name="lblSubAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 19</value>
+  </data>
+  <data name="lblSubAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblSubAccount.Text" xml:space="preserve">
+    <value>Sub Account</value>
+  </data>
+  <data name="&gt;&gt;lblSubAccount.Name" xml:space="preserve">
+    <value>lblSubAccount</value>
+  </data>
+  <data name="&gt;&gt;lblSubAccount.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.Label, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblSubAccount.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblSubAccount.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="cmbAccountCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 161</value>
@@ -547,7 +604,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;cmbAccountCategory.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>623, 47</value>
@@ -571,31 +628,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="TreeViewContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>217, 17</value>
   </metadata>
   <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="addToolStripMenuItem.Text" xml:space="preserve">
     <value>Add</value>
   </data>
   <data name="copyAndPasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="copyAndPasteToolStripMenuItem.Text" xml:space="preserve">
     <value>Copy</value>
   </data>
   <data name="deleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="TreeViewContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 92</value>
+    <value>108, 70</value>
   </data>
   <data name="&gt;&gt;TreeViewContext.Name" xml:space="preserve">
     <value>TreeViewContext</value>
