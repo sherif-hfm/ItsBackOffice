@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.labelVoucherType = new BackOfficeUI.Controls.Label();
-            this.comboBox1 = new BackOfficeUI.Controls.ComboBox();
+            this.comboBoxVoucherType = new BackOfficeUI.Controls.ComboBox();
             this.labelvoucherID = new BackOfficeUI.Controls.Label();
             this.textBoxVoucherID = new BackOfficeUI.Controls.TextBox();
             this.labelDate = new BackOfficeUI.Controls.Label();
@@ -49,19 +49,20 @@
             this.labelVoucherType.TabIndex = 2;
             this.labelVoucherType.Text = "Voucher Type :";
             // 
-            // comboBox1
+            // comboBoxVoucherType
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Clearable = true;
-            this.comboBox1.ContextSearchId = 0;
-            this.comboBox1.DefaultIndex = -1;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IsRequired = false;
-            this.comboBox1.Location = new System.Drawing.Point(136, 58);
-            this.comboBox1.LockedInModes = 25;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 3;
+            this.comboBoxVoucherType.BackColor = System.Drawing.Color.White;
+            this.comboBoxVoucherType.Clearable = true;
+            this.comboBoxVoucherType.ContextSearchId = 0;
+            this.comboBoxVoucherType.DefaultIndex = -1;
+            this.comboBoxVoucherType.FormattingEnabled = true;
+            this.comboBoxVoucherType.IsRequired = false;
+            this.comboBoxVoucherType.Location = new System.Drawing.Point(136, 58);
+            this.comboBoxVoucherType.LockedInModes = 25;
+            this.comboBoxVoucherType.Name = "comboBoxVoucherType";
+            this.comboBoxVoucherType.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxVoucherType.TabIndex = 3;
+            this.comboBoxVoucherType.SelectedIndexChanged += new System.EventHandler(this.comboBoxVoucherType_SelectedIndexChanged);
             // 
             // labelvoucherID
             // 
@@ -122,12 +123,12 @@
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.textBoxVoucherID);
             this.Controls.Add(this.labelvoucherID);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxVoucherType);
             this.Controls.Add(this.labelVoucherType);
             this.Name = "frmTransactions";
             this.Text = "frmTransactions";
             this.Controls.SetChildIndex(this.labelVoucherType, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.comboBoxVoucherType, 0);
             this.Controls.SetChildIndex(this.labelvoucherID, 0);
             this.Controls.SetChildIndex(this.textBoxVoucherID, 0);
             this.Controls.SetChildIndex(this.labelDate, 0);
@@ -140,7 +141,7 @@
         #endregion
 
         private Controls.Label labelVoucherType;
-        private Controls.ComboBox comboBox1;
+        private Controls.ComboBox comboBoxVoucherType;
         private Controls.Label labelvoucherID;
         private Controls.TextBox textBoxVoucherID;
         private Controls.Label labelDate;
