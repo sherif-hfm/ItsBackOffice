@@ -54,6 +54,7 @@
     <Compile Include="Accounting\AssetCategory.cs" />
     <Compile Include="Accounting\CostCenter.cs" />
     <Compile Include="Accounting\TableSequence.cs" />
+    <Compile Include="Accounting\Transactions.cs" />
     <Compile Include="Accounting\VoucherType.cs" />
     <Compile Include="AppInfo.cs" />
     <Compile Include="AppSettings.cs" />

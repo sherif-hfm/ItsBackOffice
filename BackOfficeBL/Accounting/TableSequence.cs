@@ -20,7 +20,7 @@ namespace BackOfficeBL.Accounting
                 {
                     ZerosFormat += "0";
                 }
-                return Year + Items.First().SerialSize.Value.ToString(ZerosFormat);
+                return AppInfo.CurrentYear.EndDate.Year + (Items.First().CurrentValue + 1).ToString(ZerosFormat);
             }
             else
             {

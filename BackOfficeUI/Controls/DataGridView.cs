@@ -32,7 +32,7 @@ namespace BackOfficeUI.Controls
 
         private int mContextSearchId = 0;
         public int ContextSearchId { get { return mContextSearchId; } set { mContextSearchId = value; } }
-        
+
         private bool mClearable = true;
         public bool Clearable { get { return mClearable; } set { mClearable = value; } }
 
@@ -60,7 +60,7 @@ namespace BackOfficeUI.Controls
 
         public void ClearData()
         {
-            this.SelectedRows.Clear();
+            //this.SelectedRows.Clear();
         }
 
         public delegate void FindDelegate(object sender, Dictionary<string, object> _findFields);
