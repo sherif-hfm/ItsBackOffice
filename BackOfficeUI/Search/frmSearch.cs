@@ -130,7 +130,7 @@ namespace BackOfficeUI.Search
 
         private void CreateResultGrid()
         {
-            grdResult = new DataGridView();
+            grdResult = new System.Windows.Forms.DataGridView();
             grdResult.Dock = DockStyle.Top;
             grdResult.Height = 200;
             grdResult.AutoGenerateColumns = false;

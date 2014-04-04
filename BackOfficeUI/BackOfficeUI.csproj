@@ -91,6 +91,12 @@
     <Compile Include="Accounting\frmAccountTree.Designer.cs">
       <DependentUpon>frmAccountTree.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\frmTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmTransactions.Designer.cs">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\frmVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,18 @@
     </Compile>
     <Compile Include="Controls\ComboBox.Designer.cs">
       <DependentUpon>ComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DataGridView.Designer.cs">
+      <DependentUpon>DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DateTimePicker.Designer.cs">
+      <DependentUpon>DateTimePicker.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\NumericUpDown.cs">
       <SubType>Component</SubType>
@@ -286,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmAccountTree.resx">
       <DependentUpon>frmAccountTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmTransactions.resx">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmVoucher.ar-KW.resx">
       <DependentUpon>frmVoucher.cs</DependentUpon>
