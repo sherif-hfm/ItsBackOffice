@@ -119,16 +119,20 @@ namespace BackOfficeUI.Accounting
             if (saveResult.SaveStatus == false)
             {
                 _status = false;
+                dgrdVouchers.Rows[GridSelectedRow].Selected = true;
+                dgrdVouchers_SelectionChanged(dgrdVouchers, new EventArgs());
+
 
             }
             else
             {
                 VouchersList = VoucherType.GetAllVouchers();
                 LoadDataGrid(VouchersList);
+                dgrdVouchers.Rows[VouchersList.Count-1].Selected = true;
+                dgrdVouchers_SelectionChanged(dgrdVouchers, new EventArgs());
             }
             dgrdVouchers.Enabled = true;
-            dgrdVouchers.Rows[GridSelectedRow].Selected = true;
-            dgrdVouchers_SelectionChanged(dgrdVouchers, new EventArgs());
+
 
         }
 

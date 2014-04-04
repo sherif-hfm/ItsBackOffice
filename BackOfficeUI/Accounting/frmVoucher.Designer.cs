@@ -544,7 +544,7 @@
             this.cbxCreditAccounts.ContextSearchId = 0;
             this.cbxCreditAccounts.DefaultIndex = -1;
             this.cbxCreditAccounts.FormattingEnabled = true;
-            this.cbxCreditAccounts.IsRequired = false;
+            this.cbxCreditAccounts.IsRequired = true;
             resources.ApplyResources(this.cbxCreditAccounts, "cbxCreditAccounts");
             this.cbxCreditAccounts.LockedInModes = 25;
             this.cbxCreditAccounts.Name = "cbxCreditAccounts";
