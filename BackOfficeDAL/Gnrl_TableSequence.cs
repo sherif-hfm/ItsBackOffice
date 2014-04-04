@@ -12,11 +12,12 @@ namespace BackOfficeDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Acc_AccountCategory
+    public partial class Gnrl_TableSequence
     {
-        public int CategoryId { get; set; }
-        public string CategoryName_Ara { get; set; }
-        public string CategroyName_Eng { get; set; }
-        public bool IsDisableCategory { get; set; }
+        public string TableName { get; set; }
+        public string UniqueYear { get; set; }
+        public long CurrentValue { get; set; }
+        public string LocationId { get; set; }
+        public Nullable<short> SerialSize { get; set; }
     }
 }

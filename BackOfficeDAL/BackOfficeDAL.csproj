@@ -47,7 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acc_AccountBalances.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Acc_AccountCategory.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_AccountReconcilation.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Acc_Accounts.cs">
@@ -62,10 +68,28 @@
     <Compile Include="Acc_BudgetsDtl.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Acc_CashierTrans.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_CashierTransAccountSetting.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_ChequeBook.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Acc_CostCenter.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Acc_Currancy.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_CurrancyRateHistory.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_Reconcilation.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acc_ReconcilationDtl.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Acc_Voucher.cs">
@@ -74,13 +98,40 @@
     <Compile Include="Acc_VoucherDtl.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Acc_VoucherInvoiceDtl.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Acc_VouchersType.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Acc_VoucherValidation.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Asst_Transfers.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ast_AssetAccountsSetting.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Ast_AssetCatogry.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ast_Assets.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ast_AssetSale.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ast_Depreciation.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ast_DepreciationDtl.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ast_DepreciationMethod.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ast_Revaluated.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Audit.cs" />
@@ -90,6 +141,15 @@
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Gnrl_FinancialYear.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gnrl_LocationType.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gnrl_Loctions.cs">
+      <DependentUpon>NewAppsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gnrl_TableSequence.cs">
       <DependentUpon>NewAppsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Grnl_Audit.cs">

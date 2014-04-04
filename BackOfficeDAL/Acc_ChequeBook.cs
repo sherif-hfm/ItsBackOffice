@@ -12,11 +12,17 @@ namespace BackOfficeDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Acc_AccountCategory
+    public partial class Acc_ChequeBook
     {
-        public int CategoryId { get; set; }
-        public string CategoryName_Ara { get; set; }
-        public string CategroyName_Eng { get; set; }
-        public bool IsDisableCategory { get; set; }
+        public int ChequeBookID { get; set; }
+        public string CheuqeBookName_Ara { get; set; }
+        public string CheuqeBookName_Eng { get; set; }
+        public int ChequeCurrancyId { get; set; }
+        public string BankAccountId { get; set; }
+        public bool IsDisable { get; set; }
+        public int ChequeStartNo { get; set; }
+        public int CHequeEndno { get; set; }
+    
+        public virtual Acc_Accounts Acc_Accounts { get; set; }
     }
 }

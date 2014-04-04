@@ -17,6 +17,7 @@ namespace BackOfficeDAL
         public Ast_AssetCatogry()
         {
             this.Ast_AssetCatogry1 = new HashSet<Ast_AssetCatogry>();
+            this.Ast_Assets = new HashSet<Ast_Assets>();
         }
     
         public int AstCatId { get; set; }
@@ -27,5 +28,6 @@ namespace BackOfficeDAL
     
         public virtual ICollection<Ast_AssetCatogry> Ast_AssetCatogry1 { get; set; }
         public virtual Ast_AssetCatogry Ast_AssetCatogry2 { get; set; }
+        public virtual ICollection<Ast_Assets> Ast_Assets { get; set; }
     }
 }

@@ -14,6 +14,11 @@ namespace BackOfficeDAL
     
     public partial class Acc_VoucherDtl
     {
+        public Acc_VoucherDtl()
+        {
+            this.Acc_VoucherInvoiceDtl = new HashSet<Acc_VoucherInvoiceDtl>();
+        }
+    
         public string VoucherTypeId { get; set; }
         public string VoucherId { get; set; }
         public int YearId { get; set; }
@@ -41,7 +46,7 @@ namespace BackOfficeDAL
         public Nullable<System.DateTime> ModifiedDate { get; set; }
     
         public virtual Acc_Accounts Acc_Accounts { get; set; }
-        public virtual Acc_CostCenter Acc_CostCenter { get; set; }
         public virtual Acc_Voucher Acc_Voucher { get; set; }
+        public virtual ICollection<Acc_VoucherInvoiceDtl> Acc_VoucherInvoiceDtl { get; set; }
     }
 }

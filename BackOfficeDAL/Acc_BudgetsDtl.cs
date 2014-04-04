@@ -27,7 +27,7 @@ namespace BackOfficeDAL
         public System.DateTime BdgtFrom { get; set; }
         public System.DateTime BdgtTo { get; set; }
     
-        public virtual Acc_Accounts Acc_Accounts { get; set; }
         public virtual Acc_Budgets Acc_Budgets { get; set; }
+        public virtual Acc_Accounts Acc_Accounts { get; set; }
     }
 }

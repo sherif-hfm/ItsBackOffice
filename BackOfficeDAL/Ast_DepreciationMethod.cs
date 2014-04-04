@@ -12,11 +12,17 @@ namespace BackOfficeDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Acc_AccountCategory
+    public partial class Ast_DepreciationMethod
     {
-        public int CategoryId { get; set; }
-        public string CategoryName_Ara { get; set; }
-        public string CategroyName_Eng { get; set; }
-        public bool IsDisableCategory { get; set; }
+        public Ast_DepreciationMethod()
+        {
+            this.Ast_Assets = new HashSet<Ast_Assets>();
+        }
+    
+        public int DepreciationId { get; set; }
+        public string DepreciationName_Ara { get; set; }
+        public string DepreciationName_Eng { get; set; }
+    
+        public virtual ICollection<Ast_Assets> Ast_Assets { get; set; }
     }
 }
