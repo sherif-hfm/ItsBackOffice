@@ -54,6 +54,7 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyAndPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reconileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.TreeViewContext.SuspendLayout();
             this.SuspendLayout();
@@ -277,7 +278,8 @@
             this.TreeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
             this.copyAndPasteToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.reconileToolStripMenuItem});
             this.TreeViewContext.Name = "TreeViewContext";
             resources.ApplyResources(this.TreeViewContext, "TreeViewContext");
             // 
@@ -298,6 +300,12 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // reconileToolStripMenuItem
+            // 
+            this.reconileToolStripMenuItem.Name = "reconileToolStripMenuItem";
+            resources.ApplyResources(this.reconileToolStripMenuItem, "reconileToolStripMenuItem");
+            this.reconileToolStripMenuItem.Click += new System.EventHandler(this.reconileToolStripMenuItem_Click);
             // 
             // frmAccountTree
             // 
@@ -348,6 +356,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private Controls.CheckBox chkSubAccount;
         private Controls.Label lblSubAccount;
+        private System.Windows.Forms.ToolStripMenuItem reconileToolStripMenuItem;
 
     }
 }

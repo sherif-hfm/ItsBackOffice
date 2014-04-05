@@ -23,6 +23,13 @@ namespace BackOfficeBL.Accounting
         public List<Acc_Voucher> VoucherDtlLst { get; set; }
 
 
+
+        public void LoadVoucher()
+        {
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            this.VoucherDtlLst = newAppsCnn.Acc_VoucherDtl.Where(a => a.AccountId == this.ReconcileAccountId).Select(a => a.Acc_Voucher).ToList();
+        }
+
         public void FromDbReconcilation(Acc_Reconcilation _dbReconcilation)
         {
             this.ReconcileId = _dbReconcilation.ReconcileId;

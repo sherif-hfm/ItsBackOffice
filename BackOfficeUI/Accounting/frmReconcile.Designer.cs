@@ -133,7 +133,6 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox9);
@@ -151,102 +150,102 @@
             this.groupBox1.Controls.Add(this.lblAccountStatement);
             this.groupBox1.Controls.Add(this.lblCurrentBanckStatementBalance);
             this.groupBox1.Controls.Add(this.lblBanckStatementDate);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // textBox7
             // 
-            resources.ApplyResources(this.textBox7, "textBox7");
             this.textBox7.BackColor = System.Drawing.Color.White;
             this.textBox7.Clearable = true;
             this.textBox7.ContextSearchId = 0;
             this.textBox7.IsRequired = false;
+            resources.ApplyResources(this.textBox7, "textBox7");
             this.textBox7.LockedInModes = 25;
             this.textBox7.Name = "textBox7";
             // 
             // textBox8
             // 
-            resources.ApplyResources(this.textBox8, "textBox8");
             this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.Clearable = true;
             this.textBox8.ContextSearchId = 0;
             this.textBox8.IsRequired = false;
+            resources.ApplyResources(this.textBox8, "textBox8");
             this.textBox8.LockedInModes = 25;
             this.textBox8.Name = "textBox8";
             // 
             // textBox9
             // 
-            resources.ApplyResources(this.textBox9, "textBox9");
             this.textBox9.BackColor = System.Drawing.Color.White;
             this.textBox9.Clearable = true;
             this.textBox9.ContextSearchId = 0;
             this.textBox9.IsRequired = false;
+            resources.ApplyResources(this.textBox9, "textBox9");
             this.textBox9.LockedInModes = 25;
             this.textBox9.Name = "textBox9";
             // 
             // textBox6
             // 
-            resources.ApplyResources(this.textBox6, "textBox6");
             this.textBox6.BackColor = System.Drawing.Color.White;
             this.textBox6.Clearable = true;
             this.textBox6.ContextSearchId = 0;
             this.textBox6.IsRequired = false;
+            resources.ApplyResources(this.textBox6, "textBox6");
             this.textBox6.LockedInModes = 25;
             this.textBox6.Name = "textBox6";
             // 
             // textBox5
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.Clearable = true;
             this.textBox5.ContextSearchId = 0;
             this.textBox5.IsRequired = false;
+            resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.LockedInModes = 25;
             this.textBox5.Name = "textBox5";
             // 
             // textBox4
             // 
-            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.BackColor = System.Drawing.Color.White;
             this.textBox4.Clearable = true;
             this.textBox4.ContextSearchId = 0;
             this.textBox4.IsRequired = false;
+            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.LockedInModes = 25;
             this.textBox4.Name = "textBox4";
             // 
             // textBox3
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Clearable = true;
             this.textBox3.ContextSearchId = 0;
             this.textBox3.IsRequired = false;
+            resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.LockedInModes = 25;
             this.textBox3.Name = "textBox3";
             // 
             // textBox2
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.Clearable = true;
             this.textBox2.ContextSearchId = 0;
             this.textBox2.IsRequired = false;
+            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.LockedInModes = 25;
             this.textBox2.Name = "textBox2";
             // 
             // textBox1
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox1.Clearable = true;
             this.textBox1.ContextSearchId = 0;
             this.textBox1.IsRequired = false;
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.LockedInModes = 25;
             this.textBox1.Name = "textBox1";
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Clearable = true;
@@ -261,6 +260,7 @@
             this.SettlementAmount});
             this.dataGridView1.ContextSearchId = 0;
             this.dataGridView1.IsRequired = false;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.LockedInModes = 25;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -313,6 +313,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmReconcile";
+            this.Find += new BackOfficeUI.Controls.frmBaseDB.FindDelegate(this.frmReconcile_Find);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.groupBox1.ResumeLayout(false);

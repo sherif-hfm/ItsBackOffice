@@ -10,9 +10,16 @@ namespace BackOfficeUI.Accounting
 {
     public partial class frmReconcile : BackOfficeUI.Controls.frmBaseDB
     {
-        public frmReconcile()
+        private BackOfficeBL.Accounting.Reconcile CrReconcile;
+
+        public frmReconcile(string AccountId)
         {
             InitializeComponent();
+        }
+
+        private void frmReconcile_Find(object sender, Dictionary<string, object> _findFields)
+        {
+            var accountId = _findFields["AccountID"];
         }
 
     }

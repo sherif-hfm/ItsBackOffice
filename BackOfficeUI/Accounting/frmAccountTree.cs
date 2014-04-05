@@ -16,6 +16,7 @@ namespace BackOfficeUI.Accounting
         private BackOfficeBL.Accounting.Account CrAccount;
         private BackOfficeBL.Accounting.Accounttype CrAccounttype;
         private BackOfficeBL.Accounting.AccountCategory CrAccountCategory;
+        IControl Parent;
         public frmAccountTree()
         {
             InitializeComponent();
@@ -298,6 +299,18 @@ namespace BackOfficeUI.Accounting
             trvAccountTree.SelectedNode = trvAccountTree.Nodes.Find(accountId.ToString(), true)[0];
         }
         #endregion
+
+        private void reconileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (trvAccountTree.SelectedNode != null && trvAccountTree.SelectedNode.ToString() != "")
+            {
+                var control = new frmReconcile(trvAccountTree.SelectedNode.Tag.ToString());
+                control.MdiParent = this.MdiParent;
+                control.Show();
+                this.Close();
+
+            }
+        }
 
 
 
