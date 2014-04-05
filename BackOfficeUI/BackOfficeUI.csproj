@@ -91,6 +91,12 @@
     <Compile Include="Accounting\frmAccountTree.Designer.cs">
       <DependentUpon>frmAccountTree.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\frmReconcile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmReconcile.Designer.cs">
+      <DependentUpon>frmReconcile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\frmTransactions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmAccountTree.resx">
       <DependentUpon>frmAccountTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmReconcile.ar-KW.resx">
+      <DependentUpon>frmReconcile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmReconcile.resx">
+      <DependentUpon>frmReconcile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmTransactions.resx">
       <DependentUpon>frmTransactions.cs</DependentUpon>
