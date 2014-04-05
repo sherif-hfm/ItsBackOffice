@@ -29,7 +29,7 @@ namespace BackOfficeBL.Search
         public string FullSearchSQL { get; set; }
         public Dictionary<string, object> DataParameters = new Dictionary<string, object>();
         public List<DataGridColumnStyle> ResultGridColumnStyle = new List<DataGridColumnStyle>();
-        
+
         public SearchMaster(int _searchID)
         {
             SearchID = _searchID;
@@ -43,7 +43,7 @@ namespace BackOfficeBL.Search
             {
                 this.FromDbSearchMaster(dbSearchMasters.First());
                 LoadResultGridColumnStyle();
-                SaveResultGridColumnStyle();
+                // SaveResultGridColumnStyle();
                 LoadDbSearchParameters(dbSearchMasters.First());
             }
         }
@@ -118,7 +118,7 @@ namespace BackOfficeBL.Search
             }
             catch (Exception ex)
             {
-                
+
                 throw ex;
             }
         }

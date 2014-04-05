@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9fdb143b02234e69bee2a83e806d773a" Name="Security" ZoomLevel="78">
+      <Diagram DiagramId="9fdb143b02234e69bee2a83e806d773a" Name="Security" ZoomLevel="71">
         <EntityTypeShape EntityType="NewApps.Sec_FormFunctions" Width="1.75" PointX="0.5" PointY="5.75" />
         <EntityTypeShape EntityType="NewApps.Sec_GroupRights" Width="1.875" PointX="3.875" PointY="1.875" />
         <EntityTypeShape EntityType="NewApps.Sec_Groups" Width="1.875" PointX="3.875" PointY="4.5" />
@@ -30,22 +30,67 @@
         <EntityTypeShape EntityType="NewApps.Acc_BudgetsDtl" Width="1.5" PointX="8.3965363690613479" PointY="30.127871363483308" />
         <AssociationConnector Association="NewApps.FK_Acc_BudgetsDtl_Acc_Budgets" />
         </Diagram>
-      <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="30" >
-        <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="0.75" PointY="6.5" />
-        <EntityTypeShape EntityType="NewApps.Acc_Accountype" Width="1.5" PointX="0.75" PointY="3.5" />
-        <EntityTypeShape EntityType="NewApps.Acc_VoucherValidation" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="5" PointY="23.5" />
-        <EntityTypeShape EntityType="NewApps.Ast_AssetCatogry" Width="1.5" PointX="9.8268385090990176" PointY="30.048058404609588" />
-        <AssociationConnector Association="NewApps.FK_Ast_AssetCatogry_Ast_AssetCatogry" />
-        <EntityTypeShape EntityType="NewApps.Acc_CostCenter" Width="1.5" PointX="3.0437759044784012" PointY="29.450065298681178" />
-        <AssociationConnector Association="NewApps.FK_Acc_CostCenter_Acc_CostCenter" />
-        <EntityTypeShape EntityType="NewApps.Acc_Accounts" Width="1.5" PointX="6.2756864867525568" PointY="27.08828684458895" />
-        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_AccountCategory" />
-        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_Accountype" />
-        <EntityTypeShape EntityType="NewApps.Acc_VoucherDtl" Width="1.5" PointX="1.4971161789713037" PointY="21.998395021072774" />
+      <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="65" >
+        <EntityTypeShape EntityType="NewApps.Acc_AccountBalances" Width="1.5" PointX="9.8559588612317839" PointY="1.067535251876123" />
+        <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="4.3846697809103272" PointY="20.004543969409795" />
+        <EntityTypeShape EntityType="NewApps.Acc_AccountReconcilation" Width="1.5" PointX="6.0528247570864977" PointY="7.7314651048423091" />
+        <EntityTypeShape EntityType="NewApps.Acc_Accounts" Width="1.5" PointX="8.51931879507346" PointY="9.60243095904702" />
+        <EntityTypeShape EntityType="NewApps.Acc_Accountype" Width="1.5" PointX="10.648258705925317" PointY="28.168344093565057" />
+        <EntityTypeShape EntityType="NewApps.Acc_CashierTrans" Width="1.5" PointX="11.621919220137372" PointY="11.999050086363708" />
+        <EntityTypeShape EntityType="NewApps.Acc_CashierTransAccountSetting" Width="1.5" PointX="1.727807779669672" PointY="28.524414075782715" />
+        <EntityTypeShape EntityType="NewApps.Acc_ChequeBook" Width="1.5" PointX="1.2716986282131162" PointY="20.722355151885356" />
+        <EntityTypeShape EntityType="NewApps.Acc_CostCenter" Width="1.5" PointX="9.7536341686517147" PointY="0.47435143612062158" />
+        <EntityTypeShape EntityType="NewApps.Acc_CurrancyRateHistory" Width="1.5" PointX="3.2536560666065921" PointY="3.9048659968678217" />
+        <EntityTypeShape EntityType="NewApps.Acc_Reconcilation" Width="1.5" PointX="4.2600064111221609" PointY="27.809736682013487" />
+        <EntityTypeShape EntityType="NewApps.Acc_ReconcilationDtl" Width="1.5" PointX="2.1419150131484095" PointY="16.50976439589158" />
+        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="4.26300304209022" PointY="22.053922082322615" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherDtl" Width="1.5" PointX="8.6588506720302867" PointY="27.00015420978896" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherInvoiceDtl" Width="1.5" PointX="8.3635784631425416" PointY="7.28535524349909" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherValidation" Width="1.5" PointX="1.4086465599986942" PointY="7.1727635446809064" />
+        <EntityTypeShape EntityType="NewApps.Asst_Transfers" Width="1.5" PointX="3.7191562185618823" PointY="31.902789860918553" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetAccountsSetting" Width="1.5" PointX="9.16868201138856" PointY="9.1965156687407354" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetCatogry" Width="1.5" PointX="8.5905172902115226" PointY="7.1011682036803885" />
+        <EntityTypeShape EntityType="NewApps.Ast_Assets" Width="1.5" PointX="0.88107045222123648" PointY="6.9625356229779012" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetSale" Width="1.5" PointX="2.1284065256493196" PointY="17.473990895540449" />
+        <EntityTypeShape EntityType="NewApps.Ast_Depreciation" Width="1.5" PointX="0.43091722411611921" PointY="20.368863323875175" />
+        <EntityTypeShape EntityType="NewApps.Ast_DepreciationDtl" Width="1.5" PointX="5.3084770987315455" PointY="26.421531257415904" />
+        <EntityTypeShape EntityType="NewApps.Ast_DepreciationMethod" Width="1.5" PointX="6.0565143367538763" PointY="4.1930555720781237" />
+        <EntityTypeShape EntityType="NewApps.Ast_Revaluated" Width="1.5" PointX="0.26238603529631443" PointY="28.567700891088556" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_LocationType" Width="1.5" PointX="10.852868260281564" PointY="19.734978491317005" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_Loctions" Width="1.5" PointX="5.4129379249238116" PointY="19.212657997018034" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_TableSequence" Width="1.5" PointX="0.58708614510814017" PointY="30.472820281271272" />
+        <AssociationConnector Association="NewApps.FK_Acc_AccountBalances_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_AccountReconcilation_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_CashierTransAccountSetting_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_CashierTransAccountSetting_Acc_Accounts1" />
+        <AssociationConnector Association="NewApps.FK_Acc_CashierTransAccountSetting_Acc_Accounts2" />
+        <AssociationConnector Association="NewApps.FK_Acc_ChequeBook_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_Reconcilation_Acc_Accounts" />
         <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Accounts" />
-        <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_CostCenter" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts1" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts2" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts3" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts4" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts5" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts6" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetSale_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_CashierTrans_Acc_Loctions" />
+        <AssociationConnector Association="NewApps.FK_Acc_CostCenter_Acc_CostCenter" />
+        <AssociationConnector Association="NewApps.FK_Ast_Assets_Acc_CostCenter" />
+        <AssociationConnector Association="NewApps.FK_Acc_ReconcilationDtl_Acc_Reconcilation" />
+        <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_Loctions" />
         <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" />
+        <AssociationConnector Association="NewApps.FK_Acc_VoucherInvoiceDtl_Acc_VoucherDtl" />
+        <AssociationConnector Association="NewApps.FK_Asst_Transfers_Ast_Assets" />
+        <AssociationConnector Association="NewApps.FK_Ast_AssetCatogry_Ast_AssetCatogry" />
+        <AssociationConnector Association="NewApps.FK_Ast_Assets_Ast_AssetCatogry" />
+        <AssociationConnector Association="NewApps.FK_Ast_Assets_Acc_Loctions" />
+        <AssociationConnector Association="NewApps.FK_Ast_Assets_Ast_DepreciationMethod" />
+        <AssociationConnector Association="NewApps.FK_Ast_DepreciationDtl_Ast_DepreciationDtl" />
+        <AssociationConnector Association="NewApps.FK_Ast_Revaluated_Ast_Assets" />
+        <AssociationConnector Association="NewApps.FK_Ast_DepreciationDtl_Ast_Depreciation" />
+        <AssociationConnector Association="NewApps.FK_Gnrl_Loctions_Gnrl_Loctions" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

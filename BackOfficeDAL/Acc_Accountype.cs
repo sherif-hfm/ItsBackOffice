@@ -14,16 +14,9 @@ namespace BackOfficeDAL
     
     public partial class Acc_Accountype
     {
-        public Acc_Accountype()
-        {
-            this.Acc_Accounts = new HashSet<Acc_Accounts>();
-        }
-    
         public int TypeID { get; set; }
         public string TypeName_Ara { get; set; }
         public string TypeName_Eng { get; set; }
         public bool IsDisable { get; set; }
-    
-        public virtual ICollection<Acc_Accounts> Acc_Accounts { get; set; }
     }
 }

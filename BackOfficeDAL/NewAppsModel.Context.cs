@@ -32,22 +32,42 @@ namespace BackOfficeDAL
         public DbSet<Sec_Users> Sec_Users { get; set; }
         public DbSet<Srch_SearchMaster> Srch_SearchMaster { get; set; }
         public DbSet<Srch_SearchParameters> Srch_SearchParameters { get; set; }
-        public DbSet<Acc_AccountCategory> Acc_AccountCategory { get; set; }
-        public DbSet<Acc_Accountype> Acc_Accountype { get; set; }
-        public DbSet<Acc_VoucherValidation> Acc_VoucherValidation { get; set; }
         public DbSet<Acc_Currancy> Acc_Currancy { get; set; }
-        public DbSet<Acc_Voucher> Acc_Voucher { get; set; }
-        public DbSet<Ast_AssetCatogry> Ast_AssetCatogry { get; set; }
         public DbSet<Acc_VouchersType> Acc_VouchersType { get; set; }
-        public DbSet<Acc_CostCenter> Acc_CostCenter { get; set; }
-        public DbSet<Acc_Accounts> Acc_Accounts { get; set; }
         public DbSet<Gnrl_AuditActions> Gnrl_AuditActions { get; set; }
         public DbSet<Grnl_Audit> Grnl_Audit { get; set; }
         public DbSet<Grnl_AuditDtl> Grnl_AuditDtl { get; set; }
-        public DbSet<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
         public DbSet<Gnrl_FinancialYear> Gnrl_FinancialYear { get; set; }
         public DbSet<Srch_ContextualSearch> Srch_ContextualSearch { get; set; }
         public DbSet<Acc_Budgets> Acc_Budgets { get; set; }
         public DbSet<Acc_BudgetsDtl> Acc_BudgetsDtl { get; set; }
+        public DbSet<Acc_AccountBalances> Acc_AccountBalances { get; set; }
+        public DbSet<Acc_AccountCategory> Acc_AccountCategory { get; set; }
+        public DbSet<Acc_AccountReconcilation> Acc_AccountReconcilation { get; set; }
+        public DbSet<Acc_Accounts> Acc_Accounts { get; set; }
+        public DbSet<Acc_Accountype> Acc_Accountype { get; set; }
+        public DbSet<Acc_CashierTrans> Acc_CashierTrans { get; set; }
+        public DbSet<Acc_CashierTransAccountSetting> Acc_CashierTransAccountSetting { get; set; }
+        public DbSet<Acc_ChequeBook> Acc_ChequeBook { get; set; }
+        public DbSet<Acc_CostCenter> Acc_CostCenter { get; set; }
+        public DbSet<Acc_CurrancyRateHistory> Acc_CurrancyRateHistory { get; set; }
+        public DbSet<Acc_Reconcilation> Acc_Reconcilation { get; set; }
+        public DbSet<Acc_ReconcilationDtl> Acc_ReconcilationDtl { get; set; }
+        public DbSet<Acc_Voucher> Acc_Voucher { get; set; }
+        public DbSet<Acc_VoucherDtl> Acc_VoucherDtl { get; set; }
+        public DbSet<Acc_VoucherInvoiceDtl> Acc_VoucherInvoiceDtl { get; set; }
+        public DbSet<Acc_VoucherValidation> Acc_VoucherValidation { get; set; }
+        public DbSet<Asst_Transfers> Asst_Transfers { get; set; }
+        public DbSet<Ast_AssetAccountsSetting> Ast_AssetAccountsSetting { get; set; }
+        public DbSet<Ast_AssetCatogry> Ast_AssetCatogry { get; set; }
+        public DbSet<Ast_Assets> Ast_Assets { get; set; }
+        public DbSet<Ast_AssetSale> Ast_AssetSale { get; set; }
+        public DbSet<Ast_Depreciation> Ast_Depreciation { get; set; }
+        public DbSet<Ast_DepreciationDtl> Ast_DepreciationDtl { get; set; }
+        public DbSet<Ast_DepreciationMethod> Ast_DepreciationMethod { get; set; }
+        public DbSet<Ast_Revaluated> Ast_Revaluated { get; set; }
+        public DbSet<Gnrl_LocationType> Gnrl_LocationType { get; set; }
+        public DbSet<Gnrl_Loctions> Gnrl_Loctions { get; set; }
+        public DbSet<Gnrl_TableSequence> Gnrl_TableSequence { get; set; }
     }
 }

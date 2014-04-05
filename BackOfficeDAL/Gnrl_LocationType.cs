@@ -12,11 +12,17 @@ namespace BackOfficeDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Acc_AccountCategory
+    public partial class Gnrl_LocationType
     {
-        public int CategoryId { get; set; }
-        public string CategoryName_Ara { get; set; }
-        public string CategroyName_Eng { get; set; }
-        public bool IsDisableCategory { get; set; }
+        public Gnrl_LocationType()
+        {
+            this.Gnrl_Loctions = new HashSet<Gnrl_Loctions>();
+        }
+    
+        public int LoctionTypeId { get; set; }
+        public string LocationTypeName_Ara { get; set; }
+        public string LocationTypeName_Eng { get; set; }
+    
+        public virtual ICollection<Gnrl_Loctions> Gnrl_Loctions { get; set; }
     }
 }

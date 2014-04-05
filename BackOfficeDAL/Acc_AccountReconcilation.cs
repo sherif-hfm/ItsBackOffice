@@ -12,11 +12,16 @@ namespace BackOfficeDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Acc_AccountCategory
+    public partial class Acc_AccountReconcilation
     {
-        public int CategoryId { get; set; }
-        public string CategoryName_Ara { get; set; }
-        public string CategroyName_Eng { get; set; }
-        public bool IsDisableCategory { get; set; }
+        public int AccountReconcileId { get; set; }
+        public int YearId { get; set; }
+        public string ReconcileAccountId { get; set; }
+        public decimal ReconciledLastBalDebit { get; set; }
+        public decimal ReconciledLastBalCredit { get; set; }
+        public decimal ReconciledCurrentBalDebit { get; set; }
+        public decimal ReconciledCurrentBalCredit { get; set; }
+    
+        public virtual Acc_Accounts Acc_Accounts { get; set; }
     }
 }

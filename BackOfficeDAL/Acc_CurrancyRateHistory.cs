@@ -12,11 +12,13 @@ namespace BackOfficeDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Acc_AccountCategory
+    public partial class Acc_CurrancyRateHistory
     {
-        public int CategoryId { get; set; }
-        public string CategoryName_Ara { get; set; }
-        public string CategroyName_Eng { get; set; }
-        public bool IsDisableCategory { get; set; }
+        public int RateId { get; set; }
+        public int CurrancyId { get; set; }
+        public decimal ExchangRate { get; set; }
+        public System.DateTime ExchangeDate { get; set; }
+    
+        public virtual Acc_Currancy Acc_Currancy { get; set; }
     }
 }

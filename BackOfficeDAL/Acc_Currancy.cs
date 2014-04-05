@@ -17,6 +17,7 @@ namespace BackOfficeDAL
         public Acc_Currancy()
         {
             this.Acc_VouchersType = new HashSet<Acc_VouchersType>();
+            this.Acc_CurrancyRateHistory = new HashSet<Acc_CurrancyRateHistory>();
         }
     
         public int CurrancyId { get; set; }
@@ -31,5 +32,6 @@ namespace BackOfficeDAL
         public Nullable<int> FractionLength { get; set; }
     
         public virtual ICollection<Acc_VouchersType> Acc_VouchersType { get; set; }
+        public virtual ICollection<Acc_CurrancyRateHistory> Acc_CurrancyRateHistory { get; set; }
     }
 }
