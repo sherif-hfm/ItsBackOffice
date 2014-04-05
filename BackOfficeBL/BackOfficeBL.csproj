@@ -52,6 +52,7 @@
     <Compile Include="Accounting\AccountCategory.cs" />
     <Compile Include="Accounting\Accountype.cs" />
     <Compile Include="Accounting\AssetCategory.cs" />
+    <Compile Include="Accounting\Budget.cs" />
     <Compile Include="Accounting\CostCenter.cs" />
     <Compile Include="Accounting\VoucherType.cs" />
     <Compile Include="AppInfo.cs" />

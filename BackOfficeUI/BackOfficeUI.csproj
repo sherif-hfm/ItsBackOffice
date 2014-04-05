@@ -79,6 +79,12 @@
     <Compile Include="Accounting\frmAssetCategory.Designer.cs">
       <DependentUpon>frmAssetCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\frmBudgets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmBudgets.Designer.cs">
+      <DependentUpon>frmBudgets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\frmCostCenter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmAssetCategory.resx">
       <DependentUpon>frmAssetCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmBudgets.resx">
+      <DependentUpon>frmBudgets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmCostCenter.ar-KW.resx">
       <DependentUpon>frmCostCenter.cs</DependentUpon>
