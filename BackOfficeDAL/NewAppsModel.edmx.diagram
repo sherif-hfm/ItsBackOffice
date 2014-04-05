@@ -4,69 +4,66 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9fdb143b02234e69bee2a83e806d773a" Name="Security" ZoomLevel="71">
-        <EntityTypeShape EntityType="NewApps.Sec_FormFunctions" Width="1.75" PointX="0.5" PointY="5.75" />
-        <EntityTypeShape EntityType="NewApps.Sec_GroupRights" Width="1.875" PointX="3.875" PointY="1.875" />
-        <EntityTypeShape EntityType="NewApps.Sec_Groups" Width="1.875" PointX="3.875" PointY="4.5" />
-        <EntityTypeShape EntityType="NewApps.Sec_MainMenu" Width="1.75" PointX="0.5" PointY="1.75" />
+      <Diagram DiagramId="9fdb143b02234e69bee2a83e806d773a" Name="Security" ZoomLevel="106">
+        <EntityTypeShape EntityType="NewApps.Sec_FormFunctions" Width="1.5" PointX="6.6644753770271663" PointY="10.388211776683205" />
+        <EntityTypeShape EntityType="NewApps.Sec_GroupRights" Width="1.5" PointX="6.0766649069621526" PointY="28.488127155456752" />
+        <EntityTypeShape EntityType="NewApps.Sec_Groups" Width="1.5" PointX="10.288675640844124" PointY="30.684804260118309" />
+        <EntityTypeShape EntityType="NewApps.Sec_MainMenu" Width="1.5" PointX="6.3306674632852289" PointY="31.013210370677157" />
+        <EntityTypeShape EntityType="NewApps.Sec_Users" Width="1.5" PointX="11.545963268515637" PointY="9.16021383235241" />
+        <EntityTypeShape EntityType="NewApps.Srch_ContextualSearch" Width="1.5" PointX="1.9976977361355432" PointY="20.405842015708725" />
+        <EntityTypeShape EntityType="NewApps.Srch_SearchMaster" Width="1.5" PointX="10.129746687658944" PointY="27.980823485171804" />
+        <EntityTypeShape EntityType="NewApps.Srch_SearchParameters" Width="1.5" PointX="9.76150097593735" PointY="14.19953126376473" />
         <AssociationConnector Association="NewApps.FK_Sec_GroupRights_Sec_Groups" />
         <AssociationConnector Association="NewApps.FK_Sec_GroupRights_Sec_MainMenu" />
         <AssociationConnector Association="NewApps.FK_Sec_MainMenu_Sec_MainMenu" />
-        <EntityTypeShape EntityType="NewApps.Sec_Users" Width="1.5" PointX="7.875" PointY="4.625" />
-        <AssociationConnector Association="NewApps.Sec_UsersGroup" />
-        <EntityTypeShape EntityType="NewApps.Srch_SearchMaster" Width="1.5" PointX="1.25" PointY="9.25" />
-        <EntityTypeShape EntityType="NewApps.Srch_SearchParameters" Width="1.5" PointX="3.875" PointY="9.375" />
         <AssociationConnector Association="NewApps.FK_Srch_SearchParameters_Srch_SearchMaster" />
-        <EntityTypeShape EntityType="NewApps.Acc_Currancy" Width="1.5" PointX="6.875" PointY="16" />
-        <EntityTypeShape EntityType="NewApps.Acc_VouchersType" Width="1.5" PointX="9.23934276832237" PointY="9.916556273548192" />
-        <AssociationConnector Association="NewApps.FK_Acc_VouchersTemplate_Acc_Currancy" />
-        <EntityTypeShape EntityType="NewApps.Gnrl_AuditActions" Width="1.5" PointX="1.5889235556074062" PointY="4.0022052247087494" />
-        <EntityTypeShape EntityType="NewApps.Grnl_Audit" Width="1.5" PointX="7.0115945744382193" PointY="26.368671131491972" />
-        <EntityTypeShape EntityType="NewApps.Grnl_AuditDtl" Width="1.5" PointX="7.9114138073806721" PointY="1.7595373847333422" />
-        <AssociationConnector Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" />
-        <EntityTypeShape EntityType="NewApps.Gnrl_FinancialYear" Width="1.5" PointX="9.8503921040568478" PointY="22.882885064409528" />
-        <EntityTypeShape EntityType="NewApps.Srch_ContextualSearch" Width="1.5" PointX="5.4775179128523535" PointY="30.371796756224612" />
-        <EntityTypeShape EntityType="NewApps.Acc_Budgets" Width="1.5" PointX="3.9683351851852304" PointY="21.650491873570946" />
-        <EntityTypeShape EntityType="NewApps.Acc_BudgetsDtl" Width="1.5" PointX="8.3965363690613479" PointY="30.127871363483308" />
-        <AssociationConnector Association="NewApps.FK_Acc_BudgetsDtl_Acc_Budgets" />
-        </Diagram>
-      <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="65" >
-        <EntityTypeShape EntityType="NewApps.Acc_AccountBalances" Width="1.5" PointX="9.8559588612317839" PointY="1.067535251876123" />
-        <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="4.3846697809103272" PointY="20.004543969409795" />
-        <EntityTypeShape EntityType="NewApps.Acc_AccountReconcilation" Width="1.5" PointX="6.0528247570864977" PointY="7.7314651048423091" />
-        <EntityTypeShape EntityType="NewApps.Acc_Accounts" Width="1.5" PointX="8.51931879507346" PointY="9.60243095904702" />
-        <EntityTypeShape EntityType="NewApps.Acc_Accountype" Width="1.5" PointX="10.648258705925317" PointY="28.168344093565057" />
-        <EntityTypeShape EntityType="NewApps.Acc_CashierTrans" Width="1.5" PointX="11.621919220137372" PointY="11.999050086363708" />
-        <EntityTypeShape EntityType="NewApps.Acc_CashierTransAccountSetting" Width="1.5" PointX="1.727807779669672" PointY="28.524414075782715" />
-        <EntityTypeShape EntityType="NewApps.Acc_ChequeBook" Width="1.5" PointX="1.2716986282131162" PointY="20.722355151885356" />
-        <EntityTypeShape EntityType="NewApps.Acc_CostCenter" Width="1.5" PointX="9.7536341686517147" PointY="0.47435143612062158" />
-        <EntityTypeShape EntityType="NewApps.Acc_CurrancyRateHistory" Width="1.5" PointX="3.2536560666065921" PointY="3.9048659968678217" />
-        <EntityTypeShape EntityType="NewApps.Acc_Reconcilation" Width="1.5" PointX="4.2600064111221609" PointY="27.809736682013487" />
-        <EntityTypeShape EntityType="NewApps.Acc_ReconcilationDtl" Width="1.5" PointX="2.1419150131484095" PointY="16.50976439589158" />
-        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="4.26300304209022" PointY="22.053922082322615" />
-        <EntityTypeShape EntityType="NewApps.Acc_VoucherDtl" Width="1.5" PointX="8.6588506720302867" PointY="27.00015420978896" />
-        <EntityTypeShape EntityType="NewApps.Acc_VoucherInvoiceDtl" Width="1.5" PointX="8.3635784631425416" PointY="7.28535524349909" />
-        <EntityTypeShape EntityType="NewApps.Acc_VoucherValidation" Width="1.5" PointX="1.4086465599986942" PointY="7.1727635446809064" />
-        <EntityTypeShape EntityType="NewApps.Asst_Transfers" Width="1.5" PointX="3.7191562185618823" PointY="31.902789860918553" />
-        <EntityTypeShape EntityType="NewApps.Ast_AssetAccountsSetting" Width="1.5" PointX="9.16868201138856" PointY="9.1965156687407354" />
-        <EntityTypeShape EntityType="NewApps.Ast_AssetCatogry" Width="1.5" PointX="8.5905172902115226" PointY="7.1011682036803885" />
-        <EntityTypeShape EntityType="NewApps.Ast_Assets" Width="1.5" PointX="0.88107045222123648" PointY="6.9625356229779012" />
-        <EntityTypeShape EntityType="NewApps.Ast_AssetSale" Width="1.5" PointX="2.1284065256493196" PointY="17.473990895540449" />
-        <EntityTypeShape EntityType="NewApps.Ast_Depreciation" Width="1.5" PointX="0.43091722411611921" PointY="20.368863323875175" />
-        <EntityTypeShape EntityType="NewApps.Ast_DepreciationDtl" Width="1.5" PointX="5.3084770987315455" PointY="26.421531257415904" />
-        <EntityTypeShape EntityType="NewApps.Ast_DepreciationMethod" Width="1.5" PointX="6.0565143367538763" PointY="4.1930555720781237" />
-        <EntityTypeShape EntityType="NewApps.Ast_Revaluated" Width="1.5" PointX="0.26238603529631443" PointY="28.567700891088556" />
-        <EntityTypeShape EntityType="NewApps.Gnrl_LocationType" Width="1.5" PointX="10.852868260281564" PointY="19.734978491317005" />
-        <EntityTypeShape EntityType="NewApps.Gnrl_Loctions" Width="1.5" PointX="5.4129379249238116" PointY="19.212657997018034" />
-        <EntityTypeShape EntityType="NewApps.Gnrl_TableSequence" Width="1.5" PointX="0.58708614510814017" PointY="30.472820281271272" />
+        <AssociationConnector Association="NewApps.Sec_UsersGroup" />
+      </Diagram>
+      <Diagram DiagramId="533f018ac91743b49c1c86f0a1c651c9" Name="Accounting" ZoomLevel="62" >
+        <EntityTypeShape EntityType="NewApps.Acc_AccountBalances" Width="1.5" PointX="11.575228884618371" PointY="27.200849098712602" />
+        <EntityTypeShape EntityType="NewApps.Acc_AccountCategory" Width="1.5" PointX="1.3683861891591858" PointY="3.606266977082131" />
+        <EntityTypeShape EntityType="NewApps.Acc_AccountReconcilation" Width="1.5" PointX="5.73428290418083" PointY="17.039061032719474" />
+        <EntityTypeShape EntityType="NewApps.Acc_Accounts" Width="1.5" PointX="10.531614833758965" PointY="11.067868476299507" />
+        <EntityTypeShape EntityType="NewApps.Acc_Accountype" Width="1.5" PointX="2.3875939764024663" PointY="8.79050912372326" />
+        <EntityTypeShape EntityType="NewApps.Acc_BudgetsDtl" Width="1.5" PointX="0.54847452256291851" PointY="23.801000397559722" />
+        <EntityTypeShape EntityType="NewApps.Acc_CashierTrans" Width="1.5" PointX="8.05627632888792" PointY="12.051047554263402" />
+        <EntityTypeShape EntityType="NewApps.Acc_CashierTransAccountSetting" Width="1.5" PointX="9.08223036913305" PointY="8.16407308362614" />
+        <EntityTypeShape EntityType="NewApps.Acc_ChequeBook" Width="1.5" PointX="7.3361559190490073" PointY="31.068372636599641" />
+        <EntityTypeShape EntityType="NewApps.Acc_CostCenter" Width="1.5" PointX="6.9184041893661048" PointY="28.434955505856756" />
+        <EntityTypeShape EntityType="NewApps.Acc_CurrancyRateHistory" Width="1.5" PointX="4.3848395815048553" PointY="15.62927485240124" />
+        <EntityTypeShape EntityType="NewApps.Acc_Reconcilation" Width="1.5" PointX="11.02818894713567" PointY="15.106834433556923" />
+        <EntityTypeShape EntityType="NewApps.Acc_ReconcilationDtl" Width="1.5" PointX="7.5616738682434317" PointY="4.4715889564117361" />
+        <EntityTypeShape EntityType="NewApps.Acc_Voucher" Width="1.5" PointX="1.6188438262878191" PointY="28.03200378829241" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherDtl" Width="1.5" PointX="11.125564595277218" PointY="27.8018761555673" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherInvoiceDtl" Width="1.5" PointX="10.978692635418238" PointY="17.913209580775913" />
+        <EntityTypeShape EntityType="NewApps.Acc_VouchersType" Width="1.5" PointX="9.7514109358896555" PointY="27.713921813161075" />
+        <EntityTypeShape EntityType="NewApps.Acc_VoucherValidation" Width="1.5" PointX="11.821129085412775" PointY="31.844076514171473" />
+        <EntityTypeShape EntityType="NewApps.Asst_Transfers" Width="1.5" PointX="6.7860242718765615" PointY="21.801607827563586" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetAccountsSetting" Width="1.5" PointX="0.8009420953695392" PointY="17.239110656659637" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetCatogry" Width="1.5" PointX="1.4052353992151261" PointY="1.0907725696874655" />
+        <EntityTypeShape EntityType="NewApps.Ast_Assets" Width="1.5" PointX="4.9275543172506406" PointY="14.277494377585823" />
+        <EntityTypeShape EntityType="NewApps.Ast_AssetSale" Width="1.5" PointX="0.42344752346326014" PointY="28.959890200272152" />
+        <EntityTypeShape EntityType="NewApps.Ast_Depreciation" Width="1.5" PointX="2.1863898943114979" PointY="13.450166887347665" />
+        <EntityTypeShape EntityType="NewApps.Ast_DepreciationDtl" Width="1.5" PointX="4.0081014316566765" PointY="4.8636111788747884" />
+        <EntityTypeShape EntityType="NewApps.Ast_DepreciationMethod" Width="1.5" PointX="9.4215877733293869" PointY="9.6295830205220643" />
+        <EntityTypeShape EntityType="NewApps.Ast_Revaluated" Width="1.5" PointX="1.6931143224672947" PointY="3.261660860507591" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_AuditActions" Width="1.5" PointX="2.8063636155828666" PointY="15.238002173247748" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_FinancialYear" Width="1.5" PointX="11.172129464881554" PointY="20.542195404200907" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_LocationType" Width="1.5" PointX="5.7906762481623684" PointY="10.81983212140381" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_Loctions" Width="1.5" PointX="4.770804060981984" PointY="0.052302435064829157" />
+        <EntityTypeShape EntityType="NewApps.Gnrl_TableSequence" Width="1.5" PointX="5.0248860833350975" PointY="10.565041114839278" />
+        <EntityTypeShape EntityType="NewApps.Grnl_Audit" Width="1.5" PointX="4.3177482859779843" PointY="15.549389146058536" />
+        <EntityTypeShape EntityType="NewApps.Grnl_AuditDtl" Width="1.5" PointX="11.173964213195241" PointY="25.769481730540043" />
         <AssociationConnector Association="NewApps.FK_Acc_AccountBalances_Acc_Accounts" />
         <AssociationConnector Association="NewApps.FK_Acc_AccountReconcilation_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_Accounts_Acc_Budgets" />
         <AssociationConnector Association="NewApps.FK_Acc_CashierTransAccountSetting_Acc_Accounts" />
         <AssociationConnector Association="NewApps.FK_Acc_CashierTransAccountSetting_Acc_Accounts1" />
         <AssociationConnector Association="NewApps.FK_Acc_CashierTransAccountSetting_Acc_Accounts2" />
         <AssociationConnector Association="NewApps.FK_Acc_ChequeBook_Acc_Accounts" />
         <AssociationConnector Association="NewApps.FK_Acc_Reconcilation_Acc_Accounts" />
         <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_VouchersTemplate_Acc_Accounts" />
         <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts" />
         <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts1" />
         <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts2" />
@@ -75,11 +72,13 @@
         <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts5" />
         <AssociationConnector Association="NewApps.FK_Ast_AssetAccountsSetting_Acc_Accounts6" />
         <AssociationConnector Association="NewApps.FK_Ast_AssetSale_Acc_Accounts" />
+        <AssociationConnector Association="NewApps.FK_Acc_BudgetsDtl_AccCostCenter" />
         <AssociationConnector Association="NewApps.FK_Acc_CashierTrans_Acc_Loctions" />
         <AssociationConnector Association="NewApps.FK_Acc_CostCenter_Acc_CostCenter" />
         <AssociationConnector Association="NewApps.FK_Ast_Assets_Acc_CostCenter" />
         <AssociationConnector Association="NewApps.FK_Acc_ReconcilationDtl_Acc_Reconcilation" />
         <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_Loctions" />
+        <AssociationConnector Association="NewApps.FK_Acc_Voucher_Acc_VouchersType" />
         <AssociationConnector Association="NewApps.FK_Acc_VoucherDtl_Acc_Voucher" />
         <AssociationConnector Association="NewApps.FK_Acc_VoucherInvoiceDtl_Acc_VoucherDtl" />
         <AssociationConnector Association="NewApps.FK_Asst_Transfers_Ast_Assets" />
@@ -91,6 +90,7 @@
         <AssociationConnector Association="NewApps.FK_Ast_Revaluated_Ast_Assets" />
         <AssociationConnector Association="NewApps.FK_Ast_DepreciationDtl_Ast_Depreciation" />
         <AssociationConnector Association="NewApps.FK_Gnrl_Loctions_Gnrl_Loctions" />
+        <AssociationConnector Association="NewApps.FK_Grnl_AuditDtl_Grnl_Audit" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

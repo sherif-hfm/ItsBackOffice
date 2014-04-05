@@ -85,6 +85,12 @@
     <Compile Include="Accounting\frmBudgets.Designer.cs">
       <DependentUpon>frmBudgets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\frmChequeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmChequeBook.Designer.cs">
+      <DependentUpon>frmChequeBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\frmCostCenter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmBudgets.resx">
       <DependentUpon>frmBudgets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmChequeBook.resx">
+      <DependentUpon>frmChequeBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmCostCenter.ar-KW.resx">
       <DependentUpon>frmCostCenter.cs</DependentUpon>

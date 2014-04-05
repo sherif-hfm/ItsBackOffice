@@ -14,12 +14,12 @@ namespace BackOfficeDAL
     
     public partial class Acc_BudgetsDtl
     {
-        public int BudgetId { get; set; }
         public int BudgetYearId { get; set; }
+        public int BudgetId { get; set; }
         public int BudgetDtlId { get; set; }
         public int BudgetYear { get; set; }
         public string BudgetAccountId { get; set; }
-        public string BudgetCostCenterId { get; set; }
+        public Nullable<int> BudgetCostCenterId { get; set; }
         public string BudgetLocationId { get; set; }
         public decimal BdgtDepitAmount { get; set; }
         public decimal BdgtCreditAmount { get; set; }
@@ -27,7 +27,8 @@ namespace BackOfficeDAL
         public System.DateTime BdgtFrom { get; set; }
         public System.DateTime BdgtTo { get; set; }
     
-        public virtual Acc_Budgets Acc_Budgets { get; set; }
         public virtual Acc_Accounts Acc_Accounts { get; set; }
+        public virtual Acc_Budgets Acc_Budgets { get; set; }
+        public virtual Acc_CostCenter Acc_CostCenter { get; set; }
     }
 }

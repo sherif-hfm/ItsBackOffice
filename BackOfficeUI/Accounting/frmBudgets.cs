@@ -38,9 +38,29 @@ namespace BackOfficeUI.Accounting
 
             }
         }
-        private void LoadBudgetDetailsDataGrid()
+        private void LoadBudgetDetailsDataGrid(List<Budget> _BudgetDetailList)
         {
+            if (_BudgetDetailList.Count != 0)
+            {
+                dgrdBudgetDetails.AutoGenerateColumns = false;
+                dgrdBudgetDetails.DataSource = null;
 
+                clmBudgetDetailID.DataPropertyName = "BudgetDtlId";
+                clmBudgetYear.DataPropertyName = "BudgetYear";
+                clmBugetAccount.DataPropertyName = "BudgetAccountId";
+                clmBugetCostCenter.DisplayMember = "CostCenterName";
+                clmBugetCostCenter.ValueMember = "BudgetCostCenterId";
+                clmBugetLocation.DisplayMember = "LocationName";
+                clmBugetLocation.ValueMember = "BudgetLocationId";
+                clmBdgtDepitAmount.DataPropertyName = "BdgtDepitAmount";
+                clmBdgtCreditAmount.DataPropertyName = "BdgtCreditAmount";
+                clmBdgttBalance.DataPropertyName = "BdgttBalance";
+                clmBdgtFrom.DataPropertyName = "BdgtFrom";
+                clmBdgtTo.DataPropertyName = "BdgtTo";
+
+                dgrdBudgetDetails.DataSource = _BudgetDetailList;
+
+            }
         }
 
         private void dgrdBudget_SelectionChanged(object sender, EventArgs e)
@@ -49,10 +69,7 @@ namespace BackOfficeUI.Accounting
             {
 
                 SelectedBudgetID = Convert.ToInt32(dgrdBudget.SelectedRows[0].Cells[0].Value);
-               // VoucherType SelectedVoucherType = VouchersList.Find(a => a.VoucherTypeId == VOUCHERTYPEID);
-                //ShowGUI(SelectedVoucherType);
-
-                //CrVoucher = SelectedVoucherType;
+                LoadBudgetDetailsDataGrid(Budget.GetBudgetDetails(SelectedBudgetID));
             }
 
         }

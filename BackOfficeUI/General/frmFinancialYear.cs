@@ -53,9 +53,11 @@ namespace BackOfficeUI.General
             {
 
                 SelectedYearID = Convert.ToInt32(dgrdFinancialYear.SelectedRows[0].Cells[0].Value);
-                FinancialYear SelectedFinancialYear = FinancialYearList.Find(a => a.YearID == SelectedYearID);
-                ShowGUI(SelectedFinancialYear);
-                financialyear = SelectedFinancialYear;
+                financialyear = FinancialYearList.Find(a => a.YearID == SelectedYearID);
+                if (financialyear != null)
+                {
+                    ShowGUI(financialyear);
+                }
             }
         }
 
@@ -176,7 +178,7 @@ namespace BackOfficeUI.General
 
                 FinancialYearList = FinancialYear.GetAllFinancialYears();
                 LoadDataGrid(FinancialYearList);
-                // dgrdFinancialYear.Rows[0].Selected = true;
+                dgrdFinancialYear.Rows[0].Selected = true;
             }
 
         }

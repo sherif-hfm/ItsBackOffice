@@ -16,6 +16,7 @@ namespace BackOfficeDAL
     {
         public Acc_CostCenter()
         {
+            this.Acc_BudgetsDtl = new HashSet<Acc_BudgetsDtl>();
             this.Acc_CostCenter1 = new HashSet<Acc_CostCenter>();
             this.Ast_Assets = new HashSet<Ast_Assets>();
         }
@@ -29,6 +30,7 @@ namespace BackOfficeDAL
         public Nullable<int> ParentId { get; set; }
         public string Notes { get; set; }
     
+        public virtual ICollection<Acc_BudgetsDtl> Acc_BudgetsDtl { get; set; }
         public virtual ICollection<Acc_CostCenter> Acc_CostCenter1 { get; set; }
         public virtual Acc_CostCenter Acc_CostCenter2 { get; set; }
         public virtual ICollection<Ast_Assets> Ast_Assets { get; set; }
