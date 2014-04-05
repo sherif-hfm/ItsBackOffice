@@ -43,6 +43,8 @@
             this.lblYearEnd = new BackOfficeUI.Controls.Label();
             this.dtbYearBegin = new System.Windows.Forms.DateTimePicker();
             this.dtbYearEnd = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new BackOfficeUI.Controls.Label();
+            this.txtPrefix = new BackOfficeUI.Controls.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgrdFinancialYear)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,12 +210,40 @@
             this.dtbYearEnd.Size = new System.Drawing.Size(200, 27);
             this.dtbYearEnd.TabIndex = 12;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Clearable = true;
+            this.label1.ContextSearchId = 0;
+            this.label1.IsRequired = false;
+            this.label1.Location = new System.Drawing.Point(6, 316);
+            this.label1.LockedInModes = 25;
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 19);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "prefix";
+            // 
+            // txtPrefix
+            // 
+            this.txtPrefix.BackColor = System.Drawing.Color.White;
+            this.txtPrefix.Clearable = true;
+            this.txtPrefix.ContextSearchId = 0;
+            this.txtPrefix.IsRequired = true;
+            this.txtPrefix.Location = new System.Drawing.Point(101, 312);
+            this.txtPrefix.LockedInModes = 25;
+            this.txtPrefix.MaxLength = 50;
+            this.txtPrefix.Name = "txtPrefix";
+            this.txtPrefix.Size = new System.Drawing.Size(200, 27);
+            this.txtPrefix.TabIndex = 13;
+            // 
             // frmFinancialYear
             // 
             this.AllowedFunctions = 25;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 401);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPrefix);
             this.Controls.Add(this.dtbYearEnd);
             this.Controls.Add(this.dtbYearBegin);
             this.Controls.Add(this.lblYearEnd);
@@ -242,6 +272,8 @@
             this.Controls.SetChildIndex(this.lblYearEnd, 0);
             this.Controls.SetChildIndex(this.dtbYearBegin, 0);
             this.Controls.SetChildIndex(this.dtbYearEnd, 0);
+            this.Controls.SetChildIndex(this.txtPrefix, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgrdFinancialYear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,5 +297,7 @@
         private Controls.Label lblYearEnd;
         private System.Windows.Forms.DateTimePicker dtbYearBegin;
         private System.Windows.Forms.DateTimePicker dtbYearEnd;
+        private Controls.Label label1;
+        private Controls.TextBox txtPrefix;
     }
 }

@@ -745,12 +745,13 @@
           <Key>
             <PropertyRef Name="YearId" />
           </Key>
-          <Property Name="YearId" Type="int" Nullable="false" />
+          <Property Name="YearId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="YearName" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="YearBegin" Type="datetime" Nullable="false" />
           <Property Name="YearEnd" Type="datetime" Nullable="false" />
           <Property Name="IsDefaultYear" Type="bit" Nullable="false" />
           <Property Name="IsClosedYear" Type="bit" Nullable="false" />
+          <Property Name="prefix" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Gnrl_LocationType">
           <Key>
@@ -2442,12 +2443,13 @@
           <Key>
             <PropertyRef Name="YearId" />
           </Key>
-          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <Property Type="Int32" Name="YearId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="YearName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="YearBegin" Nullable="false" Precision="3" />
           <Property Type="DateTime" Name="YearEnd" Nullable="false" Precision="3" />
           <Property Type="Boolean" Name="IsDefaultYear" Nullable="false" />
           <Property Type="Boolean" Name="IsClosedYear" Nullable="false" />
+          <Property Type="Int32" Name="prefix" Nullable="false" />
         </EntityType>
         <EntityType Name="Gnrl_LocationType">
           <Key>
@@ -3640,6 +3642,7 @@
           <EntitySetMapping Name="Gnrl_FinancialYear">
             <EntityTypeMapping TypeName="NewApps.Gnrl_FinancialYear">
               <MappingFragment StoreEntitySet="Gnrl_FinancialYear">
+                <ScalarProperty Name="prefix" ColumnName="prefix" />
                 <ScalarProperty Name="IsClosedYear" ColumnName="IsClosedYear" />
                 <ScalarProperty Name="IsDefaultYear" ColumnName="IsDefaultYear" />
                 <ScalarProperty Name="YearEnd" ColumnName="YearEnd" />

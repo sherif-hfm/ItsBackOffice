@@ -20,5 +20,6 @@ namespace BackOfficeDAL
         public System.DateTime YearEnd { get; set; }
         public bool IsDefaultYear { get; set; }
         public bool IsClosedYear { get; set; }
+        public int prefix { get; set; }
     }
 }

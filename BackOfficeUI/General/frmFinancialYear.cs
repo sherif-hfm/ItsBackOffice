@@ -83,6 +83,10 @@ namespace BackOfficeUI.General
             {
                 chkIsClosed.Checked = _FinancialYear.IsClosedYear;
             }
+            if (_FinancialYear.prefix != null)
+            {
+                txtPrefix.Text = _FinancialYear.prefix.ToString();
+            }
         }
         private void GetDataFromGUI()
         {
@@ -93,6 +97,7 @@ namespace BackOfficeUI.General
             financialyear.YearEnd = dtbYearEnd.Value.Date;
             financialyear.IsDefaultYear = chkIsDefault.Checked;
             financialyear.IsClosedYear = chkIsClosed.Checked;
+            financialyear.prefix = Convert.ToInt32(txtPrefix.Text);
         }
 
         private void frmFinancialYear_AddNew(object sender, ref bool _status)
@@ -175,7 +180,6 @@ namespace BackOfficeUI.General
             }
             else
             {
-
                 FinancialYearList = FinancialYear.GetAllFinancialYears();
                 LoadDataGrid(FinancialYearList);
                 dgrdFinancialYear.Rows[0].Selected = true;

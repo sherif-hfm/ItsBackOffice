@@ -15,6 +15,7 @@ namespace BackOfficeBL.General
         public bool IsClosedYear { get; set; }
         public bool IsDefaultYear { get; set; }
         public bool IsNew { get; set; }
+        public int prefix { get; set; }
         public FinancialYear()
         {
             this.IsNew = true;
@@ -33,6 +34,7 @@ namespace BackOfficeBL.General
                 year.YearEnd = financial.YearEnd;
                 year.IsDefaultYear = financial.IsDefaultYear;
                 year.IsClosedYear = financial.IsClosedYear;
+                year.prefix = financial.prefix;
 
                 FinancialYearsList.Add(year);
             }
@@ -44,13 +46,31 @@ namespace BackOfficeBL.General
 
             try
             {
-                Gnrl_FinancialYear Gnrl_FinancialYear;
                 NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
 
+
+                if (_FinancilaYear.IsDefaultYear == true)
+                {
+                    var _Gnrl_FinancialYear = newAppsCnn.Gnrl_FinancialYear.ToList();
+                    foreach (Gnrl_FinancialYear G in _Gnrl_FinancialYear)
+                    {
+
+                        G.IsDefaultYear = false;
+                        //G.IsClosedYear = GnrlFinancialYear.IsClosedYear;
+                        //G.YearBegin = GnrlFinancialYear.YearBegin;
+                        //G.YearEnd = GnrlFinancialYear.YearEnd;
+                        //G.YearId = GnrlFinancialYear.YearId;
+                        //G.YearName = GnrlFinancialYear.YearName;
+
+                    }
+                }
+                Gnrl_FinancialYear Gnrl_FinancialYear;
                 Gnrl_FinancialYear = newAppsCnn.Gnrl_FinancialYear.Where(a => a.YearId == _FinancilaYear.YearID).FirstOrDefault();
+
                 if (Gnrl_FinancialYear != null)
                 {
                     BuildDBRecord(Gnrl_FinancialYear, _FinancilaYear);
+
                 }
 
                 else
@@ -104,6 +124,7 @@ namespace BackOfficeBL.General
             _GnrlFinancilaYear.YearBegin = _FinancialYear.YearBegin;
             _GnrlFinancilaYear.IsDefaultYear = _FinancialYear.IsDefaultYear;
             _GnrlFinancilaYear.IsClosedYear = _FinancialYear.IsClosedYear;
+            _GnrlFinancilaYear.prefix = _FinancialYear.prefix;
             return _GnrlFinancilaYear;
         }
 
