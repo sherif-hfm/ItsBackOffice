@@ -335,112 +335,193 @@
   <data name="&gt;&gt;lblDifferenceInbook.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
-    <value>textBox7</value>
+  <data name="txtReconciledLastDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>627, 73</value>
   </data>
-  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="txtReconciledLastDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 27</value>
   </data>
-  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
+  <data name="txtReconciledLastDate.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;txtReconciledLastDate.Name" xml:space="preserve">
+    <value>txtReconciledLastDate</value>
+  </data>
+  <data name="&gt;&gt;txtReconciledLastDate.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.DateTimePicker, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtReconciledLastDate.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtReconciledLastDate.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;textBox8.Name" xml:space="preserve">
-    <value>textBox8</value>
+  <data name="txtCurrentStatementDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>627, 106</value>
   </data>
-  <data name="&gt;&gt;textBox8.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="txtCurrentStatementDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 27</value>
   </data>
-  <data name="&gt;&gt;textBox8.Parent" xml:space="preserve">
+  <data name="txtCurrentStatementDate.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;txtCurrentStatementDate.Name" xml:space="preserve">
+    <value>txtCurrentStatementDate</value>
+  </data>
+  <data name="&gt;&gt;txtCurrentStatementDate.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.DateTimePicker, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCurrentStatementDate.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtCurrentStatementDate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;textBox9.Name" xml:space="preserve">
-    <value>textBox9</value>
+  <data name="txtDiffreneceInBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>627, 140</value>
   </data>
-  <data name="&gt;&gt;textBox9.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="txtDiffreneceInBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 27</value>
   </data>
-  <data name="&gt;&gt;textBox9.Parent" xml:space="preserve">
+  <data name="txtDiffreneceInBook.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;txtDiffreneceInBook.Name" xml:space="preserve">
+    <value>txtDiffreneceInBook</value>
+  </data>
+  <data name="&gt;&gt;txtDiffreneceInBook.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.NumericUpDown, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtDiffreneceInBook.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtDiffreneceInBook.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
-    <value>textBox6</value>
+  <data name="txtAccountBalance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 169</value>
   </data>
-  <data name="&gt;&gt;textBox6.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="txtAccountBalance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 27</value>
   </data>
-  <data name="&gt;&gt;textBox6.Parent" xml:space="preserve">
+  <data name="txtAccountBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;txtAccountBalance.Name" xml:space="preserve">
+    <value>txtAccountBalance</value>
+  </data>
+  <data name="&gt;&gt;txtAccountBalance.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.NumericUpDown, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtAccountBalance.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtAccountBalance.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
-    <value>textBox5</value>
+  <data name="txtReconcilationValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 135</value>
   </data>
-  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="txtReconcilationValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 27</value>
   </data>
-  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+  <data name="txtReconcilationValue.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;txtReconcilationValue.Name" xml:space="preserve">
+    <value>txtReconcilationValue</value>
+  </data>
+  <data name="&gt;&gt;txtReconcilationValue.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.NumericUpDown, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtReconcilationValue.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtReconcilationValue.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
-    <value>textBox4</value>
+  <data name="txtCurrentStatemantAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 102</value>
   </data>
-  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="txtCurrentStatemantAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 27</value>
   </data>
-  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
+  <data name="txtCurrentStatemantAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;txtCurrentStatemantAmount.Name" xml:space="preserve">
+    <value>txtCurrentStatemantAmount</value>
+  </data>
+  <data name="&gt;&gt;txtCurrentStatemantAmount.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.NumericUpDown, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCurrentStatemantAmount.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtCurrentStatemantAmount.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
-    <value>textBox3</value>
+  <data name="txtReconciledLastBal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 70</value>
   </data>
-  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="txtReconciledLastBal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 27</value>
   </data>
-  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+  <data name="txtReconciledLastBal.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txtReconciledLastBal.Name" xml:space="preserve">
+    <value>txtReconciledLastBal</value>
+  </data>
+  <data name="&gt;&gt;txtReconciledLastBal.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.NumericUpDown, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtReconciledLastBal.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtReconciledLastBal.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
+  <data name="txtReconcileAccountName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 36</value>
   </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+  <data name="txtReconcileAccountName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 27</value>
+  </data>
+  <data name="txtReconcileAccountName.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtReconcileAccountName.Name" xml:space="preserve">
+    <value>txtReconcileAccountName</value>
+  </data>
+  <data name="&gt;&gt;txtReconcileAccountName.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtReconcileAccountName.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtReconcileAccountName.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="txtAccountNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 36</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="txtAccountNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 27</value>
+  </data>
+  <data name="txtAccountNo.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNo.Name" xml:space="preserve">
+    <value>txtAccountNo</value>
+  </data>
+  <data name="&gt;&gt;txtAccountNo.Type" xml:space="preserve">
     <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtAccountNo.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtAccountNo.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
@@ -466,237 +547,6 @@
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>627, 135</value>
-  </data>
-  <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
-    <value>textBox7</value>
-  </data>
-  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>627, 102</value>
-  </data>
-  <data name="textBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox8.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;textBox8.Name" xml:space="preserve">
-    <value>textBox8</value>
-  </data>
-  <data name="&gt;&gt;textBox8.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox8.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>627, 69</value>
-  </data>
-  <data name="textBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox9.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;textBox9.Name" xml:space="preserve">
-    <value>textBox9</value>
-  </data>
-  <data name="&gt;&gt;textBox9.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox9.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox9.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="textBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 168</value>
-  </data>
-  <data name="textBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
-    <value>textBox6</value>
-  </data>
-  <data name="&gt;&gt;textBox6.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox6.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 135</value>
-  </data>
-  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
-    <value>textBox5</value>
-  </data>
-  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 102</value>
-  </data>
-  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
-    <value>textBox4</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 69</value>
-  </data>
-  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
-    <value>textBox3</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 36</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>407, 27</value>
-  </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 36</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 27</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.TextBox, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <metadata name="Cheked.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransActionDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransactionId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransactionType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Debit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Credit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SettlementAmount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 269</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>835, 279</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>BackOfficeUI.Controls.DataGridView, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="Cheked.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -739,6 +589,27 @@
   </metadata>
   <data name="SettlementAmount.HeaderText" xml:space="preserve">
     <value>SettlementAmount</value>
+  </data>
+  <data name="dgrdVouchers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 269</value>
+  </data>
+  <data name="dgrdVouchers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>835, 279</value>
+  </data>
+  <data name="dgrdVouchers.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Name" xml:space="preserve">
+    <value>dgrdVouchers</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Type" xml:space="preserve">
+    <value>BackOfficeUI.Controls.DataGridView, BackOfficeUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgrdVouchers.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

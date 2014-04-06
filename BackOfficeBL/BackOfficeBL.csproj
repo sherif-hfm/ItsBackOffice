@@ -55,9 +55,11 @@
     <Compile Include="Accounting\Budget.cs" />
     <Compile Include="Accounting\ChequeBook.cs" />
     <Compile Include="Accounting\CostCenter.cs" />
+    <Compile Include="Accounting\ReconcilationDtl.cs" />
     <Compile Include="Accounting\Reconcile.cs" />
     <Compile Include="Accounting\TableSequence.cs" />
     <Compile Include="Accounting\Transactions.cs" />
+    <Compile Include="Accounting\Voucher.cs" />
     <Compile Include="Accounting\VoucherType.cs" />
     <Compile Include="AppInfo.cs" />
     <Compile Include="AppSettings.cs" />
