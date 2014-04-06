@@ -319,7 +319,7 @@
             <PropertyRef Name="BudgetId" />
             <PropertyRef Name="BudgetYearId" />
           </Key>
-          <Property Name="BudgetId" Type="int" Nullable="false" />
+          <Property Name="BudgetId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="BudgetYearId" Type="int" Nullable="false" />
           <Property Name="BudgetName_Ara" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="BudgetName_Eng" Type="nvarchar" Nullable="false" MaxLength="50" />
@@ -341,8 +341,8 @@
           <Property Name="BdgtDepitAmount" Type="decimal" Nullable="false" Precision="16" Scale="3" />
           <Property Name="BdgtCreditAmount" Type="decimal" Nullable="false" Precision="16" Scale="3" />
           <Property Name="BdgttBalance" Type="decimal" Nullable="false" Precision="16" Scale="3" />
-          <Property Name="BdgtFrom" Type="datetime" Nullable="false" />
-          <Property Name="BdgtTo" Type="datetime" Nullable="false" />
+          <Property Name="BdgtFrom" Type="date" Nullable="false" />
+          <Property Name="BdgtTo" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Acc_CashierTrans">
           <Key>
@@ -953,7 +953,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Acc_BudgetsDtl_Acc_Budgets">
-          <End Role="Acc_Budgets" Type="NewApps.Store.Acc_Budgets" Multiplicity="1" />
+          <End Role="Acc_Budgets" Type="NewApps.Store.Acc_Budgets" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Acc_BudgetsDtl" Type="NewApps.Store.Acc_BudgetsDtl" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Acc_Budgets">
@@ -2005,8 +2007,8 @@
           <Property Type="Decimal" Name="BdgtDepitAmount" Nullable="false" Precision="16" Scale="3" />
           <Property Type="Decimal" Name="BdgtCreditAmount" Nullable="false" Precision="16" Scale="3" />
           <Property Type="Decimal" Name="BdgttBalance" Nullable="false" Precision="16" Scale="3" />
-          <Property Type="DateTime" Name="BdgtFrom" Nullable="false" Precision="3" />
-          <Property Type="DateTime" Name="BdgtTo" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="BdgtFrom" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="BdgtTo" Nullable="false" Precision="0" />
           <NavigationProperty Name="Acc_Accounts" Relationship="NewApps.FK_Acc_Accounts_Acc_Budgets" FromRole="Acc_BudgetsDtl" ToRole="Acc_Accounts" />
           <NavigationProperty Name="Acc_Budgets" Relationship="NewApps.FK_Acc_BudgetsDtl_Acc_Budgets" FromRole="Acc_BudgetsDtl" ToRole="Acc_Budgets" />
           <NavigationProperty Name="Acc_CostCenter" Relationship="NewApps.FK_Acc_BudgetsDtl_AccCostCenter" FromRole="Acc_BudgetsDtl" ToRole="Acc_CostCenter" />
@@ -2727,7 +2729,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Acc_BudgetsDtl_Acc_Budgets">
-          <End Type="NewApps.Acc_Budgets" Role="Acc_Budgets" Multiplicity="1" />
+          <End Type="NewApps.Acc_Budgets" Role="Acc_Budgets" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="NewApps.Acc_BudgetsDtl" Role="Acc_BudgetsDtl" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Acc_Budgets">

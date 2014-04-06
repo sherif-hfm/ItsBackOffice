@@ -73,12 +73,14 @@ namespace BackOfficeBL.Accounting
             }
         }
 
+
         public decimal BdgtDepitAmount { get; set; }
         public decimal BdgtCreditAmount { get; set; }
         public decimal BdgttBalance { get; set; }
 
         public DateTime BdgtFrom { get; set; }
         public DateTime BdgtTo { get; set; }
+        public List<Budget> BudgetDetails { get; set; }
 
         public static List<Budget> GetAllBugets()
         {
@@ -111,7 +113,7 @@ namespace BackOfficeBL.Accounting
             return BudgetTypeList;
         }
 
-        public static List<Budget> GetBudgetDetails(int BudgetID)
+        public static List<Budget> GetBudgetDetails(int BudgetID, int BudgetYearID)
         {
             List<Budget> BudgetDetailsList = new List<Budget>();
             NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
@@ -119,7 +121,7 @@ namespace BackOfficeBL.Accounting
                                join Acc in newAppsCnn.Acc_Accounts on BudgetsDtl.BudgetAccountId equals Acc.AccountID
                                join CostCnter in newAppsCnn.Acc_CostCenter on BudgetsDtl.BudgetCostCenterId equals CostCnter.CostCenterId
                                join loc in newAppsCnn.Gnrl_Loctions on BudgetsDtl.BudgetLocationId equals loc.LocationId
-                               where BudgetsDtl.BudgetId == BudgetID
+                               where BudgetsDtl.BudgetId == BudgetID && BudgetsDtl.BudgetYearId == BudgetYearID
                                select new
                                {
                                    BudgetDtlId = BudgetsDtl.BudgetDtlId,
@@ -164,6 +166,139 @@ namespace BackOfficeBL.Accounting
             return BudgetDetailsList;
         }
 
+        public static List<Budget> GetAllLocations()
+        {
+            List<Budget> BudgetLocaionList = new List<Budget>();
+            NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+            var _BudgetLocation = from location in newAppsCnn.Gnrl_Loctions select location;
+
+            foreach (var budgetlocation in _BudgetLocation)
+            {
+                Budget BugetLocaion = new Budget();
+                BugetLocaion.LocationName_Ara = budgetlocation.LocationName_Ara;
+                BugetLocaion.LocationName_Eng = budgetlocation.LocationName_Eng;
+                BugetLocaion.BudgetLocationId = budgetlocation.LocationId;
+                BudgetLocaionList.Add(BugetLocaion);
+            }
+            return BudgetLocaionList;
+
+        }
+
+        public DataDeleteResult Delete(int BudgetID)
+        {
+            Acc_Budgets Acc_Budgets;
+            try
+            {
+                NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+                var Budget = from bdgt in newAppsCnn.Acc_Budgets where bdgt.BudgetId == BudgetID select bdgt;
+                if (Budget.Count() > 0)
+                {
+                    Acc_Budgets = Budget.First();
+                    newAppsCnn.Acc_Budgets.Remove(Acc_Budgets);
+                    newAppsCnn.SaveChanges();
+                }
+                return new DataDeleteResult() { DeleteStatus = true };
+            }
+            catch (Exception ex)
+            {
+                return new DataDeleteResult() { DeleteStatus = false, ErrorMessage = ex.Message };
+            }
+        }
+        public DataSaveResult Save(Budget _Budget)
+        {
+
+            try
+            {
+                Acc_Budgets Acc_Budgets;
+                NewAppsCnn newAppsCnn = new NewAppsCnn(AppSettings.CrAppSettings.NewAppsConnectionString);
+
+                Acc_Budgets = newAppsCnn.Acc_Budgets.Where(a => a.BudgetId == _Budget.BudgetId && a.BudgetYearId == _Budget.BudgetYearId).FirstOrDefault();
+                if (Acc_Budgets != null)
+                {
+                    BuildDBRecord(Acc_Budgets, _Budget);
+                }
+
+                else
+                {
+
+                    Acc_Budgets = new Acc_Budgets();
+                    Acc_Budgets = BuildDBRecord(Acc_Budgets, _Budget);
+                    newAppsCnn.Acc_Budgets.Add(Acc_Budgets);
+                }
+                newAppsCnn.SaveChanges();
+
+                var BudgetDetails = newAppsCnn.Acc_BudgetsDtl.Where(a => a.BudgetDtlId == _Budget.BudgetDtlId && a.BudgetId == _Budget.BudgetId && a.BudgetYearId == _Budget.BudgetYearId).ToList();
+                if (BudgetDetails.Count !=0)
+                {
+                    foreach (Acc_BudgetsDtl _Acc_BudgetsDtl in BudgetDetails)
+                    {
+
+                        foreach (Budget bdgt in _Budget.BudgetDetails)
+                        {
+                            if (_Acc_BudgetsDtl.BudgetDtlId == bdgt.BudgetDtlId)
+                            {
+                                BuildDBRecordForDetails(_Acc_BudgetsDtl, bdgt,Acc_Budgets);
+                                newAppsCnn.SaveChanges();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Budget bdgt in _Budget.BudgetDetails)
+                    {
+                        Acc_BudgetsDtl _Acc_BudgetsDtl = new Acc_BudgetsDtl();
+                        _Acc_BudgetsDtl = BuildDBRecordForDetails(_Acc_BudgetsDtl, bdgt, Acc_Budgets);
+                        newAppsCnn.Acc_BudgetsDtl.Add(_Acc_BudgetsDtl);
+                        newAppsCnn.SaveChanges();
+                    }
+
+                }
+
+                //   Audit.AddDataAudit(Audit.AuditActionTypes.AddNew, "Acc_VouchersType", this);
+
+                return new DataSaveResult() { SaveStatus = true };
+            }
+            catch (Exception ex)
+            {
+                return new DataSaveResult() { SaveStatus = false };
+            }
+        }
+
+        private Acc_Budgets BuildDBRecord(Acc_Budgets _Acc_Budgets, Budget _Budget)
+        {
+            if (_Budget.BudgetId != -1)
+            {
+                _Acc_Budgets.BudgetId = _Budget.BudgetId;
+
+            }
+            _Acc_Budgets.BudgetName_Ara = _Budget.BudgetName_Ara;
+            _Acc_Budgets.BudgetName_Eng = _Budget.BudgetName_Eng;
+            _Acc_Budgets.BudgetYearId = _Budget.BudgetYearId;
+
+            _Acc_Budgets.IsDisable = _Budget.IsDisable;
+            return _Acc_Budgets;
+        }
+
+        private Acc_BudgetsDtl BuildDBRecordForDetails(Acc_BudgetsDtl _Acc_BudgetsDtl, Budget _Budget, Acc_Budgets _Acc_Budgets)
+        {
+            _Acc_BudgetsDtl.BudgetDtlId = _Budget.BudgetDtlId;
+            _Acc_BudgetsDtl.BudgetId = _Acc_Budgets.BudgetId;
+            _Acc_BudgetsDtl.BudgetYearId = _Acc_Budgets.BudgetYearId;
+            _Acc_BudgetsDtl.BudgetYear = _Budget.BudgetYear;
+            _Acc_BudgetsDtl.BudgetAccountId = _Budget.BudgetAccountId;
+            _Acc_BudgetsDtl.BudgetCostCenterId = _Budget.BudgetCostCenterId;
+            _Acc_BudgetsDtl.BudgetLocationId = _Budget.BudgetLocationId;
+            _Acc_BudgetsDtl.BdgtDepitAmount = _Budget.BdgtDepitAmount;
+            _Acc_BudgetsDtl.BdgtCreditAmount = _Budget.BdgtCreditAmount;
+            _Acc_BudgetsDtl.BdgttBalance = _Budget.BdgttBalance;
+            _Acc_BudgetsDtl.BdgtFrom = _Budget.BdgtFrom;
+            _Acc_BudgetsDtl.BdgtTo = _Budget.BdgtTo;
+            return _Acc_BudgetsDtl;
+        }
+
+
+        //  public static List<Budget> GetAll
 
     }
 
